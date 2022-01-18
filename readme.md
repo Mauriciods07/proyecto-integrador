@@ -11,4 +11,4 @@ Ecommerce de videojuegos.
 * Marja Castañeda Hernández
 * Mauricio Iván Díaz Segura
 * Nayelli Gutiérrez Pérez
-* Raquel Arzaluz
+* Raquel Monserrat Arzaluz Luna
