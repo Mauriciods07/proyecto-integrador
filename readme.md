@@ -1,4 +1,4 @@
-# Proyecto integrador "GameJoy"
+# Proyecto integrador "GameJoy" 👾
 
 Ecommerce de videojuegos.
 
