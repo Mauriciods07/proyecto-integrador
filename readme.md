@@ -8,7 +8,7 @@ Ecommerce de videojuegos.
 * Jonathan Omar Quino Reyes.
 * Ángel Álvarez Rodríguez
 * Diana Lizbeth Rangel Soto
-* Marja Castañeda Hernández 
+* Marja Castañeda Hernández
 * Mauricio Iván Díaz Segura
-* Nayelli Gutiérrez Pérez
+* Nayelli Gutiérrez Pérez 
 * Raquel Monserrat Arzaluz Luna
