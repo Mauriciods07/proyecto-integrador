@@ -3,7 +3,7 @@
 Ecommerce de videojuegos.
 
 **Integrantes:**
-* Miguel Ángel Aguilar
+* Miguel Ángel Aguilar 
 * Alexis González Becerril
 * Jonathan Omar Quino Reyes.
 * Ángel Álvarez Rodríguez
