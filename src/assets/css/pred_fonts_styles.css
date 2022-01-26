@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Press+Start+2P&display=swap');
+
+:root {
+    /* Paleta de colores */
+    --black: #1C1C1C;
+    --red: #FF0D00;
+    --blue: #1212FF;
+    --green: #46FF01;
+    --pink: #FF00BC;
+    --yellow: #E4F802;
+    --white: #FFFFFF;
+
+    /* Fuentes */
+    --Titles: 'Press Start 2P', cursive;
+    --body: 'Audiowide';
+}
+
+body {
+    background-color: var(--black);
+}
+
+.row.banner{
+background-color: var(--blue);
+color: white;
+height: 98.1px;
+max-height: 98.1px;
+}
+.texto{
+    font-family: var(--body);
+    font-size: 15px;
+    color: var(--white);
+}
+.texto2{
+    font-family: var(--body);
+    font-size: 20px;
+    color: var(--white);
+}
+.texto3{
+    font-family: var(--Titles);
+    font-size: 20px;
+    color: var(--white);
+}
+.texto4{
+    font-family: var(--body);
+    font-size: 10px;
+    color: var(--white);
+}
+.main{
+    width: max-content;
+    height: 1500px;
+}
+footer{
+    background-color: var(--blue);
+}
+footer .row .footer-1{
+    height: 100px;
+}
+footer .row .footer-1 a{
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+}
+
+@media (max-width: 990px) {
+    .navbar-dark{
+        background-color: var(--blue) !important;
+    }
+    .nav-link{
+        border-top: 1px solid var(--white);
+        border-bottom: 1px solid var(--white);
+    }
+}
