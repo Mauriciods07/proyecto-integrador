@@ -12,29 +12,59 @@
     /* Fuentes */
     --titles: 'Press Start 2P', cursive;
     --body: 'Audiowide', cursive;
-
 }
 
 body {
     /* background-color: var(--black); */
     background-color: white;
     margin: 0px;
+    font-family: var(--body);
 }
 
-/* --- navbar */
+aside {
+    float: right;
+    width: 20%;
+    border: 2px solid green;
+}
+
+/* --- header */
 .header {
     background-color: var(--blue);
     height: 50px;
     display: flex;
     color: white;
+    justify-content: space-between;
+    padding: 15px;
 }
 
-.header p {
-    justify-content: center;
+.social-networks {
+    display: flex;
+    margin-left: 20px;
 }
 
+.social-networks i {
+    margin-right: 10px;
+    color: white;
+    display: flex;
+}
+
+.whats {
+    margin-right: 20px;
+}
+
+.whats a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+}
+
+.whats i {
+    margin-right: 10px;
+}
+
+/* --- navbar */
 .navbar {
-    justify-content: center;
+    justify-content: space-between;
     color: white;
     display: flex;
     position: absolute;
@@ -44,6 +74,8 @@ body {
     left: 0;
     right: 0;
     text-align: center;
+    text-transform: uppercase;
+    align-items: stretch;
 }
 
 .navbar li {
@@ -56,6 +88,15 @@ body {
     font-family: var(--body);
 }
 
+.user {
+    position: absolute;
+    right: 15px;
+    align-content: center;
+}
+
+.user p {
+    margin: 0px;
+}
 
 /* ---- footer */
 .carrusel img {
@@ -73,11 +114,6 @@ body {
 .footer, .cards {
     border: 1px solid var(--black);
 }
-
-/* .footer-gorgonitas .name{
-    /* Se vean las letras en mayúsculas /
-    /* font-variant: ; /
-} */
 
 .footer-menu li {
     list-style: none;
