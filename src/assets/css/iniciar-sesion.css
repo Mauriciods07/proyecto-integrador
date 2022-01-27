@@ -25,15 +25,11 @@
   border-radius: 45px;
   width: 342px;
   height: 35px;
+  color: var(--white);
+  font-family: var(--body);
+  font-size: 15px;
 }
 
-.formulario{
-    border-radius: 45px;
-    border: 5px solid var(--blue);
-    width: 520px;
-    height: 350px;
-    margin-bottom: 200px;
-}
 
 .formulario-registrate{
     border-radius: 45px;
