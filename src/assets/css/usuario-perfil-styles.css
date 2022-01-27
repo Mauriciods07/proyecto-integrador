@@ -1,0 +1,69 @@
+
+.formulario_usuario{
+    width: 95%;
+    min-height: 728px;
+    border: 5px solid var(--pink);
+    border-radius: 45px;
+    padding-left: 0px;
+}
+
+.titulo_form{
+    color: var(--white);
+    font-family: var(--body);
+    font-size: 30px;
+}
+.label_formulario{
+    color: var(--white);
+    font-family: var(--body);
+    font-size: 25px;
+}
+.input_formulario{
+    color: var(--black);
+    font-family: var(--body);
+    font-size: 25px;
+    width: 400px;
+    text-align: center;
+}
+.input_direccion{
+    text-align: justify;
+}
+.input_pago_tarjeta{
+    color: var(--black);
+    font-family: var(--body);
+    font-size: 15px;
+    width: 200px;
+    text-align: center;
+}
+.input_pago_numeros{
+    color: var(--black);
+    font-family: var(--body);
+    font-size: 15px;
+    width: 100px;
+    text-align: center;
+}
+.Foto_Usuario{
+    width: 150px;
+    border:2px solid var(--green);
+    border-radius: 50%;
+}
+
+/*
+X-Small	None	0–576px
+Small	sm	≥576px
+Medium	md	≥768px
+Large	lg	≥992px
+Extra large	xl	≥1200px
+Extra extra large	xxl	≥1400px
+*/
+
+@media  (max-device-width: 576px){
+
+    .input_formulario {
+            width: 250px;
+            font-size: 20px;
+    }
+    .input_direccion{
+        height: 10em;
+        width: 12em;
+    }
+}
