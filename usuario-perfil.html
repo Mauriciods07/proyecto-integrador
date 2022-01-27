@@ -79,7 +79,7 @@
                                     <label for="TextoNombre" class="label_formulario">Nombre:</label>
                                 </div>
                                 <div class="col-lg-8 col-md-12 text-center">
-                                    <input name="TextoNombre" type="text"class="input_formulario" id="txtNombre" placeholder="Ingresa tu nombre" disabled>
+                                    <input name="TextoNombre" type="text"class="input_formulario" id="txtNombre" placeholder="Ingresa tu nombre">
                                 </div>
                             </div>
                             <div class="row ml-3 d-flex justify-content-center mt-3">
@@ -87,7 +87,7 @@
                                     <label for="TextoApellido" class="label_formulario">Apellido:</label>
                                 </div>
                                 <div class="col-lg-8 col-md-12 text-center">
-                                    <input name="TextoApellido" type="text"class="input_formulario" id="txtApellido" placeholder="Ingresa tu apellido" disabled>
+                                    <input name="TextoApellido" type="text"class="input_formulario" id="txtApellido" placeholder="Ingresa tu apellido">
                                 </div>
                             </div>
                             <div class="row ml-3 d-flex justify-content-center mt-3">
@@ -95,7 +95,7 @@
                                     <label for="TextoCorreo" class="label_formulario">Correo:</label>
                                 </div>
                                 <div class="col-lg-8 col-md-12 text-center">
-                                    <input name="TextoCorreo" type="email"class="input_formulario" id="txtCorreo" placeholder="Ingresa tu correo" disabled>
+                                    <input name="TextoCorreo" type="email"class="input_formulario" id="txtCorreo" placeholder="Ingresa tu correo">
                                 </div>
                             </div>
                             <div class="row ml-3 d-flex justify-content-center mt-3">
@@ -103,7 +103,7 @@
                                     <label for="NumeroTelefono" class="label_formulario">Teléfono:</label>
                                 </div>
                                 <div class="col-lg-8 col-md-12 text-center">
-                                    <input name="NumeroTelefono" type="number"class="input_formulario" id="txtTelefono" placeholder="Ingresa tu celular" disabled>
+                                    <input name="NumeroTelefono" type="number"class="input_formulario" id="txtTelefono" placeholder="Ingresa tu celular">
                                 </div>
                             </div>
                             <div class="row ml-3 d-flex justify-content-around mt-3">
@@ -111,13 +111,13 @@
                                     <label for="TextoDireccion" class="label_formulario">Dirección:</label>
                                 </div>
                                 <div class="col-lg-8 col-md-12 text-center">
-                                    <textarea name="TextoDireccion" class="input_formulario input_direccion" id="txtDireccion" rows="5" cols="39" placeholder="Ingresa tu Dirección (Calle,Colonia,Municipio/Alcaldía,Ciudad,Estado)" disabled></textarea>
+                                    <textarea name="TextoDireccion" class="input_formulario input_direccion" id="txtDireccion" rows="5" cols="39" placeholder="Ingresa tu Dirección (Calle,Colonia,Municipio/Alcaldía,Ciudad,Estado)"></textarea>
                                 </div>
                             </div>
                         </div>
                     <div class="col-lg-4 d-flex align-items-center order-lg-1">    <!--Row donde estara la imagen de usuario y label de foto-->
-                        <div class="row">
-                            <div class="col-lg-12 text-center mb-5">
+                        <div class="row w-100 ml-2 mb-5">
+                            <div class="col-lg-12 text-center mb-4">
                                 <img src="src/img/IconodeUsuario.png" class="Foto_Usuario mx-auto align-self-center" alt="Imagen de Usuario">
                             </div>
                             <div class="col-lg-12 text-center">
@@ -127,26 +127,58 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">       <!--Fila donde esta la seccion de datos de pago-->
+                <div class="row ml-2 mt-3 text-center">       <!--Fila donde esta la seccion de datos de pago-->
                     <div class="row d-flex justify-content-center">
                         <div class="col-lg-4 col-md-12 text-center">
                             <label for="TextoPago" class="label_formulario">Datos de Pago:</label>
                         </div>
-                        <div class="col-lg-4 col-md-12 text-center">
-                            <input name="TextoTarjeta" type="number"class="input_pago_tarjeta" id="txtNombre" placeholder="Número de tarjeta"disabled>
+                        <div class="col-lg-4 col-md-12 text-center mt-2">
+                            <input name="TextoTarjeta" type="number"class="input_pago_tarjeta" id="txtNombre" placeholder="Número de tarjeta">
                         </div>
-                        <div class="col-lg-2 col-md-6 text-center">
+                        <div class="col-lg-2 col-md-6 text-center mt-2">
                             <input name="TextoVencimiento" type="text"class="input_pago_numeros" id="txtNombre" placeholder="AA/MM">
                         </div>
-                        <div class="col-lg-2 col-md-6 text-center">
-                            <input name="TextoCVV" type="text"class="input_pago_numeros" id="txtNombre" placeholder="CVV" disabled>
+                        <div class="col-lg-2 col-md-6 text-center mt-2">
+                            <input name="TextoCVV" type="text"class="input_pago_numeros" id="txtNombre" placeholder="CVV">
                         </div>
                     </div>
+                </div>
+                <div class="row ml-4 mt-3 text-center">       <!--Aqui va la fila de botones-->
+                    <div class="col-lg-3 col-md-12 text-center">
+                        <input type="checkbox" name="cbxUneteEquipo" class="input_cbx mr-3" id="cbxUneteEquipo">
+                        <label for="TextoPago" class="label_cbx">Únete al equipo</label>
+                    </div>
+                    <div class="col-lg-3 col-md-12">
+                        <button class="btn_Form_Usuario">Editar</button>
+                    </div>
+                    <div class="col-lg-3 col-md-12">
+                        <button class="btn_Form_Usuario">Guardar</button>
+                    </div>
+                    <div class="col-lg-3 col-md-12">
+                        <button type="button" class="btn_Form_Usuario btn_Form_Usuario" data-toggle="modal" data-target=".bd-example-modal-sm">Cerrar Sesión</button>
+                    </div>
+                    
                 </div>
         </form>
     </div>
 </main>
 
+<!---------------------------------------------------------------MODAL DE CERRAR SESION---------------------------------------------------->
+<div class="modal fade bd-example-modal-sm modal_cerrar_sesion" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm ">
+      <div class="modal-content">
+        <span class = "mb-2">¿Seguro que quieres cerrar sesión?</span>
+        <div class="row" style="background-color: transparent;">
+            <div class="col-6">
+                <button class="btn_modal_aceptar">Aceptar</button>
+            </div>
+            <div class="col-6">
+                <button class="btn_modal_cancelar" data-dismiss="modal">Cancelar</button>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div
 
 <!-----------------------------------------------------------------footer---------------------------------------------------------------------------------------->
 <footer>
