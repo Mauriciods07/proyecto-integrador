@@ -55,7 +55,7 @@
             <a class="nav-link texto2" href="#">CONTACTO</a>
             <a class="nav-link texto2">SOBRE NOSOTROS</a>
             <a class="nav-link texto2" href="#">CARRITO</a>
-            <a class="nav-link texto2" href="#">CUENTA</a>
+            <a class="nav-link texto2 active" href="#">CUENTA</a>
             <a class="nav-link texto2">TIENDA</a>
           </div>
           <div class="d-flex flex-row justify-content-around">
@@ -118,12 +118,14 @@
                     <div class="col-lg-4 d-flex align-items-center order-lg-1">    <!--Row donde estara la imagen de usuario y label de foto-->
                         <div class="row w-100 ml-2 mb-5">
                             <div class="col-lg-12 text-center mb-4">
-                                <img src="src/img/IconodeUsuario.png" class="Foto_Usuario mx-auto align-self-center" alt="Imagen de Usuario">
+                                <img src="src/img/IconodeUsuario.png" id ="imagen-usuario"class="Foto_Usuario mx-auto align-self-center" alt="Imagen de Usuario">
                             </div>
                             <div class="col-lg-12 text-center">
-                                <label for="TextoNombre" class="label_formulario">Foto Personal</label>
+                                <div class="row justify-content-center">
+                                    <input type="file" id="foto_usuario" name="Subir_Foto_Personal" style="display:none;">
+                                    <label for="foto_usuario" class="label_formulario" style="border:2px solid var(--green);">Foto Personal</label>
+                                </div>
                             </div>
-                            
                         </div>
                     </div>
                 </div>
@@ -280,12 +282,12 @@
     </div>
 
 
-    <!--------------------------------------------------------------------------FORMULARIO DE VENDEDOR-------------------------------------------->
-    <div class="container formulario_vendedor mt-5 mx-auto p-3">
-      <h2 class="titulo_form text-center mt-3 mb-5">Vendedor</h2>
-      <form action="" class="formulario_vendedor_action">
-        <div class="align-items-center">       <!--Fila donde esta el formulario personal y foto-->
-                    <div class="row ml-3 d-flex justify-content-center">
+    <!------------------------------------------------------------FORMULARIO DE VENDEDOR-------------------------------------------->
+  <div class="container formulario_vendedor mt-5 mx-auto p-3">
+    <h2 class="titulo_form text-center mt-3 mb-5">Vendedor</h2>
+    <form action="#" class="formulario_vendedor_action">
+        <div class="align-items-center">       <!--Seccion donde estan los campos principales del formulario-->
+                    <div class="row ml-3 d-flex justify-content-center">  <!--Fila donde esta comercio-->
                         <div class="col-lg-3 col-md-12 text-center">
                             <label for="TextoNombreComercio" class="label_formulario"> Comercio:</label>
                         </div>
@@ -293,7 +295,7 @@
                             <input name="TextoNombreComercio" type="text"class="input_formulario_vendedor" id="txtNombreComercio" placeholder="Ingresa el nombre de tu comercio" required>
                         </div>
                     </div>
-                    <div class="row ml-3 d-flex justify-content-center mt-3">
+                    <div class="row ml-3 d-flex justify-content-center mt-3">   <!--Fila donde esta el nombre de usuario-->
                         <div class="col-lg-3 col-md-12 text-center">
                             <label for="TextoNombreUsuario" class="label_formulario">Nombre de Usuario:</label>
                         </div>
@@ -301,7 +303,7 @@
                             <input name="TextoNombreUsuario" type="text"class="input_formulario_vendedor" id="txtNombreUsuario" placeholder="Ingresa tu apellido" required>
                         </div>
                     </div>
-                    <div class="row ml-3 d-flex justify-content-center mt-3">
+                    <div class="row ml-3 d-flex justify-content-center mt-3"> <!--Fila donde esta el correo empresarial-->
                         <div class="col-lg-3 col-md-12 text-center">
                             <label for="TextoCorreoEmpresa" class="label_formulario">Correo empresarial:</label>
                         </div>
@@ -309,7 +311,7 @@
                             <input name="TextoCorreoEmpresa" type="email"class="input_formulario_vendedor" id="txtCorreoEmpresa" placeholder="Ingresa tu correo de empresa" required>
                         </div>
                     </div>
-                    <div class="row ml-3 d-flex justify-content-center mt-3">
+                    <div class="row ml-3 d-flex justify-content-center mt-3"> <!--Fila donde esta el telefono empresarial-->
                         <div class="col-lg-3 col-md-12 text-center">
                             <label for="NumeroTelefonoEmpresa" class="label_formulario">Teléfono:</label>
                         </div>
@@ -317,7 +319,7 @@
                             <input name="NumeroTelefonoEmpresa" type="number"class="input_formulario_vendedor" id="nmbrTelefonoEmpresa" placeholder="Ingresa tu celular de contacto empresa" required>
                         </div>
                     </div>
-                    <div class="row ml-3 d-flex justify-content-around mt-3">
+                    <div class="row ml-3 d-flex justify-content-around mt-3">   <!--Fila donde esta la direccion-->
                         <div class="col-lg-3 col-md-12 text-center">
                             <label for="TextoDireccionEmpresa" class="label_formulario">Dirección:</label>
                         </div>
@@ -326,24 +328,23 @@
                         </div>
                     </div>
         </div>
-        <div class="row ml-4 mt-3 text-center">       <!--Aqui va la fila de botones-->
+        <div class="row ml-4 mt-3 text-center">       <!--Aqui va la fila de botones del formulario vendedor-->
             <div class="col-lg-4 col-md-12">
                 <button class="btn_Form_Vendedor">Editar</button>
             </div>
             <div class="col-lg-4 col-md-12">
-                <button class="btn_Form_Vendedor">Guardar</button>
+                <button type="submit" class="btn_Form_Vendedor">Guardar</button>
             </div>
             <div class="col-lg-4 col-md-12">
                 <button type="button" class="btn_Form_Vendedor" style ="font-size: 22px; "data-toggle="modal" data-target=".modal_producto">Agregar Producto</button>
             </div>
-            
         </div>
-</form>
-    </div>
+    </form>
+  </div>
 </main>
 
 <!---------------------------------------------------------------MODAL DE CERRAR SESION---------------------------------------------------->
-<div class="modal fade bd-example-modal-sm modal_cerrar_sesion" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+<div class="modal fade bd-example-modal-sm modal_cerrar_sesion" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"     aria-hidden="true">
     <div class="modal-dialog modal-sm ">
       <div class="modal-content cerrar_sesion">
         <span class = "mb-2">¿Seguro que quieres cerrar sesión?</span>
@@ -357,24 +358,66 @@
         </div>
       </div>
     </div>
-  </div>
-  <!-----------------------------------------------------------------MODAL DE AGREGAR PRODUCTO------------------------------------------------------------>
+</div>
+  <!------------------------------------------------MODAL DE AGREGAR PRODUCTO------------------------------------------------------------>
 
-  <div class="modal fade modal_producto" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="container modal fade modal_producto" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <span class = "mb-2">¿Seguro que quieres cerrar sesión?</span>
-        <div class="row" style="background-color: transparent;">
-            <div class="col-6">
-                <button class="btn_modal_aceptar">Aceptar</button>
+      <div class="modal-content content_producto text-center">
+        <form action="">
+            <span class = "titulo_form">Ingresa los datos de tu producto</span>
+            <div class="row d-flex justify-content-center mt-2">    <!--Seccion de nombre de producto-->
+                <div class="col-12 col-md-12 text-center">
+                    <label for="TextoNombreProductoNuevo" class="label_formulario_nuevo">Nombre de Producto</label>
+                </div>
+                <div class="col-12 col-md-12 text-center">
+                    <input name="TextoNombreProductoNuevo" type="text"class="input_nuevoproducto" id="txtNombreProductoNuevo" placeholder="Ingresa el nombre de producto" required>
+                </div>
             </div>
-            <div class="col-6">
-                <button class="btn_modal_cancelar" data-dismiss="modal">Cancelar</button>
+            <div class="row d-flex justify-content-around mt-2">    <!--Seccion de descripcion-->
+                <div class="col-12 col-md-12 text-center">
+                    <label for="TextoDescripcion" class="label_formulario_nuevo">Descripción</label>
+                </div>
+                <div class="col-12 col-md-12 text-center">
+                    <textarea name="TextoDescripcionNuevo" class="input_nuevoproducto" id="txtDescripcionNuevo" rows="4" cols="39" placeholder="Ingresa Descripción de tu producto"></textarea>
+                </div>
             </div>
-        </div>
+            <div class="row d-flex justify-content-center mt-1">    <!--Seccion de costos, categoria y cantidad-->
+                <div class="col-lg-4 text-center d-flex flex-column align-items-center">
+                    <label for="TextoCostoNuevo" class="label_formulario_numeros text-center">Costo</label>
+                    <input name="TextoCostoNuevo" type="number"class="input_nuevoproducto_sm" id="nmbrCostoNuevo" placeholder="Costo" required>
+                </div>
+                <div class="col-lg-4 text-center d-flex flex-column align-items-center">
+                    <label for="TextoCantidadNuevo" class="label_formulario_numeros">Cantidad</label>
+                    <input name="TextoCantidadNuevo" type="number"class="input_nuevoproducto_sm" id="txtCantidadNuevo" placeholder="Cantidad" required>
+                </div>
+                <div class="col-lg-4 text-center d-flex flex-column align-items-center">
+                    <label for="TextoCategoriaNuevo" class="label_formulario_numeros">Categoria</label>
+                    <input name="TextoCategoriaNuevo" type="text"class="input_nuevoproducto_sm" id="txtCategoriaNuevo" placeholder="Categoria" required>
+                </div>
+            </div>
+        
+            <div class="row mt-3 style="background-color: transparent;">  <!--Seccion de botones-->
+              <div class="col-6">
+                  <form action="">
+                    <input type="file" id="foto_producto_nuevo" class="btn_modal_subirimagen" name="Subir Imagen">
+                  </form>
+                    <!-- <button class="btn_modal_subirimagen">Subir Imagen</button> -->
+              </div>
+              <div class="col-3 text-center">
+                    <button class="btn_modal_cancelar_nuevo mt-3" data-dismiss="modal">Cancelar</button>
+              </div>
+              <div class="col-3 text-center">
+                  <button type="submit" class="btn_modal_aceptar_nuevo mt-3">Aceptar</button>
+              </div>
+            </div>
+         </form>
       </div>
     </div>
   </div>
+
+<!---------------------------------------------------------FIN DE MODAL DE AGREGAR PRODUCTO------------------------------------------------>
+
 
 <!-----------------------------------------------------------------footer---------------------------------------------------------------------------------------->
 <footer>
@@ -442,6 +485,7 @@
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <script src="src/assets/js/cargar-foto-usuario.js"></script>
 
   </body>
 </html>

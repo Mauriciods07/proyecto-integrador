@@ -157,6 +157,10 @@
     border-radius: 170px;
     font-family: var(--body);
 }
+.btn_Form_Vendedor:hover{
+    background: rgba(18,18,255,0.25);
+    border: 3px solid #1212FF;
+}
 .input_direccion_empresa{
     text-align: justify;
     border-radius: 25px;
@@ -186,9 +190,79 @@
     left: calc(50% - 170px);
  }
 
- .modal.fade.modal_producto{
-     
+ .modal_producto{
+    width: 1000px;
+    height: max-content;
+    color: var(--white) ;
+    background-color: #1C1C1C;
+    border: 5px solid var(--green);
+    border-radius: 45px;
  }
+ .modal-content.content_producto{
+    background-color: transparent;
+    font-size: 25px;
+    font-family: var(--body);
+    border: none;
+}
+.input_nuevoproducto{
+    color: var(--white);
+    font-family: var(--body);
+    font-size: 25px;
+    width: 600px;
+    text-align: center;
+    background-color: rgba(70, 255, 1, 0.25);
+    border: 3px solid var(--green);
+    border-radius: 25px;
+}
+.input_nuevoproducto_sm{
+    color: var(--white);
+    font-family: var(--body);
+    font-size: 25px;
+    width: 250px;
+    text-align: center;
+    background-color: rgba(70, 255, 1, 0.25);
+    border: 3px solid var(--green);
+    border-radius: 45px;
+}
+.btn_modal_subirimagen{
+    color: var(--white);
+    font-size: 20px;
+    width: 130px;
+    font-family: var(--body);
+    background: var(--pink);
+    border: 3px solid var(--green);
+    border-radius: 170px;
+}
+.label_formulario_nuevo{
+    color: var(--white);
+    font-family: var(--body);
+    font-size: 25px;
+}
+.label_formulario_numeros{
+    color: var(--white);
+    font-family: var(--body);
+    font-size: 25px;
+}
+.btn_modal_aceptar_nuevo{
+    color: var(--white);
+    font-size: 20px;
+    width: 130px;
+    font-family: var(--body);
+    background: rgba(70, 255, 1, 0.75);
+    border: 3px solid var(--green);
+    border-radius: 170px;
+}
+
+.btn_modal_cancelar_nuevo{
+    color: var(--white);
+    font-size: 20px;
+    width: 130px;
+    border-radius: 170px;
+    font-family: var(--body);
+    background: rgba(18, 18, 255, 0.5);
+    border: 3px solid var(--blue);
+    border-radius: 170px;
+}
 /*
 X-Small	None	0–576px
 Small	sm	≥576px
@@ -221,6 +295,39 @@ Extra extra large	xxl	≥1400px
         font-size: 18px;
         width: 290px;
     }
+    .input_nuevoproducto{
+        font-size: 15px;
+        width: 250px;
+    }
+    .modal_producto{
+        width: 370px;
+        height: max-content;
+     }
+     .label_formulario_nuevo{
+        font-size: 18px;
+    }
+    .label_formulario_numeros{
+        font-size: 18px;
+    }
+    .input_nuevoproducto{
+        font-size: 12px;
+    }
+    .input_nuevoproducto_sm{
+        font-size: 18px;
+        width: 200px;
+    }
+    .btn_modal_cancelar_nuevo{
+        font-size: 12px;
+        width: 80px;
+    }
+    .btn_modal_aceptar_nuevo{
+        font-size: 12px;
+        width: 80px;
+    }
+    .btn_modal_subirimagen{
+        font-size: 12px;
+        width: 80px;
+    }
 }
 
 @media  (min-device-width: 576px) and (max-device-width: 992px){    /*Tamaño chico*/
@@ -247,6 +354,33 @@ Extra extra large	xxl	≥1400px
         font-size: 18px;
         width: 290px;
     }
+    .input_nuevoproducto{
+        font-size: 20px;
+        width: 350px;
+    }
+    .label_formulario_nuevo{
+        font-size: 20px;
+    }
+    .label_formulario_numeros{
+        font-size: 20px;
+    }
+
+    .input_nuevoproducto_sm{
+        font-size: 20px;
+        width: 250px;
+    }
+    .btn_modal_cancelar_nuevo{
+        font-size: 18px;
+        width: 120px;
+    }
+    .btn_modal_aceptar_nuevo{
+        font-size: 18px;
+        width: 120px;
+    }
+    .btn_modal_subirimagen{
+        font-size: 18px;
+        width: 110px;
+    }
     
 }
 
@@ -254,7 +388,20 @@ Extra extra large	xxl	≥1400px
 {    /*Tamaño mediano*/
 
     .btn_Form_Usuario{
-        width: 200px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 250px;
         font-size: 18px;
+    }
+
+    .label_formulario_nuevo{
+        font-size: 22px;
+    }
+    .label_formulario_numeros{
+        font-size: 22px;
+    }
+    .input_nuevoproducto_sm{
+        font-size: 22px;
+        width: 250px;
     }
 }
