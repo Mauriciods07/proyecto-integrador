@@ -135,6 +135,7 @@
     min-height: 728px;
     border: 5px solid var(--blue);
     border-radius: 45px;
+    margin-bottom: 20px;
 }
 
 .input_formulario_vendedor{
@@ -281,7 +282,7 @@ Extra extra large	xxl	≥1400px
     }
     .input_formulario_vendedor {
         width: 270px;
-     font-size: 18px;
+        font-size: 18px;
     }
     .btn_Form_Usuario{
         margin-top: 10px;
@@ -346,7 +347,7 @@ Extra extra large	xxl	≥1400px
         font-size: 18px;
     }
     .input_formulario_vendedor {
-        width: 480px;
+        width: 400px;
     }
     .btn_Form_Vendedor{
         margin-top: 10px;
@@ -390,7 +391,7 @@ Extra extra large	xxl	≥1400px
     .btn_Form_Usuario{
         margin-top: 10px;
         margin-bottom: 10px;
-        width: 250px;
+        width: 200px;
         font-size: 18px;
     }
 

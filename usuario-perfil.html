@@ -68,7 +68,7 @@
       </nav>
 <!-----------------------------------------------------------------------------Fin de barra de navegacion------------------------------------------>
 <!----------------------------------------------------------------------------INICIO DE PERFIL DE USUARIO------------------------------------------>
-<main>
+<main class="mb-5">
     <div class="container formulario_usuario mt-5">
         <h2 class="titulo_form text-center mt-5 mb-5">Mi Perfil</h2>
         <form action="" class="formulario">
@@ -76,54 +76,54 @@
                     <div class="col-lg-8 order-1">
                             <div class="row ml-3 d-flex justify-content-center">
                                 <div class="col-lg-4 col-md-12 text-center">
-                                    <label for="TextoNombre" class="label_formulario">Nombre:</label>
+                                    <label for="txtNombreUsuario" class="label_formulario">Nombre:</label>
                                 </div>
                                 <div class="col-lg-8 col-md-12 text-center">
-                                    <input name="TextoNombre" type="text"class="input_formulario" id="txtNombre" placeholder="Ingresa tu nombre" required>
+                                    <input name="txtNombreUsuario" type="text"class="input_formulario" id="txtNombreUsuario" placeholder="Ingresa tu nombre" required disabled>
                                 </div>
                             </div>
                             <div class="row ml-3 d-flex justify-content-center mt-3">
                                 <div class="col-lg-4 col-md-12 text-center">
-                                    <label for="TextoApellido" class="label_formulario">Apellido:</label>
+                                    <label for="txtApellidoUsuario" class="label_formulario">Apellido:</label>
                                 </div>
                                 <div class="col-lg-8 col-md-12 text-center">
-                                    <input name="TextoApellido" type="text"class="input_formulario" id="txtApellido" placeholder="Ingresa tu apellido" required>
+                                    <input name="txtApellidoUsuario" type="text"class="input_formulario" id="txtApellidoUsuario" placeholder="Ingresa tu apellido" required disabled>
                                 </div>
                             </div>
                             <div class="row ml-3 d-flex justify-content-center mt-3">
                                 <div class="col-lg-4 col-md-12 text-center">
-                                    <label for="TextoCorreo" class="label_formulario">Correo:</label>
+                                    <label for="txtCorreoUsuario" class="label_formulario">Correo:</label>
                                 </div>
                                 <div class="col-lg-8 col-md-12 text-center">
-                                    <input name="TextoCorreo" type="email"class="input_formulario" id="txtCorreo" placeholder="Ingresa tu correo" required>
+                                    <input name="txtCorreoUsuario" type="email"class="input_formulario" id="txtCorreoUsuario" placeholder="Ingresa tu correo" required disabled>
                                 </div>
                             </div>
                             <div class="row ml-3 d-flex justify-content-center mt-3">
                                 <div class="col-lg-4 col-md-12 text-center">
-                                    <label for="NumeroTelefono" class="label_formulario">Teléfono:</label>
+                                    <label for="txtTelefonoUsuario" class="label_formulario">Teléfono:</label>
                                 </div>
                                 <div class="col-lg-8 col-md-12 text-center">
-                                    <input name="NumeroTelefono" type="number"class="input_formulario" id="txtTelefono" placeholder="Ingresa tu celular" required>
+                                    <input name="txtTelefonoUsuario" type="number"class="input_formulario" id="txtTelefonoUsuario" placeholder="Ingresa tu celular" required disabled>
                                 </div>
                             </div>
                             <div class="row ml-3 d-flex justify-content-around mt-3">
                                 <div class="col-lg-4 col-md-12 text-center">
-                                    <label for="TextoDireccion" class="label_formulario">Dirección:</label>
+                                    <label for="txtDireccionUsuario" class="label_formulario">Dirección:</label>
                                 </div>
                                 <div class="col-lg-8 col-md-12 text-center">
-                                    <textarea name="TextoDireccion" class="input_formulario input_direccion" id="txtDireccion" rows="5" cols="39" placeholder="Ingresa tu Dirección (Calle,Colonia,Municipio/Alcaldía,Ciudad,Estado)"></textarea>
+                                    <textarea name="txtDireccionUsuario" class="input_formulario input_direccion" id="txtDireccionUsuario" rows="5" cols="39" placeholder="Ingresa tu Dirección (Calle,Colonia,Municipio/Alcaldía,Ciudad,Estado)" disabled></textarea>
                                 </div>
                             </div>
                         </div>
                     <div class="col-lg-4 d-flex align-items-center order-lg-1">    <!--Row donde estara la imagen de usuario y label de foto-->
                         <div class="row w-100 ml-2 mb-5">
                             <div class="col-lg-12 text-center mb-4">
-                                <img src="src/img/IconodeUsuario.png" id ="imagen-usuario"class="Foto_Usuario mx-auto align-self-center" alt="Imagen de Usuario">
+                                <img src="src/img/IconodeUsuario.png" id ="imgFotoActual"class="Foto_Usuario mx-auto align-self-center" alt="Imagen de Usuario">
                             </div>
                             <div class="col-lg-12 text-center">
                                 <div class="row justify-content-center">
-                                    <input type="file" id="foto_usuario" name="Subir_Foto_Personal" style="display:none;">
-                                    <label for="foto_usuario" class="label_formulario" style="border:2px solid var(--green);">Foto Personal</label>
+                                    <input type="file" id="imgFotoUsuario" name="imgFotoUsuario" style="display:none;" disabled>
+                                    <label for="imgFotoUsuario" class="label_formulario" style="border:2px solid var(--green);">Foto Personal</label>
                                 </div>
                             </div>
                         </div>
@@ -132,32 +132,32 @@
                 <div class="row ml-2 mt-3 text-center">       <!--Fila donde esta la seccion de datos de pago-->
                     <div class="row d-flex justify-content-center">
                         <div class="col-lg-4 col-md-12 text-center">
-                            <label for="TextoPago" class="label_formulario">Datos de Pago:</label>
+                            <label for="txtTarjeta" class="label_formulario">Datos de Pago:</label>
                         </div>
                         <div class="col-lg-4 col-md-12 text-center mt-2">
-                            <input name="TextoTarjeta" type="number"class="input_pago_tarjeta" id="txtNombre" placeholder="Número de tarjeta" required>
+                            <input name="txtTarjeta" type="number"class="input_pago_tarjeta" id="txtTarjeta" placeholder="Número de tarjeta" required disabled>
                         </div>
                         <div class="col-lg-2 col-md-6 text-center mt-2">
-                            <input name="TextoVencimiento" type="text"class="input_pago_numeros" id="txtNombre" placeholder="AA/MM" required>
+                            <input name="txtVencimiento" type="text"class="input_pago_numeros" id="txtVencimiento" placeholder="AA/MM" required disabled>
                         </div>
                         <div class="col-lg-2 col-md-6 text-center mt-2">
-                            <input name="TextoCVV" type="text"class="input_pago_numeros" id="txtNombre" placeholder="CVV" required>
+                            <input name="txtCVV" type="text"class="input_pago_numeros" id="txtCVV" placeholder="CVV" required disabled>
                         </div>
                     </div>
                 </div>
                 <div class="row ml-4 mt-3 text-center">       <!--Aqui va la fila de botones-->
                     <div class="col-lg-3 col-md-12 text-center">
-                        <input type="checkbox" name="cbxUneteEquipo" class="input_cbx mr-3" id="cbxUneteEquipo">
-                        <label for="TextoPago" class="label_cbx">Únete al equipo</label>
+                        <input type="checkbox" name="cbxUneteEquipo" class="input_cbx mr-3" id="cbxUneteEquipo" disabled>
+                        <label for="cbxUneteEquipo" class="label_cbx">Únete al equipo</label>
                     </div>
                     <div class="col-lg-3 col-md-12">
-                        <button class="btn_Form_Usuario">Editar</button>
+                        <button type="button" class="btn_Form_Usuario" id="btnEditarUsuario">Editar</button>
                     </div>
                     <div class="col-lg-3 col-md-12">
-                        <button class="btn_Form_Usuario">Guardar</button>
+                        <button name = "btnGuardarUsuario" id = "btnGuardarUsuario" class="btn_Form_Usuario" disabled style="opacity: 0.2;";">Guardar</button>
                     </div>
                     <div class="col-lg-3 col-md-12">
-                        <button type="button" class="btn_Form_Usuario btn_Form_Usuario" data-toggle="modal" data-target=".bd-example-modal-sm">Cerrar Sesión</button>
+                        <button type="button" class="btn_Form_Usuario" data-toggle="modal" data-target=".bd-example-modal-sm">Cerrar Sesión</button>
                     </div>
                     
                 </div>
@@ -248,7 +248,7 @@
                 <div class="card card_articulo_comprado popover-test" title="Orden 1881">
                   <div class="row">
                     <div class="col-6">
-                      <img src="src/img/xbox/battlefield_2042.png" alt="Juego1" width="150" height="200">
+                      <img src="src/img/xbox/resident_evil_village.png" alt="Juego1" width="150" height="200">
                     </div>
                     <div class="col-6 pt-3">
                       <div class="row d-flex flex-column text-center mb-1">
@@ -283,9 +283,9 @@
 
 
     <!------------------------------------------------------------FORMULARIO DE VENDEDOR-------------------------------------------->
-  <div class="container formulario_vendedor mt-5 mx-auto p-3">
+  <div class="container formulario_vendedor mt-5 mx-auto p-3" style = "display: none;" id="divFormularioVendedor">
     <h2 class="titulo_form text-center mt-3 mb-5">Vendedor</h2>
-    <form action="#" class="formulario_vendedor_action">
+    <form action="functio" class="formulario_vendedor_action">
         <div class="align-items-center">       <!--Seccion donde estan los campos principales del formulario-->
                     <div class="row ml-3 d-flex justify-content-center">  <!--Fila donde esta comercio-->
                         <div class="col-lg-3 col-md-12 text-center">
@@ -485,7 +485,11 @@
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
-    <script src="src/assets/js/cargar-foto-usuario.js"></script>
+    
+    
+    <script src="src/assets/js/usuario-perfil-js/cargar-foto-usuario.js"></script>
+    <script src="src/assets/js/usuario-perfil-js/editar-usuario.js"></script>
+    <script src="src/assets/js/usuario-perfil-js/checkbox-vendedor.js"></script>
 
   </body>
 </html>

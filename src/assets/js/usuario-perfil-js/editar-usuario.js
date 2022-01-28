@@ -1,0 +1,30 @@
+let $btnEditar = document.querySelector('#btnEditarUsuario');
+let $inputNombre = document.querySelector('#txtNombreUsuario');
+let $inputApellido = document.querySelector('#txtApellidoUsuario');
+let $inputCorreo = document.querySelector('#txtCorreoUsuario');
+let $inputTelefono = document.querySelector('#txtTelefonoUsuario');
+let $inputDireccion = document.querySelector('#txtDireccionUsuario');
+let $inputFoto = document.querySelector('#imgFotoUsuario');
+let $inputTarjeta = document.querySelector('#txtTarjeta');
+let $inputVencimiento = document.querySelector('#txtVencimiento');
+let $inputCVV = document.querySelector('#txtCVV');
+let $inputCBX = document.querySelector('#cbxUneteEquipo');
+let $inputGuardarUsuario = document.querySelector('#btnGuardarUsuario');
+let $formularioVendedor = document.querySelector('.formulario_vendedor');
+
+$btnEditar.addEventListener('click', (e) =>{
+    $inputNombre.removeAttribute('disabled');
+    $inputApellido.removeAttribute('disabled');
+    $inputCorreo.removeAttribute('disabled');
+    $inputTelefono.removeAttribute('disabled');
+    $inputDireccion.removeAttribute('disabled');
+    $inputFoto.removeAttribute('disabled');
+    $inputTarjeta.removeAttribute('disabled');
+    $inputVencimiento.removeAttribute('disabled');
+    $inputCVV.removeAttribute('disabled');
+    $inputCBX.removeAttribute('disabled');
+    $inputGuardarUsuario.removeAttribute('disabled');
+    $inputGuardarUsuario.style.opacity = "1.0";
+    e.target.style.opacity = "0.2";
+    e.target.setAttribute('disabled',true);
+});
