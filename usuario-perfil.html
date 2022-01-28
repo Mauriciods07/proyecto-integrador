@@ -161,6 +161,123 @@
                 </div>
         </form>
     </div>
+
+    <!-------------------------------------------------Carousel de cartas de pedidos ordenados por el usuario--------------------------------------------------------->
+    <div class="carousel_ordenes container mt-5 mx-auto">
+      <h2 class="titulo_form text-center mt-5 mb-2">Historial de Compras</h2>
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false">
+        <div class="carousel-inner carousel_dinamico">    <!--A partir de este punto se agregaran elementos carousel-item con dos elementos cada uno, a excepcion de que haya un numero impar o el usuario solo tenga una compra-->
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-md-6 col-sm-12 d-flex justify-content-center mb-2"> <!--Cunaod solo exista un elemento, aqui se colocara col en lugar de col-md-6-->
+                  <div class="card card_articulo_comprado popover-test" title="Orden 1881">
+                    <div class="row">
+                      <div class="col-6">
+                        <img src="src/img/xbox/battlefield_2042.png" alt="Juego1" width="150" height="200">
+                      </div>
+                      <div class="col-6 pt-3">
+                        <div class="row d-flex flex-column mb-1 text-center">
+                          <span class="orden_texto">Nombre</spans>
+                          <span class="orden_texto_id d-inline-block">Halo Infinite</span>
+                        </div>
+                        <div class="row d-flex flex-column text-center mb-1">
+                          <span class="orden_texto">Precio</span>
+                          <span class="orden_texto_id mx-auto">$10000</span>
+                        </div>
+                        <div class="row d-flex flex-column text-center">
+                          <span class="orden_texto">Cantidad</span>
+                          <span class="orden_texto_id mx-auto">1</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-md-6 col-sm-12 d-flex justify-content-center mb-2">
+                <div class="card card_articulo_comprado popover-test" title="Orden 1881">
+                  <div class="row">
+                    <div class="col-6">
+                      <img src="src/img/xbox/battlefield_2042.png" alt="Juego1" width="150" height="200">
+                    </div>
+                    <div class="col-6 pt-3">
+                      <div class="row d-flex flex-column text-center mb-1">
+                        <span class="orden_texto">Nombre</spans>
+                        <span class="orden_texto_id">Nombre_Articulo</span>
+                      </div>
+                      <div class="row d-flex flex-column text-center mb-1">
+                        <span class="orden_texto">Precio</span>
+                        <span class="orden_texto_id mx-auto">$10000</span>
+                      </div>
+                      <div class="row d-flex flex-column text-center">
+                        <span class="orden_texto">Cantidad</span>
+                        <span class="orden_texto_id mx-auto">1</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>  
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-md-6 col-sm-12 d-flex justify-content-center mb-2">
+                <div class="card card_articulo_comprado popover-test" title="Orden 1881">
+                  <div class="row">
+                    <div class="col-6">
+                      <img src="src/img/xbox/battlefield_2042.png" alt="Juego1" width="150" height="200">
+                    </div>
+                    <div class="col-6 pt-3">
+                      <div class="row d-flex flex-column text-center mb-1">
+                        <span class="orden_texto">Nombre</spans>
+                        <span class="orden_texto_id">Nombre_Articulo</span>
+                      </div>
+                      <div class="row d-flex flex-column text-center mb-1">
+                        <span class="orden_texto">Precio</span>
+                        <span class="orden_texto_id mx-auto">$10000</span>
+                      </div>
+                      <div class="row d-flex flex-column text-center">
+                        <span class="orden_texto">Cantidad</span>
+                        <span class="orden_texto_id mx-auto">1</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12 d-flex justify-content-center mb-2">
+                <div class="card card_articulo_comprado popover-test" title="Orden 1881">
+                  <div class="row">
+                    <div class="col-6">
+                      <img src="src/img/xbox/battlefield_2042.png" alt="Juego1" width="150" height="200">
+                    </div>
+                    <div class="col-6 pt-3">
+                      <div class="row d-flex flex-column text-center mb-1">
+                        <span class="orden_texto">Nombre</spans>
+                        <span class="orden_texto_id">Nombre_Articulo</span>
+                      </div>
+                      <div class="row d-flex flex-column text-center mb-1">
+                        <span class="orden_texto">Precio</span>
+                        <span class="orden_texto_id mx-auto">$10000</span>
+                      </div>
+                      <div class="row d-flex flex-column text-center">
+                        <span class="orden_texto">Cantidad</span>
+                        <span class="orden_texto_id mx-auto">1</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> 
+        </div>
+       <button class="carousel-control-prev align-" type="button" data-target="#carouselExampleControls" data-slide="prev">
+          <span class="carousel-control-prev-icon" style="margin-left: 0;" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-target="#carouselExampleControls" data-slide="next">
+          <span class="carousel-control-next-icon" style="margin-right: 0;" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </button>
+      </div>
+    </div>
 </main>
 
 <!---------------------------------------------------------------MODAL DE CERRAR SESION---------------------------------------------------->

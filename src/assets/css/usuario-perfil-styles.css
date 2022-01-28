@@ -104,7 +104,7 @@
     font-family: var(--body);
     font-size: 25px;
     width: 340px;
-    height: 165px;
+    height: 170px;
     text-align: center;
     background: rgba(255, 13, 0, 0.75);
     border: 5px solid var(--pink);
@@ -121,8 +121,41 @@
 .modal {
     top: calc(30%);
     left: calc(50% - 170px);
-    /* right: calc(100%-170px); */
  }
+
+ .carousel_ordenes{
+    width: 95%;
+    min-height: 350px;
+    border: 5px solid var(--green);
+    border-radius: 45px;
+    padding-left: 0px;
+ }
+ .card_articulo_comprado{
+     max-width: 275px;
+     height: 180px;
+     background-color: transparent;
+     border: none;
+ }
+
+ .orden_texto_id{
+    color: var(--black);
+    font-family: var(--body);
+    font-size: 15px;
+    width: max-content;
+    min-width: 15px;
+    text-align: center;
+    background: #C4C4C4;
+    border-radius: 10px;
+}
+.orden_texto{
+    color: var(--white);
+    font-family: var(--body);
+    font-size: 15px;
+}
+.carousel-control-prev,
+.carousel-control-next{
+  align-self: flex-start; /* Aligns it at the top */
+}
 /*
 X-Small	None	0–576px
 Small	sm	≥576px
