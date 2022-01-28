@@ -11,6 +11,7 @@
     color: var(--white);
     font-family: var(--body);
     font-size: 30px;
+    margin-left: 20px;
 }
 .label_formulario{
     color: var(--white);
@@ -99,30 +100,6 @@
     border: 3px solid #1212FF;
 }
 
-.modal_cerrar_sesion{
-    color: var(--black);
-    font-family: var(--body);
-    font-size: 25px;
-    width: 340px;
-    height: 170px;
-    text-align: center;
-    background: rgba(255, 13, 0, 0.75);
-    border: 5px solid var(--pink);
-    border-radius: 45px;
-}
-
-.modal-content{
-    background-color: transparent;
-    font-size: 25px;
-    font-family: var(--body);
-    border: none;
-}
-
-.modal {
-    top: calc(30%);
-    left: calc(50% - 170px);
- }
-
  .carousel_ordenes{
     width: 95%;
     min-height: 350px;
@@ -152,10 +129,66 @@
     font-family: var(--body);
     font-size: 15px;
 }
-.carousel-control-prev,
-.carousel-control-next{
-  align-self: flex-start; /* Aligns it at the top */
+
+.formulario_vendedor{
+    width: 95%;
+    min-height: 728px;
+    border: 5px solid var(--blue);
+    border-radius: 45px;
 }
+
+.input_formulario_vendedor{
+    color: var(--white);
+    font-family: var(--body);
+    font-size: 25px;
+    width: 600px;
+    text-align: center;
+    background-color: rgba(70, 255, 1, 0.25);
+    border: 3px solid var(--green);
+    border-radius: 45px;
+}
+.btn_Form_Vendedor{
+    background-color: var(--pink);
+    border: 3px solid var(--blue);
+    color: var(--white);
+    font-size: 25px;
+    height: 50px;
+    width: 275px;
+    border-radius: 170px;
+    font-family: var(--body);
+}
+.input_direccion_empresa{
+    text-align: justify;
+    border-radius: 25px;
+}
+
+.modal_cerrar_sesion{
+    color: var(--black);
+    font-family: var(--body);
+    font-size: 25px;
+    width: 340px;
+    height: 170px;
+    text-align: center;
+    background: rgba(255, 13, 0, 0.75);
+    border: 5px solid var(--pink);
+    border-radius: 45px;
+}
+
+.modal-content.cerrar_sesion{
+    background-color: transparent;
+    font-size: 25px;
+    font-family: var(--body);
+    border: none;
+}
+
+.modal.fade.bd-example-modal-sm.modal_cerrar_sesion {
+    top: calc(30%);
+    left: calc(50% - 170px);
+ }
+
+ .modal.fade.modal_producto{
+     
+ }
 /*
 X-Small	None	0–576px
 Small	sm	≥576px
@@ -165,33 +198,32 @@ Extra large	xl	≥1200px
 Extra extra large	xxl	≥1400px
 */
 
-@media  (max-device-width: 576px){      /*Tamaño chico*/
+
+@media  (max-device-width: 575px){    /*Tamaño extrachico hacia abajo*/
 
     .input_formulario {
-            width: 250px;
-            font-size: 20px;
+        width: 270px;
+        font-size: 18px;
     }
-    .input_direccion{
-        height: 10em;
-        width: 12em;
+    .input_formulario_vendedor {
+        width: 270px;
+     font-size: 18px;
     }
-    .input_cbx{
-        transform: scale(1);
-    }
-}
-
-@media  (max-device-width: 575px){    /*Tamaño extrachico*/
-
     .btn_Form_Usuario{
         margin-top: 10px;
         margin-bottom: 10px;
         font-size: 18px;
         width: 200px;
     }
+    .btn_Form_Vendedor{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 18px;
+        width: 290px;
+    }
 }
 
-
-@media  (min-device-width: 576px) and (max-device-width: 992px){    /*Tamaño mediano*/
+@media  (min-device-width: 576px) and (max-device-width: 992px){    /*Tamaño chico*/
 
     .input_cbx{
         transform: scale(1.5);
@@ -206,9 +238,20 @@ Extra extra large	xxl	≥1400px
         width: 200px;
         font-size: 18px;
     }
+    .input_formulario_vendedor {
+        width: 480px;
+    }
+    .btn_Form_Vendedor{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 18px;
+        width: 290px;
+    }
+    
 }
 
-@media  (min-device-width: 993px) and (max-device-width: 1200px){    /*Tamaño mediano*/
+@media  (min-device-width: 993px) and (max-device-width: 1200px)
+{    /*Tamaño mediano*/
 
     .btn_Form_Usuario{
         width: 200px;

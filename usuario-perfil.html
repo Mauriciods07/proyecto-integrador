@@ -79,7 +79,7 @@
                                     <label for="TextoNombre" class="label_formulario">Nombre:</label>
                                 </div>
                                 <div class="col-lg-8 col-md-12 text-center">
-                                    <input name="TextoNombre" type="text"class="input_formulario" id="txtNombre" placeholder="Ingresa tu nombre">
+                                    <input name="TextoNombre" type="text"class="input_formulario" id="txtNombre" placeholder="Ingresa tu nombre" required>
                                 </div>
                             </div>
                             <div class="row ml-3 d-flex justify-content-center mt-3">
@@ -87,7 +87,7 @@
                                     <label for="TextoApellido" class="label_formulario">Apellido:</label>
                                 </div>
                                 <div class="col-lg-8 col-md-12 text-center">
-                                    <input name="TextoApellido" type="text"class="input_formulario" id="txtApellido" placeholder="Ingresa tu apellido">
+                                    <input name="TextoApellido" type="text"class="input_formulario" id="txtApellido" placeholder="Ingresa tu apellido" required>
                                 </div>
                             </div>
                             <div class="row ml-3 d-flex justify-content-center mt-3">
@@ -95,7 +95,7 @@
                                     <label for="TextoCorreo" class="label_formulario">Correo:</label>
                                 </div>
                                 <div class="col-lg-8 col-md-12 text-center">
-                                    <input name="TextoCorreo" type="email"class="input_formulario" id="txtCorreo" placeholder="Ingresa tu correo">
+                                    <input name="TextoCorreo" type="email"class="input_formulario" id="txtCorreo" placeholder="Ingresa tu correo" required>
                                 </div>
                             </div>
                             <div class="row ml-3 d-flex justify-content-center mt-3">
@@ -103,7 +103,7 @@
                                     <label for="NumeroTelefono" class="label_formulario">Teléfono:</label>
                                 </div>
                                 <div class="col-lg-8 col-md-12 text-center">
-                                    <input name="NumeroTelefono" type="number"class="input_formulario" id="txtTelefono" placeholder="Ingresa tu celular">
+                                    <input name="NumeroTelefono" type="number"class="input_formulario" id="txtTelefono" placeholder="Ingresa tu celular" required>
                                 </div>
                             </div>
                             <div class="row ml-3 d-flex justify-content-around mt-3">
@@ -133,13 +133,13 @@
                             <label for="TextoPago" class="label_formulario">Datos de Pago:</label>
                         </div>
                         <div class="col-lg-4 col-md-12 text-center mt-2">
-                            <input name="TextoTarjeta" type="number"class="input_pago_tarjeta" id="txtNombre" placeholder="Número de tarjeta">
+                            <input name="TextoTarjeta" type="number"class="input_pago_tarjeta" id="txtNombre" placeholder="Número de tarjeta" required>
                         </div>
                         <div class="col-lg-2 col-md-6 text-center mt-2">
-                            <input name="TextoVencimiento" type="text"class="input_pago_numeros" id="txtNombre" placeholder="AA/MM">
+                            <input name="TextoVencimiento" type="text"class="input_pago_numeros" id="txtNombre" placeholder="AA/MM" required>
                         </div>
                         <div class="col-lg-2 col-md-6 text-center mt-2">
-                            <input name="TextoCVV" type="text"class="input_pago_numeros" id="txtNombre" placeholder="CVV">
+                            <input name="TextoCVV" type="text"class="input_pago_numeros" id="txtNombre" placeholder="CVV" required>
                         </div>
                     </div>
                 </div>
@@ -163,8 +163,8 @@
     </div>
 
     <!-------------------------------------------------Carousel de cartas de pedidos ordenados por el usuario--------------------------------------------------------->
-    <div class="carousel_ordenes container mt-5 mx-auto">
-      <h2 class="titulo_form text-center mt-5 mb-2">Historial de Compras</h2>
+    <div class="carousel_ordenes container mt-5 mx-auto p-3">
+      <h2 class="titulo_form text-center mt-3 mb-2">Historial de Compras</h2>
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false">
         <div class="carousel-inner carousel_dinamico">    <!--A partir de este punto se agregaran elementos carousel-item con dos elementos cada uno, a excepcion de que haya un numero impar o el usuario solo tenga una compra-->
           <div class="carousel-item active">
@@ -278,11 +278,90 @@
         </button>
       </div>
     </div>
+
+
+    <!--------------------------------------------------------------------------FORMULARIO DE VENDEDOR-------------------------------------------->
+    <div class="container formulario_vendedor mt-5 mx-auto p-3">
+      <h2 class="titulo_form text-center mt-3 mb-5">Vendedor</h2>
+      <form action="" class="formulario_vendedor_action">
+        <div class="align-items-center">       <!--Fila donde esta el formulario personal y foto-->
+                    <div class="row ml-3 d-flex justify-content-center">
+                        <div class="col-lg-3 col-md-12 text-center">
+                            <label for="TextoNombreComercio" class="label_formulario"> Comercio:</label>
+                        </div>
+                        <div class="col-lg-9 col-md-12 text-center">
+                            <input name="TextoNombreComercio" type="text"class="input_formulario_vendedor" id="txtNombreComercio" placeholder="Ingresa el nombre de tu comercio" required>
+                        </div>
+                    </div>
+                    <div class="row ml-3 d-flex justify-content-center mt-3">
+                        <div class="col-lg-3 col-md-12 text-center">
+                            <label for="TextoNombreUsuario" class="label_formulario">Nombre de Usuario:</label>
+                        </div>
+                        <div class="col-lg-9 col-md-12 text-center">
+                            <input name="TextoNombreUsuario" type="text"class="input_formulario_vendedor" id="txtNombreUsuario" placeholder="Ingresa tu apellido" required>
+                        </div>
+                    </div>
+                    <div class="row ml-3 d-flex justify-content-center mt-3">
+                        <div class="col-lg-3 col-md-12 text-center">
+                            <label for="TextoCorreoEmpresa" class="label_formulario">Correo empresarial:</label>
+                        </div>
+                        <div class="col-lg-9 col-md-12 text-center">
+                            <input name="TextoCorreoEmpresa" type="email"class="input_formulario_vendedor" id="txtCorreoEmpresa" placeholder="Ingresa tu correo de empresa" required>
+                        </div>
+                    </div>
+                    <div class="row ml-3 d-flex justify-content-center mt-3">
+                        <div class="col-lg-3 col-md-12 text-center">
+                            <label for="NumeroTelefonoEmpresa" class="label_formulario">Teléfono:</label>
+                        </div>
+                        <div class="col-lg-9 col-md-12 text-center">
+                            <input name="NumeroTelefonoEmpresa" type="number"class="input_formulario_vendedor" id="nmbrTelefonoEmpresa" placeholder="Ingresa tu celular de contacto empresa" required>
+                        </div>
+                    </div>
+                    <div class="row ml-3 d-flex justify-content-around mt-3">
+                        <div class="col-lg-3 col-md-12 text-center">
+                            <label for="TextoDireccionEmpresa" class="label_formulario">Dirección:</label>
+                        </div>
+                        <div class="col-lg-9 col-md-12 text-center">
+                            <textarea name="TextoDireccionEmpresa" class="input_formulario_vendedor input_direccion_empresa" id="txtDireccionEmpresa" rows="5" cols="39" placeholder="Ingresa tu Dirección Comercial (Calle,Colonia,Municipio/Alcaldía,Ciudad,Estado)"></textarea>
+                        </div>
+                    </div>
+        </div>
+        <div class="row ml-4 mt-3 text-center">       <!--Aqui va la fila de botones-->
+            <div class="col-lg-4 col-md-12">
+                <button class="btn_Form_Vendedor">Editar</button>
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <button class="btn_Form_Vendedor">Guardar</button>
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <button type="button" class="btn_Form_Vendedor" style ="font-size: 22px; "data-toggle="modal" data-target=".modal_producto">Agregar Producto</button>
+            </div>
+            
+        </div>
+</form>
+    </div>
 </main>
 
 <!---------------------------------------------------------------MODAL DE CERRAR SESION---------------------------------------------------->
 <div class="modal fade bd-example-modal-sm modal_cerrar_sesion" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-sm ">
+      <div class="modal-content cerrar_sesion">
+        <span class = "mb-2">¿Seguro que quieres cerrar sesión?</span>
+        <div class="row" style="background-color: transparent;">
+            <div class="col-6">
+                <button class="btn_modal_aceptar">Aceptar</button>
+            </div>
+            <div class="col-6">
+                <button class="btn_modal_cancelar" data-dismiss="modal">Cancelar</button>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-----------------------------------------------------------------MODAL DE AGREGAR PRODUCTO------------------------------------------------------------>
+
+  <div class="modal fade modal_producto" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <span class = "mb-2">¿Seguro que quieres cerrar sesión?</span>
         <div class="row" style="background-color: transparent;">
@@ -295,7 +374,7 @@
         </div>
       </div>
     </div>
-  </div
+  </div>
 
 <!-----------------------------------------------------------------footer---------------------------------------------------------------------------------------->
 <footer>
