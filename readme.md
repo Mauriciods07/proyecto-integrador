@@ -3,12 +3,12 @@
 Ecommerce de videojuegos.
 
 **Integrantes:**
-* Miguel Ángel Aguilar
+* Miguel Angel Aguilar Escutia.
 * Alexis González Becerril
-* Jonathan Omar Quino Reyes
+* Jonathan Omar Quino Reyes.
 * Ángel Álvarez Rodríguez
-* Diana Lizbeth Rangel Soto
+* Diana Lizbeth Rangel Soto.
 * Marja Castañeda Hernández
 * Mauricio Iván Díaz Segura
-* Nayelli Gutiérrez Pérez
-* Raquel Arzaluz
+* Nayelli Gutiérrez Pérez 
+* Raquel Monserrat Arzaluz Luna
