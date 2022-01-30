@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Press+Start+2P&display=swap');
+
+:root {
+    /* Paleta de colores */
+    --black: #1C1C1C;
+    --red: #FF0D00;
+    --blue: #1212FF;
+    --green: #46FF01;
+    --pink: #FF00BC;
+    --yellow: #E4F802;
+    --white: #FFFFFF;
+
+    /* Fuentes */
+    --Titles: 'Press Start 2P', cursive;
+    --body: 'Audiowide';
+
+    --radius: 50px;
+}
+
+/* Se colorea el fondo el cuerpo de la pagina */
+body {
+    background-color: var(--black);
+}
+
+.row.banner{        /* El banner de la pagina se colorea de azul y se da una altura de 98.1 pixeles con text blanco*/
+background-color: var(--blue);
+color: white;
+height: 98.1px;
+max-height: 98.1px;
+}
+
+.texto{ /* Tipo de texto 1 con tamaño de 15 pixeles*/
+    font-family: var(--body);
+    font-size: 15px;
+    color: var(--white);
+}
+/*Tipo de texto 2 con tamaño de 20 pixeles*/
+.texto2{
+    font-family: var(--body);
+    font-size: 20px;
+    color: var(--white);
+}
+/*Tipo de texto 3 con tamaño de 20 pixeles y diferente tipo de letra*/
+.texto3{
+    font-family: var(--Titles);
+    font-size: 20px;
+    color: var(--white);
+}
+/*Tipo de texto 4 con tamaño de 10 pixeles*/
+.texto4{
+    font-family: var(--body);
+    font-size: 10px;
+    color: var(--white);
+}
+.main{  /*Seccion personalizada de pagina*/
+    width: max-content;
+    height: 1500px;
+}
+
+.container {
+    margin: 5vw auto;
+}
+
+.articulos-contador {
+    border: 1px solid var(--red);
+    border-radius: var(--radius);
+    background-color: var(--red);
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    top: 20%;
+    right: 0.5%;
+    text-align: center;
+    display: none;
+}
+
+.contador {
+    color: white;
+}
+
+/* ----- título de página ----- */
+.title-box > h4 {
+    position: absolute;
+    left: 25%;
+}
+
+.title-box {
+    border: 3px solid var(--pink);
+    border-radius: var(--radius);
+    text-align: center;
+    width: 10rem;
+    position: relative;
+    height: 2.5rem;
+}
+
+/* ----- artículos ----- */
+.article {
+    border-radius: var(--radius);
+    padding: 50px;
+}
+
+.articlePink {
+    border: 1px solid rgb(255, 0, 188);
+}
+
+.articleBlue {
+    border: 1px solid rgb(18, 18, 255);
+}
+
+.articleRed {
+    border: 1px solid rgb(255, 13, 0);
+
+}
+
+.articleYellow {
+    border: 1px solid rgb(228, 248, 2);
+}
+
+.articleGreen {
+    border: 1px solid rgb(70, 255, 1);
+}
+
+.article img {
+    max-width: 10rem;
+    border: 5px solid black;
+    border-radius: 30px;
+}
+
+.cantidad {
+    display: flex;
+    justify-content: center;   
+}
+
+.cantidad p {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: -2px;
+}
+
+.qtyBtn {
+    border-radius: 50%;
+    height: 1.5rem;
+    width: 1.7rem;
+    color: white;
+    padding: 0px;
+}
+
+.plusBtn {
+    background-color: rgba(0, 0, 0, 0);
+    border: 5px solid var(--green);
+}
+
+.minusBtn {
+    background-color: rgba(0, 0, 0, 0);
+    border: 5px solid var(--red);
+}
+
+.textBtn {
+    position: absolute;
+    transform: translate(-50%, -55%);
+}
+
+.quitarBtn {
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+}
+
+.quitar {
+    justify-content: flex-end;
+    transform: translate(5%, 200%);
+}
+
+.postarticulos {
+    align-items: center;
+}
+
+.qty-div .qty {
+    justify-content: space-around;
+}
+
+.cantidad p {
+    margin: 0;
+}
+
+/* ----- Carrito ----- */
+.carrito img {
+    max-width: 80%;
+    max-height: 20rem;
+}
+
+.carritoBtn {
+    background-color: rgba(0, 0, 0, 0);
+    margin: 30px;
+}
+
+/* ----- Casilla de pago ----- */
+.pago {
+    border: 5px solid var(--blue);
+    border-radius: var(--radius);
+    padding-top: 10px;
+}
+
+.pymBtn {
+    background-color: var(--blue);
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border: 0;
+    height: 3rem;
+    width: 100%;
+}
+
+/* ----- Efectos ----- */
+.title-box:hover {
+    background-color: rgba(255, 0, 188, 0.1);
+}
+
+.articlePink:hover {
+    background-color: rgba(255, 0, 188, 0.1);
+}
+
+.articleBlue:hover {
+    background-color: rgba(18, 18, 255, 0.1);
+}
+
+.articleRed:hover {
+    background-color: rgba(255, 13, 0, 0.1);
+}
+
+.articleYellow:hover {
+    background-color: rgba(228, 248, 2, 0.1);
+}
+
+.articleGreen:hover {
+    background-color: rgba(70, 255, 1, 0.1);
+}
+
+.quitarBtn:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.plusBtn:active {
+    background-color: var(--green);
+}
+
+.minusBtn:active {
+    background-color: var(--red);
+}
+
+.carritoBtn:hover {
+    background-color: rgba(255, 0, 188, 0.5);
+}
+
+.pago:hover {
+    background-color: rgba(18, 18, 255, 0.2);
+}
+
+/* ----- Footer ----- */
+footer{ /*Footer de color azul*/
+    background-color: var(--blue);
+}
+
+footer .row .footer-1{  /*Secion de footer 1 con altura de 100 pixeles*/
+    height: 100px;
+}
+
+footer .row .footer-1 a{    /*Se quitan las animaciones de enlace del listado de enlaces*/
+    text-decoration: none;
+}
+
+li{             /* Se quitan las viñetas de las listas de la pagina*/
+    list-style-type: none;
+}
+
+@media (max-width: 990px) {     /*Cuando el ancho de la pagina sea maximo de 900pixeles, la barra de navegacion colapsada se colorea azul y se colocan separadores blancos a los menus*/
+    .navbar-dark{
+        background-color: var(--blue) !important;
+    }
+    .nav-link{
+        border-top: 1px solid var(--white);
+        border-bottom: 1px solid var(--white);
+    }
+    .container {
+        margin-top: 5vh;
+    }
+    .quitar{
+        transform: translate(5%, 30%);
+    }
+    .carrito img {
+        max-width: 50%;
+    }
+    .articulos-contador {
+        top: 85%;
+        right: 20%;
+    }
+}
