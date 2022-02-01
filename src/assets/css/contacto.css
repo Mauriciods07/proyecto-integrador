@@ -80,3 +80,66 @@ li{             /* Se quitan las viñetas de las listas de la pagina*/
         border-bottom: 1px solid var(--white);
     }
 }
+/* ****************************Contacto********************************************* */
+.contacto{
+    border: 5px solid  var(--blue);
+    border-radius: 60px;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+.tituloContacto{
+    color: var(--white);
+    font-family: var(--body);
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.row.form-group{
+    justify-content: center;
+}
+.nombreContacto{
+    color: var(--white);
+    font-family: var(--body);
+    font-size: 25px;
+    width: 140px;
+    text-align: center;
+}
+.contenedorContacto{
+    /* width: 620px; */
+    height: 40px;
+    border: 3px solid var(--green);
+    background-color: rgba(70, 255, 1, 0.25);
+    border-radius: 60px;
+    /* margin-bottom: 20px; */
+    color: var(--white);
+    font-family: var(--body);
+    font-size: 25px;
+}
+/* .contenedorContacto{
+
+} */
+
+.contenedorContacto.form-control{
+    border: 3px solid var(--green);
+    background-color: rgba(70, 255, 1, 0.25);
+    border-radius: 60px;
+    margin-bottom: 20px;
+    color: var(--white);
+    font-size: 25px;
+}
+
+.btnEnviar{
+    border: 3px solid var(--blue);
+    background-color: var(--pink);
+    color: var(--white);
+    font-family: var(--body);
+    font-size: 30px;
+    border-radius: 170px;
+    width: 217px;
+    height: 78px;
+    margin: 0 auto;
+    display: block;
+}
+.btnEnviar:hover{
+    background-color:  rgba(18, 18, 255, 0.25);
+}
