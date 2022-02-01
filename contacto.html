@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-    <link rel="stylesheet" href="src/assets/css/pred_fonts_styles.css" type="text/css"> <!--Link a hoja de estilos de Pagina base-->
+    <!-- css contacto -->
+    <link rel="stylesheet" href="src/assets/css/contacto.css" type="text/css"> <!--Link a hoja de estilos de Pagina base-->
 
-    <title>GameJoy</title>     <!--Titulo de la pagina-->
+    <title>Contacto GameJoy</title>     <!--Titulo de la pagina-->
   </head>
 
 
@@ -51,7 +52,7 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">  <!--Todo lo que este dentro de esta seccion se colapsa hacia abajo-->
           <div class="navbar-nav mx-auto text-center">  <!-- Menu de navegacion con las paginas enlazadas-->
             <a class="nav-link texto2" href="index.html">INICIO</a>   <!--Enlace de INICIO-->
-            <a class="nav-link texto2" href="contacto.html">CONTACTO</a>    <!--Enlace de CONTACTO-->
+            <a class="nav-link texto2" href="#">CONTACTO</a>    <!--Enlace de CONTACTO-->
             <a class="nav-link texto2">SOBRE NOSOTROS</a>   <!--Enlace de SOBRE NOSOTROS-->
             <a class="nav-link texto2" href="#">CARRITO</a>   <!--Enlace de CARRITO-->
             <a class="nav-link texto2" href="#">CUENTA</a>    <!--Enlace de CUENTA-->
@@ -64,12 +65,73 @@
         </div>
       </nav>
 <!-----------------------------------------------------------------------------Fin de barra de navegacion-------------------------------------------------------->
-<!-- Aqui EMPIEZA LA PAGINA PERSONALIZADA  -->
-<div class="container text-justify">    
-  <main>
-    
-  </main>
-</div>
+<!-- Aqui EMPIEZA LA PAGINA CONTACTO  -->
+<!-- <div class="container text-justify">    
+  <main> -->
+<!-- Aqui EMPIEZA LA PAGINA CONTACTO  -->
+    <div class="conteiner">
+        <div class=" row justify-content-center mt-5 mb-5">
+            <div class="contacto col-md-10 col-sm-10 col-10 ">
+                <!-- contacto -->
+                <h3 class="tituloContacto mt-5">Contacto</h3>
+                <!-- <hr class="bg-danger"> -->
+
+                <form action="https://formsubmit.co/gamejoy.gorgonita@gmail.com" id="form1" method="post" class="needs-validation" novalidate>
+                  <!-- 408bcf8cc4872cf10e6f6f427d614278 -->
+                    <div class="row form-group">
+                        <label for="nombre" class="nombreContacto col-form-label col-md-2 col-sm-11 col-11">Nombre</label>
+                        <div class="col-md-7 col-sm-11 col-11">
+                            <input type="text" name="nombre" id="nombre" value="" required class="contenedorContacto form-control" placeholder="Nombre">
+                            <!-- Validación -->
+                            <div class="valid-feedback">Valido</div>
+                            <div class="invalid-feedback">Completa el campo</div>
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+                        <label for="correo" class="nombreContacto col-form-label col-md-2 col-sm-11 col-11">Correo</label>
+                        <div class="col-md-7 col-sm-11 col-11">
+                            <input type="email" name="correo" id="correo" value="" required class="contenedorContacto form-control" placeholder="Correo">
+                            <!-- Validación -->
+                            <div class="valid-feedback">Valido</div>
+                            <div class="invalid-feedback">Completa el campo</div>
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+                        <label for="telefono" class="nombreContacto col-form-label col-md-2 col-sm-11 col-11">Teléfono</label>
+                        <div class="col-md-7 col-sm-11 col-11">
+                            <input type="tel" name="telefono" id="telefono" value="" required class="contenedorContacto form-control" placeholder="Teléfono">
+                            <!-- Validación -->
+                            <div class="valid-feedback">Valido</div>
+                            <div class="invalid-feedback">Completa el campo</div>
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+                        <label for="mensaje" class="nombreContacto col-form-label col-md-2 col-sm-11 col-11">Mensaje</label>
+                        <div class="col-md-7 col-sm-11 col-11">
+                            <textarea name="mensaje" id="mensaje" rows="10"  class="contenedorContacto form-control" name="mensaje" id="mensaje" placeholder="Mensaje" value="" required ></textarea>
+                            <!-- Validación -->
+                            <div class="valid-feedback">Valido</div>
+                            <div class="invalid-feedback">Completa el campo</div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btnEnviar mb-5" id="btn_enviar" >Enviar</button>
+                    <!-- onclick="return validar();" -->
+
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+<!--   </main>
+</div> -->
 
 <!-- FIN DE LA PAGINA PERSONALIZADA -->
 <!-----------------------------------------------------------------footer---------------------------------------------------------------------------------------->
@@ -119,11 +181,8 @@
 
 
 
-
-
-
-
-
+<!-- ************Script***************** -->
+<script src="src/assets/js/contacto.js"></script>
 
 
 
