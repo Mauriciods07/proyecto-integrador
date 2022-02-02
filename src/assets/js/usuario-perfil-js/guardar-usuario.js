@@ -1,9 +1,10 @@
 function validarUsuario(){
-    if(!($inputTelefono.value.length>9 && $inputTelefono.value.length<12)){
-        alert('El numero de teléfono debe tener de 10 a 11 dígitos');
+    if(!($inputTelefono.value.length>9 && $inputTelefono.value.length<12) || !($inputTarjeta.value.length===16 && $inputVencimiento.value.length===5 && $inputCVV.value.length===3)) {
+        alert('Revisa los campos en rojo');
         return false;
     }
     else{
+        console.log($inputTarjeta.value.length===16,$inputCVV.value.length===3,$inputVencimiento.value.length===5);
         alert('Las modificaciones del Usuario se guardan en el usuario del correo X mediante API');
         $inputNombre.setAttribute('disabled',true);
         $inputApellido.setAttribute('disabled',true);
