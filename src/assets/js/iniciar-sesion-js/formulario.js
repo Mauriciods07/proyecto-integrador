@@ -1,5 +1,5 @@
 const formulario = document.getElementById('formulario');
-const inputs = document.querySelectorAll ('#formulario input')
+const inputs = document.querySelectorAll('#formulario input')
 
 
 const expresiones = {
@@ -88,6 +88,7 @@ formulario.addEventListener ('submit', (e)=> {
 
     if (campos. correo && campos. password){
         formulario.reset();
+        window.location.href="usuario-perfil.html";
 
         document.querySelectorAll('.formulario_grupo-correcto').forEach ((icono) =>{
             icono.classList.remove ('formulario_grupo-correcto')
