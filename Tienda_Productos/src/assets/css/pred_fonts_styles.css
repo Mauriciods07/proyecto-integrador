@@ -102,16 +102,18 @@ li{             /* Se quitan las viñetas de las listas de la pagina*/
     border-radius: 45px;
     margin-left: auto;
     margin-right: auto;
+    color: #FFFFFF; 
 }
-h1{
+.letra{
     font-family: Audiowide;
     font-style: normal;
     font-weight: normal;
-    font-size: 50px;
-    line-height: 60px;
-    display: flex;
+    font-size: 20px;
+    line-height: 30px;
+   /* display: flex;*/
+    text-align:center;
     align-items: center;
-    color: #ffffff; 
+    color: #FFFFFF; 
 }
 .BordeBlanco{
     border-right: #FFFFFF 5px solid;
@@ -309,7 +311,7 @@ p{
 .hoverRosa{ 
     width: 0%;
     height: 100%;
-    background-color: rgba(255, 13, 0, 0.75) ;
+    background-color:rgba(255, 0, 188, 0.75) ;
     position: absolute;
     top: 0;
     display: flex;
