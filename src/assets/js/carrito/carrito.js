@@ -1,6 +1,6 @@
 let Mario = {
     titulo: "Mario Kart",
-    img: "src/img/mario_kart8_deluxe.jpg",
+    img: "src/img/productos/mario_kart8_deluxe.jpg",
     precio: 1400,
     descripcion: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat nisi saepe optio vero animi assumenda non quas corporis corrupti eius eum facere quod sunt repellendus, recusandae quo veritatis dolorem? Molestias.",
     color: "#FF00BC",
@@ -9,7 +9,7 @@ let Mario = {
 
 let Luigi = {
     titulo: "Luigi",
-    img: "src/img/luigis_mansion3.jpg",
+    img: "src/img/productos/luigis_mansion3.jpg",
     precio: 1500,
     descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat voluptatum ullam quis recusandae rem id excepturi tempore magni! Doloremque laudantium vero assumenda illum, reprehenderit atque sunt necessitatibus expedita ipsum?",
     color: "#46FF01",
@@ -18,7 +18,7 @@ let Luigi = {
 
 let Pokemon = {
     titulo: "Pokémon",
-    img: "src/img/pokemon_brilliant_diamond.jpg",
+    img: "src/img/productos/pokemon_brilliant_diamond.jpg",
     precio: 1300,
     descripcion: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta cupiditate, repellat nihil quisquam minima enim expedita cum molestiae natus accusantium fugiat voluptates laboriosam, quas modi perspiciatis laudantium temporibus nemo accusamus.",
     color: "#1212FF",
