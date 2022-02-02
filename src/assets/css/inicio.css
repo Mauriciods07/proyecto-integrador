@@ -93,11 +93,31 @@ li{             /* Se quitan las viñetas de las listas de la pagina*/
     font-family: var(--Titles);
     /* font-size: 150px; */
     color: var(--white);
+    font-size: 70px;
 }
+
 .parrafocarrucelhome{
     font-family: var(--body);
     /* font-size: 80px; */
     color: var(--white);
+    font-size: 60px;
+}
+@media screen and (max-width: 834px){
+    .titulocarrucelhome{
+        font-size: 50px;
+    }
+    .parrafocarrucelhome{
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 460px){
+    .titulocarrucelhome{
+        font-size: 30px;
+    }
+    .parrafocarrucelhome{
+        font-size: 20px;
+    }
 }
 /*---------------------------------------------------------------------------------Productos mas vendidos---------------------------------------------*/
 .containerbverdePMV{
@@ -203,6 +223,14 @@ li{             /* Se quitan las viñetas de las listas de la pagina*/
 }
 .botoncondicionCA:hover{
     background-color: rgba(255,0,0,0.2)   ;
-
+    color: var(--white);
+}
+.botonenvioCA:hover{
+    background-color: rgba(255,0,0,0.2)   ;
+    color: var(--white);
+}
+.botontiendaCA:hover{
+    background-color: rgba(255,0,0,0.2)   ;
+    color: var(--white);
 }
 
