@@ -154,7 +154,7 @@
                         <button type="button" class="btn_Form_Usuario" id="btnEditarUsuario">Editar</button>
                     </div>
                     <div class="col-lg-3 col-md-12">
-                        <button type="submit" name = "btnGuardarUsuario" id = "btnGuardarUsuario" class="btn_Form_Usuario" disabled style="opacity: 0.2;";">Guardar</button>
+                        <button type="submit" name = "btnGuardarUsuario" id = "btnGuardarUsuario" class="btn_Form_Usuario" disabled style="opacity: 0.2;">Guardar</button>
                     </div>
                     <div class="col-lg-3 col-md-12">
                         <button type="button" class="btn_Form_Usuario" data-toggle="modal" data-target=".bd-example-modal-sm">Cerrar Sesión</button>
@@ -361,10 +361,10 @@
 </div>
   <!------------------------------------------------MODAL DE AGREGAR PRODUCTO------------------------------------------------------------>
 
-  <div class="container modal fade modal_producto" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="container modal fade modal_producto" id="modalAgregarProductoNuevo" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content content_producto text-center">
-        <form action="">
+        <!-- <form onsubmit="return(validarAgregarProducto())" autocomplete="off"> -->
             <span class = "titulo_form">Ingresa los datos de tu producto</span>
             <div class="row d-flex justify-content-center mt-2">    <!--Seccion de nombre de producto-->
                 <div class="col-12 col-md-12 text-center">
@@ -384,34 +384,41 @@
             </div>
             <div class="row d-flex justify-content-center mt-1">    <!--Seccion de costos, categoria y cantidad-->
                 <div class="col-lg-4 text-center d-flex flex-column align-items-center">
-                    <label for="TextoCostoNuevo" class="label_formulario_numeros text-center">Costo</label>
-                    <input name="TextoCostoNuevo" type="number"class="input_nuevoproducto_sm" id="nmbrCostoNuevo" placeholder="Costo" required>
+                    <label for="numberCostoNuevo" class="label_formulario_numeros text-center">Costo</label>
+                    <input name="numberCostoNuevo" type="number"class="input_nuevoproducto_sm" id="numberCostoNuevo" placeholder="Costo" required min="1">
                 </div>
                 <div class="col-lg-4 text-center d-flex flex-column align-items-center">
-                    <label for="TextoCantidadNuevo" class="label_formulario_numeros">Cantidad</label>
-                    <input name="TextoCantidadNuevo" type="number"class="input_nuevoproducto_sm" id="txtCantidadNuevo" placeholder="Cantidad" required>
+                    <label for="numberCantidadNuevo" class="label_formulario_numeros">Cantidad</label>
+                    <input name="numberCantidadNuevo" type="number"class="input_nuevoproducto_sm" id="numberCantidadNuevo" placeholder="Cantidad" min="1" required>
                 </div>
                 <div class="col-lg-4 text-center d-flex flex-column align-items-center">
                     <label for="TextoCategoriaNuevo" class="label_formulario_numeros">Categoria</label>
-                    <input name="TextoCategoriaNuevo" type="text"class="input_nuevoproducto_sm" id="txtCategoriaNuevo" placeholder="Categoria" required>
+                    <select name = "TextoCategoriaNuevo" class="input_nuevoproducto_sm align-baseline" id="txtCategoriaNuevo" required>
+                      <option value = "1" selected>Xbox</option>
+                      <option value = "2">PlayStation</option>
+                      <option value = "3">Nintendo</option>
+                      <option value = "3">Otros</option>
+                      <option value = "3">Coleccionables</option>
+                   </select>
+                    <!-- <input name="TextoCategoriaNuevo" type="text"class="input_nuevoproducto_sm" id="txtCategoriaNuevo" placeholder="Categoria" required> -->
                 </div>
             </div>
         
             <div class="row mt-3 style="background-color: transparent;">  <!--Seccion de botones-->
               <div class="col-6">
-                  <form action="">
-                    <input type="file" id="foto_producto_nuevo" class="btn_modal_subirimagen" name="Subir Imagen">
-                  </form>
+                    <img src="src/img/error.png" id="imgProductoNuevo" width="30" height="30">
+                    <label for="archivoFotoProductoNuevo" id="btnSubirImagenProductoNuevo" class="btn_modal_subirimagen">Subir Imagen</label>
+                    <input name="archivoFotoProductoNuevo" type="file" style="display: none;" id="archivoFotoProductoNuevo" name="Subir Imagen" required>
                     <!-- <button class="btn_modal_subirimagen">Subir Imagen</button> -->
               </div>
               <div class="col-3 text-center">
-                    <button class="btn_modal_cancelar_nuevo mt-3" data-dismiss="modal">Cancelar</button>
+                    <button class="btn_modal_cancelar_nuevo mt-3" id="btnModalCancelarProductoNuevo" data-dismiss="modal">Cancelar</button>
               </div>
               <div class="col-3 text-center">
-                  <button type="submit" class="btn_modal_aceptar_nuevo mt-3">Aceptar</button>
+                  <button type="button" class="btn_modal_aceptar_nuevo mt-3" id="btnModalAceptarProductoNuevo">Aceptar</button>
               </div>
             </div>
-         </form>
+         <!-- </form> -->
       </div>
     </div>
   </div>
@@ -498,5 +505,8 @@
     <script src="src/assets/js/usuario-perfil-js/validar-tarjeta.js"></script>
     <script src="src/assets/js/usuario-perfil-js/validar-vencimiento.js"></script>
     <script src="src/assets/js/usuario-perfil-js/validar-CVV.js"></script>
+    <script src="src/assets/js/usuario-perfil-js/agregar-producto.js"></script>
+    <script src="src/assets/js/usuario-perfil-js/cargar-foto-producto-nuevo.js"></script>
+    <script src="src/assets/js/usuario-perfil-js/iniciar-modal-producto-nuevo.js"></script>
   </body>
 </html>

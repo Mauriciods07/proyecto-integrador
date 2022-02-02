@@ -13,6 +13,8 @@
             $btnEditarVendedor.removeAttribute('disabled');
             $btnGuardarVendedor.style.opacity = "0.2";
             $btnGuardarVendedor.setAttribute('disabled',true);
+            $btnAgregarVendedor.style.opacity = "0.2";
+            $btnAgregarVendedor.setAttribute('disabled',true);
             return false;
             // alert('Las modificaciones del vendedor se guardan en el usuario del correo X mediante API');
         }

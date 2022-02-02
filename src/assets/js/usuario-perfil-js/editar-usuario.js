@@ -8,6 +8,7 @@ $btnEditarUsuario.addEventListener('click', (e) =>{
     $inputVencimiento.removeAttribute('disabled');
     $inputCVV.removeAttribute('disabled');
     $inputCBX.removeAttribute('disabled');
+    $archivo.removeAttribute('disabled');
     $btnGuardarUsuario.removeAttribute('disabled');
     $btnGuardarUsuario.style.opacity = "1.0";
     e.target.style.opacity = "0.2";

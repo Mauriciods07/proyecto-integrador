@@ -223,6 +223,7 @@
     color: var(--white);
     font-family: var(--body);
     font-size: 25px;
+    height: fit-content;
     width: 250px;
     text-align: center;
     background-color: rgba(70, 255, 1, 0.25);
