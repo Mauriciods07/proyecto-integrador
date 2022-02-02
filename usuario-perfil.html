@@ -49,7 +49,7 @@
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">  <!--Agregar Paginas del equipo-->
           <div class="navbar-nav mx-auto text-center">
             <a class="nav-link texto2" href="index.html">INICIO</a>
             <a class="nav-link texto2" href="#">CONTACTO</a>
@@ -336,7 +336,7 @@
                 <button type="submit" class="btn_Form_Vendedor" id="btn_Guardar_Vendedor" style="opacity: 0.2;" disabled>Guardar</button>
             </div>
             <div class="col-lg-4 col-md-12">
-                <button type="button" class="btn_Form_Vendedor" style ="font-size: 22px; "data-toggle="modal" data-target=".modal_producto" id="btn_Agregar_Vendedor" disabled>Agregar Producto</button>
+                <button type="button" class="btn_Form_Vendedor" style ="font-size: 22px; "data-toggle="modal" data-target=".modal_producto" id="btn_Agregar_Vendedor" disabled>Añadir Producto</button>
             </div>
         </div>
     </form>
@@ -350,7 +350,7 @@
         <span class = "mb-2">¿Seguro que quieres cerrar sesión?</span>
         <div class="row" style="background-color: transparent;">
             <div class="col-6">
-                <button class="btn_modal_aceptar">Aceptar</button>
+                <button class="btn_modal_aceptar"><a href="iniciar-sesion.html">Aceptar</a></button>  <!--Agregar pagina de Marja y Raquel-->
             </div>
             <div class="col-6">
                 <button class="btn_modal_cancelar" data-dismiss="modal">Cancelar</button>
@@ -495,5 +495,8 @@
     <script src="src/assets/js/usuario-perfil-js/guardar-usuario.js"></script>
     <script src="src/assets/js/usuario-perfil-js/validar-telefono-usuario.js"></script>
     <script src="src/assets/js/usuario-perfil-js/validar-telefono-vendedor.js"></script>
+    <script src="src/assets/js/usuario-perfil-js/validar-tarjeta.js"></script>
+    <script src="src/assets/js/usuario-perfil-js/validar-vencimiento.js"></script>
+    <script src="src/assets/js/usuario-perfil-js/validar-CVV.js"></script>
   </body>
 </html>

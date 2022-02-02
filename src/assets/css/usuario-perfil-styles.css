@@ -205,6 +205,10 @@
     font-family: var(--body);
     border: none;
 }
+.container.modal.fade.modal_producto {
+    top: calc(5%);
+    left: calc(50% - 500px);
+ }
 .input_nuevoproducto{
     color: var(--white);
     font-family: var(--body);
@@ -293,8 +297,8 @@ Extra extra large	xxl	≥1400px
     .btn_Form_Vendedor{
         margin-top: 10px;
         margin-bottom: 10px;
-        font-size: 18px;
-        width: 290px;
+        font-size: 17px;
+        width: 260px;
     }
     .input_nuevoproducto{
         font-size: 15px;
@@ -314,7 +318,7 @@ Extra extra large	xxl	≥1400px
         font-size: 12px;
     }
     .input_nuevoproducto_sm{
-        font-size: 18px;
+        font-size: 16px;
         width: 200px;
     }
     .btn_modal_cancelar_nuevo{
@@ -329,10 +333,18 @@ Extra extra large	xxl	≥1400px
         font-size: 12px;
         width: 80px;
     }
+    .container.modal.fade.modal_producto {
+        top: 0px;
+        left: calc(50% - 185px);
+     }
 }
 
 @media  (min-device-width: 576px) and (max-device-width: 992px){    /*Tamaño chico*/
 
+    .container.modal.fade.modal_producto {
+        top: calc(5%);
+        left: calc(50% - 350px);
+     }
     .input_cbx{
         transform: scale(1.5);
         align-items: center;
@@ -387,6 +399,11 @@ Extra extra large	xxl	≥1400px
 
 @media  (min-device-width: 993px) and (max-device-width: 1200px)
 {    /*Tamaño mediano*/
+
+    .container.modal.fade.modal_producto {
+        top: calc(5%);
+        left: calc(50% - 450px);
+     }
 
     .btn_Form_Usuario{
         margin-top: 10px;
