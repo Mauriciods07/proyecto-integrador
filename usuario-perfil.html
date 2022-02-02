@@ -15,11 +15,11 @@
         <div class="row banner d-flex justify-content-between"> <!--Banner donde se colocan medios de contacto y redes sociales-->
             <div class="col-md-3 col-lg ml-5 d-flex align-items-center">  <!--Para la primera columna, hacemos que su hijo directo se aparte con un marginleft de 5 y se aline al centro de manera vertical (eje y)-->
               <div class="row d-inline-flex align-items-center">  <!--Se crea una nueva fila dentro de la columna, por coveniencia, los hijos de esta columna se alinearan al centro de manera horizontal y se separan con un margintop de 2-->
-                <a href="https://es-la.facebook.com/"><img class="m-1" src="/src/img/FacebookLogo.png" width="25"></a> <!--Icono con liga a facebook de tamaño 25 y margen derecho de 3-->
-                <a href="https://www.instagram.com/?hl=es"><img class="m-1" src="/src/img/InstagramLogo.png" width="30"></a>  <!--Icono con liga a instagram-->
-                <a href="https://twitter.com/?lang=es"><img class="m-1" src="/src/img/Twiterlogo.png" width="25"></a> <!--Icono con liga a twitter-->
+                <a href="https://es-la.facebook.com/"><img class="m-1" src="src/img/FacebookLogo.png" width="25"></a> <!--Icono con liga a facebook de tamaño 25 y margen derecho de 3-->
+                <a href="https://www.instagram.com/?hl=es"><img class="m-1" src="src/img/InstagramLogo.png" width="30"></a>  <!--Icono con liga a instagram-->
+                <a href="https://twitter.com/?lang=es"><img class="m-1" src="src/img/Twiterlogo.png" width="25"></a> <!--Icono con liga a twitter-->
                 <!-- <a href="https://www.flaticon.es/iconos-gratis/insignia-social-de-twitter" title="insignia social de twitter iconos">Insignia social de twitter iconos creados por Pixel perfect - Flaticon</a> -->
-                <a href="https://www.tiktok.com/es/"><img class="m-1" src="/src/img/Tiktoklogo.png" width="25"></a>
+                <a href="https://www.tiktok.com/es/"><img class="m-1" src="src/img/Tiktoklogo.png" width="25"></a>
                 <!-- <a href="https://www.flaticon.com/free-icons/tiktok" title="tiktok icons">Tiktok icons created by Aldo Cervantes - Flaticon</a> -->
                 <span class="texto align-baseline">¡Síguenos!</span> <!--Texto en span alineado a la mitad del row padre inmediato-->
                </div>
@@ -31,7 +31,7 @@
             </div>
             <div class="col-md-3 col-lg d-flex justify-content-end">  <!--Se crea columna con el hijo directo alineado al final del row padre-->
               <div class="row mr-5 d-flex align-items-center">  <!--Se alinean los hijos directos hacia el centro vertical y con margen derecho de 5 (Alejarse de la derecha)-->
-                <a href="https://www.whatsapp.com/?lang=es"><img class="m-2" src="/src/img/WhastappLogo.png" width="25"></a>  <!--Se coloca icono de whatsapp con margen general de 1 y tamaño de 25px-->
+                <a href="https://www.whatsapp.com/?lang=es"><img class="m-2" src="src/img/WhastappLogo.png" width="25"></a>  <!--Se coloca icono de whatsapp con margen general de 1 y tamaño de 25px-->
                 <!-- <a href="https://www.flaticon.com/free-icons/whatsapp" title="whatsapp icons">Whatsapp icons created by Pixel perfect - Flaticon</a> -->
                 <span class="texto">Ponte en contacto</span>  <!--Texto de ponte en contacto-->
               </div>
@@ -43,7 +43,7 @@
 
       <nav class="navbar navbar-expand-lg navbar-dark navbar-toggleable-lg">
         <a class="navbar-brand" href="#">
-          <img src="/src/img/LogoGJ.png" width="80" height="100" alt="">
+          <img src="src/img/LogoGJ.png" width="80" height="100" alt="">
         </a>
         <span class="texto3 d-block d-sm-block d-md-block d-lg-none">GAME<br>JOY</span>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,9 +59,9 @@
             <a class="nav-link texto2">TIENDA</a>
           </div>
           <div class="d-flex flex-row justify-content-around">
-            <a href="#" class="m-2"><img src="/src/img/IconodeUsuario.png" width="50" height="50" alt="Icono Cuenta"></a>
+            <a href="#" class="m-2"><img src="src/img/IconodeUsuario.png" width="50" height="50" alt="Icono Cuenta"></a>
             <!-- <a href="https://www.flaticon.com/free-icons/user" title="user icons">User icons created by Smashicons - Flaticon</a> -->
-            <a href="#" class="m-2"><img src="/src/img/IconodeCarrito.png" width="50" height="50" alt="Icono Carrito"></a>
+            <a href="#" class="m-2"><img src="src/img/IconodeCarrito.png" width="50" height="50" alt="Icono Carrito"></a>
             <!-- <a href="https://www.flaticon.com/free-icons/shopping-cart" title="shopping cart icons">Shopping cart icons created by Smashicons - Flaticon</a> -->
           </div>
         </div>
@@ -71,7 +71,7 @@
 <main class="mb-5">
     <div class="container formulario_usuario mt-5">
         <h2 class="titulo_form text-center mt-5 mb-5">Mi Perfil</h2>
-        <form action="" class="formulario">
+        <form id="formularioUsuario" autocomplete="off" onsubmit="return(validarUsuario())" class="formulario">
                 <div class="row">       <!--Fila donde esta el formulario personal y foto-->
                     <div class="col-lg-8 order-1">
                             <div class="row ml-3 d-flex justify-content-center">
@@ -103,7 +103,7 @@
                                     <label for="txtTelefonoUsuario" class="label_formulario">Teléfono:</label>
                                 </div>
                                 <div class="col-lg-8 col-md-12 text-center">
-                                    <input name="txtTelefonoUsuario" type="number"class="input_formulario" id="txtTelefonoUsuario" placeholder="Ingresa tu celular" required disabled>
+                                    <input name="txtTelefonoUsuario" type="number"class="input_formulario" id="txtTelefonoUsuario" placeholder="Ingresa tu celular" min="0" maxlength="11" minlength="10" required disabled>
                                 </div>
                             </div>
                             <div class="row ml-3 d-flex justify-content-around mt-3">
@@ -135,13 +135,13 @@
                             <label for="txtTarjeta" class="label_formulario">Datos de Pago:</label>
                         </div>
                         <div class="col-lg-4 col-md-12 text-center mt-2">
-                            <input name="txtTarjeta" type="number"class="input_pago_tarjeta" id="txtTarjeta" placeholder="Número de tarjeta" required disabled>
+                            <input name="txtTarjeta" type="number"class="input_pago_tarjeta" id="txtTarjeta" placeholder="Número de tarjeta" maxlength="16" minlength="16" required disabled>
                         </div>
                         <div class="col-lg-2 col-md-6 text-center mt-2">
-                            <input name="txtVencimiento" type="text"class="input_pago_numeros" id="txtVencimiento" placeholder="AA/MM" required disabled>
+                            <input name="txtVencimiento" type="text"class="input_pago_numeros" id="txtVencimiento" maxlength="5" minlength="5" placeholder="AA/MM" required disabled>
                         </div>
                         <div class="col-lg-2 col-md-6 text-center mt-2">
-                            <input name="txtCVV" type="text"class="input_pago_numeros" id="txtCVV" placeholder="CVV" required disabled>
+                            <input name="txtCVV" type="text"class="input_pago_numeros" id="txtCVV" placeholder="CVV" maxlength="3" minlength="3" required disabled>
                         </div>
                     </div>
                 </div>
@@ -154,7 +154,7 @@
                         <button type="button" class="btn_Form_Usuario" id="btnEditarUsuario">Editar</button>
                     </div>
                     <div class="col-lg-3 col-md-12">
-                        <button name = "btnGuardarUsuario" id = "btnGuardarUsuario" class="btn_Form_Usuario" disabled style="opacity: 0.2;";">Guardar</button>
+                        <button type="submit" name = "btnGuardarUsuario" id = "btnGuardarUsuario" class="btn_Form_Usuario" disabled style="opacity: 0.2;";">Guardar</button>
                     </div>
                     <div class="col-lg-3 col-md-12">
                         <button type="button" class="btn_Form_Usuario" data-toggle="modal" data-target=".bd-example-modal-sm">Cerrar Sesión</button>
@@ -285,22 +285,22 @@
     <!------------------------------------------------------------FORMULARIO DE VENDEDOR-------------------------------------------->
   <div class="container formulario_vendedor mt-5 mx-auto p-3" style = "display: none;" id="divFormularioVendedor">
     <h2 class="titulo_form text-center mt-3 mb-5">Vendedor</h2>
-    <form action="functio" class="formulario_vendedor_action">
+    <form id="formularioVendedor"  autocomplete="off" onsubmit="return(validarVendedor())" class="formulario_vendedor_action">
         <div class="align-items-center">       <!--Seccion donde estan los campos principales del formulario-->
                     <div class="row ml-3 d-flex justify-content-center">  <!--Fila donde esta comercio-->
                         <div class="col-lg-3 col-md-12 text-center">
                             <label for="TextoNombreComercio" class="label_formulario"> Comercio:</label>
                         </div>
                         <div class="col-lg-9 col-md-12 text-center">
-                            <input name="TextoNombreComercio" type="text"class="input_formulario_vendedor" id="txtNombreComercio" placeholder="Ingresa el nombre de tu comercio" required>
+                            <input name="TextoNombreComercio" type="text"class="input_formulario_vendedor" id="txtNombreComercio" placeholder="Ingresa el nombre de tu comercio" required disabled>
                         </div>
                     </div>
                     <div class="row ml-3 d-flex justify-content-center mt-3">   <!--Fila donde esta el nombre de usuario-->
                         <div class="col-lg-3 col-md-12 text-center">
-                            <label for="TextoNombreUsuario" class="label_formulario">Nombre de Usuario:</label>
+                            <label for="TextoNombreVendedor" class="label_formulario">Nombre Legal:</label>
                         </div>
                         <div class="col-lg-9 col-md-12 text-center">
-                            <input name="TextoNombreUsuario" type="text"class="input_formulario_vendedor" id="txtNombreUsuario" placeholder="Ingresa tu apellido" required>
+                            <input name="TextoNombreVendedor" type="text"class="input_formulario_vendedor" id="txtNombreVendedor" placeholder="Ingresa nombre de persona física" required disabled>
                         </div>
                     </div>
                     <div class="row ml-3 d-flex justify-content-center mt-3"> <!--Fila donde esta el correo empresarial-->
@@ -308,7 +308,7 @@
                             <label for="TextoCorreoEmpresa" class="label_formulario">Correo empresarial:</label>
                         </div>
                         <div class="col-lg-9 col-md-12 text-center">
-                            <input name="TextoCorreoEmpresa" type="email"class="input_formulario_vendedor" id="txtCorreoEmpresa" placeholder="Ingresa tu correo de empresa" required>
+                            <input name="TextoCorreoEmpresa" type="email"class="input_formulario_vendedor" id="txtCorreoEmpresa" placeholder="Ingresa tu correo de empresa" required disabled>
                         </div>
                     </div>
                     <div class="row ml-3 d-flex justify-content-center mt-3"> <!--Fila donde esta el telefono empresarial-->
@@ -316,7 +316,7 @@
                             <label for="NumeroTelefonoEmpresa" class="label_formulario">Teléfono:</label>
                         </div>
                         <div class="col-lg-9 col-md-12 text-center">
-                            <input name="NumeroTelefonoEmpresa" type="number"class="input_formulario_vendedor" id="nmbrTelefonoEmpresa" placeholder="Ingresa tu celular de contacto empresa" required>
+                            <input name="NumeroTelefonoEmpresa" type="number"class="input_formulario_vendedor" id="nmbrTelefonoEmpresa" placeholder="Ingresa tu celular de contacto empresa" min="0" maxlength="11" minlength="10" required disabled>
                         </div>
                     </div>
                     <div class="row ml-3 d-flex justify-content-around mt-3">   <!--Fila donde esta la direccion-->
@@ -324,19 +324,19 @@
                             <label for="TextoDireccionEmpresa" class="label_formulario">Dirección:</label>
                         </div>
                         <div class="col-lg-9 col-md-12 text-center">
-                            <textarea name="TextoDireccionEmpresa" class="input_formulario_vendedor input_direccion_empresa" id="txtDireccionEmpresa" rows="5" cols="39" placeholder="Ingresa tu Dirección Comercial (Calle,Colonia,Municipio/Alcaldía,Ciudad,Estado)"></textarea>
+                            <textarea name="TextoDireccionEmpresa" class="input_formulario_vendedor input_direccion_empresa" id="txtDireccionEmpresa" rows="5" cols="39" placeholder="Ingresa tu Dirección Comercial (Calle,Colonia,Municipio/Alcaldía,Ciudad,Estado)" required disabled></textarea>
                         </div>
                     </div>
         </div>
         <div class="row ml-4 mt-3 text-center">       <!--Aqui va la fila de botones del formulario vendedor-->
             <div class="col-lg-4 col-md-12">
-                <button class="btn_Form_Vendedor">Editar</button>
+                <button type="button" class="btn_Form_Vendedor" id="btn_Editar_Vendedor" disabled style="opacity: 0.2;">Editar</button>
             </div>
             <div class="col-lg-4 col-md-12">
-                <button type="submit" class="btn_Form_Vendedor">Guardar</button>
+                <button type="submit" class="btn_Form_Vendedor" id="btn_Guardar_Vendedor" style="opacity: 0.2;" disabled>Guardar</button>
             </div>
             <div class="col-lg-4 col-md-12">
-                <button type="button" class="btn_Form_Vendedor" style ="font-size: 22px; "data-toggle="modal" data-target=".modal_producto">Agregar Producto</button>
+                <button type="button" class="btn_Form_Vendedor" style ="font-size: 22px; "data-toggle="modal" data-target=".modal_producto" id="btn_Agregar_Vendedor" disabled>Agregar Producto</button>
             </div>
         </div>
     </form>
@@ -435,17 +435,17 @@
     </div>
     <div class="col-md-3 col-lg-3 align-self-center d-flex justify-content-center mt-3">
       <a href="index.html">
-        <img src="/src/img/LogoGJ.png" width="80" height="100" alt="">
+        <img src="src/img/LogoGJ.png" width="80" height="100" alt="">
       </a>
     </div>
     <div class="col-md-3 col-lg-3 text-center mt-3">
         <span class="texto2 d-block">Síguenos en redes sociales</span>
           <div class="row d-inline-flex align-items-center">  <!--Se crea una nueva fila dentro de la columna, por coveniencia, los hijos de esta columna se alinearan al centro de manera horizontal y se separan con un margintop de 2-->
-            <a href="https://es-la.facebook.com/"><img class="m-1" src="/src/img/FacebookLogo.png" width="40"></a> <!--Icono con liga a facebook de tamaño 25 y margen derecho de 3-->
-            <a href="https://www.instagram.com/?hl=es"><img class="m-1" src="/src/img/InstagramLogo.png" width="40"></a>  <!--Icono con liga a instagram-->
-            <a href="https://twitter.com/?lang=es"><img class="m-1" src="/src/img/Twiterlogo.png" width="50"></a> <!--Icono con liga a twitter-->
+            <a href="https://es-la.facebook.com/"><img class="m-1" src="src/img/FacebookLogo.png" width="40"></a> <!--Icono con liga a facebook de tamaño 25 y margen derecho de 3-->
+            <a href="https://www.instagram.com/?hl=es"><img class="m-1" src="src/img/InstagramLogo.png" width="40"></a>  <!--Icono con liga a instagram-->
+            <a href="https://twitter.com/?lang=es"><img class="m-1" src="src/img/Twiterlogo.png" width="50"></a> <!--Icono con liga a twitter-->
             <!-- <a href="https://www.flaticon.es/iconos-gratis/insignia-social-de-twitter" title="insignia social de twitter iconos">Insignia social de twitter iconos creados por Pixel perfect - Flaticon</a> -->
-            <a href="https://www.tiktok.com/es/"><img class="mr-3" src="/src/img/Tiktoklogo.png" width="40"></a>
+            <a href="https://www.tiktok.com/es/"><img class="mr-3" src="src/img/Tiktoklogo.png" width="40"></a>
             <!-- <a href="https://www.flaticon.com/free-icons/tiktok" title="tiktok icons">Tiktok icons created by Aldo Cervantes - Flaticon</a> -->
            </div>
     </div>
@@ -455,13 +455,13 @@
       <span class="texto2">Gorgonitas 2022</span>
     </div>
     <div class="col-sm col-md-6 d-flex justify-content-center pb-2">
-      <a href="https://www.paypal.com/mx/home"><img class="mr-3" src="/src/img/LogodePaypal.png" width="40"></a>
+      <a href="https://www.paypal.com/mx/home"><img class="mr-3" src="src/img/LogodePaypal.png" width="40"></a>
       <!-- <a href="https://www.flaticon.com/free-icons/paypal" title="paypal icons">Paypal icons created by Roundicons - Flaticon</a> -->
-      <a href="https://www.visa.com.mx/"><img class="mr-3" src="/src/img/LogodeVisa.png" width="50"></a>
+      <a href="https://www.visa.com.mx/"><img class="mr-3" src="src/img/LogodeVisa.png" width="50"></a>
       <!-- <a href="https://www.flaticon.com/free-icons/visa" title="visa icons">Visa icons created by Pixel Buddha - Flaticon</a> -->
-      <a href="https://www.americanexpress.com/es-mx/"><img class="mr-3" src="/src/img/IconodeEfectivo.png" width="50"></a>
+      <a href="https://www.americanexpress.com/es-mx/"><img class="mr-3" src="src/img/IconodeEfectivo.png" width="50"></a>
       <!-- <a href="https://www.flaticon.com/free-icons/american-express" title="american express icons">American express icons created by Freepik - Flaticon</a> -->
-      <a href="https://bitcoin.org/es/"><img class="mr-3" src="/src/img/LogodeBitcoin.png" width="40"></a>
+      <a href="https://bitcoin.org/es/"><img class="mr-3" src="src/img/LogodeBitcoin.png" width="40"></a>
       <!-- <a href="https://www.flaticon.com/free-icons/bitcoin" title="bitcoin icons">Bitcoin icons created by Freepik - Flaticon</a> -->
     </div>
   </div>
@@ -482,7 +482,7 @@
 
 
 
-    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <!--Recursos de Bootstrap, y scripts para funcionar la pagina -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
     
@@ -490,6 +490,10 @@
     <script src="src/assets/js/usuario-perfil-js/cargar-foto-usuario.js"></script>
     <script src="src/assets/js/usuario-perfil-js/editar-usuario.js"></script>
     <script src="src/assets/js/usuario-perfil-js/checkbox-vendedor.js"></script>
-
+    <script src="src/assets/js/usuario-perfil-js/editar-vendedor.js"></script>
+    <script src="src/assets/js/usuario-perfil-js/guardar-vendedor.js"></script>
+    <script src="src/assets/js/usuario-perfil-js/guardar-usuario.js"></script>
+    <script src="src/assets/js/usuario-perfil-js/validar-telefono-usuario.js"></script>
+    <script src="src/assets/js/usuario-perfil-js/validar-telefono-vendedor.js"></script>
   </body>
 </html>

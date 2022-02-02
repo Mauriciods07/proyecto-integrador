@@ -1,4 +1,4 @@
-let $btnEditar = document.querySelector('#btnEditarUsuario');
+let $btnEditarUsuario = document.querySelector('#btnEditarUsuario');
 let $inputNombre = document.querySelector('#txtNombreUsuario');
 let $inputApellido = document.querySelector('#txtApellidoUsuario');
 let $inputCorreo = document.querySelector('#txtCorreoUsuario');
@@ -9,13 +9,12 @@ let $inputTarjeta = document.querySelector('#txtTarjeta');
 let $inputVencimiento = document.querySelector('#txtVencimiento');
 let $inputCVV = document.querySelector('#txtCVV');
 let $inputCBX = document.querySelector('#cbxUneteEquipo');
-let $inputGuardarUsuario = document.querySelector('#btnGuardarUsuario');
+let $btnGuardarUsuario = document.querySelector('#btnGuardarUsuario');
 let $formularioVendedor = document.querySelector('.formulario_vendedor');
 
-$btnEditar.addEventListener('click', (e) =>{
+$btnEditarUsuario.addEventListener('click', (e) =>{
     $inputNombre.removeAttribute('disabled');
     $inputApellido.removeAttribute('disabled');
-    $inputCorreo.removeAttribute('disabled');
     $inputTelefono.removeAttribute('disabled');
     $inputDireccion.removeAttribute('disabled');
     $inputFoto.removeAttribute('disabled');
@@ -23,8 +22,13 @@ $btnEditar.addEventListener('click', (e) =>{
     $inputVencimiento.removeAttribute('disabled');
     $inputCVV.removeAttribute('disabled');
     $inputCBX.removeAttribute('disabled');
-    $inputGuardarUsuario.removeAttribute('disabled');
-    $inputGuardarUsuario.style.opacity = "1.0";
+    $btnGuardarUsuario.removeAttribute('disabled');
+    $btnGuardarUsuario.style.opacity = "1.0";
     e.target.style.opacity = "0.2";
     e.target.setAttribute('disabled',true);
+    $btnEditarVendedor.removeAttribute('disabled');
+    $btnEditarVendedor.style.opacity = "1.0";
+    $btnAgregarVendedor.removeAttribute('disabled',true);
+    $btnAgregarVendedor.style.opacity = "1.0";
+    alert('Has habilitado la opcion de editar datos del usuario,excepto correo porque es el identificador unico en BD');
 });

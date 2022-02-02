@@ -39,7 +39,7 @@
     border-radius: 25px;
 }
 .input_pago_tarjeta{
-    color: var(--black);
+    color: var(--white);
     font-family: var(--body);
     font-size: 15px;
     width: 200px;
@@ -49,7 +49,7 @@
     border-radius: 45px;
 }
 .input_pago_numeros{
-    color: var(--black);
+    color: var(--white);
     font-family: var(--body);
     font-size: 15px;
     width: 100px;
