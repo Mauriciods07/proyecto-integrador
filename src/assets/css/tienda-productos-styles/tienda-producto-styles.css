@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Press+Start+2P&display=swap');
+
+:root {
+    /* Paleta de colores */
+    --black: #1C1C1C;
+    --red: #FF0D00;
+    --blue: #1212FF;
+    --green: #46FF01;
+    --pink: #FF00BC;
+    --yellow: #E4F802;
+    --white: #FFFFFF;
+
+    /* Fuentes */
+    --Titles: 'Press Start 2P', cursive;
+    --body: 'Audiowide';
+}
+
+/* Se colorea el fondo el cuerpo de la pagina */
+body {
+    background-color: var(--black);
+}
+
+.row.banner{        /* El banner de la pagina se colorea de azul y se da una altura de 98.1 pixeles con text blanco*/
+background-color: var(--blue);
+color: white;
+height: 98.1px;
+max-height: 98.1px;
+}
+
+.texto{ /* Tipo de texto 1 con tamaño de 15 pixeles*/
+    font-family: var(--body);
+    font-size: 15px;
+    color: var(--white);
+}
+/*Tipo de texto 2 con tamaño de 20 pixeles*/
+.texto2{
+    font-family: var(--body);
+    font-size: 20px;
+    color: var(--white);
+}
+/*Tipo de texto 3 con tamaño de 20 pixeles y diferente tipo de letra*/
+.texto3{
+    font-family: var(--Titles);
+    font-size: 20px;
+    color: var(--white);
+}
+/*Tipo de texto 4 con tamaño de 10 pixeles*/
+.texto4{
+    font-family: var(--body);
+    font-size: 10px;
+    color: var(--white);
+}
+.main{  /*Seccion personalizada de pagina*/
+    width: max-content;
+    height: 1500px;
+}
+
+footer{ /*Footer de color azul*/
+    background-color: var(--blue);
+}
+
+footer .row .footer-1{  /*Secion de footer 1 con altura de 100 pixeles*/
+    height: 100px;
+}
+
+footer .row .footer-1 a{    /*Se quitan las animaciones de enlace del listado de enlaces*/
+    text-decoration: none;
+}
+
+li{             /* Se quitan las viñetas de las listas de la pagina*/
+    list-style-type: none;
+}
+
+@media (max-width: 990px) {     /*Cuando el ancho de la pagina sea maximo de 900pixeles, la barra de navegacion colapsada se colorea azul y se colocan separadores blancos a los menus*/
+    .navbar-dark{
+        background-color: var(--blue) !important;
+    }
+    .nav-link{
+        border-top: 1px solid var(--white);
+        border-bottom: 1px solid var(--white);
+    }
+}
+
+
+
+/*****************************************DIANA*********************************************/
+
+.ajuste{ /*Realiza un ajuste en el contenido para el margen de la linea blanca*/
+    margin-left: 5em;
+    margin-right: 5em;
+}
+.ajuste2{ /*Realiza un ajuste en el contenido para el margen en el footer*/
+    margin-left: -10em;
+    margin-right: -10em;
+}
+.div1{ 
+    height: 70px;
+    width: 220px;
+    border: 5px solid #FF00BC;
+    box-sizing: border-box; /*hace que el padding y el border pasen a formar parte del cálculo del ancho de la caja y no lo suman posteriormente.*/
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 45px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #FFFFFF; 
+}
+.letra{
+    font-family: Audiowide;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+   /* display: flex;*/
+    text-align:center;
+    align-items: center;
+    color: #FFFFFF; 
+}
+.BordeBlanco{
+    border-right: #FFFFFF 5px solid;
+    border-left: #FFFFFF 5px solid;
+}
+.Etiquetas{ /*Formato de los elementos que etiqueta*/
+    font-family: Audiowide;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 40px;
+    align-items: center;
+    color: #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 45px;
+    border: 5px solid rgba(255, 13, 0, 0);
+    text-align:center;
+    margin: 10px;
+}
+.ImaSeccion{
+    width: 420px;
+    height: 332px;
+    border: 5px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 45px;    
+    transition: transform 1.5s; /*Tiempo de reaccion para que se ejecute el hover*/
+}
+.ImaSeccion:hover{
+    transform: scale(1.07);
+}
+.TextoProducto{
+    align-items: center;
+    text-align:center;
+    display: flex;
+    font-family: Audiowide;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 40px;
+    align-items: center;
+    color: #FFFFFF; 
+}
+.Imagen_prducto{
+width: 340px;
+height: 242px;
+border: 5px solid #FFFFFF;
+box-sizing: border-box;
+border-radius: 45px;
+transition: transform 1.5s;
+background-color: #1C1C1C;
+}
+.redondo{/*Da el formato de circulo en el boton de carrito*/
+    display: block;
+    margin: auto;    
+    width: 90px;
+    height: 90px;
+    border: 5px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 360px;
+    background-color: #1C1C1C;
+}
+.Amarillo {
+    cursor: pointer; /*indica que el cursos esta sobre el boton*/
+    background: linear-gradient(to right, transparent 50%, rgba(228, 248, 2, 0.25) 25%);
+    background-size: 200%; /*Se desplaza el color para que no aparezca en pantalla*/
+    background-position: left; /*el relleno queda de lado izquiero */
+}
+.Amarillo:hover {/*Modifica la posicion de el relleno */
+   background-position: right; /*el relleno lo envia de lado derecho*/ /*Genera el efecto de transicion de color*/   
+}
+.Azul {/*Relleno de boton carrito*/
+    cursor: pointer; /*indica que el cursos esta sobre el boton*/
+    background: linear-gradient(to right, transparent 50%, rgba(18, 18, 255, 0.25) 25%);
+    background-size: 200%; /*Se desplaza el color para que no aparezca en pantalla*/
+    background-position: left; /*el relleno queda de lado izquiero */
+}
+.Azul:hover {/*Modifica la posicion de el relleno */
+   background-position: right; /*el relleno lo envia de lado derecho*/ 
+                               /*genera el efecto de transicion de color*/   
+}
+.Rosa{/*Relleno de boton carrito*/
+    cursor: pointer; /*indica que el cursos esta sobre el boton*/
+    background: linear-gradient(to right, transparent 50%, rgba(255, 0, 188, 0.25) 25%);
+    background-size: 200%; /*Se desplaza el color para que no aparezca en pantalla*/
+    background-position: left; /*el relleno queda de lado izquiero */
+}
+.Rosa:hover {/*Modifica la posicion de el relleno */
+   background-position: right; /*el relleno lo envia de lado derecho*/ /*genera el efecto de transicion de color*/   
+}
+.Verde {/*Relleno de boton carrito*/
+    cursor: pointer; /*indica que el cursos esta sobre el boton*/
+    background: linear-gradient(to right, transparent 50%, rgba(70, 255, 1, 0.25) 25%);
+    background-size: 200%; /*Se desplaza el color para que no aparezca en pantalla*/
+    background-position: left; /*el relleno queda de lado izquiero */
+}
+.Verde:hover {/*Modifica la posicion de el relleno */
+   background-position: right; /*el relleno lo envia de lado derecho*//*genera el efecto de transicion de color*/                                
+}
+.Rojo {/*Relleno de boton carrito*/
+    cursor: pointer; /*indica que el cursos esta sobre el boton*/
+    background: linear-gradient(to right, transparent 50%,  rgba(255, 13, 0, 0.25) 25%);
+    background-size: 200%; /*Se desplaza el color para que no aparezca en pantalla*/
+    background-position: left; /*el relleno queda de lado izquiero */
+}
+.Rojo:hover {/*Modifica la posicion de el relleno */
+   background-position: right; /*el relleno lo envia de lado derecho*/ 
+                               /*genera el efecto de transicion de color*/   
+}
+.Carrito{
+    width:65px; 
+    height:60px;
+}
+/*Ajuste para el diseño responsive*/
+@media (max-width: 768px) {
+    h1{
+        font-size: 30px;
+        line-height: 40px;
+    }   
+    .ImaSeccion{
+        width: 300px;
+        height: 330px;    
+    }
+    .div1{
+        height: 50px;
+        width: 150px;
+        border: 4px solid #FF00BC; 
+    }
+    .redondo{
+        width: 70px;
+        height: 70px;
+    }
+    .Carrito{
+        width:45px; 
+        height:45px;
+    }
+    .Imagen_prducto{
+        width: 280px;
+        height: 200px;
+    }
+    .Etiquetas{
+        font-size: 25px;
+        border: 4px solid #FFFFFF;
+        margin-top: 5%;
+    }
+    .TextoProducto{
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .ajuste{/*evita que el margen altera las imagenes de productos*/
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+}
+
+/*Funciones para dar el efecto de fondo y letra, dentro de lo imagen*/
+.Box{/*Box hace referencia a la cada de la imagen */
+    width: 340px;
+    height: 242px;
+    text-align: center;
+    overflow: hidden;  /*permite regular la visiblidad de los contenidos que sobresalen de una caja html.*//* hace que el texto que sobresalga por encima del div no sea visible*/
+    position: relative;
+    margin: 1.5;
+    border-radius: 15%;    
+    margin: auto; 
+}
+.Box igm{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;  /*indica cómo el contenido de un elemento reemplazado*/  /*El contenido reemplazado se dimensiona para mantener su relación de aspecto mientras llena el cuadro de contenido completo del elemento*/
+}
+p{
+    color: black;
+    font-size: 16px;
+    line-height: 120%;
+    text-transform: uppercase;/*especifica el cambio entre mayúsculas y minúsculas del texto de un elemento*//*fuerza a todos los caracteres a ser convertidos a mayúsculas */
+}
+/*Efecto de fondo de color con expancion Comor Verde*//*Aplica para los demas colores*/
+/*aplica para .hoverColor y .Box:hover .*/
+.hoverVerde{ 
+    width: 0%;/*El efecto empieza a un 0% para que no se muestra en pantalla*/
+    height: 100%;
+    background-color:rgba(70, 255, 1, 0.75) ;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;/*permite regular la visiblidad de los contenidos que sobresalen de una caja html.*//* hace que el texto que sobresalga por encima del div no sea visible*/
+    transition: transform 1.5s;/*Da el tiempo de cambio de un estado a otro*/
+}
+.Box:hover .hoverVerde{
+    width: 100%;/*da el efecto de cambio de color de forma completa**/
+    transform: scale(1.07);/*Expande la imagen a 7%*/
+}
+.hoverRosa{ 
+    width: 0%;
+    height: 100%;
+    background-color:rgba(255, 0, 188, 0.75) ;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: transform 1.5s;
+}
+.Box:hover .hoverRosa{
+    width: 100%;
+    transform: scale(1.07);
+}
+.hoverAzul{ 
+    width: 0%;
+    height: 100%;
+    background-color:rgba(18, 18, 255, 0.75) ;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: transform 1.5s;
+}
+.Box:hover .hoverAzul{
+    width: 100%;
+    transform: scale(1.07);
+}
+.hoverRojo{ 
+    width: 0%;
+    height: 100%;
+    background-color: rgba(255, 13, 0, 0.75) ;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: transform 1.5s;
+}
+.Box:hover .hoverRojo{
+    width: 100%;
+    transform: scale(1.07);
+}
+.hoverAmarillo{ 
+    width: 0%;
+    height: 100%;
+    background-color:rgba(228, 248, 2, 0.75) ;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: transform 1.5s;
+}
+.Box:hover .hoverAmarillo{
+    width: 100%;
+    transform: scale(1.07);
+}
+/*Ajunte para el responsive*/
+@media (max-width: 768px) {
+    .Box{/*cambio de tamaño de la imagen */
+         width: 280px;
+         height: 200px;}
+         p{/*cambio de tamaño del texto*/
+           font-size: 13px;
+           line-height: 100%;
+        }    
+    }
+
+/**********************DIANA***FIN*********************/
