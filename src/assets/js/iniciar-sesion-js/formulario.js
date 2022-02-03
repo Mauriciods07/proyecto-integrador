@@ -65,13 +65,13 @@ formulario.addEventListener ('submit', (e)=> {
  
 
     if (campos. correo && campos. password){
-        formulario.reset();
         window.location.href="usuario-perfil.html";
-
+        formulario.reset();
         document.querySelectorAll('.formulario_grupo-correcto').forEach ((icono) =>{
             icono.classList.remove ('formulario_grupo-correcto')
             document.getElementById ('formulario_mensaje').classList.remove('formulario_mensaje-activo');
         })
+        
     } else{
         document.getElementById ('formulario_mensaje').classList.add ('formulario_mensaje-activo');
     }
