@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Press+Start+2P&display=swap');
+
+:root {
+    /* Paleta de colores */
+    --black: #1C1C1C;
+    --red: #FF0D00;
+    --blue: #1212FF;
+    --green: #46FF01;
+    --pink: #FF00BC;
+    --yellow: #E4F802;
+    --white: #FFFFFF;
+
+    /* Fuentes */
+    --Titles: 'Press Start 2P', cursive;
+    --body: 'Audiowide';
+}
+
+body {
+    background-color: var(--black);
+}
+
+.row.banner{
+background-color: var(--blue);
+color: white;
+height: 98.1px;
+max-height: 98.1px;
+}
+.texto{
+    font-family: var(--body);
+    font-size: 15px;
+    color: var(--white);
+}
+.texto2{
+    font-family: var(--body);
+    font-size: 20px;
+    color: var(--white);
+}
+.texto3{
+    font-family: var(--Titles);
+    font-size: 20px;
+    color: var(--white);
+}
+.texto4{
+    font-family: var(--body);
+    font-size: 10px;
+    color: var(--white);
+}
+.main{
+    width: max-content;
+    height: 1500px;
+}
+
+.title-box > h4 {
+    position: absolute;
+    top: 10%;
+    left: 25%;
+}
+
+.title-box {
+    border: 3px solid var(--pink);
+    width: 15rem;
+    position: relative;
+    text-align: center;
+    height: 2.5rem;
+    border-radius: 45px;
+} /* Tamaño de letra del div del titulo tienda */
+.title{
+    font-size: 25px;
+   
+
+}
+.title-box:hover {
+    background-color: rgba(255, 0, 188, 0.1);
+}
+/* Contenedor el div de tienda */
+.contenedor{
+    margin-left: 15%;
+    margin-top: 20px;
+}
+/* Contenedor de las imagenes */
+.container{
+    margin-top: 50px;
+    justify-content: center;
+    align-content: space-between;
+}
+/* Especifidad, Se dan diseño a las imagenes */
+.container .row  img{
+    margin-top: 15px; 
+    /* margin-top: 15px; */
+    width: 300px;
+    height: 200px;
+    border-radius: 45px;
+    border: 2px solid var(--white);
+    justify-content: center;
+    transition: transform 1.5s;/* Tiempo en el que aparece la imagen con hover */
+} 
+
+/* Se añade hover para darle estilo a la imagen */
+ img:hover{
+    transform: scale(1.2);
+}
+/* Se le agrega estilos a todos los row y se centran */
+.container  .row{
+    justify-content: center;
+    align-content: center;
+}
+
+/* Espeficiad de los botones,  */
+.container .row button{
+    width: 280px ;
+    height: 45px;
+    margin: 20px;
+    padding: 0;
+    border: 2px solid var(--pink);
+   font-family: var(--body);
+   font-size: 30px;
+   background-color: var(--black);
+   color: var(--white);
+   border-radius: 45px;
+  
+}
+/* Especifidad del los enlaces dentro de los botones */
+.container .row button a{
+    text-decoration: none; 
+    color: var(--white);
+}/* Se agrega estilo hover a los enlaces */
+.container .row button a:hover{   
+    color:var(--white);
+}
+/* Se agregan los bordes de color verde a los botones de 
+    Lanzamiento y Playstatiion */
+ .container .row .btn-green{
+   
+    border: 2px solid var(--green);  
+} 
+ .container .row .btn-green:hover{
+    background-color: rgb(67, 99, 61);
+
+} 
+/* Se agregan los bordes de color rojo a los botones de 
+    Ofertas y Xbox */
+.container .row .btn-red{
+   
+    border: 2px solid var(--red);  
+}
+.container .row .btn-red:hover{
+    background-color: rgb(68, 49, 59);
+}/* Se agregan los bordes de color Azul a los botones de 
+   Otros  y Nintendo */
+.container .row .btn-blue{
+   
+    border: 2px solid var(--blue); 
+} 
+.container .row .btn-blue:hover{
+    background-color: rgb(61, 71, 99);
+}
+
+footer{
+    margin-top: 25px;
+    background-color: var(--blue);
+}
+footer .row .footer-1{
+    height: 100px;
+}
+footer .row .footer-1 a{
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+}
+
+@media (max-width: 990px) {
+    .navbar-dark{
+        background-color: var(--blue) !important;
+    }
+    .nav-link{
+        border-top: 1px solid var(--white);
+        border-bottom: 1px solid var(--white);
+    }
+}

@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/assets/css/pred_fonts_styles.css" type="text/css"> <!--Link a hoja de estilos de Pagina base-->
+    <link rel="stylesheet" href="src/assets/css/usuario-perfil-styles/usuario-perfil-styles.css" type="text/css">    <!--Hoja de estilos de pagina de usuario-->
+
+    <title>GameJoy Perfil de Usuario</title>     <!--Titulo de la pagina-->
+  </head>
+  <body>
+     <section class="d-none d-lg-block">
+        <div class="row banner d-flex justify-content-between"> <!--Banner donde se colocan medios de contacto y redes sociales-->
+            <div class="col-md-3 col-lg ml-5 d-flex align-items-center">  <!--Para la primera columna, hacemos que su hijo directo se aparte con un marginleft de 5 y se aline al centro de manera vertical (eje y)-->
+              <div class="row d-inline-flex align-items-center">  <!--Se crea una nueva fila dentro de la columna, por coveniencia, los hijos de esta columna se alinearan al centro de manera horizontal y se separan con un margintop de 2-->
+                <a href="https://es-la.facebook.com/"><img class="m-1" src="src/img/FacebookLogo.png" width="25"></a> <!--Icono con liga a facebook de tamaño 25 y margen derecho de 3-->
+                <a href="https://www.instagram.com/?hl=es"><img class="m-1" src="src/img/InstagramLogo.png" width="30"></a>  <!--Icono con liga a instagram-->
+                <a href="https://twitter.com/?lang=es"><img class="m-1" src="src/img/Twiterlogo.png" width="25"></a> <!--Icono con liga a twitter-->
+                <!-- <a href="https://www.flaticon.es/iconos-gratis/insignia-social-de-twitter" title="insignia social de twitter iconos">Insignia social de twitter iconos creados por Pixel perfect - Flaticon</a> -->
+                <a href="https://www.tiktok.com/es/"><img class="m-1" src="src/img/Tiktoklogo.png" width="25"></a>
+                <!-- <a href="https://www.flaticon.com/free-icons/tiktok" title="tiktok icons">Tiktok icons created by Aldo Cervantes - Flaticon</a> -->
+                <span class="texto align-baseline">¡Síguenos!</span> <!--Texto en span alineado a la mitad del row padre inmediato-->
+               </div>
+            </div>
+            <div class="col-md-5 col-lg d-inline-flex justify-content-center"><!--Siguiente columna donde se alinea al hijo inmediato hacia el centro vertical-->
+              <div class="row d-flex align-items-center"> <!--Se crea una fila donde los elementos hijos se alinean al centro de manera horizontal-->
+                <span class="texto2 d-sm-none d-md-block">Envios a toda la República Mexicana y Estados Unidos</span> <!--Texto con propiedades de clase texto-->
+              </div>
+            </div>
+            <div class="col-md-3 col-lg d-flex justify-content-end">  <!--Se crea columna con el hijo directo alineado al final del row padre-->
+              <div class="row mr-5 d-flex align-items-center">  <!--Se alinean los hijos directos hacia el centro vertical y con margen derecho de 5 (Alejarse de la derecha)-->
+                <a href="https://www.whatsapp.com/?lang=es"><img class="m-2" src="src/img/WhastappLogo.png" width="25"></a>  <!--Se coloca icono de whatsapp con margen general de 1 y tamaño de 25px-->
+                <!-- <a href="https://www.flaticon.com/free-icons/whatsapp" title="whatsapp icons">Whatsapp icons created by Pixel perfect - Flaticon</a> -->
+                <span class="texto">Ponte en contacto</span>  <!--Texto de ponte en contacto-->
+              </div>
+            </div>
+        </div>
+    </section>
+
+    <!---------------------------------------------------Inicio de barra de navegacion--------------------------------------------------------------------------->
+
+      <nav class="navbar navbar-expand-lg navbar-dark navbar-toggleable-lg">
+        <a class="navbar-brand" href="#">
+          <img src="src/img/LogoGJ.png" width="80" height="100" alt="">
+        </a>
+        <span class="texto3 d-block d-sm-block d-md-block d-lg-none">GAME<br>JOY</span>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">  <!--Agregar Paginas del equipo-->
+          <div class="navbar-nav mx-auto text-center">
+            <a class="nav-link texto2" href="index.html">INICIO</a>
+            <a class="nav-link texto2" href="#">CONTACTO</a>
+            <a class="nav-link texto2">SOBRE NOSOTROS</a>
+            <a class="nav-link texto2" href="#">CARRITO</a>
+            <a class="nav-link texto2 active" href="#">CUENTA</a>
+            <a class="nav-link texto2">TIENDA</a>
+          </div>
+          <div class="d-flex flex-row justify-content-around">
+            <a href="#" class="m-2"><img src="src/img/IconodeUsuario.png" width="50" height="50" alt="Icono Cuenta"></a>
+            <!-- <a href="https://www.flaticon.com/free-icons/user" title="user icons">User icons created by Smashicons - Flaticon</a> -->
+            <a href="#" class="m-2"><img src="src/img/IconodeCarrito.png" width="50" height="50" alt="Icono Carrito"></a>
+            <!-- <a href="https://www.flaticon.com/free-icons/shopping-cart" title="shopping cart icons">Shopping cart icons created by Smashicons - Flaticon</a> -->
+          </div>
+        </div>
+      </nav>
+<!-----------------------------------------------------------------------------Fin de barra de navegacion------------------------------------------>
+<!----------------------------------------------------------------------------INICIO DE PERFIL DE USUARIO------------------------------------------>
+<main class="mb-5">
+    <div class="container formulario_usuario mt-5">
+        <h2 class="titulo_form text-center mt-5 mb-5">Mi Perfil</h2>
+        <form id="formularioUsuario" autocomplete="off" onsubmit="return(validarUsuario())" class="formulario">
+                <div class="row">       <!--Fila donde esta el formulario personal y foto-->
+                    <div class="col-lg-8 order-1">
+                            <div class="row ml-3 d-flex justify-content-center">
+                                <div class="col-lg-4 col-md-12 text-center">
+                                    <label for="txtNombreUsuario" class="label_formulario">Nombre:</label>
+                                </div>
+                                <div class="col-lg-8 col-md-12 text-center">
+                                    <input name="txtNombreUsuario" type="text"class="input_formulario" id="txtNombreUsuario" placeholder="Ingresa tu nombre" required disabled>
+                                </div>
+                            </div>
+                            <div class="row ml-3 d-flex justify-content-center mt-3">
+                                <div class="col-lg-4 col-md-12 text-center">
+                                    <label for="txtApellidoUsuario" class="label_formulario">Apellido:</label>
+                                </div>
+                                <div class="col-lg-8 col-md-12 text-center">
+                                    <input name="txtApellidoUsuario" type="text"class="input_formulario" id="txtApellidoUsuario" placeholder="Ingresa tu apellido" required disabled>
+                                </div>
+                            </div>
+                            <div class="row ml-3 d-flex justify-content-center mt-3">
+                                <div class="col-lg-4 col-md-12 text-center">
+                                    <label for="txtCorreoUsuario" class="label_formulario">Correo:</label>
+                                </div>
+                                <div class="col-lg-8 col-md-12 text-center">
+                                    <input name="txtCorreoUsuario" type="email"class="input_formulario" id="txtCorreoUsuario" placeholder="Ingresa tu correo" required disabled>
+                                </div>
+                            </div>
+                            <div class="row ml-3 d-flex justify-content-center mt-3">
+                                <div class="col-lg-4 col-md-12 text-center">
+                                    <label for="txtTelefonoUsuario" class="label_formulario">Teléfono:</label>
+                                </div>
+                                <div class="col-lg-8 col-md-12 text-center">
+                                    <input name="txtTelefonoUsuario" type="number"class="input_formulario" id="txtTelefonoUsuario" placeholder="Ingresa tu celular" min="0" maxlength="11" minlength="10" required disabled>
+                                </div>
+                            </div>
+                            <div class="row ml-3 d-flex justify-content-around mt-3">
+                                <div class="col-lg-4 col-md-12 text-center">
+                                    <label for="txtDireccionUsuario" class="label_formulario">Dirección:</label>
+                                </div>
+                                <div class="col-lg-8 col-md-12 text-center">
+                                    <textarea name="txtDireccionUsuario" class="input_formulario input_direccion" id="txtDireccionUsuario" rows="5" cols="39" placeholder="Ingresa tu Dirección (Calle,Colonia,Municipio/Alcaldía,Ciudad,Estado)" disabled></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="col-lg-4 d-flex align-items-center order-lg-1">    <!--Row donde estara la imagen de usuario y label de foto-->
+                        <div class="row w-100 ml-2 mb-5">
+                            <div class="col-lg-12 text-center mb-4">
+                                <img src="src/img/IconodeUsuario.png" id ="imgFotoActual"class="Foto_Usuario mx-auto align-self-center" alt="Imagen de Usuario">
+                            </div>
+                            <div class="col-lg-12 text-center">
+                                <div class="row justify-content-center">
+                                    <input type="file" id="imgFotoUsuario" name="imgFotoUsuario" style="display:none;" disabled>
+                                    <label for="imgFotoUsuario" class="label_formulario" style="border:2px solid var(--green);">Foto Personal</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row ml-2 mt-3 text-center">       <!--Fila donde esta la seccion de datos de pago-->
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-lg-4 col-md-12 text-center">
+                            <label for="txtTarjeta" class="label_formulario">Datos de Pago:</label>
+                        </div>
+                        <div class="col-lg-4 col-md-12 text-center mt-2">
+                            <input name="txtTarjeta" type="number"class="input_pago_tarjeta" id="txtTarjeta" placeholder="Número de tarjeta" required disabled>
+                        </div>
+                        <div class="col-lg-2 col-md-6 text-center mt-2">
+                            <input name="txtVencimiento" type="text"class="input_pago_numeros" id="txtVencimiento" minlength="5" placeholder="AA/MM" required disabled>
+                        </div>
+                        <div class="col-lg-2 col-md-6 text-center mt-2">
+                            <input name="txtCVV" type="text"class="input_pago_numeros" id="txtCVV" placeholder="CVV" minlength="3" required disabled>
+                        </div>
+                    </div>
+                </div>
+                <div class="row ml-4 mt-3 text-center">       <!--Aqui va la fila de botones-->
+                    <div class="col-lg-3 col-md-12 text-center">
+                        <input type="checkbox" name="cbxUneteEquipo" class="input_cbx mr-3" id="cbxUneteEquipo" disabled>
+                        <label for="cbxUneteEquipo" class="label_cbx">Únete al equipo</label>
+                    </div>
+                    <div class="col-lg-3 col-md-12">
+                        <button type="button" class="btn_Form_Usuario" id="btnEditarUsuario">Editar</button>
+                    </div>
+                    <div class="col-lg-3 col-md-12">
+                        <button type="submit" name = "btnGuardarUsuario" id = "btnGuardarUsuario" class="btn_Form_Usuario" disabled style="opacity: 0.2;">Guardar</button>
+                    </div>
+                    <div class="col-lg-3 col-md-12">
+                        <button type="button" class="btn_Form_Usuario" data-toggle="modal" data-target=".bd-example-modal-sm">Cerrar Sesión</button>
+                    </div>
+                    
+                </div>
+        </form>
+    </div>
+
+    <!-------------------------------------------------Carousel de cartas de pedidos ordenados por el usuario--------------------------------------------------------->
+    <div class="carousel_ordenes container mt-5 mx-auto p-3">
+      <h2 class="titulo_form text-center mt-3 mb-2">Historial de Compras</h2>
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false">
+        <div class="carousel-inner carousel_dinamico">    <!--A partir de este punto se agregaran elementos carousel-item con dos elementos cada uno, a excepcion de que haya un numero impar o el usuario solo tenga una compra-->
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-md-6 col-sm-12 d-flex justify-content-center mb-2"> <!--Cunaod solo exista un elemento, aqui se colocara col en lugar de col-md-6-->
+                  <div class="card card_articulo_comprado popover-test" title="Orden 1881">
+                    <div class="row">
+                      <div class="col-6">
+                        <img src="src/img/xbox/battlefield_2042.png" alt="Juego1" width="150" height="200">
+                      </div>
+                      <div class="col-6 pt-3">
+                        <div class="row d-flex flex-column mb-1 text-center">
+                          <span class="orden_texto">Nombre</spans>
+                          <span class="orden_texto_id d-inline-block">Halo Infinite</span>
+                        </div>
+                        <div class="row d-flex flex-column text-center mb-1">
+                          <span class="orden_texto">Precio</span>
+                          <span class="orden_texto_id mx-auto">$10000</span>
+                        </div>
+                        <div class="row d-flex flex-column text-center">
+                          <span class="orden_texto">Cantidad</span>
+                          <span class="orden_texto_id mx-auto">1</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-md-6 col-sm-12 d-flex justify-content-center mb-2">
+                <div class="card card_articulo_comprado popover-test" title="Orden 1881">
+                  <div class="row">
+                    <div class="col-6">
+                      <img src="src/img/xbox/battlefield_2042.png" alt="Juego1" width="150" height="200">
+                    </div>
+                    <div class="col-6 pt-3">
+                      <div class="row d-flex flex-column text-center mb-1">
+                        <span class="orden_texto">Nombre</spans>
+                        <span class="orden_texto_id">Nombre_Articulo</span>
+                      </div>
+                      <div class="row d-flex flex-column text-center mb-1">
+                        <span class="orden_texto">Precio</span>
+                        <span class="orden_texto_id mx-auto">$10000</span>
+                      </div>
+                      <div class="row d-flex flex-column text-center">
+                        <span class="orden_texto">Cantidad</span>
+                        <span class="orden_texto_id mx-auto">1</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>  
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-md-6 col-sm-12 d-flex justify-content-center mb-2">
+                <div class="card card_articulo_comprado popover-test" title="Orden 1881">
+                  <div class="row">
+                    <div class="col-6">
+                      <img src="src/img/xbox/battlefield_2042.png" alt="Juego1" width="150" height="200">
+                    </div>
+                    <div class="col-6 pt-3">
+                      <div class="row d-flex flex-column text-center mb-1">
+                        <span class="orden_texto">Nombre</spans>
+                        <span class="orden_texto_id">Nombre_Articulo</span>
+                      </div>
+                      <div class="row d-flex flex-column text-center mb-1">
+                        <span class="orden_texto">Precio</span>
+                        <span class="orden_texto_id mx-auto">$10000</span>
+                      </div>
+                      <div class="row d-flex flex-column text-center">
+                        <span class="orden_texto">Cantidad</span>
+                        <span class="orden_texto_id mx-auto">1</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12 d-flex justify-content-center mb-2">
+                <div class="card card_articulo_comprado popover-test" title="Orden 1881">
+                  <div class="row">
+                    <div class="col-6">
+                      <img src="src/img/xbox/resident_evil_village.png" alt="Juego1" width="150" height="200">
+                    </div>
+                    <div class="col-6 pt-3">
+                      <div class="row d-flex flex-column text-center mb-1">
+                        <span class="orden_texto">Nombre</spans>
+                        <span class="orden_texto_id">Nombre_Articulo</span>
+                      </div>
+                      <div class="row d-flex flex-column text-center mb-1">
+                        <span class="orden_texto">Precio</span>
+                        <span class="orden_texto_id mx-auto">$10000</span>
+                      </div>
+                      <div class="row d-flex flex-column text-center">
+                        <span class="orden_texto">Cantidad</span>
+                        <span class="orden_texto_id mx-auto">1</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> 
+        </div>
+       <button class="carousel-control-prev align-" type="button" data-target="#carouselExampleControls" data-slide="prev">
+          <span class="carousel-control-prev-icon" style="margin-left: 0;" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-target="#carouselExampleControls" data-slide="next">
+          <span class="carousel-control-next-icon" style="margin-right: 0;" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </button>
+      </div>
+    </div>
+
+
+    <!------------------------------------------------------------FORMULARIO DE VENDEDOR-------------------------------------------->
+  <div class="container formulario_vendedor mt-5 mx-auto p-3" style = "display: none;" id="divFormularioVendedor">
+    <h2 class="titulo_form text-center mt-3 mb-5">Vendedor</h2>
+    <form id="formularioVendedor"  autocomplete="off" onsubmit="return(validarVendedor())" class="formulario_vendedor_action">
+        <div class="align-items-center">       <!--Seccion donde estan los campos principales del formulario-->
+                    <div class="row ml-3 d-flex justify-content-center">  <!--Fila donde esta comercio-->
+                        <div class="col-lg-3 col-md-12 text-center">
+                            <label for="TextoNombreComercio" class="label_formulario"> Comercio:</label>
+                        </div>
+                        <div class="col-lg-9 col-md-12 text-center">
+                            <input name="TextoNombreComercio" type="text"class="input_formulario_vendedor" id="txtNombreComercio" placeholder="Ingresa el nombre de tu comercio" required disabled>
+                        </div>
+                    </div>
+                    <div class="row ml-3 d-flex justify-content-center mt-3">   <!--Fila donde esta el nombre de usuario-->
+                        <div class="col-lg-3 col-md-12 text-center">
+                            <label for="TextoNombreVendedor" class="label_formulario">Nombre Legal:</label>
+                        </div>
+                        <div class="col-lg-9 col-md-12 text-center">
+                            <input name="TextoNombreVendedor" type="text"class="input_formulario_vendedor" id="txtNombreVendedor" placeholder="Ingresa nombre de persona física" required disabled>
+                        </div>
+                    </div>
+                    <div class="row ml-3 d-flex justify-content-center mt-3"> <!--Fila donde esta el correo empresarial-->
+                        <div class="col-lg-3 col-md-12 text-center">
+                            <label for="TextoCorreoEmpresa" class="label_formulario">Correo empresarial:</label>
+                        </div>
+                        <div class="col-lg-9 col-md-12 text-center">
+                            <input name="TextoCorreoEmpresa" type="email"class="input_formulario_vendedor" id="txtCorreoEmpresa" placeholder="Ingresa tu correo de empresa" required disabled>
+                        </div>
+                    </div>
+                    <div class="row ml-3 d-flex justify-content-center mt-3"> <!--Fila donde esta el telefono empresarial-->
+                        <div class="col-lg-3 col-md-12 text-center">
+                            <label for="NumeroTelefonoEmpresa" class="label_formulario">Teléfono:</label>
+                        </div>
+                        <div class="col-lg-9 col-md-12 text-center">
+                            <input name="NumeroTelefonoEmpresa" type="number"class="input_formulario_vendedor" id="nmbrTelefonoEmpresa" placeholder="Ingresa tu celular de contacto empresa" min="0" maxlength="11" minlength="10" required disabled>
+                        </div>
+                    </div>
+                    <div class="row ml-3 d-flex justify-content-around mt-3">   <!--Fila donde esta la direccion-->
+                        <div class="col-lg-3 col-md-12 text-center">
+                            <label for="TextoDireccionEmpresa" class="label_formulario">Dirección:</label>
+                        </div>
+                        <div class="col-lg-9 col-md-12 text-center">
+                            <textarea name="TextoDireccionEmpresa" class="input_formulario_vendedor input_direccion_empresa" id="txtDireccionEmpresa" rows="5" cols="39" placeholder="Ingresa tu Dirección Comercial (Calle,Colonia,Municipio/Alcaldía,Ciudad,Estado)" required disabled></textarea>
+                        </div>
+                    </div>
+        </div>
+        <div class="row ml-4 mt-3 text-center">       <!--Aqui va la fila de botones del formulario vendedor-->
+            <div class="col-lg-4 col-md-12">
+                <button type="button" class="btn_Form_Vendedor" id="btn_Editar_Vendedor" disabled style="opacity: 0.2;">Editar</button>
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <button type="submit" class="btn_Form_Vendedor" id="btn_Guardar_Vendedor" style="opacity: 0.2;" disabled>Guardar</button>
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <button type="button" class="btn_Form_Vendedor" style ="font-size: 22px; "data-toggle="modal" data-target=".modal_producto" id="btn_Agregar_Vendedor" disabled style="opacity: 0.2;">Añadir Producto</button>
+            </div>
+        </div>
+    </form>
+  </div>
+</main>
+
+<!---------------------------------------------------------------MODAL DE CERRAR SESION---------------------------------------------------->
+<div class="modal fade bd-example-modal-sm modal_cerrar_sesion" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"     aria-hidden="true">
+    <div class="modal-dialog modal-sm ">
+      <div class="modal-content cerrar_sesion">
+        <span class = "mb-2">¿Seguro que quieres cerrar sesión?</span>
+        <div class="row" style="background-color: transparent;">
+            <div class="col-6">
+                <button class="btn_modal_aceptar"><a href="iniciar-sesion.html">Aceptar</a></button>  <!--Agregar pagina de Marja y Raquel-->
+            </div>
+            <div class="col-6">
+                <button class="btn_modal_cancelar" data-dismiss="modal">Cancelar</button>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+  <!------------------------------------------------MODAL DE AGREGAR PRODUCTO------------------------------------------------------------>
+
+  <div class="container modal fade modal_producto" id="modalAgregarProductoNuevo" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content content_producto text-center">
+        <!-- <form onsubmit="return(validarAgregarProducto())" autocomplete="off"> -->
+            <span class = "titulo_form">Ingresa los datos de tu producto</span>
+            <div class="row d-flex justify-content-center mt-2">    <!--Seccion de nombre de producto-->
+                <div class="col-12 col-md-12 text-center">
+                    <label for="TextoNombreProductoNuevo" class="label_formulario_nuevo">Nombre de Producto</label>
+                </div>
+                <div class="col-12 col-md-12 text-center">
+                    <input name="TextoNombreProductoNuevo" type="text"class="input_nuevoproducto" id="txtNombreProductoNuevo" placeholder="Ingresa el nombre de producto" required>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-around mt-2">    <!--Seccion de descripcion-->
+                <div class="col-12 col-md-12 text-center">
+                    <label for="TextoDescripcion" class="label_formulario_nuevo">Descripción</label>
+                </div>
+                <div class="col-12 col-md-12 text-center">
+                    <textarea name="TextoDescripcionNuevo" class="input_nuevoproducto" id="txtDescripcionNuevo" rows="4" cols="39" placeholder="Ingresa Descripción de tu producto"></textarea>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center mt-1">    <!--Seccion de costos, categoria y cantidad-->
+                <div class="col-lg-4 text-center d-flex flex-column align-items-center">
+                    <label for="numberCostoNuevo" class="label_formulario_numeros text-center">Costo</label>
+                    <input name="numberCostoNuevo" type="number"class="input_nuevoproducto_sm" id="numberCostoNuevo" placeholder="Costo" required min="1">
+                </div>
+                <div class="col-lg-4 text-center d-flex flex-column align-items-center">
+                    <label for="numberCantidadNuevo" class="label_formulario_numeros">Cantidad</label>
+                    <input name="numberCantidadNuevo" type="number"class="input_nuevoproducto_sm" id="numberCantidadNuevo" placeholder="Cantidad" min="1" required>
+                </div>
+                <div class="col-lg-4 text-center d-flex flex-column align-items-center">
+                    <label for="TextoCategoriaNuevo" class="label_formulario_numeros">Categoria</label>
+                    <select name = "TextoCategoriaNuevo" class="input_nuevoproducto_sm align-baseline" id="txtCategoriaNuevo" required>
+                      <option value = "1" selected>Xbox</option>
+                      <option value = "2">PlayStation</option>
+                      <option value = "3">Nintendo</option>
+                      <option value = "3">Otros</option>
+                      <option value = "3">Coleccionables</option>
+                   </select>
+                    <!-- <input name="TextoCategoriaNuevo" type="text"class="input_nuevoproducto_sm" id="txtCategoriaNuevo" placeholder="Categoria" required> -->
+                </div>
+            </div>
+        
+            <div class="row mt-3 style="background-color: transparent;">  <!--Seccion de botones-->
+              <div class="col-6">
+                    <img src="src/img/error.png" id="imgProductoNuevo" width="30" height="30">
+                    <label for="archivoFotoProductoNuevo" id="btnSubirImagenProductoNuevo" class="btn_modal_subirimagen">Subir Imagen</label>
+                    <input name="archivoFotoProductoNuevo" type="file" style="display: none;" id="archivoFotoProductoNuevo" name="Subir Imagen" required>
+                    <!-- <button class="btn_modal_subirimagen">Subir Imagen</button> -->
+              </div>
+              <div class="col-3 text-center">
+                    <button class="btn_modal_cancelar_nuevo mt-3" id="btnModalCancelarProductoNuevo" data-dismiss="modal">Cancelar</button>
+              </div>
+              <div class="col-3 text-center">
+                  <button type="button" class="btn_modal_aceptar_nuevo mt-3" id="btnModalAceptarProductoNuevo">Aceptar</button>
+              </div>
+            </div>
+         <!-- </form> -->
+      </div>
+    </div>
+  </div>
+
+<!---------------------------------------------------------FIN DE MODAL DE AGREGAR PRODUCTO------------------------------------------------>
+
+
+<!-----------------------------------------------------------------footer---------------------------------------------------------------------------------------->
+<footer>
+  <div class="row footer-1 pt-5">
+    <div class="col-md-3 col-lg-3 d-block text-center">
+        <li><a href="index.html" class="texto2">GAMEJOY</a></li>
+        <li><a href="#" class="texto4">Mas Productos</a></li>
+        <li><a href="#" class="texto4">Contacto</a></li>
+        <li><a href="#" class="texto4">Login</a></li>
+        <li><a href="#" class="texto4">Preguntas Frecuentes</a></li>
+    </div>
+    <div class="col-md-3 col-lg-3 align-self-center text-center mt-3">
+        <span class="texto2 d-inline-block">Sobre Nosotros</span>
+        <span class="texto4 d-inline-block">Somos ua plataforma digital creada en el año 2022, enfocada a la venta de videojuegos y productos afines</span>
+    </div>
+    <div class="col-md-3 col-lg-3 align-self-center d-flex justify-content-center mt-3">
+      <a href="index.html">
+        <img src="src/img/LogoGJ.png" width="80" height="100" alt="">
+      </a>
+    </div>
+    <div class="col-md-3 col-lg-3 text-center mt-3">
+        <span class="texto2 d-block">Síguenos en redes sociales</span>
+          <div class="row d-inline-flex align-items-center">  <!--Se crea una nueva fila dentro de la columna, por coveniencia, los hijos de esta columna se alinearan al centro de manera horizontal y se separan con un margintop de 2-->
+            <a href="https://es-la.facebook.com/"><img class="m-1" src="src/img/FacebookLogo.png" width="40"></a> <!--Icono con liga a facebook de tamaño 25 y margen derecho de 3-->
+            <a href="https://www.instagram.com/?hl=es"><img class="m-1" src="src/img/InstagramLogo.png" width="40"></a>  <!--Icono con liga a instagram-->
+            <a href="https://twitter.com/?lang=es"><img class="m-1" src="src/img/Twiterlogo.png" width="50"></a> <!--Icono con liga a twitter-->
+            <!-- <a href="https://www.flaticon.es/iconos-gratis/insignia-social-de-twitter" title="insignia social de twitter iconos">Insignia social de twitter iconos creados por Pixel perfect - Flaticon</a> -->
+            <a href="https://www.tiktok.com/es/"><img class="mr-3" src="src/img/Tiktoklogo.png" width="40"></a>
+            <!-- <a href="https://www.flaticon.com/free-icons/tiktok" title="tiktok icons">Tiktok icons created by Aldo Cervantes - Flaticon</a> -->
+           </div>
+    </div>
+  </div>
+  <div class="row footer-2 mt-5">
+    <div class="col-sm col-md-6 d-flex align-items-center justify-content-center">
+      <span class="texto2">Gorgonitas 2022</span>
+    </div>
+    <div class="col-sm col-md-6 d-flex justify-content-center pb-2">
+      <a href="https://www.paypal.com/mx/home"><img class="mr-3" src="src/img/LogodePaypal.png" width="40"></a>
+      <!-- <a href="https://www.flaticon.com/free-icons/paypal" title="paypal icons">Paypal icons created by Roundicons - Flaticon</a> -->
+      <a href="https://www.visa.com.mx/"><img class="mr-3" src="src/img/LogodeVisa.png" width="50"></a>
+      <!-- <a href="https://www.flaticon.com/free-icons/visa" title="visa icons">Visa icons created by Pixel Buddha - Flaticon</a> -->
+      <a href="https://www.americanexpress.com/es-mx/"><img class="mr-3" src="src/img/IconodeEfectivo.png" width="50"></a>
+      <!-- <a href="https://www.flaticon.com/free-icons/american-express" title="american express icons">American express icons created by Freepik - Flaticon</a> -->
+      <a href="https://bitcoin.org/es/"><img class="mr-3" src="src/img/LogodeBitcoin.png" width="40"></a>
+      <!-- <a href="https://www.flaticon.com/free-icons/bitcoin" title="bitcoin icons">Bitcoin icons created by Freepik - Flaticon</a> -->
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--Recursos de Bootstrap, y scripts para funcionar la pagina -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    
+    <script src="src/assets/js/usuario-perfil-js/inicializar-pagina.js"></script>
+    <script src="src/assets/js/usuario-perfil-js/cargar-foto-usuario.js"></script>
+    <script src="src/assets/js/usuario-perfil-js/editar-usuario.js"></script>
+    <script src="src/assets/js/usuario-perfil-js/checkbox-vendedor.js"></script>
+    <script src="src/assets/js/usuario-perfil-js/editar-vendedor.js"></script>
+    <script src="src/assets/js/usuario-perfil-js/guardar-vendedor.js"></script>
+    <script src="src/assets/js/usuario-perfil-js/guardar-usuario.js"></script>
+    <script src="src/assets/js/usuario-perfil-js/validar-telefono-usuario.js"></script>
+    <script src="src/assets/js/usuario-perfil-js/validar-telefono-vendedor.js"></script>
+    <script src="src/assets/js/usuario-perfil-js/validar-tarjeta.js"></script>
+    <script src="src/assets/js/usuario-perfil-js/validar-vencimiento.js"></script>
+    <script src="src/assets/js/usuario-perfil-js/validar-CVV.js"></script>
+    <script src="src/assets/js/usuario-perfil-js/agregar-producto.js"></script>
+    <script src="src/assets/js/usuario-perfil-js/cargar-foto-producto-nuevo.js"></script>
+    <script src="src/assets/js/usuario-perfil-js/iniciar-modal-producto-nuevo.js"></script>
+  </body>
+</html>
