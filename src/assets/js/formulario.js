@@ -1,5 +1,6 @@
 const formulario = document.getElementById('formulario');
-const inputs = document.querySelectorAll('#formulario input')
+const inputs = document.querySelectorAll ('#formulario input');
+
 
 const expresiones = {
 	apellido: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
@@ -32,6 +33,27 @@ switch(e.target.name){
         validarCampo(expresiones.password, e.target , 'password');
     
     break;
+
+    case "nombre":
+         validarCampo(expresiones.nombre, e.target, 'nombre');
+    break;
+
+    case "apellido":
+        validarCampo(expresiones.apellido, e.target, 'apellido');
+    break;
+
+    case "correo2":
+        validarCampo(expresiones.correo, e.target, 'correo2');
+    break;
+
+    case "password2":
+        validarCampo(expresiones.password, e.target , 'password2')
+    break;
+
+    case "telefono":
+        validarCampo(expresiones.telefono, e.target , 'telefono')
+    break;
+   
 }
 }
 
@@ -62,15 +84,14 @@ input.addEventListener ('blur', validarFormulario );
 
 formulario.addEventListener ('submit', (e)=> {
 
- 
+    e.preventDefault();
 
     if (campos. correo && campos. password){
         formulario.reset();
-        window.location.href="usuario-perfil.html";
 
         document.querySelectorAll('.formulario_grupo-correcto').forEach ((icono) =>{
             icono.classList.remove ('formulario_grupo-correcto')
-            document.getElementById ('formulario_mensaje').classList.remove('formulario_mensaje-activo');
+
         })
     } else{
         document.getElementById ('formulario_mensaje').classList.add ('formulario_mensaje-activo');

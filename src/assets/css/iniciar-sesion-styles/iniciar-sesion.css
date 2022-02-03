@@ -152,7 +152,7 @@ font-family: var(--body);
   display: block;
 }
 
-.formulario_grupo-correcto .formulario_validacion-estado {
+.formulario_grupo-correcto .formulario_validacion-estado { /*validacoion para el capo iniciar sesion*/
 
   color: #46FF01;
   opacity: 1;
@@ -170,12 +170,12 @@ font-family: var(--body);
   border: 3px solid  #FF0D00;
 }
 
-.formulario_grupo-incorrecto .formulario_validacion-estado{
+.formulario_grupo-incorrecto .formulario_validacion-estado{/*validacoion para el capo iniciar sesion*/
 
   color: #FF0D00;
   opacity: 1;
 }
-.formulario_grupo-incorrecto .formulario_validacion-circulo{
+.formulario_grupo-incorrecto .formulario_validacion-circulo{ 
 
   color: #FF0D00;
   opacity: 1;
