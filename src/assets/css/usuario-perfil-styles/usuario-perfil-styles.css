@@ -1,0 +1,426 @@
+
+.formulario_usuario{
+    width: 95%;
+    min-height: 728px;
+    border: 5px solid var(--pink);
+    border-radius: 45px;
+    padding-left: 0px;
+}
+
+.titulo_form{
+    color: var(--white);
+    font-family: var(--body);
+    font-size: 30px;
+    margin-left: 20px;
+}
+.label_formulario{
+    color: var(--white);
+    font-family: var(--body);
+    font-size: 25px;
+}
+.label_cbx{
+    color: var(--white);
+    font-family: var(--body);
+    font-size: 18px;
+}
+.input_formulario{
+    color: var(--white);
+    font-family: var(--body);
+    font-size: 25px;
+    width: 400px;
+    text-align: center;
+    background-color: rgba(70, 255, 1, 0.25);
+    border: 3px solid var(--green);
+    border-radius: 45px;
+}
+
+.input_direccion{
+    text-align: justify;
+    border-radius: 25px;
+}
+.input_pago_tarjeta{
+    color: var(--white);
+    font-family: var(--body);
+    font-size: 15px;
+    width: 200px;
+    text-align: center;
+    background-color: rgba(70, 255, 1, 0.25);
+    border: 3px solid var(--green);
+    border-radius: 45px;
+}
+.input_pago_numeros{
+    color: var(--white);
+    font-family: var(--body);
+    font-size: 15px;
+    width: 100px;
+    text-align: center;
+    background-color: rgba(70, 255, 1, 0.25);
+    border: 3px solid var(--green);
+    border-radius: 45px;
+}
+.Foto_Usuario{
+    width: 150px;
+    border:2px solid var(--green);
+    border-radius: 50%;
+}
+.input_cbx{
+    transform: scale(2);
+}
+.btn_Form_Usuario{
+    background-color: var(--pink);
+    border: 3px solid var(--blue);
+    color: var(--white);
+    font-size: 25px;
+    width: 250px;
+    border-radius: 170px;
+    font-family: var(--body);
+}
+.btn_modal_aceptar{
+    color: var(--white);
+    font-size: 20px;
+    width: 130px;
+    font-family: var(--body);
+    background: rgba(70, 255, 1, 0.75);
+    border: 3px solid var(--green);
+    border-radius: 170px;
+}
+
+.btn_modal_cancelar{
+    color: var(--white);
+    font-size: 20px;
+    width: 130px;
+    border-radius: 170px;
+    font-family: var(--body);
+    background: rgba(18, 18, 255, 0.5);
+    border: 3px solid var(--blue);
+    border-radius: 170px;
+}
+.btn_Form_Usuario:hover{
+    background: rgba(18,18,255,0.25);
+    border: 3px solid #1212FF;
+}
+
+ .carousel_ordenes{
+    width: 95%;
+    min-height: 350px;
+    border: 5px solid var(--green);
+    border-radius: 45px;
+    padding-left: 0px;
+ }
+ .card_articulo_comprado{
+     max-width: 275px;
+     height: 180px;
+     background-color: transparent;
+     border: none;
+ }
+
+ .orden_texto_id{
+    color: var(--black);
+    font-family: var(--body);
+    font-size: 15px;
+    width: max-content;
+    min-width: 15px;
+    text-align: center;
+    background: #C4C4C4;
+    border-radius: 10px;
+}
+.orden_texto{
+    color: var(--white);
+    font-family: var(--body);
+    font-size: 15px;
+}
+
+.formulario_vendedor{
+    width: 95%;
+    min-height: 728px;
+    border: 5px solid var(--blue);
+    border-radius: 45px;
+    margin-bottom: 20px;
+}
+
+.input_formulario_vendedor{
+    color: var(--white);
+    font-family: var(--body);
+    font-size: 25px;
+    width: 600px;
+    text-align: center;
+    background-color: rgba(70, 255, 1, 0.25);
+    border: 3px solid var(--green);
+    border-radius: 45px;
+}
+.btn_Form_Vendedor{
+    background-color: var(--pink);
+    border: 3px solid var(--blue);
+    color: var(--white);
+    font-size: 25px;
+    height: 50px;
+    width: 275px;
+    border-radius: 170px;
+    font-family: var(--body);
+}
+.btn_Form_Vendedor:hover{
+    background: rgba(18,18,255,0.25);
+    border: 3px solid #1212FF;
+}
+.input_direccion_empresa{
+    text-align: justify;
+    border-radius: 25px;
+}
+
+.modal_cerrar_sesion{
+    color: var(--black);
+    font-family: var(--body);
+    font-size: 25px;
+    width: 340px;
+    height: 170px;
+    text-align: center;
+    background: rgba(255, 13, 0, 0.75);
+    border: 5px solid var(--pink);
+    border-radius: 45px;
+}
+
+.modal-content.cerrar_sesion{
+    background-color: transparent;
+    font-size: 25px;
+    font-family: var(--body);
+    border: none;
+}
+
+.modal.fade.bd-example-modal-sm.modal_cerrar_sesion {
+    top: calc(30%);
+    left: calc(50% - 170px);
+ }
+
+ .modal_producto{
+    width: 1000px;
+    height: max-content;
+    color: var(--white) ;
+    background-color: #1C1C1C;
+    border: 5px solid var(--green);
+    border-radius: 45px;
+ }
+ .modal-content.content_producto{
+    background-color: transparent;
+    font-size: 25px;
+    font-family: var(--body);
+    border: none;
+}
+.container.modal.fade.modal_producto {
+    top: calc(5%);
+    left: calc(50% - 500px);
+ }
+.input_nuevoproducto{
+    color: var(--white);
+    font-family: var(--body);
+    font-size: 25px;
+    width: 600px;
+    text-align: center;
+    background-color: rgba(70, 255, 1, 0.25);
+    border: 3px solid var(--green);
+    border-radius: 25px;
+}
+.input_nuevoproducto_sm{
+    color: var(--white);
+    font-family: var(--body);
+    font-size: 25px;
+    height: fit-content;
+    width: 250px;
+    text-align: center;
+    background-color: rgba(70, 255, 1, 0.25);
+    border: 3px solid var(--green);
+    border-radius: 45px;
+}
+.btn_modal_subirimagen{
+    color: var(--white);
+    font-size: 20px;
+    width: 130px;
+    font-family: var(--body);
+    background: var(--pink);
+    border: 3px solid var(--green);
+    border-radius: 170px;
+}
+.label_formulario_nuevo{
+    color: var(--white);
+    font-family: var(--body);
+    font-size: 25px;
+}
+.label_formulario_numeros{
+    color: var(--white);
+    font-family: var(--body);
+    font-size: 25px;
+}
+.btn_modal_aceptar_nuevo{
+    color: var(--white);
+    font-size: 20px;
+    width: 130px;
+    font-family: var(--body);
+    background: rgba(70, 255, 1, 0.75);
+    border: 3px solid var(--green);
+    border-radius: 170px;
+}
+
+.btn_modal_cancelar_nuevo{
+    color: var(--white);
+    font-size: 20px;
+    width: 130px;
+    border-radius: 170px;
+    font-family: var(--body);
+    background: rgba(18, 18, 255, 0.5);
+    border: 3px solid var(--blue);
+    border-radius: 170px;
+}
+/*
+X-Small	None	0–576px
+Small	sm	≥576px
+Medium	md	≥768px
+Large	lg	≥992px
+Extra large	xl	≥1200px
+Extra extra large	xxl	≥1400px
+*/
+
+
+@media  (max-device-width: 575px){    /*Tamaño extrachico hacia abajo*/
+
+    .input_formulario {
+        width: 270px;
+        font-size: 18px;
+    }
+    .input_formulario_vendedor {
+        width: 270px;
+        font-size: 18px;
+    }
+    .btn_Form_Usuario{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 18px;
+        width: 200px;
+    }
+    .btn_Form_Vendedor{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 17px;
+        width: 260px;
+    }
+    .input_nuevoproducto{
+        font-size: 15px;
+        width: 250px;
+    }
+    .modal_producto{
+        width: 370px;
+        height: max-content;
+     }
+     .label_formulario_nuevo{
+        font-size: 18px;
+    }
+    .label_formulario_numeros{
+        font-size: 18px;
+    }
+    .input_nuevoproducto{
+        font-size: 12px;
+    }
+    .input_nuevoproducto_sm{
+        font-size: 16px;
+        width: 200px;
+    }
+    .btn_modal_cancelar_nuevo{
+        font-size: 12px;
+        width: 80px;
+    }
+    .btn_modal_aceptar_nuevo{
+        font-size: 12px;
+        width: 80px;
+    }
+    .btn_modal_subirimagen{
+        font-size: 12px;
+        width: 80px;
+    }
+    .container.modal.fade.modal_producto {
+        top: 0px;
+        left: calc(50% - 185px);
+     }
+}
+
+@media  (min-device-width: 576px) and (max-device-width: 992px){    /*Tamaño chico*/
+
+    .container.modal.fade.modal_producto {
+        top: calc(5%);
+        left: calc(50% - 350px);
+     }
+    .input_cbx{
+        transform: scale(1.5);
+        align-items: center;
+    }
+    .label_cbx{
+        text-align: center;
+    }
+    .btn_Form_Usuario{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 200px;
+        font-size: 18px;
+    }
+    .input_formulario_vendedor {
+        width: 400px;
+    }
+    .btn_Form_Vendedor{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 18px;
+        width: 290px;
+    }
+    .input_nuevoproducto{
+        font-size: 20px;
+        width: 350px;
+    }
+    .label_formulario_nuevo{
+        font-size: 20px;
+    }
+    .label_formulario_numeros{
+        font-size: 20px;
+    }
+
+    .input_nuevoproducto_sm{
+        font-size: 20px;
+        width: 250px;
+    }
+    .btn_modal_cancelar_nuevo{
+        font-size: 18px;
+        width: 120px;
+    }
+    .btn_modal_aceptar_nuevo{
+        font-size: 18px;
+        width: 120px;
+    }
+    .btn_modal_subirimagen{
+        font-size: 18px;
+        width: 110px;
+    }
+    
+}
+
+@media  (min-device-width: 993px) and (max-device-width: 1200px)
+{    /*Tamaño mediano*/
+
+    .container.modal.fade.modal_producto {
+        top: calc(5%);
+        left: calc(50% - 450px);
+     }
+
+    .btn_Form_Usuario{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 200px;
+        font-size: 18px;
+    }
+
+    .label_formulario_nuevo{
+        font-size: 22px;
+    }
+    .label_formulario_numeros{
+        font-size: 22px;
+    }
+    .input_nuevoproducto_sm{
+        font-size: 22px;
+        width: 250px;
+    }
+}
