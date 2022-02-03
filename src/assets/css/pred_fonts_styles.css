@@ -71,6 +71,7 @@ li{             /* Se quitan las viñetas de las listas de la pagina*/
     list-style-type: none;
 }
 
+
 @media (max-width: 990px) {     /*Cuando el ancho de la pagina sea maximo de 900pixeles, la barra de navegacion colapsada se colorea azul y se colocan separadores blancos a*/
     .navbar-dark{
         background-color: var(--blue) !important;
