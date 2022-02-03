@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Press+Start+2P&display=swap');
+
+:root {
+    /* Paleta de colores */
+    --black: #1C1C1C;
+    --red: #FF0D00;
+    --blue: #1212FF;
+    --green: #46FF01;
+    --pink: #FF00BC;
+    --yellow: #E4F802;
+    --white: #FFFFFF;
+
+    /* Fuentes */
+    --Titles: 'Press Start 2P', cursive;
+    --body: 'Audiowide';
+}
+
+/* Se colorea el fondo el cuerpo de la pagina */
+body {
+    background-color: var(--black);
+}
+
+.row.banner{        /* El banner de la pagina se colorea de azul y se da una altura de 98.1 pixeles con text blanco*/
+background-color: var(--blue);
+color: white;
+height: 98.1px;
+max-height: 98.1px;
+}
+
+.texto{ /* Tipo de texto 1 con tamaño de 15 pixeles*/
+    font-family: var(--body);
+    font-size: 15px;
+    color: var(--white);
+}
+/*Tipo de texto 2 con tamaño de 20 pixeles*/
+.texto2{
+    font-family: var(--body);
+    font-size: 20px;
+    color: var(--white);
+}
+/*Tipo de texto 3 con tamaño de 20 pixeles y diferente tipo de letra*/
+.texto3{
+    font-family: var(--Titles);
+    font-size: 20px;
+    color: var(--white);
+}
+/*Tipo de texto 4 con tamaño de 10 pixeles*/
+.texto4{
+    font-family: var(--body);
+    font-size: 10px;
+    color: var(--white);
+}
+.main{  /*Seccion personalizada de pagina*/
+    width: max-content;
+    height: 1500px;
+}
+
+footer{ /*Footer de color azul*/
+    background-color: var(--blue);
+}
+
+footer .row .footer-1{  /*Secion de footer 1 con altura de 100 pixeles*/
+    height: 100px;
+}
+
+footer .row .footer-1 a{    /*Se quitan las animaciones de enlace del listado de enlaces*/
+    text-decoration: none;
+}
+
+li{             /* Se quitan las viñetas de las listas de la pagina*/
+    list-style-type: none;
+}
+
+@media (max-width: 990px) {     /*Cuando el ancho de la pagina sea maximo de 900pixeles, la barra de navegacion colapsada se colorea azul y se colocan separadores blancos a los menus*/
+    .navbar-dark{
+        background-color: var(--blue) !important;
+    }
+    .nav-link{
+        border-top: 1px solid var(--white);
+        border-bottom: 1px solid var(--white);
+    }
+}
+
+/*-----------------------------------------------------ACERCA DE NOSOTROS----------------------------------- */
+
+.bienvenida {
+    color: var(--white);
+    text-align: center;
+    font-family: var(--body);
+    font-size: 70px;
+}
+
+.tituloadn {
+    color: var(--white);
+    text-align: center;
+    font-family: var(--Titles);
+    font-size: 80px;
+}
+
+.logoadn {
+    width: 352px;
+    height: 408px;
+    margin: 0 auto;
+    display: block;
+    
+}
+
+.esloganadn {
+    color: var(--white);
+    text-align: center;
+    font-family: var(--Titles);
+    font-size: 40px;
+}
+
+.descripcionadn {
+    color: var(--white);
+    text-align: center;
+    font-family: var(--body);
+    font-size: 35px;
+}
+
+h3 {
+    color: var(--pink);
+    text-align: center;
+    font-family: var(--body);
+    font-size: 70px;
+}
+
+.misionyvision {
+    color: var(--white);
+    text-align: center;
+    font-family: var(--body);
+    font-size: 35px;
+}
+
+.mapita {
+    margin: 0 auto;
+    display: block;
+}
+.card-title {
+    color: var(--green);
+    text-align: center;
+    font-family: var(--body);
+    font-size: 30px;
+}
+
+.card-body {
+    background-color: var(--black);
+  
+}
+
+.card-text {
+    color: var(--white);
+    text-align: center;
+    font-family: var(--body);
+    font-size: 15px;
+}
+
+
+
+.iconosadn {
+    height: 42px;
+    width: 42px;
+    margin-right: 15px;
+    margin-left: 15px;
+
+    
+}
+
+.container {
+    color: var(--white);
+    text-align: center;
+}
+
+
+.avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+}
+
+.cr7 {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+}
+.nombres {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+}
+
+
+
+.fusion:hover{
+
+-webkit-box-shadow: 0px 0px 15px 15px #FF00BC;
+
+}
+
+.fusion {
+    width: 200px;
+    height: 200px;
+    background-color: var(--red);
+    border-radius: 100%;
+ 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.fusion img {
+    position: absolute;
+    left: auto;
+    transition: opacity 1s ease-in-out;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fusion img.avatar:hover {
+    opacity: 0;
+}
+
+
+
+.iconosadn:hover{
+
+    border-radius:30%;
+    -webkit-border-radius:30%;
+    -webkit-box-shadow: 0px 0px 8px 8px #FF0D00;
+
+}
+
