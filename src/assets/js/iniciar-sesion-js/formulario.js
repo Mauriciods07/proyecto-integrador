@@ -1,5 +1,5 @@
 const formulario = document.getElementById('formulario');
-const inputs = document.querySelectorAll ('#formulario input')
+const inputs = document.querySelectorAll('#formulario input')
 
 const expresiones = {
 	apellido: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
@@ -66,6 +66,7 @@ formulario.addEventListener ('submit', (e)=> {
 
     if (campos. correo && campos. password){
         formulario.reset();
+        window.location.href="usuario-perfil.html";
 
         document.querySelectorAll('.formulario_grupo-correcto').forEach ((icono) =>{
             icono.classList.remove ('formulario_grupo-correcto')
