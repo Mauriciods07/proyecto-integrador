@@ -13,11 +13,6 @@
   
 }
 
-.formulario_label-resgistrate{
-  color: var(--white);
-  font-family: var(--body);
-  font-size: 20px;
-}
 
 .formulario_boton {  /*Caracteristicas de los botones */
   background-color: var(--pink);
@@ -104,18 +99,14 @@ font-family: var(--body);
   margin-bottom: 200px;  
 }
 
-
-
-
-.formulario-registrate{ /*Caracteristicas de los formularios*/
-    border-radius: 45px;
-    border: 5px solid var(--blue);
-    width: 700px;
-    height: 550px;
-    margin-bottom: 200px;  
-    padding-left: 60px;
+.formulario_registrate{
+  color: var(--white);
+  font-family: var(--body);
+  font-size: 20px;
+  text-align: center;
+  
 }
-
+.texto-registro
 .formulario_input-exito-activo{
   display: block;
 
@@ -142,11 +133,6 @@ font-family: var(--body);
   
 }
 
-.formulario_grupo-correcto .formulario_validacion-circulo {
-  color: #46FF01;
-  opacity: 1;
-
-}
 
 .formulario_mensaje-activo{
   display: block;
@@ -175,13 +161,6 @@ font-family: var(--body);
   color: #FF0D00;
   opacity: 1;
 }
-.formulario_grupo-incorrecto .formulario_validacion-circulo{ 
-
-  color: #FF0D00;
-  opacity: 1;
-
-}
-
 
 
 
