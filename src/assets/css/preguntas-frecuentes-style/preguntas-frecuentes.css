@@ -62,3 +62,17 @@ margin-bottom: 45px;
 .btnEnviar:hover{
     background-color:  rgba(18, 18, 255, 0.25);
 }
+
+.card{
+
+    background-color: transparent;
+    color: white;
+    font-family: var(--body);
+    font-size: 15px;
+    border:#FF0D00 solid 2px ;
+    border-radius: 60px;
+}
+
+.card-title{
+    background-color:#FF0D00 ;
+}
