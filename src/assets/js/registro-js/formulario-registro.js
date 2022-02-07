@@ -70,9 +70,9 @@ inputs.forEach((input) =>{
 
 formulario.addEventListener ('submit', (e) =>{
 
-    if (campos.correo2 && campos.password && campos.nombre &&  campos. apellido && campos. telefono){
-        window.location.href="usuario-perfil.html";
-        formulario.reset();
+    if (campos.nombre &&  campos.apellido && campos.correo2 && campos.password &&  campos.telefono){
+        
+      formulario.reset();
         document.querySelectorAll('.formulario_grupo-correcto').forEach ((icono) =>{
             icono.classList.remove ('formulario_grupo-correcto')
             document.getElementById ('formulario_mensaje').classList.remove('formulario_mensaje-activo');
