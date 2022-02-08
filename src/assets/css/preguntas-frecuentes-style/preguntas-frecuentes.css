@@ -1,0 +1,78 @@
+.contacto{
+    border: 5px solid  var(--blue);
+    border-radius: 60px;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+.tituloPreguntas{
+    color: var(--white);
+    font-family: var(--body);
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.pregunta_label{
+display: inline;
+margin-bottom: 45px;
+
+}
+
+.row.form-group{
+    justify-content: center;
+}
+.nombreContacto{
+    color: var(--white);
+    font-family: var(--body);
+    font-size: 25px;
+    width: 500px;
+    text-align: center;
+}
+.contenedorContacto{
+    /* width: 620px; */
+    height: 10px;
+    border: 3px solid var(--green);
+    background-color: rgba(70, 255, 1, 0.25);
+    border-radius: 60px;
+    /* margin-bottom: 20px; */
+    color: var(--white);
+    font-family: var(--body);
+    font-size: 25px;
+}
+
+.segundotitulo{
+    color: var(--white);
+    font-family: var(--body);
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.btnEnviar{
+    border: 3px solid var(--blue);
+    background-color: var(--pink);
+    color: var(--white);
+    font-family: var(--body);
+    font-size: 30px;
+    border-radius: 170px;
+    width: 217px;
+    height: 78px;
+    margin: 0 auto;
+    display: block;
+}
+.btnEnviar:hover{
+    background-color:  rgba(18, 18, 255, 0.25);
+}
+
+.card{
+
+    background-color: transparent;
+    color: white;
+    font-family: var(--body);
+    font-size: 15px;
+    border:#FF0D00 solid 2px ;
+    border-radius: 60px;
+}
+
+.card-title{
+    background-color:#FF0D00 ;
+}

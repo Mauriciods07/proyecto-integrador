@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS --> 
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="src/assets/css/pred_fonts_styles.css" type="text/css"> <!--Link a hoja de estilos de Pagina base-->
-    <link rel="stylesheet" href="src/assets/css/iniciar-sesion-styles/iniciar-sesion.css" type="text/css">
+    <link rel="stylesheet" href="src/assets/css/preguntas-frecuentes-style/preguntas-frecuentes.css" type="text/css">
 
     <title>GameJoy Iniciar sesión</title>     <!--Titulo de la pagina-->
   </head>
@@ -68,44 +68,88 @@
       </nav>
 <!-----------------------------------------------------------------------------Fin de barra de navegacion-------------------------------------------------------->
 <!-- Aqui EMPIEZA LA PAGINA PERSONALIZADA  -->
-<main>
-  <div class="container-fluid"> <!--Contenedor de los dos formularios -->
-  <div class="row "> <!--Inicio de la primera hilera -->
-      <div class="col-lg-12 col-md-12 col-sm-12 d-flex  mt-5 justify-content-center"> <!-- Columna  del formulario Iniciar sesión-->
-        <form onsubmit="return(false)" class="formulario-validacion formulario-iniciar" id="formulario"> <!--Formulario iniciar sesión-->
-          <br/>
-          <br/>
-          <br/>
-        <div class="row justify-content-center"> <!-- Hilera para el titulo-->
-          <h2 class="titulo   justify-content-center  mt-4 mb-4">INICIAR SESIÓN</h2> <!--Titulo-->
-        </div>
 
+<h2 class="segundotitulo"> Preguntas frecuentes</h2>
 
-          <div class="formulario_grupo row d-flex justify-content-center mt-5 mb-5" id="grupo_correo"> <!-- Hilera para la sección correo-->
-        <label class="formulario_label col-lg-1 col-md-4 col-sm-12 mr-5 " for="exampleInputEmail1">Correo:</label> <!--Elemento para la etiqueta Correo, ya es resposivo hastael tamaño sm-->
-          <input type="email" class="formulario_input col-lg-6 col-md-10 col-sm-12 ml-5" name="correo" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="correo@ejemplo.com"><!--Espacio para colocar el correo del usuario ya es resposivo hastael tamaño sm-->
-       <i class=" formulario_validacion-estado fas fa-times-circle"></i>
-       <p class="formulario_input-error">Introduce el correo electronico como se indica en el ejemplo.</p>
-          </div>
-          
-          <div class="formulario_grupo row d-flex justify-content-center mt-5 mb-5" id="grupo_password"> <!-- Hilera para la sección Contraseña -->
-       <label class="formulario_label col-lg-2 col-md-4 col-sm-12 mr"  for="exampleInputPassword1">Contraseña:</label><!--Elemento para la etiqueta Contraseña ya es resposivo hastael tamaño sm-->
-       <input type="password" class="formulario_input col-lg-6 col-md-10 col-sm-12 ml-5" id="exampleInputPassword1" name="password"><!--Espacio para colocar la contraseña del usuario ya es resposivo hastael tamaño sm--> 
-       <i class=" formulario_validacion-estado fas fa-times-circle"></i>
-       <p class="formulario_input-error">La contraseña debe contener de 4 a 12 digitos</p>
-          </div>
-          
-          <div class="text-center"> <!--Contenedor del botón-->
-          <button type="submit" class="formulario_boton" id="formulario_mensaje-acceder">Iniciar sesión</button><!--Botón para iniciar sesión -->
-          </div>
-          <div class="formulario_mensaje" id="formulario_mensaje"><p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente</p></div>
-          <div class="formulario_registrate "id="formulario_mensaje_registrate"><a class="texto-registro" href="registrate.html" >¡REGÍSTRATE!</a> </div>
-      </form>
+<div class="card-group container-fluid ">
+  <div class="card ml-5 mb-5">
+    <div class="card-body">
+      <h5 class="card-title  text-center">¿Cómo me registro?</h5>
+      <p class="card-text text-justify">Si no tienes una  cuenta con nosotros, puedes ir a la sección de iniciar sesión; das click en el icono que está en la parte del navegador.<br> En la parte de abajo del formulario se encuentra la opción para registrate. Dale click. Te llevará a nuestro formulario. <br>Cuando estés ahí, sólo tendrás que llenar los campos con los datos que se te piden y dar click en el botón de resgistrarse. <br> ¡Listo¡ Ya eres parte de nuestra comunidad. </p>
+      
     </div>
-      </div>  
   </div>
-</main>
+  <div class="card  mb-5">
+    <div class="card-body">
+      <h5 class="card-title text-center">¿Cómo creo un perfil?</h5>
+      <p class="card-text text-justify">Una vez que tengas una cuenta con nosotros, podrás rellenar con tus dato la sección prefil del usuario. <br> Dale click en editar, y rellena correctamente los datos que se te piden. <br> Ahí podrás ver tu historial de compra y tus datos para cuando realices otra compra.</p>
+      
+    </div>
+  </div>
+  <div class="card mb-5 mr-5 ">
+    <div class="card-body">
+      <h5 class="card-title  text-center" >¿Cómo me vuelvo vendedor?</h5>
+      <p class="card-text text-justify">En la sección perfil de usuario, una vez que hayas llenado tu perfil, se encuentra la opción unete al equipo.<br> Se desplegará en la parte de abajo otro apartado donde se te pedirán datos, pero está vez como vendedor. <br> Le das enguardar y enviar.  <br>¡Listo! Ya eres parte de nuestro equipo. </p>
+     
+      
+    </div>
+  </div>
+</div>
 
+<div class=" card-group container-fluid">
+  <div class="card mb-5 ml-5">
+    <div class="card-body">
+      <h5 class="card-title  text-center">¿Cómo agrego un producto para vender?</h5>
+      <p class="card-text text-justify"> En el apartado de vendedor de la sección perfil del usuario, se encuentra la opción  añadir producto. Se te deplegara un formulario, donde poner los datos y la descripción del producto que quieras vender. <br> Sube una foto de buena calidad del producto que quieras ofertar. Dale en aceptar. <br> Ahora tu producto estará en nuestro catalogo.</p>
+      
+    </div>
+  </div>
+  <div class="card mb-5">
+    <div class="card-body">
+      <h5 class="card-title text-center">¿Dónde puedo ver los artículos que he seleccionado?</h5>
+      <p class="card-text text-justify">En la barra de navegación se encuentra el icono de carrito, al seleccionarlo te redirige a la página carrito donde encontrarás todos los artículos has seleccionado de la tienda.  <br> En los botones de mas y menos se controla la cantidad de ejemplares que quieras comprar del artículo. <br> Si lo que quieres es eliminar el artículo del carrito, en la parte de abajo hay un botón con  una cruz para elimar la selección. </p>
+      
+    </div>
+  </div>
+  <div class="card mb-5 mr-5">
+    <div class="card-body">
+      <h5 class="card-title text-center">Especificaciones de  tienda </h5>
+      <p class="card-text text-justify">Las descripciones de cada artículo se encuentran cuando pasas el cursor encima de la imagen. <br> Si quieres agregar un producto de la tienda sólo da click en el carrito de la parte de abajo <br> Para ver los articulos seleccionados, dirigete al carrito que se encuentra en el navegador para terminar tu compra.</p>
+      
+    </div>
+  </div>
+</div>
+
+
+<div class="conteiner">
+  <div class=" row justify-content-center mt-5 mb-5">
+      <div class="contacto col-md-10 col-sm-10 col-10 ">
+          <!-- contacto -->
+          <h3 class="tituloPreguntas mt-5">Envíanos tu pregunta</h3>
+          <!-- <hr class="bg-danger"> -->
+
+          <form action="https://formsubmit.co/gamejoy.gorgonita@gmail.com" id="form1" method="post" class="needs-validation" novalidate>
+            <!-- 408bcf8cc4872cf10e6f6f427d614278 -->
+              
+              <div class="row form-group">
+                 <div class="pregunta_label"><label for="mensaje" class="nombreContacto col-lg-12 col-md-12 col-sm-12">Deja tu pregunta o comentario aquí:</label></div>
+                  <div class="col-lg-10 col-md-10 col-sm-10">
+                      <textarea name="mensaje" id="mensaje" rows="10"  class="contenedorContacto form-control" name="mensaje" id="mensaje" placeholder="Pregunta o comentario" value="" required ></textarea>
+                      <!-- Validación -->
+                      <div class="valid-feedback">Valido</div>
+                      <div class="invalid-feedback">Completa el campo</div>
+                  </div>
+              </div>
+
+              <button type="submit" class="btnEnviar mb-5" id="btn_enviar" >Enviar</button>
+              <!-- onclick="return validar();" -->
+
+
+          </form>
+
+      </div>
+
+  </div>
 
 <!-- FIN DE LA PAGINA PERSONALIZADA -->
 <!-----------------------------------------------------------------footer---------------------------------------------------------------------------------------->
@@ -153,9 +197,6 @@
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-    <script src="src/assets/js/iniciar-sesion-js/formulario.js"></script>
-
-
+   
     </body>
 </html>
