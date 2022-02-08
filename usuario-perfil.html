@@ -43,7 +43,7 @@
 
       <nav class="navbar navbar-expand-lg navbar-dark navbar-toggleable-lg">
         <a class="navbar-brand" href="#">
-          <img src="src/img/LogoGJ.png" width="80" height="100" alt="">
+          <img src="src/img/LogoGJconFondo.png" width="80" height="100" alt="">
         </a>
         <span class="texto3 d-block d-sm-block d-md-block d-lg-none">GAME<br>JOY</span>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,11 +52,9 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">  <!--Agregar Paginas del equipo-->
           <div class="navbar-nav mx-auto text-center">
             <a class="nav-link texto2" href="index.html">INICIO</a>
+            <a class="nav-link texto2" href="tienda.html">TIENDA</a>
             <a class="nav-link texto2" href="contacto.html">CONTACTO</a>
             <a class="nav-link texto2" href="acerca-de-nosotros.html">SOBRE NOSOTROS</a>
-            <a class="nav-link texto2" href="carrito.html">CARRITO</a>
-            <a class="nav-link texto2 active" href="iniciar-sesion.html">CUENTA</a>
-            <a class="nav-link texto2" href="tienda.html">TIENDA</a>
           </div>
           <div class="d-flex flex-row justify-content-around">
             <a href="usuario-perfil.html" class="m-2"><img src="src/img/IconodeUsuario.png" width="50" height="50" alt="Icono Cuenta"></a>
@@ -69,7 +67,7 @@
 <!-----------------------------------------------------------------------------Fin de barra de navegacion------------------------------------------>
 <!----------------------------------------------------------------------------INICIO DE PERFIL DE USUARIO------------------------------------------>
 <main class="mb-5">
-    <div class="container formulario_usuario mt-5">
+    <div class="container formulario_usuario mt-5 p-3">
         <h2 class="titulo_form text-center mt-5 mb-5">Mi Perfil</h2>
         <form id="formularioUsuario" autocomplete="off" onsubmit="return(validarUsuario())" class="formulario">
                 <div class="row">       <!--Fila donde esta el formulario personal y foto-->
@@ -123,7 +121,7 @@
                             <div class="col-lg-12 text-center">
                                 <div class="row justify-content-center">
                                     <input type="file" id="imgFotoUsuario" name="imgFotoUsuario" style="display:none;" disabled>
-                                    <label for="imgFotoUsuario" class="label_formulario" style="border:2px solid var(--green);">Foto Personal</label>
+                                    <label for="imgFotoUsuario" class="label_formulario" style="border:2px solid var(--blue);">Foto Personal</label>
                                 </div>
                             </div>
                         </div>
@@ -442,7 +440,7 @@
     </div>
     <div class="col-md-3 col-lg-3 align-self-center d-flex justify-content-center mt-3">
       <a href="index.html">
-        <img src="src/img/LogoGJ.png" width="80" height="100" alt="">
+        <img src="src/img/LogoGJconFondo.png" width="80" height="100" alt="">
       </a>
     </div>
     <div class="col-md-3 col-lg-3 text-center mt-3">
@@ -473,20 +471,6 @@
     </div>
   </div>
 </footer>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     <!--Recursos de Bootstrap, y scripts para funcionar la pagina -->
