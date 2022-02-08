@@ -376,11 +376,6 @@ Extra extra large	xxl	≥1400px
 }
 
 @media  (min-device-width: 576px) and (max-device-width: 992px){    /*Tamaño chico*/
-
-    .container.modal.fade.modal_producto {
-        top: calc(5%);
-        left: calc(50% - 350px);
-     }
     .input_cbx{
         transform: scale(1.5);
         align-items: center;
@@ -438,7 +433,7 @@ Extra extra large	xxl	≥1400px
 
     .container.modal.fade.modal_producto {
         top: calc(5%);
-        left: calc(50% - 450px);
+        left: calc(50% - 500px);
      }
 
     .btn_Form_Usuario{
@@ -458,6 +453,20 @@ Extra extra large	xxl	≥1400px
         font-size: 22px;
         width: 250px;
     }
+}
+
+/*Especificaciones para el modal de producto*/
+@media  (min-device-width: 770px) and (max-device-width: 992px){
+    .container.modal.fade.modal_producto {
+        top: calc(5%);
+        left: calc(50% - 350px);
+     }
+}
+@media  (min-device-width: 576px) and (max-device-width: 769px){
+    .container.modal.fade.modal_producto {
+        top: calc(5%);
+        left: calc(50% - 275px);
+     }
 }
 
 /*Clases de validaciones*/
@@ -515,3 +524,4 @@ Extra extra large	xxl	≥1400px
     font-size: 18px;
     color: red;
 }
+
