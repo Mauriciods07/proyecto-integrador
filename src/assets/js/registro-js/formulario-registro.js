@@ -5,14 +5,14 @@ const expresiones = {
 	
 	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
 	password: /^.{4,12}$/, // 4 a 12 digitos.
-	correo2: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-	telefono: /^\d{7,14}$/ // 7 a 14 numeros.
+	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+	telefono: /^\d{10,11}$/ // 10 a 11 numeros.
 }
 const campos ={
 	password: false,
-	correo2:  false ,
+	correo:  false ,
     nombre: false,
-    correo2: false,
+    correo: false,
     password: false,
     telefono: false
    
@@ -27,8 +27,8 @@ const validarFormulario = (e) =>{
         validarCampo (expresiones.nombre, e.target, 'apellido');
     
     break;
-    case  "correo2":
-        validarCampo (expresiones.correo2, e.target, 'correo2');
+    case  "correo":
+        validarCampo (expresiones.correo, e.target, 'correo');
     
     break
      case  "password":
@@ -70,8 +70,8 @@ inputs.forEach((input) =>{
 
 formulario.addEventListener ('submit', (e) =>{
 
-    if (campos.nombre &&  campos.apellido && campos.correo2 && campos.password &&  campos.telefono){
-        
+    if (campos.nombre &&  campos.apellido && campos.correo && campos.password &&  campos.telefono){
+        window.location.href="usuario-perfil.html";
       formulario.reset();
         document.querySelectorAll('.formulario_grupo-correcto').forEach ((icono) =>{
             icono.classList.remove ('formulario_grupo-correcto')
