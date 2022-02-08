@@ -1,5 +1,6 @@
-function validarUsuario(){
-    if(!($inputTelefono.value.length>9 && $inputTelefono.value.length<12) || !($inputTarjeta.value.length===16 && $inputVencimiento.value.length===5 && $inputCVV.value.length===3)) {
+
+function guardarUsuario(){
+    if(!(nombre_OK && apellido_OK && correo_OK && telefono_OK && direccion_OK && tarjeta_OK && vencimiento_OK && cvv_OK)) {
         alert('Revisa los campos en rojo');
         return false;
     }

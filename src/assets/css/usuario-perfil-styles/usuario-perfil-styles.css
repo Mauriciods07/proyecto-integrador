@@ -1,8 +1,15 @@
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+}
 
+input[type=number] {
+  -moz-appearance: textfield;
+}
 .formulario_usuario{
     width: 95%;
     min-height: 728px;
-    border: 5px solid var(--pink);
+    border: 5px solid lightgray;
     border-radius: 45px;
     padding-left: 0px;
 }
@@ -10,7 +17,7 @@
 .titulo_form{
     color: var(--white);
     font-family: var(--body);
-    font-size: 30px;
+    font-size: 50px;
     margin-left: 20px;
 }
 .label_formulario{
@@ -29,9 +36,12 @@
     font-size: 25px;
     width: 400px;
     text-align: center;
-    background-color: rgba(70, 255, 1, 0.25);
-    border: 3px solid var(--green);
+    background-color: rgba(18,18,255, 0.25);
+    border: 3px solid var(--blue);
     border-radius: 45px;
+}
+.input_formulario:hover{
+    box-shadow: 2px 0px 30px rgba(163, 163,  163, 1);
 }
 
 .input_direccion{
@@ -44,32 +54,41 @@
     font-size: 15px;
     width: 200px;
     text-align: center;
-    background-color: rgba(70, 255, 1, 0.25);
-    border: 3px solid var(--green);
+    background-color: rgba(18,18,255, 0.25);
+    border: 3px solid var(--blue);
     border-radius: 45px;
 }
+
+.input_pago_tarjeta:hover{
+    box-shadow: 1px 0px 30px rgba(163, 163,  163, 1);
+}
+
 .input_pago_numeros{
     color: var(--white);
     font-family: var(--body);
     font-size: 15px;
     width: 100px;
     text-align: center;
-    background-color: rgba(70, 255, 1, 0.25);
-    border: 3px solid var(--green);
+    background-color: rgba(18,18,255, 0.25);
+    border: 3px solid var(--blue);
     border-radius: 45px;
 }
+.input_pago_numeros:hover{
+    box-shadow: 1px 0px 30px rgba(163, 163,  163, 1);
+}
+
 .Foto_Usuario{
     width: 150px;
-    border:2px solid var(--green);
+    border:2px solid var(--blue);
     border-radius: 50%;
 }
 .input_cbx{
     transform: scale(2);
 }
 .btn_Form_Usuario{
-    background-color: var(--pink);
+    background-color: lightgray;
     border: 3px solid var(--blue);
-    color: var(--white);
+    color: var(--black);
     font-size: 25px;
     width: 250px;
     border-radius: 170px;
@@ -95,15 +114,16 @@
     border: 3px solid var(--blue);
     border-radius: 170px;
 }
-.btn_Form_Usuario:hover{
-    background: rgba(18,18,255,0.25);
-    border: 3px solid #1212FF;
+.btn_Form_Usuario:hover {
+    background-color: var(--blue);
+    border: 3px solid var(--blue);
+    color: var(--white);
 }
 
  .carousel_ordenes{
     width: 95%;
     min-height: 350px;
-    border: 5px solid var(--green);
+    border: 5px solid lightgray;
     border-radius: 45px;
     padding-left: 0px;
  }
@@ -121,8 +141,9 @@
     width: max-content;
     min-width: 15px;
     text-align: center;
-    background: #C4C4C4;
+    background: lightgray;
     border-radius: 10px;
+    border: 3px solid var(--blue);
 }
 .orden_texto{
     color: var(--white);
@@ -133,7 +154,7 @@
 .formulario_vendedor{
     width: 95%;
     min-height: 728px;
-    border: 5px solid var(--blue);
+    border: 5px solid lightgray;
     border-radius: 45px;
     margin-bottom: 20px;
 }
@@ -144,14 +165,17 @@
     font-size: 25px;
     width: 600px;
     text-align: center;
-    background-color: rgba(70, 255, 1, 0.25);
-    border: 3px solid var(--green);
+    background-color: rgba(18,18,255, 0.25);
+    border: 3px solid var(--blue);
     border-radius: 45px;
 }
+.input_formulario_vendedor:hover{
+    box-shadow: 2px 0px 30px rgba(163, 163,  163, 1);
+}
 .btn_Form_Vendedor{
-    background-color: var(--pink);
+    background-color: lightgray;
     border: 3px solid var(--blue);
-    color: var(--white);
+    color: var(--black);
     font-size: 25px;
     height: 50px;
     width: 275px;
@@ -159,8 +183,9 @@
     font-family: var(--body);
 }
 .btn_Form_Vendedor:hover{
-    background: rgba(18,18,255,0.25);
-    border: 3px solid #1212FF;
+    background-color: var(--blue);
+    border: 3px solid var(--blue);
+    color: var(--white);
 }
 .input_direccion_empresa{
     text-align: justify;
@@ -196,7 +221,7 @@
     height: max-content;
     color: var(--white) ;
     background-color: #1C1C1C;
-    border: 5px solid var(--green);
+    border: 5px solid lightgray;
     border-radius: 45px;
  }
  .modal-content.content_producto{
@@ -215,9 +240,12 @@
     font-size: 25px;
     width: 600px;
     text-align: center;
-    background-color: rgba(70, 255, 1, 0.25);
-    border: 3px solid var(--green);
+    background-color: rgba(18,18,255, 0.25);
+    border: 3px solid var(--blue);
     border-radius: 25px;
+}
+.input_nuevoproducto:hover{
+    box-shadow: 1px 0px 30px rgba(163, 163,  163, 1);
 }
 .input_nuevoproducto_sm{
     color: var(--white);
@@ -226,17 +254,21 @@
     height: fit-content;
     width: 250px;
     text-align: center;
-    background-color: rgba(70, 255, 1, 0.25);
-    border: 3px solid var(--green);
+    background-color: rgba(18,18,255, 0.25);
+    border: 3px solid var(--blue);
     border-radius: 45px;
+}
+.input_nuevoproducto_sm:hover{
+    box-shadow: 1px 0px 30px rgba(163, 163,  163, 1);
 }
 .btn_modal_subirimagen{
     color: var(--white);
     font-size: 20px;
     width: 130px;
     font-family: var(--body);
-    background: var(--pink);
-    border: 3px solid var(--green);
+    background-color: lightgray;
+    border: 3px solid var(--blue);
+    color: var(--black);
     border-radius: 170px;
 }
 .label_formulario_nuevo{
@@ -250,10 +282,12 @@
     font-size: 25px;
 }
 .btn_modal_aceptar_nuevo{
-    color: var(--white);
     font-size: 20px;
     width: 130px;
     font-family: var(--body);
+    background-color: lightgray;
+    border: 3px solid var(--blue);
+    color: var(--black);
     background: rgba(70, 255, 1, 0.75);
     border: 3px solid var(--green);
     border-radius: 170px;
@@ -265,8 +299,9 @@
     width: 130px;
     border-radius: 170px;
     font-family: var(--body);
-    background: rgba(18, 18, 255, 0.5);
+    background-color: lightgray;
     border: 3px solid var(--blue);
+    color: var(--black);
     border-radius: 170px;
 }
 /*
@@ -341,11 +376,6 @@ Extra extra large	xxl	≥1400px
 }
 
 @media  (min-device-width: 576px) and (max-device-width: 992px){    /*Tamaño chico*/
-
-    .container.modal.fade.modal_producto {
-        top: calc(5%);
-        left: calc(50% - 350px);
-     }
     .input_cbx{
         transform: scale(1.5);
         align-items: center;
@@ -403,7 +433,7 @@ Extra extra large	xxl	≥1400px
 
     .container.modal.fade.modal_producto {
         top: calc(5%);
-        left: calc(50% - 450px);
+        left: calc(50% - 500px);
      }
 
     .btn_Form_Usuario{
@@ -424,3 +454,74 @@ Extra extra large	xxl	≥1400px
         width: 250px;
     }
 }
+
+/*Especificaciones para el modal de producto*/
+@media  (min-device-width: 770px) and (max-device-width: 992px){
+    .container.modal.fade.modal_producto {
+        top: calc(5%);
+        left: calc(50% - 350px);
+     }
+}
+@media  (min-device-width: 576px) and (max-device-width: 769px){
+    .container.modal.fade.modal_producto {
+        top: calc(5%);
+        left: calc(50% - 275px);
+     }
+}
+
+/*Clases de validaciones*/
+#mensaje_error_Nombre{
+    font-family: var(--body);
+    font-size: 18px;
+    color: red;
+}
+#mensaje_error_Apellido{
+    font-family: var(--body);
+    font-size: 18px;
+    color: red;
+}
+
+#mensaje_error_Correo{
+    font-family: var(--body);
+    font-size: 18px;
+    color: red;
+}
+#mensaje_error_Telefono{
+    font-family: var(--body);
+    font-size: 18px;
+    color: red;
+}
+#mensaje_error_Direccion{
+    font-family: var(--body);
+    font-size: 18px;
+    color: red;
+}
+
+/*Clases de validacion de vendedor*/
+
+#mensaje_error_Comercio{
+    font-family: var(--body);
+    font-size: 18px;
+    color: red;
+}
+#mensaje_error_Legal{
+    font-family: var(--body);
+    font-size: 18px;
+    color: red;
+}
+#mensaje_error_CorreoEmpresa{
+    font-family: var(--body);
+    font-size: 18px;
+    color: red;
+}
+#mensaje_error_TelefonoEmpresa{
+    font-family: var(--body);
+    font-size: 18px;
+    color: red;
+}
+#mensaje_error_DireccionEmpresa{
+    font-family: var(--body);
+    font-size: 18px;
+    color: red;
+}
+

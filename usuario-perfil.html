@@ -43,7 +43,7 @@
 
       <nav class="navbar navbar-expand-lg navbar-dark navbar-toggleable-lg">
         <a class="navbar-brand" href="#">
-          <img src="src/img/LogoGJ.png" width="80" height="100" alt="">
+          <img src="src/img/LogoGJconFondo.png" width="80" height="100" alt="">
         </a>
         <span class="texto3 d-block d-sm-block d-md-block d-lg-none">GAME<br>JOY</span>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,11 +52,9 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">  <!--Agregar Paginas del equipo-->
           <div class="navbar-nav mx-auto text-center">
             <a class="nav-link texto2" href="index.html">INICIO</a>
+            <a class="nav-link texto2" href="tienda.html">TIENDA</a>
             <a class="nav-link texto2" href="contacto.html">CONTACTO</a>
             <a class="nav-link texto2" href="acerca-de-nosotros.html">SOBRE NOSOTROS</a>
-            <a class="nav-link texto2" href="carrito.html">CARRITO</a>
-            <a class="nav-link texto2 active" href="iniciar-sesion.html">CUENTA</a>
-            <a class="nav-link texto2" href="tienda.html">TIENDA</a>
           </div>
           <div class="d-flex flex-row justify-content-around">
             <a href="usuario-perfil.html" class="m-2"><img src="src/img/IconodeUsuario.png" width="50" height="50" alt="Icono Cuenta"></a>
@@ -69,49 +67,54 @@
 <!-----------------------------------------------------------------------------Fin de barra de navegacion------------------------------------------>
 <!----------------------------------------------------------------------------INICIO DE PERFIL DE USUARIO------------------------------------------>
 <main class="mb-5">
-    <div class="container formulario_usuario mt-5">
+    <div class="container formulario_usuario mt-5 p-3">
         <h2 class="titulo_form text-center mt-5 mb-5">Mi Perfil</h2>
-        <form id="formularioUsuario" autocomplete="off" onsubmit="return(validarUsuario())" class="formulario">
+        <form id="formularioUsuario" autocomplete="off" onsubmit="return(guardarUsuario())" class="formulario">
                 <div class="row">       <!--Fila donde esta el formulario personal y foto-->
-                    <div class="col-lg-8 order-1">
-                            <div class="row ml-3 d-flex justify-content-center">
+                    <div class="col-lg-8 order-1">  <!--Todo tenia ml-3-->
+                            <div class="row d-flex justify-content-center">
                                 <div class="col-lg-4 col-md-12 text-center">
-                                    <label for="txtNombreUsuario" class="label_formulario">Nombre:</label>
+                                    <label for="txtNombreUsuario" id="lblNombre" class="label_formulario">Nombre:</label>
                                 </div>
                                 <div class="col-lg-8 col-md-12 text-center">
                                     <input name="txtNombreUsuario" type="text"class="input_formulario" id="txtNombreUsuario" placeholder="Ingresa tu nombre" required disabled>
+                                    <p id="mensaje_error_Nombre" style="display: none;">Introduce un nombre de entre 1-40 letras.</p>
                                 </div>
                             </div>
-                            <div class="row ml-3 d-flex justify-content-center mt-3">
+                            <div class="row d-flex justify-content-center mt-3">
                                 <div class="col-lg-4 col-md-12 text-center">
-                                    <label for="txtApellidoUsuario" class="label_formulario">Apellido:</label>
+                                    <label for="txtApellidoUsuario" id="lblApellido" class="label_formulario">Apellido:</label>
                                 </div>
                                 <div class="col-lg-8 col-md-12 text-center">
                                     <input name="txtApellidoUsuario" type="text"class="input_formulario" id="txtApellidoUsuario" placeholder="Ingresa tu apellido" required disabled>
+                                    <p id="mensaje_error_Apellido" style="display: none;">Introduce un apellido de entre 1-40 letras.</p>
                                 </div>
                             </div>
-                            <div class="row ml-3 d-flex justify-content-center mt-3">
+                            <div class="row d-flex justify-content-center mt-3">
                                 <div class="col-lg-4 col-md-12 text-center">
-                                    <label for="txtCorreoUsuario" class="label_formulario">Correo:</label>
+                                    <label for="txtCorreoUsuario" id="lblCorreo" class="label_formulario">Correo:</label>
                                 </div>
                                 <div class="col-lg-8 col-md-12 text-center">
                                     <input name="txtCorreoUsuario" type="email"class="input_formulario" id="txtCorreoUsuario" placeholder="Ingresa tu correo" required disabled>
+                                    <p id="mensaje_error_Correo" style="display: none;">Introduce el correo electrónico como se indica en el ejemplo.</p>
                                 </div>
                             </div>
-                            <div class="row ml-3 d-flex justify-content-center mt-3">
+                            <div class="row d-flex justify-content-center mt-3">
                                 <div class="col-lg-4 col-md-12 text-center">
-                                    <label for="txtTelefonoUsuario" class="label_formulario">Teléfono:</label>
+                                    <label id="lblTelefono" for="txtTelefonoUsuario" class="label_formulario">Teléfono:</label>
                                 </div>
                                 <div class="col-lg-8 col-md-12 text-center">
-                                    <input name="txtTelefonoUsuario" type="number"class="input_formulario" id="txtTelefonoUsuario" placeholder="Ingresa tu celular" min="0" maxlength="11" minlength="10" required disabled>
+                                    <input name="txtTelefonoUsuario" type="number"class="input_formulario" id="txtTelefonoUsuario" placeholder="10 - 11 dígitos" required disabled>
+                                    <p id="mensaje_error_Telefono" style="display: none;">Introduce el número correctamente.</p>
                                 </div>
                             </div>
-                            <div class="row ml-3 d-flex justify-content-around mt-3">
+                            <div class="row d-flex justify-content-around mt-3">
                                 <div class="col-lg-4 col-md-12 text-center">
-                                    <label for="txtDireccionUsuario" class="label_formulario">Dirección:</label>
+                                    <label for="txtDireccionUsuario" id="lblDireccion" class="label_formulario">Dirección:</label>
                                 </div>
                                 <div class="col-lg-8 col-md-12 text-center">
                                     <textarea name="txtDireccionUsuario" class="input_formulario input_direccion" id="txtDireccionUsuario" rows="5" cols="39" placeholder="Ingresa tu Dirección (Calle,Colonia,Municipio/Alcaldía,Ciudad,Estado)" disabled></textarea>
+                                    <p id="mensaje_error_Direccion" style="display: none;">Introduce una direccion correcta</p>
                                 </div>
                             </div>
                         </div>
@@ -123,29 +126,29 @@
                             <div class="col-lg-12 text-center">
                                 <div class="row justify-content-center">
                                     <input type="file" id="imgFotoUsuario" name="imgFotoUsuario" style="display:none;" disabled>
-                                    <label for="imgFotoUsuario" class="label_formulario" style="border:2px solid var(--green);">Foto Personal</label>
+                                    <label for="imgFotoUsuario" class="label_formulario" style="border:2px solid var(--blue);">Foto Personal</label>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row ml-2 mt-3 text-center">       <!--Fila donde esta la seccion de datos de pago-->
+                <div class="row mt-3 text-center">       <!--Fila donde esta la seccion de datos de pago tenia ml-2-->
                     <div class="row d-flex justify-content-center">
                         <div class="col-lg-4 col-md-12 text-center">
-                            <label for="txtTarjeta" class="label_formulario">Datos de Pago:</label>
+                            <label for="txtTarjeta" id="datos_Pago" class="label_formulario">Datos de Pago:</label>
                         </div>
                         <div class="col-lg-4 col-md-12 text-center mt-2">
-                            <input name="txtTarjeta" type="number"class="input_pago_tarjeta" id="txtTarjeta" placeholder="Número de tarjeta" required disabled>
+                            <input name="txtTarjeta" type="number" class="input_pago_tarjeta" id="txtTarjeta" placeholder="Número de tarjeta" required disabled>
                         </div>
                         <div class="col-lg-2 col-md-6 text-center mt-2">
-                            <input name="txtVencimiento" type="text"class="input_pago_numeros" id="txtVencimiento" minlength="5" placeholder="AA/MM" required disabled>
+                            <input name="txtVencimiento" type="text" class="input_pago_numeros" id="txtVencimiento" minlength="5" placeholder="AA/MM" required disabled>
                         </div>
                         <div class="col-lg-2 col-md-6 text-center mt-2">
-                            <input name="txtCVV" type="text"class="input_pago_numeros" id="txtCVV" placeholder="CVV" minlength="3" required disabled>
+                            <input name="txtCVV" type="text" class="input_pago_numeros" id="txtCVV" placeholder="CVV" minlength="3" required disabled>
                         </div>
                     </div>
                 </div>
-                <div class="row ml-4 mt-3 text-center">       <!--Aqui va la fila de botones-->
+                <div class="row mt-3 text-center">       <!--Aqui va la fila de botones tenia ml-4-->
                     <div class="col-lg-3 col-md-12 text-center">
                         <input type="checkbox" name="cbxUneteEquipo" class="input_cbx mr-3" id="cbxUneteEquipo" disabled>
                         <label for="cbxUneteEquipo" class="label_cbx">Únete al equipo</label>
@@ -287,48 +290,53 @@
     <h2 class="titulo_form text-center mt-3 mb-5">Vendedor</h2>
     <form id="formularioVendedor"  autocomplete="off" onsubmit="return(validarVendedor())" class="formulario_vendedor_action">
         <div class="align-items-center">       <!--Seccion donde estan los campos principales del formulario-->
-                    <div class="row ml-3 d-flex justify-content-center">  <!--Fila donde esta comercio-->
+                    <div class="row d-flex justify-content-center">  <!--Fila donde esta comercio tenia ml-3-->
                         <div class="col-lg-3 col-md-12 text-center">
-                            <label for="TextoNombreComercio" class="label_formulario"> Comercio:</label>
+                            <label for="TextoNombreComercio" id="lblComercio" class="label_formulario"> Comercio:</label>
                         </div>
                         <div class="col-lg-9 col-md-12 text-center">
                             <input name="TextoNombreComercio" type="text"class="input_formulario_vendedor" id="txtNombreComercio" placeholder="Ingresa el nombre de tu comercio" required disabled>
+                            <p id="mensaje_error_Comercio" style="display: none;">Introduce el comercio correctamente.</p>
                         </div>
                     </div>
-                    <div class="row ml-3 d-flex justify-content-center mt-3">   <!--Fila donde esta el nombre de usuario-->
+                    <div class="row d-flex justify-content-center mt-3">   <!--Fila donde esta el nombre de usuario tenia ml-3-->
                         <div class="col-lg-3 col-md-12 text-center">
-                            <label for="TextoNombreVendedor" class="label_formulario">Nombre Legal:</label>
+                            <label for="TextoNombreVendedor" id="lblNombreLegal" class="label_formulario">Nombre Legal:</label>
                         </div>
                         <div class="col-lg-9 col-md-12 text-center">
                             <input name="TextoNombreVendedor" type="text"class="input_formulario_vendedor" id="txtNombreVendedor" placeholder="Ingresa nombre de persona física" required disabled>
+                            <p id="mensaje_error_Legal" style="display: none;">Introduce el nombre legal correcto</p>
                         </div>
                     </div>
-                    <div class="row ml-3 d-flex justify-content-center mt-3"> <!--Fila donde esta el correo empresarial-->
+                    <div class="row d-flex justify-content-center mt-3"> <!--Fila donde esta el correo empresarial tenia ml-3-->
                         <div class="col-lg-3 col-md-12 text-center">
-                            <label for="TextoCorreoEmpresa" class="label_formulario">Correo empresarial:</label>
+                            <label for="TextoCorreoEmpresa" id="lblCorreoEmpresa" class="label_formulario">Correo empresarial:</label>
                         </div>
                         <div class="col-lg-9 col-md-12 text-center">
                             <input name="TextoCorreoEmpresa" type="email"class="input_formulario_vendedor" id="txtCorreoEmpresa" placeholder="Ingresa tu correo de empresa" required disabled>
+                            <p id="mensaje_error_CorreoEmpresa" style="display: none;">Introduce el correo correctamente</p>
                         </div>
                     </div>
-                    <div class="row ml-3 d-flex justify-content-center mt-3"> <!--Fila donde esta el telefono empresarial-->
+                    <div class="row d-flex justify-content-center mt-3"> <!--Fila donde esta el telefono empresarial tena ml-3-->
                         <div class="col-lg-3 col-md-12 text-center">
-                            <label for="NumeroTelefonoEmpresa" class="label_formulario">Teléfono:</label>
+                            <label for="NumeroTelefonoEmpresa" id="lblTelefonoEmpresa" class="label_formulario">Teléfono:</label>
                         </div>
                         <div class="col-lg-9 col-md-12 text-center">
                             <input name="NumeroTelefonoEmpresa" type="number"class="input_formulario_vendedor" id="nmbrTelefonoEmpresa" placeholder="Ingresa tu celular de contacto empresa" min="0" maxlength="11" minlength="10" required disabled>
+                            <p id="mensaje_error_TelefonoEmpresa" style="display: none;">Introduce el teléfono correctamente.</p>
                         </div>
                     </div>
-                    <div class="row ml-3 d-flex justify-content-around mt-3">   <!--Fila donde esta la direccion-->
+                    <div class="row d-flex justify-content-around mt-3">   <!--Fila donde esta la direccion tenia ml-3-->
                         <div class="col-lg-3 col-md-12 text-center">
-                            <label for="TextoDireccionEmpresa" class="label_formulario">Dirección:</label>
+                            <label for="TextoDireccionEmpresa" id="lblDireccionEmpresa" class="label_formulario">Dirección:</label>
                         </div>
                         <div class="col-lg-9 col-md-12 text-center">
                             <textarea name="TextoDireccionEmpresa" class="input_formulario_vendedor input_direccion_empresa" id="txtDireccionEmpresa" rows="5" cols="39" placeholder="Ingresa tu Dirección Comercial (Calle,Colonia,Municipio/Alcaldía,Ciudad,Estado)" required disabled></textarea>
+                            <p id="mensaje_error_DireccionEmpresa" style="display: none;">Introduce la dirección correctamente.</p>
                         </div>
                     </div>
         </div>
-        <div class="row ml-4 mt-3 text-center">       <!--Aqui va la fila de botones del formulario vendedor-->
+        <div class="row mt-3 text-center">       <!--Aqui va la fila de botones del formulario vendedor tenia ml-4-->
             <div class="col-lg-4 col-md-12">
                 <button type="button" class="btn_Form_Vendedor" id="btn_Editar_Vendedor" disabled style="opacity: 0.2;">Editar</button>
             </div>
@@ -365,10 +373,10 @@
     <div class="modal-dialog modal-lg">
       <div class="modal-content content_producto text-center">
         <!-- <form onsubmit="return(validarAgregarProducto())" autocomplete="off"> -->
-            <span class = "titulo_form">Ingresa los datos de tu producto</span>
+            <span class = "titulo_form" style="font-size: 30px;">Ingresa los datos de tu producto</span>
             <div class="row d-flex justify-content-center mt-2">    <!--Seccion de nombre de producto-->
                 <div class="col-12 col-md-12 text-center">
-                    <label for="TextoNombreProductoNuevo" class="label_formulario_nuevo">Nombre de Producto</label>
+                    <label for="TextoNombreProductoNuevo" id="lblNombreProducto" class="label_formulario_nuevo">Nombre de Producto</label>
                 </div>
                 <div class="col-12 col-md-12 text-center">
                     <input name="TextoNombreProductoNuevo" type="text"class="input_nuevoproducto" id="txtNombreProductoNuevo" placeholder="Ingresa el nombre de producto" required>
@@ -376,7 +384,7 @@
             </div>
             <div class="row d-flex justify-content-around mt-2">    <!--Seccion de descripcion-->
                 <div class="col-12 col-md-12 text-center">
-                    <label for="TextoDescripcion" class="label_formulario_nuevo">Descripción</label>
+                    <label for="TextoDescripcion" id="lblDescripcionProducto" class="label_formulario_nuevo">Descripción</label>
                 </div>
                 <div class="col-12 col-md-12 text-center">
                     <textarea name="TextoDescripcionNuevo" class="input_nuevoproducto" id="txtDescripcionNuevo" rows="4" cols="39" placeholder="Ingresa Descripción de tu producto"></textarea>
@@ -384,11 +392,11 @@
             </div>
             <div class="row d-flex justify-content-center mt-1">    <!--Seccion de costos, categoria y cantidad-->
                 <div class="col-lg-4 text-center d-flex flex-column align-items-center">
-                    <label for="numberCostoNuevo" class="label_formulario_numeros text-center">Costo</label>
+                    <label for="numberCostoNuevo" id="lblCostoProducto" class="label_formulario_numeros text-center">Costo</label>
                     <input name="numberCostoNuevo" type="number"class="input_nuevoproducto_sm" id="numberCostoNuevo" placeholder="Costo" required min="1">
                 </div>
                 <div class="col-lg-4 text-center d-flex flex-column align-items-center">
-                    <label for="numberCantidadNuevo" class="label_formulario_numeros">Cantidad</label>
+                    <label for="numberCantidadNuevo" id="lblCantidadProducto" class="label_formulario_numeros">Cantidad</label>
                     <input name="numberCantidadNuevo" type="number"class="input_nuevoproducto_sm" id="numberCantidadNuevo" placeholder="Cantidad" min="1" required>
                 </div>
                 <div class="col-lg-4 text-center d-flex flex-column align-items-center">
@@ -397,8 +405,7 @@
                       <option value = "1" selected>Xbox</option>
                       <option value = "2">PlayStation</option>
                       <option value = "3">Nintendo</option>
-                      <option value = "3">Otros</option>
-                      <option value = "3">Coleccionables</option>
+                      <option value = "4">Coleccionables</option>
                    </select>
                     <!-- <input name="TextoCategoriaNuevo" type="text"class="input_nuevoproducto_sm" id="txtCategoriaNuevo" placeholder="Categoria" required> -->
                 </div>
@@ -442,7 +449,7 @@
     </div>
     <div class="col-md-3 col-lg-3 align-self-center d-flex justify-content-center mt-3">
       <a href="index.html">
-        <img src="src/img/LogoGJ.png" width="80" height="100" alt="">
+        <img src="src/img/LogoGJconFondo.png" width="80" height="100" alt="">
       </a>
     </div>
     <div class="col-md-3 col-lg-3 text-center mt-3">
@@ -475,24 +482,10 @@
 </footer>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <!--Recursos de Bootstrap, y scripts para funcionar la pagina -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
-    
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
     <script src="src/assets/js/usuario-perfil-js/inicializar-pagina.js"></script>
     <script src="src/assets/js/usuario-perfil-js/cargar-foto-usuario.js"></script>
     <script src="src/assets/js/usuario-perfil-js/editar-usuario.js"></script>
@@ -500,13 +493,12 @@
     <script src="src/assets/js/usuario-perfil-js/editar-vendedor.js"></script>
     <script src="src/assets/js/usuario-perfil-js/guardar-vendedor.js"></script>
     <script src="src/assets/js/usuario-perfil-js/guardar-usuario.js"></script>
-    <script src="src/assets/js/usuario-perfil-js/validar-telefono-usuario.js"></script>
-    <script src="src/assets/js/usuario-perfil-js/validar-telefono-vendedor.js"></script>
-    <script src="src/assets/js/usuario-perfil-js/validar-tarjeta.js"></script>
-    <script src="src/assets/js/usuario-perfil-js/validar-vencimiento.js"></script>
-    <script src="src/assets/js/usuario-perfil-js/validar-CVV.js"></script>
     <script src="src/assets/js/usuario-perfil-js/agregar-producto.js"></script>
     <script src="src/assets/js/usuario-perfil-js/cargar-foto-producto-nuevo.js"></script>
     <script src="src/assets/js/usuario-perfil-js/iniciar-modal-producto-nuevo.js"></script>
+    <script src="src/assets/js/usuario-perfil-js/validar-usuario.js"></script>
+    <script src="src/assets/js/usuario-perfil-js/validar-vendedor.js"></script>
+    <script src="src/assets/js/usuario-perfil-js/validar-nuevo-producto.js"></script>
+    
   </body>
 </html>
