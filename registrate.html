@@ -6,9 +6,9 @@
     <!-- Bootstrap CSS --> 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="src/assets/css/pred_fonts_styles.css" type="text/css"> <!--Link a hoja de estilos de Pagina base-->
-    <link rel="stylesheet" href="src/assets/css/iniciar-sesion-styles/iniciar-sesion.css" type="text/css">
+    <link rel="stylesheet" href="src/assets/css/registro-styles/registro.css" type="text/css">
 
-    <title>GameJoy Iniciar sesión</title>     <!--Titulo de la pagina-->
+    <title>GameJoy ¡REGÍSTRATE! </title>     <!--Titulo de la pagina-->
   </head>
 
 
@@ -70,38 +70,55 @@
 <!-- Aqui EMPIEZA LA PAGINA PERSONALIZADA  -->
 <main>
   <div class="container-fluid"> <!--Contenedor de los dos formularios -->
-  <div class="row "> <!--Inicio de la primera hilera -->
-      <div class="col-lg-12 col-md-12 col-sm-12 d-flex  mt-5 justify-content-center"> <!-- Columna  del formulario Iniciar sesión-->
-        <form onsubmit="return(false)" class="formulario-validacion formulario-iniciar" id="formulario"> <!--Formulario iniciar sesión-->
+  <div class="row mt-5"> <!--Inicio de la primera hilera -->
+      
+ <div class="col-lg-12 col-md-12 col-sm-12 d-flex justify-content-center">
+        <form class= "formulario-validacion formulario-registrate mr-3" id="formulario"> <!--Formulario iniciar Registrate-->
           <br/>
-          <br/>
-          <br/>
-        <div class="row justify-content-center"> <!-- Hilera para el titulo-->
-          <h2 class="titulo   justify-content-center  mt-4 mb-4">INICIAR SESIÓN</h2> <!--Titulo-->
+        <div class=" row d-flex   justify-content-center"><!-- Hilera para el titulo-->
+          <h2 class=" titulo mb-5 mt-5  mr-5 ml-5">¡REGÍSTRATE!</h2><!--Titulo-->
         </div>
-
-
-          <div class="formulario_grupo row d-flex justify-content-center mt-5 mb-5" id="grupo_correo"> <!-- Hilera para la sección correo-->
-        <label class="formulario_label col-lg-1 col-md-4 col-sm-12 mr-5 " for="exampleInputEmail1">Correo:</label> <!--Elemento para la etiqueta Correo, ya es resposivo hastael tamaño sm-->
-          <input type="email" class="formulario_input col-lg-6 col-md-10 col-sm-12 ml-5" name="correo" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="correo@ejemplo.com"><!--Espacio para colocar el correo del usuario ya es resposivo hastael tamaño sm-->
-       <i class=" formulario_validacion-estado fas fa-times-circle"></i>
-       <p class="formulario_input-error">Introduce el correo electronico como se indica en el ejemplo.</p>
+          <div class=" formulario_grupo  row d-flex justify-content-around mt-2 mb-3" id="grupo-nombre"><!-- Hilera para la sección nombre-->
+         <label class="formulario_label-resgistrate col-lg-1 col-md-4 col-sm-12" for="exampleInputEmail1"> Nombre: </label><!--Elemento para la etiqueta Nombre-->
+            <input type="text" class="Registro formulario_input col-lg-6 col-md-10 col-sm-12 mr-5 ml-5"  id="exampleInputEmail1" name="nombre" aria-describedby="emailHelp">
+            <!--Espacio para colocar el nombre del usuario, ya es resposivo hasta el tamaño sm-->
+            <i class=" formulario_validacion-circulo fas fa-times-circle"></i>
+            <p class="formulario_input-error">En nombre sólo se pueden introducir letras.</p>
           </div>
+          <div class=" row d-flex justify-content-around mt-2 mb-3" id="grupo-apellido"><!-- Hilera para la sección Apellido, ya es resposivo hastael tamaño sm-->
+            <label class=" formulario_label-resgistrate col-lg-1 col-md-4 col-sm-12"  for="exampleInputPassword1">Apellido: </label><!--Elemento para la etiqueta Apellido, ya es resposivo hasta el tamaño sm-->
+            <input type="text" class="Registro formulario_input col-lg-6 col-md-10 col-sm-12 mr-5 ml-5" name="apellido" id="exampleInputPassword1"><!--Espacio para colocar el Apellido del usuario, ya es resposivo hasta el tamaño sm--> 
+            <i class=" formulario_validacion-circulo fas fa-times-circle"></i>
+            <p class="formulario_input-error">En el apellido sólo se pueden introducir letras.</p>
+          </div>
+          <div class="row d-flex justify-content-around mt-2 mb-3" id="grupo-correo2"><!-- Hilera para la sección correo ya es resposivo hastael tamaño sm-->
+            <label class="formulario_label-resgistrate col-lg-1 col-md-4 col-sm-12" for="exampleInputPassword1">Correo: </label><!--Espacio para colocar el correo del usuario, ya es resposivo hasta el tamaño sm--> 
+            <input type="email" class="Registro formulario_input col-lg-6 col-md-10 col-sm-12 mr-5 ml-5" name="correo2" id="exampleInputPassword1" placeholder="correo@ejemplo.com"><!--Espacio para colocar la contraseña del usuario, ya es resposivo hastael tamaño sm-->
+            <i class=" formulario_validacion-circulo fas fa-times-circle"></i>
+            <p class="formulario_input-error"> Formato como se muestra en el ejemplo.</p> 
+            </div>
+          <div class="row d-flex justify-content-around mt-2 mb-3" id="grupo-password"><!-- Hilera para la sección contraseña-->
+            <label class="formulario_label-resgistrate col-lg-1 col-md-4 col-sm-12 " for="exampleInputPassword1">Contraseña: </label><!--Elemento para la etiqueta Contraseña, ya es responsivo hasta el tamaño sm-->
+            <input type="password" class="Registro formulario_input formulario_input col-lg-6 col-md-10 col-sm-12 mr-5 ml-5" name="password" id="exampleInputPassword1"><!--Espacio para colocar la contraseña del usuario, ya es resposivo hastael tamaño sm-->
+            <i class=" formulario_validacion-circulo fas fa-times-circle"></i>
+            <p class="formulario_input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p> 
+            </div>
           
-          <div class="formulario_grupo row d-flex justify-content-center mt-5 mb-5" id="grupo_password"> <!-- Hilera para la sección Contraseña -->
-       <label class="formulario_label col-lg-2 col-md-4 col-sm-12 mr"  for="exampleInputPassword1">Contraseña:</label><!--Elemento para la etiqueta Contraseña ya es resposivo hastael tamaño sm-->
-       <input type="password" class="formulario_input col-lg-6 col-md-10 col-sm-12 ml-5" id="exampleInputPassword1" name="password"><!--Espacio para colocar la contraseña del usuario ya es resposivo hastael tamaño sm--> 
-       <i class=" formulario_validacion-estado fas fa-times-circle"></i>
-       <p class="formulario_input-error">La contraseña debe contener de 4 a 12 digitos</p>
-          </div>
+          <div class="row d-flex justify-content-around mt-2 mb-3" id="grupo-telefono"><!-- Hilera para la sección teléfono-->
+            <label class="formulario_label-resgistrate col-lg-1 col-md-4 col-sm-12" for="exampleInputPassword1">Teléfono: </label><!--Elemento para la etiqueta Teléfono, ya es responsivo hasta el tamaño sm-->
+            <input type="text" class="Registro formulario_input col-lg-6 col-md-10 col-sm-12 mr-5 ml-5" name="telefono" id="exampleInputPassword1"><!--Espacio para colocar el teléfono del usuario, ya es resposivo hastael tamaño sm--> 
+            <i class=" formulario_validacion-circulo fas fa-times-circle"></i>
+            <p class="formulario_input-error"> Sólo  contiene numeros y  maximo son 14 dígitos.</p>
+            </div>
           
-          <div class="text-center"> <!--Contenedor del botón-->
-          <button type="submit" class="formulario_boton" id="formulario_mensaje-acceder">Iniciar sesión</button><!--Botón para iniciar sesión -->
-          </div>
-          <div class="formulario_mensaje" id="formulario_mensaje"><p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente</p></div>
-          <div class="formulario_registrate "id="formulario_mensaje_registrate"><a class="texto-registro" href="registrate.html" >¡REGÍSTRATE!</a> </div>
-      </form>
-    </div>
+     
+          <div class="text-center"><!--Contenedor del botón-->
+          <button type="submit" class="formulario_boton mt-2 mr-7 " id="formulario_mensaje-enviado">Registrarse</button><!--Botón Registrarse-->
+        </div>
+        <div class="formulario_mensaje align-self-center" id="formulario_mensaje"><p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor, rellena el formulario correctamente</p></div>
+        </form>
+    
+      </div>
       </div>  
   </div>
 </main>
@@ -154,8 +171,7 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-    <script src="src/assets/js/iniciar-sesion-js/formulario.js"></script>
-
+    <script src="src/assets/js/registro-js/formulario-registro.js"></script>
 
     </body>
 </html>
