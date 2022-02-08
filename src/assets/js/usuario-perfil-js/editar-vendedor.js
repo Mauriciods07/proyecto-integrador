@@ -10,5 +10,4 @@ $btnEditarVendedor.addEventListener('click',(e) =>{
     $btnAgregarVendedor.style.opacity = "1.0";
     e.target.style.opacity = "0.2";
     e.target.setAttribute('disabled',true);
-    alert('Has habilitado la opcion de editar datos del vendedor');
 });

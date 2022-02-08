@@ -35,5 +35,26 @@ let $archivoProductoNuevo = document.getElementById('archivoFotoProductoNuevo');
 let $imgProductoNuevo = document.getElementById('imgProductoNuevo');
 let $btnSubirImagenProductoNuevo = document.getElementById("btnSubirImagenProductoNuevo");
 
+/*Variables de validacion de formularios*/
+
+let nombre_OK = true;
+let apellido_OK = true;
+let correo_OK = true;
+let telefono_OK = true;
+let direccion_OK =true;
+let tarjeta_OK = true;
+let vencimiento_Ok = true;
+let cvv_OK = true;
+
+let comercio_OK = true;
+let legal_OK = true;
+let correoempresa_OK = true;
+let telefonoempresa_OK = true;
+let direccionempresa_OK =true;
+
+let nombreproducto_OK = true;
+let descripcionproducto_OK = true;
+let costoproducto_OK = true;
+let cantidadproducto_OK = true;
 
 //llamada a API para cargar datos del usuario basados en su correo;
