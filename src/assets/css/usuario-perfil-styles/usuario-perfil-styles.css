@@ -1,4 +1,11 @@
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+}
 
+input[type=number] {
+  -moz-appearance: textfield;
+}
 .formulario_usuario{
     width: 95%;
     min-height: 728px;
@@ -33,6 +40,9 @@
     border: 3px solid var(--blue);
     border-radius: 45px;
 }
+.input_formulario:hover{
+    box-shadow: 2px 0px 30px rgba(163, 163,  163, 1);
+}
 
 .input_direccion{
     text-align: justify;
@@ -48,6 +58,11 @@
     border: 3px solid var(--blue);
     border-radius: 45px;
 }
+
+.input_pago_tarjeta:hover{
+    box-shadow: 1px 0px 30px rgba(163, 163,  163, 1);
+}
+
 .input_pago_numeros{
     color: var(--white);
     font-family: var(--body);
@@ -58,6 +73,10 @@
     border: 3px solid var(--blue);
     border-radius: 45px;
 }
+.input_pago_numeros:hover{
+    box-shadow: 1px 0px 30px rgba(163, 163,  163, 1);
+}
+
 .Foto_Usuario{
     width: 150px;
     border:2px solid var(--blue);
@@ -95,10 +114,10 @@
     border: 3px solid var(--blue);
     border-radius: 170px;
 }
-.btn_Form_Usuario:hover{
-    background-color: lightgray;
+.btn_Form_Usuario:hover {
+    background-color: var(--blue);
     border: 3px solid var(--blue);
-    color: var(--black);
+    color: var(--white);
 }
 
  .carousel_ordenes{
@@ -150,6 +169,9 @@
     border: 3px solid var(--blue);
     border-radius: 45px;
 }
+.input_formulario_vendedor:hover{
+    box-shadow: 2px 0px 30px rgba(163, 163,  163, 1);
+}
 .btn_Form_Vendedor{
     background-color: lightgray;
     border: 3px solid var(--blue);
@@ -161,9 +183,9 @@
     font-family: var(--body);
 }
 .btn_Form_Vendedor:hover{
-    background-color: lightgray;
+    background-color: var(--blue);
     border: 3px solid var(--blue);
-    color: var(--black);
+    color: var(--white);
 }
 .input_direccion_empresa{
     text-align: justify;
@@ -222,6 +244,9 @@
     border: 3px solid var(--blue);
     border-radius: 25px;
 }
+.input_nuevoproducto:hover{
+    box-shadow: 1px 0px 30px rgba(163, 163,  163, 1);
+}
 .input_nuevoproducto_sm{
     color: var(--white);
     font-family: var(--body);
@@ -232,6 +257,9 @@
     background-color: rgba(18,18,255, 0.25);
     border: 3px solid var(--blue);
     border-radius: 45px;
+}
+.input_nuevoproducto_sm:hover{
+    box-shadow: 1px 0px 30px rgba(163, 163,  163, 1);
 }
 .btn_modal_subirimagen{
     color: var(--white);
@@ -430,4 +458,60 @@ Extra extra large	xxl	≥1400px
         font-size: 22px;
         width: 250px;
     }
+}
+
+/*Clases de validaciones*/
+#mensaje_error_Nombre{
+    font-family: var(--body);
+    font-size: 18px;
+    color: red;
+}
+#mensaje_error_Apellido{
+    font-family: var(--body);
+    font-size: 18px;
+    color: red;
+}
+
+#mensaje_error_Correo{
+    font-family: var(--body);
+    font-size: 18px;
+    color: red;
+}
+#mensaje_error_Telefono{
+    font-family: var(--body);
+    font-size: 18px;
+    color: red;
+}
+#mensaje_error_Direccion{
+    font-family: var(--body);
+    font-size: 18px;
+    color: red;
+}
+
+/*Clases de validacion de vendedor*/
+
+#mensaje_error_Comercio{
+    font-family: var(--body);
+    font-size: 18px;
+    color: red;
+}
+#mensaje_error_Legal{
+    font-family: var(--body);
+    font-size: 18px;
+    color: red;
+}
+#mensaje_error_CorreoEmpresa{
+    font-family: var(--body);
+    font-size: 18px;
+    color: red;
+}
+#mensaje_error_TelefonoEmpresa{
+    font-family: var(--body);
+    font-size: 18px;
+    color: red;
+}
+#mensaje_error_DireccionEmpresa{
+    font-family: var(--body);
+    font-size: 18px;
+    color: red;
 }

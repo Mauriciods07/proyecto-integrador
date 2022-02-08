@@ -1,6 +1,6 @@
     function validarVendedor(){
-        if(!($inputTelefonoEmpresa.value.length>9 && $inputTelefonoEmpresa.value.length<12)){
-            alert('El numero de teléfono debe tener de 10 a 11 dígitos');
+        if(!(comercio_OK && legal_OK && correoempresa_OK && telefonoempresa_OK && direccionempresa_OK)){
+            alert('Revisa los campos en rojo');
             return false;
         }
         else{
