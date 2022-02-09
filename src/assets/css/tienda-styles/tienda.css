@@ -6,8 +6,8 @@
     --red: #FF0D00;
     --blue: #1212FF;
     --green: #46FF01;
-    --pink: #FF00BC;
-    --yellow: #E4F802;
+    --lightgrey: #d3d3d3;
+    --grey: #a9a9a9;
     --white: #FFFFFF;
 
     /* Fuentes */
@@ -53,12 +53,12 @@ max-height: 98.1px;
 .title-box > h4 {
     position: absolute;
     top: 10%;
-    left: 25%;
+    left: 20%;
 }
 
 .title-box {
-    border: 3px solid var(--pink);
-    width: 15rem;
+    border: 3px solid var(--lightgrey);
+    width: 10rem;
     position: relative;
     text-align: center;
     height: 2.5rem;
@@ -70,7 +70,7 @@ max-height: 98.1px;
 
 }
 .title-box:hover {
-    background-color: rgba(255, 0, 188, 0.1);
+    background-color: rgba(211, 211, 211, 0.1);
 }
 /* Contenedor el div de tienda */
 .contenedor{
@@ -84,7 +84,7 @@ max-height: 98.1px;
     align-content: space-between;
 }
 /* Especifidad, Se dan diseño a las imagenes */
-.container .row  img{
+ .container .row  #img{
     margin-top: 15px; 
     /* margin-top: 15px; */
     width: 300px;
@@ -92,11 +92,11 @@ max-height: 98.1px;
     border-radius: 45px;
     border: 2px solid var(--white);
     justify-content: center;
-    transition: transform 1.5s;/* Tiempo en el que aparece la imagen con hover */
-} 
+    transition: transform 1.5s;  /* Tiempo en el que aparece la imagen con hover  */
+}
 
 /* Se añade hover para darle estilo a la imagen */
- img:hover{
+ #img:hover{
     transform: scale(1.2);
 }
 /* Se le agrega estilos a todos los row y se centran */
@@ -111,9 +111,8 @@ max-height: 98.1px;
     height: 45px;
     margin: 20px;
     padding: 0;
-    border: 2px solid var(--pink);
-   font-family: var(--body);
-   font-size: 30px;
+    font-family: var(--body);
+   font-size: 25px;
    background-color: var(--black);
    color: var(--white);
    border-radius: 45px;
