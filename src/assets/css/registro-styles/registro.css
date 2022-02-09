@@ -222,10 +222,15 @@
   .formulario_input {
    
      width: 300px;
+     font-size: 13px;
    
   
   }
-  
+  .formulario_mensaje{
+width : 400px;
+font-size: 12px;
+
+  }
 
 
 
