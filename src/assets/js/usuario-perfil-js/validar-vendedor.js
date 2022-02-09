@@ -1,4 +1,4 @@
-formularioVendedorInputs.forEach((input,index) =>{      //Validar los campos del vendedor, con excepcion de la direccion porque no utiliza input
+formularioVendedorInputs.forEach((input,index) =>{      //  REVISAR validar-usuario.js PARA EXPLICACION, ES LO MISMO, PERO APLICADO AL FORMULARIO DE VENDEDOR
         input.addEventListener('keyup',(e) =>{
             const valido = expregVendedor[index].test(input.value) ? true : false;
             if(valido){
