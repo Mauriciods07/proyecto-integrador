@@ -35,23 +35,40 @@ let $archivoProductoNuevo = document.getElementById('archivoFotoProductoNuevo');
 let $imgProductoNuevo = document.getElementById('imgProductoNuevo');
 let $btnSubirImagenProductoNuevo = document.getElementById("btnSubirImagenProductoNuevo");
 
+/*Enumerar inputs de formularios*/
+let formularioUsuarioInputs = document.querySelectorAll('.formulario_usuario input');    //referencias a los inputs del formulario de usuario
+let banderaUsuario = new Array(formularioUsuarioInputs.length); //Banderas de usuario para validar formulario
+banderaUsuario.fill(false);     //Las banderas de usuario se llenan de false para que se modifiquen los campos, si ya hay campos llenos al cargar datos de Api, asegurarse que estos se llenen individualmente
+
+
+let formularioVendedorInputs = document.querySelectorAll('.formulario_vendedor input'); //Referencias a los inputs del formulario de vendedor
+let banderaVendedor = new Array(formularioVendedorInputs.length);       //Banderas de vendedor para validar formulario
+banderaVendedor.fill(false);     //Las banderas de vendedor  se llenan de false para que se modifiquen los campos, si ya hay campos llenos al cargar datos de Api, asegurarse que estos se llenen individualmente
+
+
+let formularioProductoInputs = document.querySelectorAll('.modal_producto input');  //Referencias a los inputs del formulario de nuevo producto
+let banderaProducto = new Array(formularioProductoInputs.length); //Banderas de nuevo producto para validar formulario
+banderaProducto.fill(false);        //Las banderas de producto nuevo  se llenan de false para que se modifiquen los campos, si ya hay campos llenos al cargar datos de Api, asegurarse que estos se llenen individualmente
+
+console.log(formularioProductoInputs);
+let expregUsuario = [/^[a-zA-ZÀ-ÿ\s]{1,40}$/,
+                    /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
+                    /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]{3}$/,
+                    /^\d{10,11}$/,/^[a-zA-ZÀ-ÿ\s]{1,100}$/,
+                    /^\d{16}$/,/^(0[0-9]|1[0-9])\/?([0-9]{2})$/,
+                    /^\d{3}$/,
+                    /./];   //TODO verificar si esta ultima expresion se utiliza
+expregUsuario.pop();
+console.log(expregUsuario.length);
+
+let expregVendedor =[/^[a-zA-ZÀ-ÿ\s]{1,40}$/,
+                     /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
+                     /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]{3}$/,
+                     /^\d{10,11}$/];
+
 /*Variables de validacion de formularios*/
-
-let nombre_OK = true;
-let apellido_OK = true;
-let correo_OK = true;
-let telefono_OK = true;
 let direccion_OK =true;
-let tarjeta_OK = true;
-let vencimiento_Ok = true;
-let cvv_OK = true;
-
-let comercio_OK = true;
-let legal_OK = true;
-let correoempresa_OK = true;
-let telefonoempresa_OK = true;
 let direccionempresa_OK =true;
-
 let nombreproducto_OK = true;
 let descripcionproducto_OK = true;
 let costoproducto_OK = true;

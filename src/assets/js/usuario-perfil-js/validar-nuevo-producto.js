@@ -53,10 +53,3 @@ $inputCantidadProductoNuevo.addEventListener('keyup', (e) =>{
         cantidadproducto_OK = false;
     }
 });
-
-
-
-$inputNombreProductoNuevo.removeEventListener("keyup",KeyboardEvent);
-$inputDescripcionProductoNuevo.removeEventListener("keyup",KeyboardEvent);
-$inputCostoProductoNuevo.removeEventListener("keyup",KeyboardEvent);
-$inputCantidadProductoNuevo.removeEventListener("keyup",KeyboardEvent);
