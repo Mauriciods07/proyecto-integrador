@@ -1,6 +1,6 @@
-
+//Esta funcion se manda llamar cuando el boton de guardar es seleccionado con submit
 function guardarUsuario(){
-    if(!(nombre_OK && apellido_OK && correo_OK && telefono_OK && direccion_OK && tarjeta_OK && vencimiento_OK && cvv_OK)) {
+    if(!(banderaUsuario[0]&&banderaUsuario[1]&&banderaUsuario[2]&&banderaUsuario[3]&&banderaUsuario[5]&&banderaUsuario[6]&&banderaUsuario[7]&&direccion_OK)){
         alert('Revisa los campos en rojo');
         return false;
     }
@@ -23,20 +23,4 @@ function guardarUsuario(){
     }
     
 }
-
-// function restaurar(){    
-//         /////////////////////Formulario de Vendedor se desactiva hasta que se vuelva a editar de manera general///////////////////////////////
-//         $btnEditarVendedor.setAttribute('disabled',true);
-//         $btnEditarVendedor.style.opacity = "0.2";
-//         $btnGuardarVendedor.setAttribute('disabled',true);
-//         $btnGuardarVendedor.style.opacity = "0.2";
-//         $inputNombreComercio.setAttribute('disabled',true);
-//         $inputNombreVendedor.setAttribute('disabled',true);
-//         $inputCorreoEmpresa.setAttribute('disabled',true);
-//         $inputTelefonoEmpresa.setAttribute('disabled',true);
-//         $inputDireccionEmpresa.setAttribute('disabled',true);
-//         $btnAgregarVendedor.setAttribute('disabled',true);
-//         $imgFotoUsuario.setAttribute('disabled',true);
-//         $btnAgregarVendedor.style.opacity = "0.2";
-// }
 

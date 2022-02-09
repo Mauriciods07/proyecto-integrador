@@ -470,58 +470,19 @@ Extra extra large	xxl	≥1400px
 }
 
 /*Clases de validaciones*/
-#mensaje_error_Nombre{
+
+/*Clase de validacion de usuario*/
+.formulario_usuario p{
     font-family: var(--body);
     font-size: 18px;
-    color: red;
-}
-#mensaje_error_Apellido{
-    font-family: var(--body);
-    font-size: 18px;
-    color: red;
+    color: white;
 }
 
-#mensaje_error_Correo{
-    font-family: var(--body);
-    font-size: 18px;
-    color: red;
-}
-#mensaje_error_Telefono{
-    font-family: var(--body);
-    font-size: 18px;
-    color: red;
-}
-#mensaje_error_Direccion{
-    font-family: var(--body);
-    font-size: 18px;
-    color: red;
-}
+/*Clase de validacion de vendedor*/
 
-/*Clases de validacion de vendedor*/
-
-#mensaje_error_Comercio{
+.formulario_vendedor p{
     font-family: var(--body);
     font-size: 18px;
-    color: red;
-}
-#mensaje_error_Legal{
-    font-family: var(--body);
-    font-size: 18px;
-    color: red;
-}
-#mensaje_error_CorreoEmpresa{
-    font-family: var(--body);
-    font-size: 18px;
-    color: red;
-}
-#mensaje_error_TelefonoEmpresa{
-    font-family: var(--body);
-    font-size: 18px;
-    color: red;
-}
-#mensaje_error_DireccionEmpresa{
-    font-family: var(--body);
-    font-size: 18px;
-    color: red;
+    color: white;
 }
 
