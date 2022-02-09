@@ -1,6 +1,7 @@
     function validarVendedor(){
-        if(!(comercio_OK && legal_OK && correoempresa_OK && telefonoempresa_OK && direccionempresa_OK)){
+        if(!(banderaVendedor.every(campo => campo===true)&&direccionempresa_OK)){
             alert('Revisa los campos en rojo');
+            console.log(banderaVendedor);
             return false;
         }
         else{
