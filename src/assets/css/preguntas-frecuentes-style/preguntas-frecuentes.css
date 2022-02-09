@@ -14,6 +14,7 @@
 .pregunta_label{
 display: inline;
 margin-bottom: 45px;
+font-size: 25px;
 
 }
 
@@ -39,9 +40,6 @@ margin-bottom: 45px;
     font-size: 25px;
 }
 
-.contenedorContacto:hover{
-    
-}
 
 
 .segundotitulo{
@@ -85,4 +83,11 @@ margin-bottom: 45px;
 
 .card-title{
     background-color:#FF0D00 ;
+}
+
+@media (max-width: 450px) {
+    .segundotitulo{
+        font-size: 15px;
+    }
+   
 }
