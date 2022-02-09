@@ -14,7 +14,10 @@
 .pregunta_label{
 display: inline;
 margin-bottom: 45px;
+
+
 font-size: 25px;
+
 
 }
 
@@ -31,14 +34,22 @@ font-size: 25px;
 .contenedorContacto{
     /* width: 620px; */
     height: 10px;
+
+    border: 3px solid var(--green);
+    background-color: rgba(70, 255, 1, 0.25);
+
     background-color: rgba(18,18,255, 0.25);
     border: 3px solid var(--blue);
+
     border-radius: 60px;
     /* margin-bottom: 20px; */
     color: var(--white);
     font-family: var(--body);
     font-size: 25px;
 }
+
+
+
 
 
 
@@ -51,7 +62,21 @@ font-size: 25px;
 }
 
 .btnEnviar{
-    
+
+    border: 3px solid var(--blue);
+    background-color: var(--pink);
+    color: var(--white);
+    font-family: var(--body);
+    font-size: 30px;
+    border-radius: 170px;
+    width: 217px;
+    height: 78px;
+    margin: 0 auto;
+    display: block;
+}
+.btnEnviar:hover{
+    background-color:  rgba(18, 18, 255, 0.25);
+
     font-family: var(--body); background-color: lightgray;
     border: 3px solid var(--blue);
     color: var(--black);
@@ -69,6 +94,7 @@ font-size: 25px;
     box-shadow: 1px 0px 30px rgba(163, 163,  163, 1);
     background: rgba(18, 18, 255, 0.5);
     color: white;
+
 }
 
 .card{
@@ -83,4 +109,7 @@ font-size: 25px;
 
 .card-title{
     background-color:#FF0D00 ;
+
+}
+
 }
