@@ -15,17 +15,10 @@
   }
   
   .formulario_boton {  /*Caracteristicas de los botones */
-
     background-color: #D6D6E3;
     border-radius: 45px;
     border: 3px solid white;
-    color: black;
-
-    background-color: var(--pink);
-    border-radius: 45px;
-    border: 3px solid var(--blue);
-    color: var(--white);
-
+    color: var(black);
     font-family: var(--body);
     font-size: 25px;
     margin-bottom: 25px;
@@ -45,11 +38,7 @@
   .formulario_input {  /*Caracteristicas de los espacios para escribir*/
 
     background: #1212ff4f;
-    border: 3px solid rgba(18,18,165,1);
-
-    background: rgba(70, 255, 1, 0.25);
-    border: 3px solid var(--green);
-
+    border: 3px solid rgb(18, 18, 255);
     border-radius: 45px;
     width: 342px;
     height: 35px;
@@ -66,9 +55,6 @@
   
 
     border: 3px solid  #D6D6E3;
-
-    border: 3px solid  #FF00BC;
-
     outline: none;
     box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
     
@@ -100,11 +86,7 @@
     width: 800px;
     line-height: 45px;
     text-align: center;
-
     background-color: var(--blue);
-
-    background-color:#FF00BC;
-
     color: white;
     display: none;
     
@@ -127,11 +109,7 @@
   
   .formulario-registrate{ /*Caracteristicas de los formularios*/
       border-radius: 45px;
-
       border: 5px solid #D6D6E3;
-
-      border: 5px solid var(--blue);
-
       width: 800px;
       height: 600px;
       margin-bottom: 200px;  
@@ -265,10 +243,6 @@
   }
   
 
-     font-size: 13px;
-   
-  
-  }
   .formulario_mensaje{
 width : 400px;
 font-size: 12px;
@@ -278,5 +252,5 @@ font-size: 12px;
 
 
 
-  }
- 
+  
+}
