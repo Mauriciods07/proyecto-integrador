@@ -1,4 +1,4 @@
-$btnEditarVendedor.addEventListener('click',(e) =>{
+$btnEditarVendedor.addEventListener('click',(e) =>{ //Funcion donde, el click a boton editar vendedor, habilita los campos inputs, botones de agregar producto y guardar vendedor. Mientras que el boton editar vendedor se deshabilita
     $inputNombreComercio.removeAttribute('disabled');
     $inputNombreVendedor.removeAttribute('disabled');
     $inputCorreoEmpresa.removeAttribute('disabled');

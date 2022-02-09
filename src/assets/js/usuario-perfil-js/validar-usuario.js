@@ -1,6 +1,6 @@
-formularioUsuarioInputs.forEach((input,index) =>{
-        if(index>=0 && index<=3){
-            input.addEventListener('keyup',(e) =>{
+formularioUsuarioInputs.forEach((input,index) =>{   //Funcion que evalua todos los inputs dentro del formulario de usuario, como todos los inputs no se utilizan, existen condicionales dentro del foreach
+        if(index>=0 && index<=3){   //Los indices del 0-3 son inputs de nombre, apellido, correo y telefono
+            input.addEventListener('keyup',(e) =>{  //A cada input se agrega un evento de escritura, mientras se escribe dentro de ellos, se evalua que cumplan las expresiones regulares, dependiendo de la validacion el estilo de texto cambia
                 const valido = expregUsuario[index].test(input.value) ? true : false;
                 if(valido){
                     document.querySelectorAll('.formulario_usuario label')[index].style.color = 'white';
@@ -14,8 +14,8 @@ formularioUsuarioInputs.forEach((input,index) =>{
                 }
             })
         }
-        else if(index>=5 && index<=7){
-            input.addEventListener('keyup', (e) =>{
+        else if(index>=5 && index<=7){  //Los indices del 5-7 son campos de pago (Tarjeta, fecha de vencmiento y CVV)
+            input.addEventListener('keyup', (e) =>{ //Se agregan eventos de escritura y mientras se escribe se valida con expresiones regulares, el estilo del texto interior cambia, al igual que el label datos de pago.
                 const valido = expregUsuario[index].test(input.value) ? true : false;
                 if (valido){
                     document.getElementById('datos_Pago').style.color = "white";
@@ -29,7 +29,7 @@ formularioUsuarioInputs.forEach((input,index) =>{
                 }
             });
         }
-        else{
+        else{   //Si el indice no esta en los rangos seleccionados, se omiten los inputs de foto y checkbox, ya que no son necesarios para validacion
             console.log('ignore los otros campos de foto y checkbox');
         }
 });
