@@ -84,10 +84,3 @@ font-size: 25px;
 .card-title{
     background-color:#FF0D00 ;
 }
-
-@media (max-width: 450px) {
-    .segundotitulo{
-        font-size: 15px;
-    }
-   
-}
