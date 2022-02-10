@@ -4,11 +4,13 @@ formularioVendedorInputs.forEach((input,index) =>{      //  REVISAR validar-usua
             if(valido){
                 document.querySelectorAll('.formulario_vendedor label')[index].style.color = 'white';
                 document.querySelectorAll('.formulario_vendedor p')[index].style.display = "none";
+                input.style.border = "3px solid green";
                 banderaVendedor[index] = true;
             }
             else{
                 document.querySelectorAll('.formulario_vendedor label')[index].style.color = 'red';
                 document.querySelectorAll('.formulario_vendedor p')[index].style.display = "block";
+                input.style.border = "3px solid red";
                 banderaVendedor[index] = false;
             }
         })
@@ -19,11 +21,13 @@ $inputDireccionEmpresa.addEventListener('keyup', (e) =>{
     if (valido){
         document.getElementById('lblDireccionEmpresa').style.color = 'white';
         document.getElementById('mensaje_error_DireccionEmpresa').style.display = "none";
+        e.target.style.border = "3px solid green";
         direccionempresa_OK = true;
     }
     else{
         document.getElementById('lblDireccionEmpresa').style.color = 'red';
         document.getElementById('mensaje_error_DireccionEmpresa').style.display ="block";
+        e.target.style.border = "3px solid red";
         direccionempresa_OK = false;
     }
 });

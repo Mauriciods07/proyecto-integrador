@@ -135,20 +135,18 @@ input[type=number] {
  }
 
  .orden_texto_id{
-    color: var(--black);
+    color: var(--white);
     font-family: var(--body);
     font-size: 15px;
     width: max-content;
     min-width: 15px;
     text-align: center;
-    background: lightgray;
-    border-radius: 10px;
-    border: 3px solid var(--blue);
+    border-bottom: 3px solid lightgray;
 }
 .orden_texto{
     color: var(--white);
     font-family: var(--body);
-    font-size: 15px;
+    font-size: 18px;
 }
 
 .formulario_vendedor{
