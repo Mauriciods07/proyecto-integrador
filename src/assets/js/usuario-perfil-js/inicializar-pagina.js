@@ -67,4 +67,36 @@ let descripcionproducto_OK = true;
 let costoproducto_OK = true;
 let cantidadproducto_OK = true;
 
+//Variables para carousel dinamico
+let Mario = {
+    titulo: "Mario Kart 8",
+    img: "src/img/productos/mario_kart8_deluxe.jpg",
+    precio: 1400,
+    descripcion: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat nisi saepe optio vero animi assumenda non quas corporis corrupti eius eum facere quod sunt repellendus, recusandae quo veritatis dolorem? Molestias.",
+    color: "#FF00BC",
+    cantidad: 1
+}
+
+let Luigi = {
+    titulo: "Luigi´s Mansion",
+    img: "src/img/productos/luigis_mansion3.jpg",
+    precio: 1500,
+    descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat voluptatum ullam quis recusandae rem id excepturi tempore magni! Doloremque laudantium vero assumenda illum, reprehenderit atque sunt necessitatibus expedita ipsum?",
+    color: "#46FF01",
+    cantidad: 1
+}
+
+let Pokemon = {
+    titulo: "Pokémon Sword & Shield",
+    img: "src/img/productos/pokemon_brilliant_diamond.jpg",
+    precio: 1300,
+    descripcion: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta cupiditate, repellat nihil quisquam minima enim expedita cum molestiae natus accusantium fugiat voluptates laboriosam, quas modi perspiciatis laudantium temporibus nemo accusamus.",
+    color: "#1212FF",
+    cantidad: 1
+}
+const juegos = [Luigi, Luigi,Pokemon, Mario, Luigi,Pokemon];
+let paginas = 0;
+let numjuegos = juegos.length;
+let numJuegosPorAgregar = juegos.length;
+let $carousel = document.querySelector('.carousel-inner.carousel_dinamico');
 //llamada a API para cargar datos del usuario basados en su correo;
