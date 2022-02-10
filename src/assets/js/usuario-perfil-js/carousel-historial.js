@@ -18,7 +18,7 @@ for(let i=0;i<paginas;i++){
               <div class="card card_articulo_comprado popover-test" title="Orden 1881">
                 <div class="row">
                   <div class="col-6">
-                    <img src=${juegos[2*i].img} alt="Juego1" width="150" height="200">
+                    <img src=${juegos[2*i].img} alt=${juegos[2*i].titulo} width="150" height="200">
                   </div>
                   <div class="col-6 pt-3">
                     <div class="row d-flex flex-column mb-1 text-center">
@@ -27,7 +27,7 @@ for(let i=0;i<paginas;i++){
                     </div>
                     <div class="row d-flex flex-column text-center mb-1">
                       <span class="orden_texto">Precio</span>
-                      <span class="orden_texto_id mx-auto">${juegos[2*i].precio}</span>
+                      <span class="orden_texto_id mx-auto">${'$' + juegos[2*i].precio}</span>
                     </div>
                     <div class="row d-flex flex-column text-center">
                       <span class="orden_texto">Cantidad</span>
@@ -53,7 +53,7 @@ for(let i=0;i<paginas;i++){
               <div class="card card_articulo_comprado popover-test" title="Orden 1881">
                 <div class="row">
                   <div class="col-6">
-                    <img src=${juegos[2*i].img} alt="Juego1" width="150" height="200">
+                    <img src=${juegos[2*i].img} alt=${juegos[2*i].titulo} width="150" height="200">
                   </div>
                   <div class="col-6 pt-3">
                     <div class="row d-flex flex-column mb-1 text-center">
@@ -62,7 +62,7 @@ for(let i=0;i<paginas;i++){
                     </div>
                     <div class="row d-flex flex-column text-center mb-1">
                       <span class="orden_texto">Precio</span>
-                      <span class="orden_texto_id mx-auto">${juegos[2*i].precio}</span>
+                      <span class="orden_texto_id mx-auto">${'$' + juegos[2*i].precio}</span>
                     </div>
                     <div class="row d-flex flex-column text-center">
                       <span class="orden_texto">Cantidad</span>
@@ -76,7 +76,7 @@ for(let i=0;i<paginas;i++){
             <div class="card card_articulo_comprado popover-test" title="Orden 1881">
               <div class="row">
                 <div class="col-6">
-                  <img src="${juegos[2*i+1].img}" alt="Juego1" width="150" height="200">
+                  <img src="${juegos[2*i+1].img}" alt=${juegos[2*i+1].titulo} width="150" height="200">
                 </div>
                 <div class="col-6 pt-3">
                   <div class="row d-flex flex-column text-center mb-1">
@@ -85,7 +85,7 @@ for(let i=0;i<paginas;i++){
                   </div>
                   <div class="row d-flex flex-column text-center mb-1">
                     <span class="orden_texto">Precio</span>
-                    <span class="orden_texto_id mx-auto">${juegos[2*i+1].precio}</span>
+                    <span class="orden_texto_id mx-auto">${'$' + juegos[2*i+1].precio}</span>
                   </div>
                   <div class="row d-flex flex-column text-center">
                     <span class="orden_texto">Cantidad</span>
