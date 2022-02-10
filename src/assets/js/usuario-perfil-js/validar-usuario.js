@@ -5,11 +5,13 @@ formularioUsuarioInputs.forEach((input,index) =>{   //Funcion que evalua todos l
                 if(valido){
                     document.querySelectorAll('.formulario_usuario label')[index].style.color = 'white';
                     document.querySelectorAll('.formulario_usuario p')[index].style.display = "none";
+                    input.style.border = "3px solid green";
                     banderaUsuario[index] = true;
                 }
                 else{
                     document.querySelectorAll('.formulario_usuario label')[index].style.color = 'red';
                     document.querySelectorAll('.formulario_usuario p')[index].style.display = "block";
+                    input.style.border = "3px solid red";
                     banderaUsuario[index] = false;
                 }
             })
@@ -20,10 +22,12 @@ formularioUsuarioInputs.forEach((input,index) =>{   //Funcion que evalua todos l
                 if (valido){
                     document.getElementById('datos_Pago').style.color = "white";
                     input.style.color = 'white';
+                    input.style.border = "3px solid green";
                     banderaUsuario[index] = true;
                 }
                 else{
                     input.style.color = 'red';
+                    input.style.border = "3px solid red";
                     document.getElementById('datos_Pago').style.color = "red";
                     banderaUsuario[index] = true;
                 }
@@ -40,11 +44,13 @@ $inputDireccion.addEventListener('keyup', (e) =>{   //Evento especial para campo
     if (valido){
         document.querySelectorAll('.formulario_usuario label')[4].style.color = 'white';
         document.querySelectorAll('.formulario_usuario p')[4].style.display = "none";
+        e.target.style.border = "3px solid green";
         direccion_OK = true;
     }
     else{
         document.querySelectorAll('.formulario_usuario label')[4].style.color = 'red';
         document.querySelectorAll('.formulario_usuario p')[4].style.display = "block";
+        e.target.style.border = "3px solid red";
         direccion_OK = false;
     }
 });

@@ -4,11 +4,13 @@ $inputNombreProductoNuevo.addEventListener('keyup', (e) =>{ //Evento donde al es
     if (valido){
         document.getElementById('lblNombreProducto').style.color = 'white';
         e.target.style.color = "white";
+        e.target.style.border = "3px solid green";
         nombreproducto_OK = true;
     }
     else{
         document.getElementById('lblNombreProducto').style.color = 'red';
         e.target.style.color = "red";
+        e.target.style.border = "3px solid red";
         nombreproducto_OK = false;
     }
 });
@@ -19,11 +21,13 @@ $inputDescripcionProductoNuevo.addEventListener('keyup', (e) =>{ //Evento donde 
     if (valido){
         document.getElementById('lblDescripcionProducto').style.color = 'white';
         e.target.style.color = "white";
+        e.target.style.border = "3px solid green";
         descripcionproducto_OK = true;
     }
     else{
         document.getElementById('lblDescripcionProducto').style.color = 'red';
         e.target.style.color = "red";
+        e.target.style.border = "3px solid red";
         descripcionproducto_OK = false
     }
 });
@@ -32,11 +36,13 @@ $inputCostoProductoNuevo.addEventListener('keyup', (e) =>{ //Evento donde al esc
     if (parseInt(e.target.value)>=1){
         document.getElementById('lblCostoProducto').style.color = 'white';
         e.target.style.color = "white";
+        e.target.style.border = "3px solid green";
         costoproducto_OK = true;
     }
     else{
         document.getElementById('lblCostoProducto').style.color = 'red';
         e.target.style.color = "red";
+        e.target.style.border = "3px solid red";
         costoproducto_OK = false;
     }
 });
@@ -45,11 +51,13 @@ $inputCantidadProductoNuevo.addEventListener('keyup', (e) =>{   //Evento donde a
     if (parseInt(e.target.value)>=1){
         document.getElementById('lblCantidadProducto').style.color = 'white';
         e.target.style.color = "white";
+        e.target.style.border = "3px solid green";
         cantidadproducto_OK = true;
     }
     else{
         document.getElementById('lblCantidadProducto').style.color = 'red';
         e.target.style.color = "red";
+        e.target.style.border = "3px solid red";
         cantidadproducto_OK = false;
     }
 });
