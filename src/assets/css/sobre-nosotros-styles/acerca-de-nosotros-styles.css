@@ -10,6 +10,7 @@
     --yellow: #E4F802;
     --white: #FFFFFF;
 
+
     /* Fuentes */
     --Titles: 'Press Start 2P', cursive;
     --body: 'Audiowide';
@@ -120,7 +121,7 @@ li{             /* Se quitan las viñetas de las listas de la pagina*/
 }
 
 h3 {
-    color: var(--pink);
+    color: var(--blue);
     text-align: center;
     font-family: var(--body);
     font-size: 70px;
@@ -194,7 +195,7 @@ h3 {
 
 .fusion:hover{
 
--webkit-box-shadow: 0px 0px 15px 15px #FF00BC;
+-webkit-box-shadow: 0px 0px 15px 15px #46FF01;
 
 }
 
@@ -233,3 +234,32 @@ h3 {
 
 }
 
+@media screen and (max-width: 834px){
+    .bienvenida{
+        font-size: 40px;
+    }
+    .tituloadn{
+        font-size: 50px;
+    }
+    .esloganadn {
+        font-size: 20px;
+    }
+    .descripcionadn {
+        font-size: 20px;
+    }
+    h3 {
+        font-size: 40px;
+    }
+    .misionyvision {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 460px){
+    .bienvenida{
+        font-size: 30px;
+    }
+    .tituloadn{
+        font-size: 20px;
+    }
+}
