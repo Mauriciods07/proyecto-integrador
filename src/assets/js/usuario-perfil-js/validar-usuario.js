@@ -1,14 +1,66 @@
+formularioUsuarioInputs.forEach((input,index) =>{   //Funcion que evalua todos los inputs dentro del formulario de usuario, como todos los inputs no se utilizan, existen condicionales dentro del foreach
+        if(index>=0 && index<=3){   //Los indices del 0-3 son inputs de nombre, apellido, correo y telefono
+            input.addEventListener('keyup',(e) =>{  //A cada input se agrega un evento de escritura, mientras se escribe dentro de ellos, se evalua que cumplan las expresiones regulares, dependiendo de la validacion el estilo de texto cambia
+                const valido = expregUsuario[index].test(input.value) ? true : false;
+                if(valido){
+                    document.querySelectorAll('.formulario_usuario label')[index].style.color = 'white';
+                    document.querySelectorAll('.formulario_usuario p')[index].style.display = "none";
+                    banderaUsuario[index] = true;
+                }
+                else{
+                    document.querySelectorAll('.formulario_usuario label')[index].style.color = 'red';
+                    document.querySelectorAll('.formulario_usuario p')[index].style.display = "block";
+                    banderaUsuario[index] = false;
+                }
+            })
+        }
+        else if(index>=5 && index<=7){  //Los indices del 5-7 son campos de pago (Tarjeta, fecha de vencmiento y CVV)
+            input.addEventListener('keyup', (e) =>{ //Se agregan eventos de escritura y mientras se escribe se valida con expresiones regulares, el estilo del texto interior cambia, al igual que el label datos de pago.
+                const valido = expregUsuario[index].test(input.value) ? true : false;
+                if (valido){
+                    document.getElementById('datos_Pago').style.color = "white";
+                    input.style.color = 'white';
+                    banderaUsuario[index] = true;
+                }
+                else{
+                    input.style.color = 'red';
+                    document.getElementById('datos_Pago').style.color = "red";
+                    banderaUsuario[index] = true;
+                }
+            });
+        }
+        else{   //Si el indice no esta en los rangos seleccionados, se omiten los inputs de foto y checkbox, ya que no son necesarios para validacion
+            console.log('ignore los otros campos de foto y checkbox');
+        }
+});
+
+$inputDireccion.addEventListener('keyup', (e) =>{   //Evento especial para campo direccion ya que es textarea y no input
+    const expregDireccion = /^[a-zA-ZÀ-ÿ\s]{1,100}$/;
+    const valido = expregDireccion.test(e.target.value) ? true : false;
+    if (valido){
+        document.querySelectorAll('.formulario_usuario label')[4].style.color = 'white';
+        document.querySelectorAll('.formulario_usuario p')[4].style.display = "none";
+        direccion_OK = true;
+    }
+    else{
+        document.querySelectorAll('.formulario_usuario label')[4].style.color = 'red';
+        document.querySelectorAll('.formulario_usuario p')[4].style.display = "block";
+        direccion_OK = false;
+    }
+});
+
+/*      Opcion 2 para validar
 $inputNombre.addEventListener('keyup', (e) =>{
     const expregNombre = /^[a-zA-ZÀ-ÿ\s]{1,40}$/;
     const valido = expregNombre.test(e.target.value) ? true : false;
     if (valido){
-        document.getElementById('lblNombre').style.color = 'white';
-        document.getElementById('mensaje_error_Nombre').style.display = "none";
+        document.querySelectorAll('.formulario_usuario label')[0].style.color = 'white';
+        document.querySelectorAll('.formulario_usuario p')[0].style.display = "none";
         nombre_OK = true;
     }
     else{
-        document.getElementById('lblNombre').style.color = 'red';
-        document.getElementById('mensaje_error_Nombre').style.display ="block";
+        document.querySelectorAll('.formulario_usuario label')[0].style.color = 'red';
+        document.querySelectorAll('.formulario_usuario p')[0].style.display = "block";
         nombre_OK = false;
     }
 });
@@ -17,13 +69,13 @@ $inputApellido.addEventListener('keyup', (e) =>{
     const expregApellido = /^[a-zA-ZÀ-ÿ\s]{1,40}$/;
     const valido = expregApellido.test(e.target.value) ? true : false;
     if (valido){
-        document.getElementById('lblApellido').style.color = 'white';
-        document.getElementById('mensaje_error_Apellido').style.display = "none";
+        document.querySelectorAll('.formulario_usuario label')[1].style.color = 'white';
+        document.querySelectorAll('.formulario_usuario p')[1].style.display = "none";
         apellido_OK = true;
     }
     else{
-        document.getElementById('lblApellido').style.color = 'red';
-        document.getElementById('mensaje_error_Apellido').style.display ="block";
+        document.querySelectorAll('.formulario_usuario label')[1].style.color = 'red';
+        document.querySelectorAll('.formulario_usuario p')[1].style.display = "block";
         apellido_OK = false
     }
 });
@@ -32,13 +84,13 @@ $inputCorreo.addEventListener('keyup', (e) =>{
     const expregCorreo = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]{3}$/;
     const valido = expregCorreo.test(e.target.value) ? true : false;
     if (valido){
-        document.getElementById('lblCorreo').style.color = 'white';
-        document.getElementById('mensaje_error_Correo').style.display = "none";
+        document.querySelectorAll('.formulario_usuario label')[2].style.color = 'white';
+        document.querySelectorAll('.formulario_usuario p')[2].style.display = "none";
         correo_OK = true;
     }
     else{
-        document.getElementById('lblCorreo').style.color = 'red';
-        document.getElementById('mensaje_error_Correo').style.display ="block";
+        document.querySelectorAll('.formulario_usuario label')[2].style.color = 'red';
+        document.querySelectorAll('.formulario_usuario p')[2].style.display = "block";
         correo_OK = false;
     }
 });
@@ -47,14 +99,14 @@ $inputTelefono.addEventListener('keyup', (e) =>{
     const expregTelefono = /^\d{10,11}$/;
     const valido = expregTelefono.test(e.target.value) ? true : false;
     if (valido){
-        document.getElementById('lblTelefono').style.color = 'white';
-        document.getElementById('mensaje_error_Telefono').style.display = "none";
+        document.querySelectorAll('.formulario_usuario label')[3].style.color = 'white';
+        document.querySelectorAll('.formulario_usuario p')[3].style.display = "none";
         telefono_OK = true;
 
     }
     else{
-        document.getElementById('lblTelefono').style.color = 'red';
-        document.getElementById('mensaje_error_Telefono').style.display ="block";
+        document.querySelectorAll('.formulario_usuario label')[3].style.color = 'red';
+        document.querySelectorAll('.formulario_usuario p')[3].style.display = "block";
         telefono_OK = false;
     }
 });
@@ -63,13 +115,13 @@ $inputDireccion.addEventListener('keyup', (e) =>{
     const expregDireccion = /^[a-zA-ZÀ-ÿ\s]{1,100}$/;
     const valido = expregDireccion.test(e.target.value) ? true : false;
     if (valido){
-        document.getElementById('lblDireccion').style.color = 'white';
-        document.getElementById('mensaje_error_Direccion').style.display = "none";
+        document.querySelectorAll('.formulario_usuario label')[4].style.color = 'white';
+        document.querySelectorAll('.formulario_usuario p')[4].style.display = "none";
         direccion_OK = true;
     }
     else{
-        document.getElementById('lblDireccion').style.color = 'red';
-        document.getElementById('mensaje_error_Direccion').style.display ="block";
+        document.querySelectorAll('.formulario_usuario label')[4].style.color = 'red';
+        document.querySelectorAll('.formulario_usuario p')[4].style.display = "block";
         direccion_OK = false;
     }
 });
@@ -128,3 +180,4 @@ $inputDireccion.removeEventListener("keyup",KeyboardEvent);
 $inputVencimiento.removeEventListener("keyup",KeyboardEvent);
 $inputTarjeta.removeEventListener("keyup",KeyboardEvent);
 $inputCVV.removeEventListener("keyup",KeyboardEvent);
+*/

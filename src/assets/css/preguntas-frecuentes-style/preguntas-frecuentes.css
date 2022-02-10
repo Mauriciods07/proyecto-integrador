@@ -15,6 +15,10 @@
 display: inline;
 margin-bottom: 45px;
 
+
+font-size: 25px;
+
+
 }
 
 .row.form-group{
@@ -30,14 +34,24 @@ margin-bottom: 45px;
 .contenedorContacto{
     /* width: 620px; */
     height: 10px;
+
     border: 3px solid var(--green);
     background-color: rgba(70, 255, 1, 0.25);
+
+    background-color: rgba(18,18,255, 0.25);
+    border: 3px solid var(--blue);
+
     border-radius: 60px;
     /* margin-bottom: 20px; */
     color: var(--white);
     font-family: var(--body);
     font-size: 25px;
 }
+
+
+
+
+
 
 .segundotitulo{
     color: var(--white);
@@ -48,6 +62,7 @@ margin-bottom: 45px;
 }
 
 .btnEnviar{
+
     border: 3px solid var(--blue);
     background-color: var(--pink);
     color: var(--white);
@@ -61,6 +76,25 @@ margin-bottom: 45px;
 }
 .btnEnviar:hover{
     background-color:  rgba(18, 18, 255, 0.25);
+
+    font-family: var(--body); background-color: lightgray;
+    border: 3px solid var(--blue);
+    color: var(--black);
+     width: 217px;
+    height: 78px;
+    margin: 0 auto;
+    display: block;
+    font-size: 20px;
+    border-radius: 170px;
+}
+.btnEnviar:hover{
+    background-color: var(--blue);
+    border: 3px solid var(--blue);
+    color: var(--white);
+    box-shadow: 1px 0px 30px rgba(163, 163,  163, 1);
+    background: rgba(18, 18, 255, 0.5);
+    color: white;
+
 }
 
 .card{
@@ -75,4 +109,7 @@ margin-bottom: 45px;
 
 .card-title{
     background-color:#FF0D00 ;
+
 }
+
+

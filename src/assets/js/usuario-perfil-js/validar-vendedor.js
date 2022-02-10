@@ -1,3 +1,34 @@
+formularioVendedorInputs.forEach((input,index) =>{      //  REVISAR validar-usuario.js PARA EXPLICACION, ES LO MISMO, PERO APLICADO AL FORMULARIO DE VENDEDOR
+        input.addEventListener('keyup',(e) =>{
+            const valido = expregVendedor[index].test(input.value) ? true : false;
+            if(valido){
+                document.querySelectorAll('.formulario_vendedor label')[index].style.color = 'white';
+                document.querySelectorAll('.formulario_vendedor p')[index].style.display = "none";
+                banderaVendedor[index] = true;
+            }
+            else{
+                document.querySelectorAll('.formulario_vendedor label')[index].style.color = 'red';
+                document.querySelectorAll('.formulario_vendedor p')[index].style.display = "block";
+                banderaVendedor[index] = false;
+            }
+        })
+});
+$inputDireccionEmpresa.addEventListener('keyup', (e) =>{
+    const expregDireccionEmpresa = /^[a-zA-ZÀ-ÿ\s]{1,100}$/;
+    const valido = expregDireccionEmpresa.test(e.target.value) ? true : false;
+    if (valido){
+        document.getElementById('lblDireccionEmpresa').style.color = 'white';
+        document.getElementById('mensaje_error_DireccionEmpresa').style.display = "none";
+        direccionempresa_OK = true;
+    }
+    else{
+        document.getElementById('lblDireccionEmpresa').style.color = 'red';
+        document.getElementById('mensaje_error_DireccionEmpresa').style.display ="block";
+        direccionempresa_OK = false;
+    }
+});
+
+/*  Opcion 2 de validar formulario de vendedor
 $inputNombreComercio.addEventListener('keyup', (e) =>{
     const expregNombre = /^[a-zA-ZÀ-ÿ\s]{1,40}$/;
     const valido = expregNombre.test(e.target.value) ? true : false;
@@ -80,4 +111,4 @@ $inputNombreComercio.removeEventListener("keyup",KeyboardEvent);
 $inputNombreVendedor.removeEventListener("keyup",KeyboardEvent);
 $inputCorreoEmpresa.removeEventListener("keyup",KeyboardEvent);
 $inputTelefonoEmpresa.removeEventListener("keyup",KeyboardEvent);
-$inputDireccionEmpresa.removeEventListener("keyup",KeyboardEvent);
+$inputDireccionEmpresa.removeEventListener("keyup",KeyboardEvent);*/

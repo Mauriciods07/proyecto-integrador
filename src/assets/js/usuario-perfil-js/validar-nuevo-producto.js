@@ -1,4 +1,4 @@
-$inputNombreProductoNuevo.addEventListener('keyup', (e) =>{
+$inputNombreProductoNuevo.addEventListener('keyup', (e) =>{ //Evento donde al escribir sobre el input Nombre de producto nuevo, la funcion pregunta si es igual a la expresion regular definida (1-40 caracteres), si esta bien o no, los estilos de texto cambian para avisar al usuario
     const expregNombre = /^[a-zA-ZÀ-ÿ\s]{1,40}$/;
     const valido = expregNombre.test(e.target.value) ? true : false;
     if (valido){
@@ -13,7 +13,7 @@ $inputNombreProductoNuevo.addEventListener('keyup', (e) =>{
     }
 });
 
-$inputDescripcionProductoNuevo.addEventListener('keyup', (e) =>{
+$inputDescripcionProductoNuevo.addEventListener('keyup', (e) =>{ //Evento donde al escribir sobre el input descripcion de producto nuevo, la funcion pregunta si es igual a la expresion regular definida (1-100 caracteres), si esta bien o no, los estilos de texto cambian para avisar al usuario
     const expregDescripcion = /^[a-zA-ZÀ-ÿ\s]{1,100}$/;
     const valido = expregDescripcion.test(e.target.value) ? true : false;
     if (valido){
@@ -28,7 +28,7 @@ $inputDescripcionProductoNuevo.addEventListener('keyup', (e) =>{
     }
 });
 
-$inputCostoProductoNuevo.addEventListener('keyup', (e) =>{
+$inputCostoProductoNuevo.addEventListener('keyup', (e) =>{ //Evento donde al escribir sobre el input costo de producto nuevo, la funcion pregunta si es igual a la condicion definida (costo mayor a 1), si esta bien o no, los estilos de texto cambian para avisar al usuario
     if (parseInt(e.target.value)>=1){
         document.getElementById('lblCostoProducto').style.color = 'white';
         e.target.style.color = "white";
@@ -41,7 +41,7 @@ $inputCostoProductoNuevo.addEventListener('keyup', (e) =>{
     }
 });
 
-$inputCantidadProductoNuevo.addEventListener('keyup', (e) =>{
+$inputCantidadProductoNuevo.addEventListener('keyup', (e) =>{   //Evento donde al escribir sobre el input Cantidad de producto nuevo, la funcion pregunta si es igual a la condicion definida (cantidad mayor a 1), si esta bien o no, los estilos de texto cambian para avisar al usuario
     if (parseInt(e.target.value)>=1){
         document.getElementById('lblCantidadProducto').style.color = 'white';
         e.target.style.color = "white";
@@ -53,10 +53,4 @@ $inputCantidadProductoNuevo.addEventListener('keyup', (e) =>{
         cantidadproducto_OK = false;
     }
 });
-
-
-
-$inputNombreProductoNuevo.removeEventListener("keyup",KeyboardEvent);
-$inputDescripcionProductoNuevo.removeEventListener("keyup",KeyboardEvent);
-$inputCostoProductoNuevo.removeEventListener("keyup",KeyboardEvent);
-$inputCantidadProductoNuevo.removeEventListener("keyup",KeyboardEvent);
+//El elemento select no se valida porque tiene una categoria definida por defecto, asi que el usuario debe tener atencion al llenar el formulario

@@ -15,10 +15,10 @@
 
 
 .formulario_boton {  /*Caracteristicas de los botones */
-  background-color: var(--pink);
+  background-color: #D6D6E3;
   border-radius: 45px;
-  border: 3px solid var(--blue);
-  color: var(--white);
+  border: 3px solid white;
+  color: var(black);
   font-family: var(--body);
   font-size: 25px;
   margin-bottom: 25px;
@@ -27,7 +27,7 @@
 }
 
 .formulario_boton:hover{
-  box-shadow: 3px 0px 30px rgba(163, 163,  163, 1);
+  box-shadow: 3px 0px 30px var(--blue);
 }
 
 .formulario_input-exito{
@@ -38,8 +38,8 @@
 
 
 .formulario_input {  /*Caracteristicas de los espacios para escribir*/
-  background: rgba(70, 255, 1, 0.25);
-  border: 3px solid var(--green);
+  background: #1212ff4f;
+  border: 3px solid rgb(18, 18, 255);
   border-radius: 45px;
   width: 342px;
   height: 35px;
@@ -53,7 +53,7 @@
 
 .formulario_input:focus {
 
-  border: 3px solid  #FF00BC;
+  border: 3px solid  #ffff;
   outline: none;
   box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
   
@@ -84,7 +84,7 @@ font-family: var(--body);
   height: 45px;
   line-height: 45px;
   text-align: center;
-  background-color:#FF00BC;
+  background-color: blue;
   color: white;
   display: none;
   
@@ -93,7 +93,7 @@ font-family: var(--body);
 }
 .formulario-iniciar{
   border-radius: 45px;
-  border: 5px solid var(--blue);
+  border: 5px solid #D6D6E3;
   width: 700px;
   height: 550px;
   margin-bottom: 200px;  
@@ -109,6 +109,20 @@ font-family: var(--body);
 .texto-registro
 .formulario_input-exito-activo{
   display: block;
+
+}
+
+.formulario_mensaje{
+  font-family:var(--body) ;
+  height: 45px;
+  width: 800px;
+  line-height: 45px;
+  text-align: center;
+  background-color: var(--blue);
+  color: white;
+  display: none;
+  
+  
 
 }
 

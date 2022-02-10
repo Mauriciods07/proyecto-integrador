@@ -1,4 +1,4 @@
-$btnModalAceptarProductoNuevo.addEventListener('click', (e) =>{
+$btnModalAceptarProductoNuevo.addEventListener('click', (e) =>{ //Boton donde el dar click, verifica que las banderas de los inputs dentro del modal esten correctamente ingresadas, si lo estan, se agrega el producto(REQUIERE API)
     let ruta = $imgProductoNuevo.src;
     if(nombreproducto_OK && descripcionproducto_OK && costoproducto_OK && cantidadproducto_OK && !ruta.includes("error.png")){
         e.target.setAttribute('data-dismiss',"modal");
