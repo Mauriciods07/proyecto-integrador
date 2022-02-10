@@ -43,7 +43,7 @@
 
       <nav class="navbar navbar-expand-lg navbar-dark navbar-toggleable-lg">    <!--Se crea la barra de navegacion, expandible solo hasta el breakpoint lg-->
         <a class="navbar-brand" href="#">
-          <img src="src/img/LogoGJTrazoBlanco.png" width="80" height="100" alt="">  <!--Logo de GameJoy hacia el lado izquierdo-->
+          <img src="src/img/LogoGJconFondo.png" width="80" height="100" alt="">  <!--Logo de GameJoy hacia el lado izquierdo-->
         </a>
         <span class="texto3 d-block d-sm-block d-md-block d-lg-none">GAME<br>JOY</span> <!-- Texto GAME JOY, visible solo en barra de menu colapsada-->
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"> <!--Boton de navegador colapsable-->
@@ -52,11 +52,10 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">  <!--Todo lo que este dentro de esta seccion se colapsa hacia abajo-->
           <div class="navbar-nav mx-auto text-center">  <!-- Menu de navegacion con las paginas enlazadas-->
             <a class="nav-link texto2" href="index.html">INICIO</a>   <!--Enlace de INICIO-->
+            <a class="nav-link texto2" href="tienda.html">TIENDA</a>  
             <a class="nav-link texto2 active" href="contacto.html">CONTACTO</a>    <!--Enlace de CONTACTO-->
             <a class="nav-link texto2" href="acerca-de-nosotros.html">SOBRE NOSOTROS</a>   <!--Enlace de SOBRE NOSOTROS-->
-            <a class="nav-link texto2" href="carrito.html">CARRITO</a>   <!--Enlace de CARRITO-->
-            <a class="nav-link texto2" href="iniciar-sesion.html">CUENTA</a>    <!--Enlace de CUENTA-->
-            <a class="nav-link texto2" href="tienda.html">TIENDA</a>             <!--Enlace de TIENDA-->
+                     <!--Enlace de TIENDA-->
           </div>
           <div class="d-flex flex-row justify-content-around">  <!--Seccion donde esta los iconos de usuario y carrito de la tienda-->
             <a href="iniciar-sesion.html" class="m-2"><img src="src/img/IconodeUsuario.png" width="50" height="50" alt="Icono Cuenta"></a> <!--Icono de cuenta-->
@@ -76,50 +75,60 @@
                 <h3 class="tituloContacto mt-5">Contacto</h3>
                 <!-- <hr class="bg-danger"> -->
 
-                <form action="https://formsubmit.co/gamejoy.gorgonita@gmail.com" id="form1" method="post" class="needs-validation" novalidate>
+                <form action="https://formsubmit.co/gamejoy.gorgonita@gmail.com" id="formulario"  onsubmit="return(false)" class="formulario-validacion formulario-contacto mr-3" id="formulario">
+                  <!-- method="post" class="needs-validation" novalidate -->
                   <!-- 408bcf8cc4872cf10e6f6f427d614278 -->
-                    <div class="row form-group">
+                    <div class="row form-group " id="grupo_nombre">
                         <label for="nombre" class="nombreContacto col-form-label col-md-2 col-sm-11 col-11">Nombre</label>
                         <div class="col-md-7 col-sm-11 col-11">
-                            <input type="text" name="nombre" id="nombre" value="" required class="contenedorContacto form-control" placeholder="Nombre">
+                            <input type="text" name="nombre" id="nombre" value="" required class="contenedorContacto form-control" placeholder="Nombre" >
                             <!-- Validación -->
-                            <div class="valid-feedback">Valido</div>
-                            <div class="invalid-feedback">Completa el campo</div>
+                            <i class=" formulario_validacion-circulo fas fa-times-circle"></i>
+                            <p class="formulario_input-error">Sólo se pueden introducir letras.</p>
+                           <!--  <div class="valid-feedback">Valido</div>
+                            <div class="invalid-feedback">Completa el campo</div> -->
                         </div>
                     </div>
 
-                    <div class="row form-group">
+                    <div class="row form-group" id="grupo_correo">
                         <label for="correo" class="nombreContacto col-form-label col-md-2 col-sm-11 col-11">Correo</label>
                         <div class="col-md-7 col-sm-11 col-11">
-                            <input type="email" name="correo" id="correo" value="" required class="contenedorContacto form-control" placeholder="Correo">
+                            <input type="email" name="correo" id="correo" value="" required class="contenedorContacto form-control" placeholder="ejemplo@gmail.com">
                             <!-- Validación -->
-                            <div class="valid-feedback">Valido</div>
-                            <div class="invalid-feedback">Completa el campo</div>
+                            <i class=" formulario_validacion-circulo fas fa-times-circle"></i>
+                            <p class="formulario_input-error"> Formato como se muestra en el ejemplo.</p> 
+                            <!-- <div class="valid-feedback">Valido</div>
+                            <div class="invalid-feedback">Completa el campo</div> -->
                         </div>
                     </div>
 
-                    <div class="row form-group">
+                    <div class="row form-group" id="grupo_telefono">
                         <label for="telefono" class="nombreContacto col-form-label col-md-2 col-sm-11 col-11">Teléfono</label>
                         <div class="col-md-7 col-sm-11 col-11">
                             <input type="tel" name="telefono" id="telefono" value="" required class="contenedorContacto form-control" placeholder="Teléfono">
                             <!-- Validación -->
-                            <div class="valid-feedback">Valido</div>
-                            <div class="invalid-feedback">Completa el campo</div>
+                            <i class=" formulario_validacion-circulo fas fa-times-circle"></i>
+                            <p class="formulario_input-error"> Sólo se puede agregar números.</p>
+                           <!--  <div class="valid-feedback">Valido</div>
+                            <div class="invalid-feedback">Completa el campo</div> -->
                         </div>
                     </div>
 
-                    <div class="row form-group">
+                    <div class="row form-group" id="grupo_mensaje">
                         <label for="mensaje" class="nombreContacto col-form-label col-md-2 col-sm-11 col-11">Mensaje</label>
                         <div class="col-md-7 col-sm-11 col-11">
                             <textarea name="mensaje" id="mensaje" rows="10"  class="contenedorContacto form-control" name="mensaje" id="mensaje" placeholder="Mensaje" value="" required ></textarea>
                             <!-- Validación -->
-                            <div class="valid-feedback">Valido</div>
-                            <div class="invalid-feedback">Completa el campo</div>
+                            <i class=" formulario_validacion-circulo fas fa-times-circle"></i>
+                            <p class="formulario_input-error"> Ingresa el mensaje.</p>
+                            <!-- <div class="valid-feedback">Valido</div>
+                            <div class="invalid-feedback">Completa el campo</div> -->
                         </div>
                     </div>
 
                     <button type="submit" class="btnEnviar mb-5" id="btn_enviar" >Enviar</button>
                     <!-- onclick="return validar();" -->
+                    <div class="formulario_mensaje align-self-center" id="formulario_mensaje"><p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor, rellena el formulario correctamente</p></div>
 
 
                 </form>
@@ -142,7 +151,7 @@
         <li><a href="tienda.html" class="texto4">Más Productos</a></li>
         <li><a href="contacto.html" class="texto4">Contacto</a></li>
         <li><a href="iniciar-sesion.html" class="texto4">Login</a></li>
-        <li><a href="preguntas.frecuentes.html" class="texto4">Preguntas Frecuentes</a></li>
+        <li><a href="contacto.html" class="texto4">Preguntas Frecuentes</a></li>
     </div>
     <div class="col-md-3 col-lg-3 align-self-center text-center mt-3">    <!--Texto sobre Nosotros  2/4-->
         <span class="texto2 d-inline-block">Sobre Nosotros</span>
