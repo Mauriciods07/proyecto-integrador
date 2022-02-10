@@ -207,15 +207,10 @@ font-family: var(--body);
 
 
 
-.formulario_validacion-circulo{
- 
-  right: 70px;
- 
-  
-}
 
 .formulario_input-error{
   text-align: center;
+  font-size: 12px;
 }
 
 }
