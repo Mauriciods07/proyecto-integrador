@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/assets/css/tienda-productos-styles/tienda-producto-styles.css" type="text/css"> <!--Link a hoja de estilos de Pagina base-->
+
+    <title>GameJoy / Ofertas</title>     <!--Titulo de la pagina-->
+  </head>
+
+
+  <!----------------------------------------------------------Inicio de HEADER------------------------------------------------------------------------->
+  <body>
+     <section class="d-none d-lg-block">    <!--Banner de pagina SE ESCONDE BANNER CUANDO LA PAGINA SE REDUCE-->
+        <div class="row banner d-flex justify-content-between"> <!--Banner donde se colocan medios de contacto y redes sociales-->
+            <div class="col-md-3 col-lg ml-5 d-flex align-items-center">  <!--Para la primera columna, hacemos que su hijo directo se aparte con un marginleft de 5 y se aline al centro de manera vertical (eje y)-->
+              <div class="row d-inline-flex align-items-center">  <!--Se crea una nueva fila dentro de la columna, por coveniencia, los hijos de esta columna se alinearan al centro de manera horizontal y se separan con un margintop de 2-->
+                <a href="https://es-la.facebook.com/"><img class="m-1" src="src/img/FacebookLogo.png" width="25"></a> <!--Icono con liga a facebook de tamaño 25 y margen derecho de 3-->
+                <a href="https://www.instagram.com/?hl=es"><img class="m-1" src="src/img/InstagramLogo.png" width="30"></a>  <!--Icono con liga a instagram-->
+                <a href="https://twitter.com/?lang=es"><img class="m-1" src="src/img/Twiterlogo.png" width="25"></a> <!--Icono con liga a twitter-->
+                <a href="https://www.tiktok.com/es/"><img class="m-1" src="src/img/Tiktoklogo.png" width="25"></a>
+                <span class="texto align-baseline">¡Síguenos!</span> <!--Texto en span alineado a la mitad del row padre inmediato-->
+               </div>
+            </div>
+            <div class="col-md-5 col-lg d-inline-flex justify-content-center"><!--Siguiente columna donde se alinea al hijo inmediato hacia el centro vertical-->
+              <div class="row d-flex align-items-center"> <!--Se crea una fila donde los elementos hijos se alinean al centro de manera horizontal-->
+                <span class="texto2 d-sm-none d-md-block">Envíos a toda la República Mexicana y Estados Unidos</span> <!--Texto con propiedades de clase texto-->
+              </div>
+            </div>
+            <div class="col-md-3 col-lg d-flex justify-content-end">  <!--Se crea columna con el hijo directo alineado al final del row padre-->
+              <div class="row mr-5 d-flex align-items-center">  <!--Se alinean los hijos directos hacia el centro vertical y con margen derecho de 5 (Alejarse de la derecha)-->
+                <a href="https://www.whatsapp.com/?lang=es"><img class="m-2" src="src/img/WhastappLogo.png" width="25"></a>  <!--Se coloca icono de whatsapp con margen general de 1 y tamaño de 25px-->
+                <span class="texto">Ponte en contacto</span>  <!--Texto de ponte en contacto-->
+              </div>
+            </div>
+        </div>
+    </section>
+
+    <!---------------------------------------------------Inicio de barra de navegacion--------------------------------------------------------------------------->
+
+      <nav class="navbar navbar-expand-lg navbar-dark navbar-toggleable-lg">    <!--Se crea la barra de navegacion, expandible solo hasta el breakpoint lg-->
+        <a class="navbar-brand" href="#">
+          <img src="src/img/LogoGJconFondo.png" width="80" height="100" alt="">  <!--Logo de GameJoy hacia el lado izquierdo-->
+        </a>
+        <span class="texto3 d-block d-sm-block d-md-block d-lg-none">GAME<br>JOY</span> <!-- Texto GAME JOY, visible solo en barra de menu colapsada-->
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"> <!--Boton de navegador colapsable-->
+          <span class="navbar-toggler-icon"></span>
+        </button>                       <!--Todo lo que esta debajo de este boton va a desaparecer cuando el ancho de la ventana se reduzca-->
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">  <!--Todo lo que este dentro de esta seccion se colapsa hacia abajo-->
+          <div class="navbar-nav mx-auto text-center">  <!-- Menu de navegacion con las paginas enlazadas-->
+            <a class="nav-link texto2" href="index.html">INICIO</a>   <!--Enlace de INICIO-->
+            <!-- Inicia el sub menú despegable -->
+            <li class="nav-item dropdown">
+              <!-- Titulo tienda -->
+              <a class="nav-link  texto2 dropdown-toggle active " href="tienda.html" id="navbarDropdown" 
+              role="button" data-toggle="dropdown" aria-expanded="false">
+                TIENDA</a>
+                <!-- Sub titutlos del sub menú -->
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="tienda-lanzamientos.html">Lanzamiento</a>
+                <a class="dropdown-item" href="tienda-ofertas.html">Ofertas</a>
+                <a class="dropdown-item" href="tienda-accesorios.html">Accesorios</a>
+                <a class="dropdown-item" href="tienda-playstation.html">PlayStation</a>
+                <a class="dropdown-item" href="tienda-nintendo.html">Nintendo</a>
+                <a class="dropdown-item" href="tienda-xbox.html">Xbox</a>
+               
+            </li>
+         <!-- Termina el bloque de código del sub menú -->    
+            <a class="nav-link texto2" href="contacto.html">CONTACTO</a>    <!--Enlace de CONTACTO-->
+            <a class="nav-link texto2" href="acerca-de-nosotros.html">SOBRE NOSOTROS</a>   <!--Enlace de SOBRE NOSOTROS-->
+
+
+          </div>
+          <div class="d-flex flex-row justify-content-around">  <!--Seccion donde esta los iconos de usuario y carrito de la tienda-->
+            <a href="iniciar-sesion.html" class="m-2"><img src="src/img/IconodeUsuario.png" width="50" height="50" alt="Icono Cuenta"></a> <!--Icono de cuenta-->
+            <a href="carrito.html" class="m-2"><img src="src/img/IconodeCarrito.png" width="50" height="50" alt="Icono Carrito"></a>  <!--Icono de carrito-->
+          </div>
+        </div>
+      </nav>
+<!-----------------------------------------------------------------------------Fin de barra de navegacion-------------------------------------------------------->
+<!-- Aqui EMPIEZA LA PAGINA PERSONALIZADA  -->
+
+
+
+<!--*************************DIANA*****************************************-->
+
+
+
+<main>
+
+  <br>
+  <h1 style="text-align:center" > <a href="tienda.html"> <div class="div1Verde Verde" >Tienda</div> </a></h1>  <!--Titulo de la pagina/ Clase div1 da formato a ñla caja de texto tienda/ Clase rosa, le da formato  a la caja-->
+  <br>
+  <br>
+  <div class="ajuste" > <!--Genera un margen en toda la pagia -->
+               <!--****-->   <!--  -->
+  <div class="row BordeBlanco "> <!--Genera el borde blanco-->
+        
+      <div class="col col-lg d-flex justify-content-around"  ><!-- Centra la caja que contiene el titulo -->
+        <img src="src/img/img_productos/ofertas.jpg"  alt="Lanzamientos" class="ImaSeccion" style="border-color: white " >            
+      </div>  <!--class="ImaSeccion" da formato a la imagen de la seccion-->
+
+      <div class="col centrar1 col-lg d-flex justify-content-around ">
+        <div class="container centrar">
+          <div class="row justify-content-around">
+            <div class="col Etiquetas  Verde" style="border-color:  #46FF01"  >Ofertas</div>
+                         <!--class Etiquetas, da formato al contenido de la etiqueta-->
+                         <!--class Verde/Verde/Rojo/Rosa/amatillo, da el formato del la animacion en su respectivo color-->
+          </div> 
+          <div class="row justify-content-around ">
+            <div class="col Etiquetas Cris" style="border-color:  white "  > Juegos </div>
+            <div class="col Etiquetas Cris" style="border-color: white"  >Consolas</div>
+            <div class="col Etiquetas Cris" style="border-color:white"  >Funkos</div> <br>
+            <div class="col Etiquetas Cris" style="border-color: white" >Controles </div>
+            <div class="col Etiquetas Cris" style="border-color: white"  >Audifonos</div>
+            <div class="col Etiquetas Cris" style="border-color:   white "  >Más...</div>
+          </div> 
+        </div>
+      </div>
+
+      <div class="row justify-content-center ">        
+              
+      </div>
+  </div>
+  
+<!-- Genera una fila para la seccion de-->
+  <div class="row"><p><br>  </p></div>  <!-- -->
+
+  <div class="row BordeBlanco">
+
+
+<!--Verde-->
+    <dir class="col"> 
+      <div class="row Box"> <br><img src="src/img/img_productos/1.jpg" class="Imagen_prducto" style="border-color:  #46FF01 "  alt="Pruducto">
+      <div class="hoverVerde">
+        <p>Assassin's Creed Valhalla <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quae suscipit at neque. Nihil, vitae nesciunt alias perferendis modi voluptas .</p>
+      </div>
+        </div>  
+        <div class="row">
+        <dir class="col letra">
+          Assassin's<br>$965 <br><button class="redondo Verde" style="border-color: #46FF01"> <img src="src/img/img_productos/carrito.png"  alt="carrito " class="Carrito"> </button>
+      </dir>
+     </div>   
+</dir>
+ <!--Verde-->
+ <dir class="col"> 
+  <div class="row Box"> <br><img src="src/img/img_productos/2.jpg" class="Imagen_prducto" style="border-color:  #46FF01 "  alt="Pruducto">
+  <div class="hoverVerde">
+    <p>Assassin's Creed Valhalla <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quae suscipit at neque. Nihil, vitae nesciunt alias perferendis modi voluptas .</p>
+  </div>
+    </div>  
+    <div class="row">
+    <dir class="col letra">
+      Assassin's <br>$965 <br><button class="redondo Verde" style="border-color: #46FF01"> <img src="src/img/img_productos/carrito.png"  alt="carrito " class="Carrito"> </button>
+  </dir>
+ </div>
+</dir>
+  <!--Verde-->
+  <dir class="col"> 
+    <div class="row Box"> <br><img src="src/img/img_productos/3.jpg" class="Imagen_prducto" style="border-color:  #46FF01 "  alt="Pruducto">
+    <div class="hoverVerde">
+      <p>Assassin's Creed Valhalla <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quae suscipit at neque. Nihil, vitae nesciunt alias perferendis modi voluptas .</p>
+    </div>
+      </div>  
+      <div class="row">
+      <dir class="col letra">
+        Assassin's<br>$965 <br><button class="redondo Verde" style="border-color: #46FF01"> <img src="src/img/img_productos/carrito.png"  alt="carrito " class="Carrito"> </button>
+    </dir>
+   </div>
+  </dir>
+  <!--Verde-->
+  <dir class="col"> 
+    <div class="row Box"> <br><img src="src/img/img_productos/4.jpg" class="Imagen_prducto" style="border-color:  #46FF01 "  alt="Pruducto">
+    <div class="hoverVerde">
+      <p>Assassin's Creed Valhalla <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quae suscipit at neque. Nihil, vitae nesciunt alias perferendis modi voluptas .</p>
+    </div>
+      </div>  
+      <div class="row">
+      <dir class="col letra">
+        Assassin's <br>$965 <br><button class="redondo Verde" style="border-color: #46FF01"> <img src="src/img/img_productos/carrito.png"  alt="carrito " class="Carrito"> </button>
+    </dir>
+   </div>
+  </dir>
+  <!--Verde-->
+  <dir class="col"> 
+    <div class="row Box"> <br><img src="src/img/img_productos/5.jpg" class="Imagen_prducto" style="border-color:  #46FF01 "  alt="Pruducto">
+    <div class="hoverVerde">
+      <p>Assassin's Creed Valhalla <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quae suscipit at neque. Nihil, vitae nesciunt alias perferendis modi voluptas .</p>
+    </div>
+      </div>  
+      <div class="row">
+      <dir class="col letra">
+        Assassin's<br>$965 <br><button class="redondo Verde" style="border-color: #46FF01"> <img src="src/img/img_productos/carrito.png"  alt="carrito " class="Carrito"> </button>
+    </dir>
+   </div>
+  </dir>
+  <!--Verde-->
+  <dir class="col"> 
+    <div class="row Box"> <br><img src="src/img/img_productos/6.jpg" class="Imagen_prducto" style="border-color:  #46FF01 "  alt="Pruducto">
+    <div class="hoverVerde">
+      <p>Assassin's Creed Valhalla <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quae suscipit at neque. Nihil, vitae nesciunt alias perferendis modi voluptas .</p>
+    </div>
+      </div>  
+      <div class="row">
+      <dir class="col letra">
+        Assassin's <br>$965 <br><button class="redondo Verde" style="border-color: #46FF01"> <img src="src/img/img_productos/carrito.png"  alt="carrito " class="Carrito"> </button>
+    </dir>
+   </div>
+  </dir>
+  <!--Verde-->
+  <dir class="col"> 
+    <div class="row Box"> <br><img src="src/img/img_productos/7.jpg" class="Imagen_prducto" style="border-color:  #46FF01 "  alt="Pruducto">
+    <div class="hoverVerde">
+      <p>Assassin's Creed Valhalla <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quae suscipit at neque. Nihil, vitae nesciunt alias perferendis modi voluptas .</p>
+    </div>
+      </div>  
+      <div class="row">
+      <dir class="col letra">
+        Assassin's<br>$965 <br><button class="redondo Verde" style="border-color: #46FF01"> <img src="src/img/img_productos/carrito.png"  alt="carrito " class="Carrito"> </button>
+    </dir>
+   </div>
+  </dir>
+  <!--Verde-->
+  <dir class="col"> 
+    <div class="row Box"> <br><img src="src/img/img_productos/8.jpg" class="Imagen_prducto" style="border-color:  #46FF01 "  alt="Pruducto">
+    <div class="hoverVerde">
+      <p>Assassin's Creed Valhalla <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quae suscipit at neque. Nihil, vitae nesciunt alias perferendis modi voluptas .</p>
+    </div>
+      </div>  
+      <div class="row">
+      <dir class="col letra">
+        Assassin's<br>$965 <br><button class="redondo Verde" style="border-color: #46FF01"> <img src="src/img/img_productos/carrito.png"  alt="carrito " class="Carrito"> </button>
+    </dir>
+   </div>
+  </dir>
+  <!--Verde-->
+  <dir class="col"> 
+    <div class="row Box"> <br><img src="src/img/img_productos/9.jpg" class="Imagen_prducto" style="border-color:  #46FF01 "  alt="Pruducto">
+    <div class="hoverVerde">
+      <p>Assassin's Creed Valhalla <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quae suscipit at neque. Nihil, vitae nesciunt alias perferendis modi voluptas .</p>
+    </div>
+      </div>  
+      <div class="row">
+      <dir class="col letra">
+        Assassin's <br>$965 <br><button class="redondo Verde" style="border-color: #46FF01"> <img src="src/img/img_productos/carrito.png"  alt="carrito " class="Carrito"> </button>
+    </dir>
+   </div>
+  </dir>
+  <!--Verde-->
+  <dir class="col"> 
+    <div class="row Box"> <br><img src="src/img/img_productos/10.jpg" class="Imagen_prducto" style="border-color:  #46FF01 "  alt="Pruducto">
+    <div class="hoverVerde">
+      <p>Assassin's Creed Valhalla <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quae suscipit at neque. Nihil, vitae nesciunt alias perferendis modi voluptas .</p>
+    </div>
+      </div>  
+      <div class="row">
+      <dir class="col letra">
+        Assassin's<br>$965 <br><button class="redondo Verde" style="border-color: #46FF01"> <img src="src/img/img_productos/carrito.png"  alt="carrito " class="Carrito"> </button>
+    </dir>
+   </div>
+  </dir>
+  <!--Verde-->
+  <dir class="col"> 
+    <div class="row Box"> <br><img src="src/img/img_productos/11.jpg" class="Imagen_prducto" style="border-color:  #46FF01 "  alt="Pruducto">
+    <div class="hoverVerde">
+      <p>Assassin's Creed Valhalla <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quae suscipit at neque. Nihil, vitae nesciunt alias perferendis modi voluptas .</p>
+    </div>
+      </div>  
+      <div class="row">
+      <dir class="col letra">
+        Assassin's <br>$965 <br><button class="redondo Verde" style="border-color: #46FF01"> <img src="src/img/img_productos/carrito.png"  alt="carrito " class="Carrito"> </button>
+    </dir>
+   </div>
+  </dir>
+  <!--Verde-->
+  <dir class="col"> 
+    <div class="row Box"> <br><img src="src/img/img_productos/12.jpg" class="Imagen_prducto" style="border-color:  #46FF01 "  alt="Pruducto">
+    <div class="hoverVerde">
+      <p>Assassin's Creed Valhalla <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quae suscipit at neque. Nihil, vitae nesciunt alias perferendis modi voluptas .</p>
+    </div>
+      </div>  
+      <div class="row">
+      <dir class="col letra">
+        Assassin's <br>$965 <br><button class="redondo Verde" style="border-color: #46FF01"> <img src="src/img/img_productos/carrito.png"  alt="carrito " class="Carrito"> </button>
+    </dir>
+   </div>
+  </dir>
+  <!--Verde-->
+  <dir class="col"> 
+    <div class="row Box"> <br><img src="src/img/img_productos/13.jpg" class="Imagen_prducto" style="border-color:  #46FF01 "  alt="Pruducto">
+    <div class="hoverVerde">
+      <p>Assassin's Creed Valhalla <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quae suscipit at neque. Nihil, vitae nesciunt alias perferendis modi voluptas .</p>
+    </div>
+      </div>  
+      <div class="row">
+      <dir class="col letra">
+        Assassin's <br>$965 <br><button class="redondo Verde" style="border-color: #46FF01"> <img src="src/img/img_productos/carrito.png"  alt="carrito " class="Carrito"> </button>
+    </dir>
+   </div>
+  </dir>
+  <!--Verde-->
+  <dir class="col"> 
+    <div class="row Box"> <br><img src="src/img/img_productos/14.jpg" class="Imagen_prducto" style="border-color:  #46FF01 "  alt="Pruducto">
+    <div class="hoverVerde">
+      <p>Assassin's Creed Valhalla <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quae suscipit at neque. Nihil, vitae nesciunt alias perferendis modi voluptas .</p>
+    </div>
+      </div>  
+      <div class="row">
+      <dir class="col letra">
+        Assassin's <br>$965 <br><button class="redondo Verde" style="border-color: #46FF01"> <img src="src/img/img_productos/carrito.png"  alt="carrito " class="Carrito"> </button>
+    </dir>
+   </div>
+  </dir>
+  <!--Verde-->
+  <dir class="col"> 
+    <div class="row Box"> <br><img src="src/img/img_productos/15.jpg" class="Imagen_prducto" style="border-color:  #46FF01 "  alt="Pruducto">
+    <div class="hoverVerde">
+      <p>Assassin's  <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quae suscipit at neque. Nihil, vitae nesciunt alias perferendis modi voluptas .</p>
+    </div>
+      </div>  
+      <div class="row">
+      <dir class="col letra">
+        Assassin's <br>$965 <br><button class="redondo Verde" style="border-color: #46FF01"> <img src="src/img/img_productos/carrito.png"  alt="carrito " class="Carrito"> </button>
+    </dir>
+   </div>
+  </dir>
+
+  
+
+    
+
+
+
+  
+    
+ 
+    </div>
+ 
+  </div>   <br>
+
+
+<!---------------------------------- FIN DIANA ---------------------------------->
+
+<!-- FIN DE LA PAGINA PERSONALIZADA -->
+<!-----------------------------------------------------------------footer---------------------------------------------------------------------------------------->
+<div class="ajuste2">   <!--Genera un ajuste en el footer-->
+<footer>  
+
+   <!--Inicio de Footer Dividido en dos secciones Informacion y Formas de pago-->
+  <div class="row footer-1 pt-5">   <!--Primera seccion del footer-->
+    <div class="col-md-3 col-lg-3 d-block text-center">   <!--Listado de ligas de encabezado  1/4-->
+        <li><a href="index.html" class="texto2">GAMEJOY</a></li>
+        <li><a href="tienda.html" class="texto4">Mas Productos</a></li>
+        <li><a href="contacto.html" class="texto4">Contacto</a></li>
+        <li><a href="iniciar-sesion.html" class="texto4">Login</a></li>
+        <li><a href="contacto.html" class="texto4">Preguntas Frecuentes</a></li>
+    </div>
+    <div class="col-md-3 col-lg-3 align-self-center text-center mt-3">    <!--Texto sobre Nosotros  2/4-->
+        <span class="texto2 d-inline-block">Sobre Nosotros</span>
+        <span class="texto4 d-inline-block">Somos una plataforma digital creada en el año 2022, enfocada a la venta de videojuegos y productos afines</span>
+    </div>
+    <div class="col-md-3 col-lg-3 align-self-center d-flex justify-content-center mt-3">  <!--Logo de la tienda 3/4-->
+      <a href="index.html">
+        <img src="src/img/LogoGJconFondo.png" width="80" height="100" alt="">
+      </a>
+    </div>
+    <div class="col-md-3 col-lg-3 text-center mt-3">    <!--Seccion de redes sociales 4/4-->
+        <span class="texto2 d-block">Síguenos en redes sociales</span>
+          <div class="row d-inline-flex align-items-center">  <!--Se crea una nueva fila dentro de la columna, por coveniencia, los hijos de esta columna se alinearan al centro de manera horizontal y se separan con un margintop de 2-->
+            <a href="https://es-la.facebook.com/"><img class="m-1" src="src/img/FacebookLogo.png" width="40"></a> <!--Icono con liga a facebook de tamaño 25 y margen derecho de 3-->
+            <a href="https://www.instagram.com/?hl=es"><img class="m-1" src="src/img/InstagramLogo.png" width="40"></a>  <!--Icono con liga a instagram-->
+            <a href="https://twitter.com/?lang=es"><img class="m-1" src="src/img/Twiterlogo.png" width="50"></a> <!--Icono con liga a twitter-->
+            <a href="https://www.tiktok.com/es/"><img class="mr-3" src="src/img/Tiktoklogo.png" width="40"></a>  <!--Icono de Tiktok -->
+           </div>
+    </div>
+  </div>
+  <div class="row footer-2 mt-5">           <!--Seccion 2 de footer-->
+    <div class="col-sm col-md-6 d-flex align-items-center justify-content-center">  <!--Nombre de equipo 1/2-->
+      <span class="texto2">Gorgonitas 2022</span>
+    </div>
+    <div class="col-sm col-md-6 d-flex justify-content-center pb-2">      <!-- Logos de medio de pago 2/2-->
+      <a href="https://www.paypal.com/mx/home"><img class="mr-3" src="src/img/LogodePaypal.png" width="40"></a>
+      <a href="https://www.visa.com.mx/"><img class="mr-3" src="src/img/LogodeVisa.png" width="50"></a>
+      <a href="https://www.americanexpress.com/es-mx/"><img class="mr-3" src="src/img/IconodeEfectivo.png" width="50"></a>
+      <a href="https://bitcoin.org/es/"><img class="mr-3" src="src/img/LogodeBitcoin.png" width="40"></a>
+    </div>
+  </div>  
+ 
+
+
+ 
+</footer>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+    <!--SECCION DE REFERENCIAS DE LOGOS ANTIGUOS-->
+
+    <!-- <a href="https://www.flaticon.com/free-icons/shopping-cart" title="shopping cart icons">Shopping cart icons created by Smashicons - Flaticon</a> -->
+    <!-- <a href="https://www.flaticon.com/free-icons/user" title="user icons">User icons created by Smashicons - Flaticon</a> -->
+    <!-- <a href="https://www.flaticon.com/free-icons/whatsapp" title="whatsapp icons">Whatsapp icons created by Pixel perfect - Flaticon</a> -->
+    <!-- <a href="https://www.flaticon.es/iconos-gratis/insignia-social-de-twitter" title="insignia social de twitter iconos">Insignia social de twitter iconos creados por Pixel perfect - Flaticon</a> -->
+    <!-- <a href="https://www.flaticon.com/free-icons/tiktok" title="tiktok icons">Tiktok icons created by Aldo Cervantes - Flaticon</a> -->
+    <!-- <a href="https://www.flaticon.es/iconos-gratis/insignia-social-de-twitter" title="insignia social de twitter iconos">Insignia social de twitter iconos creados por Pixel perfect - Flaticon</a> -->
+    <!-- <a href="https://www.flaticon.com/free-icons/tiktok" title="tiktok icons">Tiktok icons created by Aldo Cervantes - Flaticon</a> -->
+    <!-- <a href="https://www.flaticon.com/free-icons/paypal" title="paypal icons">Paypal icons created by Roundicons - Flaticon</a> -->
+    <!-- <a href="https://www.flaticon.com/free-icons/visa" title="visa icons">Visa icons created by Pixel Buddha - Flaticon</a> -->
+    <!-- <a href="https://www.flaticon.com/free-icons/american-express" title="american express icons">American express icons created by Freepik - Flaticon</a> -->
+    <!-- <a href="https://www.flaticon.com/free-icons/bitcoin" title="bitcoin icons">Bitcoin icons created by Freepik - Flaticon</a> -->
+    </body>
+</html>

@@ -1,0 +1,217 @@
+.titulo {  /*Caracteristicas de los titulos*/
+    color: var(--white);
+    font-family: var(--body);
+    font-size: 25px;
+  }
+  
+  
+
+  .formulario_label-resgistrate{
+    color: var(--white);
+    font-family: var(--body);
+    font-size: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  
+  .formulario_boton {  /*Caracteristicas de los botones */
+    background-color: #D6D6E3;
+    border-radius: 45px;
+    border: 3px solid white;
+    color: var(black);
+    font-family: var(--body);
+    font-size: 25px;
+    margin-bottom: 25px;
+    cursor: pointer;
+    transition: .1s ease all;
+  }
+  
+  .formulario_boton:hover{
+
+    box-shadow: 3px 0px 30px var(--blue);
+
+    box-shadow: 3px 0px 30px rgba(163, 163,  163, 1);
+
+  }
+  
+  
+  .formulario_input {  /*Caracteristicas de los espacios para escribir*/
+
+    background: #1212ff4f;
+    border: 3px solid rgb(18, 18, 255);
+    border-radius: 45px;
+    width: 342px;
+    height: 35px;
+    color: var(--white);
+    font-family: var(--body);
+    font-size: 15px;
+    cursor:pointer;
+    transition: .3s ease all;
+   
+  }
+  
+  
+  .formulario_input:focus {
+  
+
+    border: 3px solid  #D6D6E3;
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+    
+    
+  }
+  
+  .formulario_input-error{
+  font-size: 15px;
+  display: none;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  color: white;
+  font-family: var(--body);
+  
+  
+  }
+  
+  .formulario_input-error-activo{
+    display: block;
+  
+  }
+  
+  
+  
+  
+  .formulario_mensaje{
+    font-family:var(--body) ;
+    height: 45px;
+    width: 800px;
+    line-height: 45px;
+    text-align: center;
+    background-color: var(--blue);
+    color: white;
+    display: none;
+    
+    
+  
+  }
+
+ .formulario_iniciarsesion{
+    color: var(--white);
+    font-family: var(--body);
+    font-size: 20px;
+    text-align: center;
+    
+  }
+
+
+
+  
+  
+  
+  .formulario-registrate{ /*Caracteristicas de los formularios*/
+      border-radius: 45px;
+      border: 5px solid #D6D6E3;
+      width: 800px;
+      height: 700px;
+      margin-bottom: 200px;  
+      
+  }
+  
+  .formulario_input-exito-activo{
+    display: block;
+  
+  }
+  
+  
+  /*¨--------------------------------Formularios para validacion--------------------------------------*/
+
+  
+  .formulario_validacion-circulo{
+    position: relative;
+    right: 40px; 
+    z-index: 100;
+    font-size: 16px;
+    opacity: 0;
+    
+  }
+  
+ 
+  
+  .formulario_mensaje-activo{
+    display: block;
+
+  }
+  
+  .formulario_grupo-correcto .formulario_validacion-circulo { /*validacoion para el capo iniciar sesion*/
+  
+    color: #46FF01;
+    opacity: 1;
+    
+  
+  }
+  .formulario_grupo-correcto .formulario_label-resgistrate { /*validacoion para el capo iniciar sesion*/
+  
+    color: #46FF01;
+    opacity: 1;
+    
+  
+  }
+
+  .formulario_grupo-correcto .formulario_input{
+    border: 3px solid  #46FF01;
+  }
+  
+  .formulario_grupo-incorrecto .formulario_label-resgistrate{
+  
+    color: #FF0D00;
+  }
+  
+  .formulario_grupo-incorrecto .formulario_input{
+  
+    border: 3px solid  #FF0D00;
+  }
+  
+  .formulario_grupo-incorrecto .formulario_validacion-circulo{/*validacoion para el capo iniciar sesion*/
+  
+    color: #FF0D00;
+    opacity: 1;
+  }
+  
+  
+  
+  @media (max-width: 990px) {  /*Cuando el ancho de la pagina sea maximo de 780 pixeles los formularios crecen en altura*/
+
+    
+    
+    .formulario-registrate{
+  
+      height: 910px; 
+      align-items: center;
+      
+    }
+  
+  
+  
+
+  
+  .formulario_label-resgistrate {
+    text-align: center; /* las etique al cambiar la pantalla se centran*/
+  
+    
+  }
+  
+  .formulario_input {
+   
+    text-align: center; /* El texto se empieza a escribi desde el centro  al cambiar la pantalla */
+   
+   
+  
+  }
+  
+ 
+  
+  .formulario_input-error{
+  
+    text-align: center;
+  }
+  
+  }

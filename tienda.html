@@ -66,7 +66,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark navbar-toggleable-lg">
         <a class="navbar-brand" href="#">
-            <img src="src/img/LogoGJTrazoBlanco.png" width="80" height="100" alt="">
+            <img src="src/img/LogoGJconFondo.png" width="80" height="100" alt="">
         </a>
         <span class="texto3 d-block d-sm-block d-md-block d-lg-none">GAME<br>JOY</span>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
@@ -77,11 +77,26 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav mx-auto text-center">
                 <a class="nav-link texto2 " href="index.html">INICIO</a>
+               <!-- Inicia el sub menú despegable -->
+                <li class="nav-item dropdown">
+                    <!-- Titulo tienda -->
+                    <a class="nav-link  texto2 dropdown-toggle active " href="tienda.html" id="navbarDropdown" 
+                    role="button" data-toggle="dropdown" aria-expanded="false">
+                      TIENDA</a>
+                      <!-- Sub titutlos del sub menú -->
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="tienda-lanzamientos.html">Lanzamiento</a>
+                        <a class="dropdown-item" href="tienda-ofertas.html">Ofertas</a>
+                        <a class="dropdown-item" href="tienda-accesorios.html">Accesorios</a>
+                        <a class="dropdown-item" href="tienda-playstation.html">PlayStation</a>
+                        <a class="dropdown-item" href="tienda-nintendo.html">Nintendo</a>
+                        <a class="dropdown-item" href="tienda-xbox.html">Xbox</a>
+                  </li>
+               <!-- Termina el bloque de código del sub menú -->
                 <a class="nav-link texto2 " href="contacto.html">CONTACTO</a>
                 <a class="nav-link texto2 " href="acerca-de-nosotros.html">SOBRE NOSOTROS</a>
-                <a class="nav-link texto2 " href="carrito.html">CARRITO</a>
-                <a class="nav-link texto2 " href="iniciar-sesion.html">CUENTA</a>
-                <a class="nav-link texto2 active" href="tienda.html">TIENDA</a>
+              
+               
             </div>
             <div class="d-flex flex-row justify-content-around">
                 <a href="iniciar-sesion.html" class="m-2"><img src="src/img/IconodeUsuario.png" width="50" height="50"
@@ -97,38 +112,41 @@
     <!--  <div class="container text-justify"> -->
     <main>
 
-        <!--------------------------------Boton tienda---------------------------------------------->
-        <div class="contenedor ">
-            <!-- Contedor del boton tienda -->
-            <div class="row mb-4 align-items-center">
+       
+           
+        
+        
+
+
+        <!-- Contenedor de Lanzamiento, Ofertas y Otros -->
+        <div class="container">
+             <!--------------------------------Boton tienda---------------------------------------------->
+             <!-- Contedor del boton tienda -->
+             <div class="row mb-4 justify-content-center">
                 <!-- Caja del título -->
                 <div class="title-box">
                     <h4 class="texto2 title">Tienda</h4>
                 </div>
             </div>
-        </div>
-        <!-----------------------------------Fin ddel boton tienda---------------------------------------------->
-
-
-        <!-- Contenedor de Lanzamiento, Ofertas y Otros -->
-        <div class="container">
+             <!--------------------------------Boton tienda---------------------------------------------->
+        
             <!-- div de fila donde estaran las imagenes y botones -->
             <div class="row">
                 <!-- Div de la imagen Lanzamiento y boton Lanzamiento -->
                 <div class="col-12 col-md-12 col-lg-4 p-0"><!--Se hacen responsivas--> 
-                    <div class="row"><img src="src/img/lanzamiento.jfif" alt="" width="300px" height="200px"> </div>
-                    <div class="row"> <button class="btn-green "><a href="Tienda-Producto.html">Lanzamiento</a> </button></div>
+                    <div class="row"><img id="img" src="src/img/lanzamiento.jfif" alt="" width="300px" height="200px"> </div>
+                    <div class="row"> <button class="btn-blue "><a href="tienda-lanzamientos.html">Lanzamiento</a> </button></div>
 
                 </div>
                 <!-- Div de la imagen Ofertas y boton ofertas -->
                 <div class="col-12 col-md-12 col-lg-4 p-0">
-                    <div class="row"><img src="src/img/ofertas.jpg" alt="" width="300px" height="200px"></div>
-                    <div class="row"> <button class="btn-red"><a href="Tienda-Producto.html">Ofertas</a> </button></div>
+                    <div class="row"><img id="img" src="src/img/ofertas.jpg" alt="" width="300px" height="200px"></div>
+                    <div class="row"> <button class="btn-red"><a href="tienda-ofertas.html">Ofertas</a> </button></div>
                 </div>
                 <!-- Div de la imagen Otros y boton Otros -->
                 <div class="col-12 col-md-12 col-lg-4 p-0">
-                    <div class="row"><img src="src/img/Otros.jpg" alt="" width="300px" height="200px"></div>
-                    <div class="row"> <button class="btn-blue"><a href="Tienda-Producto.html">Otros</a> </button></div>
+                    <div class="row"><img id="img"src="src/img/Otros.jpg" alt="" width="300px" height="200px"></div>
+                    <div class="row"> <button class="btn-blue"><a href="tienda-accesorios.html">Accesesorios</a> </button></div>
                 </div>
             </div>
         </div>
@@ -141,18 +159,18 @@
             <div class="row">
 
                 <div class="col-12 col-md-12 col-lg-4 p-0">
-                    <div class="row "><img src="src/img/PlayStation.jpeg" alt="" width="300px" height="200px"> </div>
-                    <div class="row"> <button class="btn-green"><a href="Tienda-Producto.html">PlayStation</a> </button></div>
+                    <div class="row "><img id="img" src="src/img/PlayStation.jpeg" alt="" width="300px" height="200px"> </div>
+                    <div class="row"> <button class="btn-red"><a href="tienda-playstation.html">PlayStation</a> </button></div>
 
                 </div>
                 <div class="col-12 col-md-12 col-lg-4 p-0">
-                    <div class="row "><img class="x" src="src/img/Nintendo.jpeg" alt="" width="300px" height="200px">
+                    <div class="row "><img id="img" src="src/img/Nintendo.jpeg" alt="" width="300px" height="200px">
                     </div>
-                    <div class="row"> <button class="btn-blue"><a href="Tienda-Producto.html">Nintendo</a> </button></div>
+                    <div class="row"> <button class="btn-blue"><a href="tienda-nintendo.html">Nintendo</a> </button></div>
                 </div>
                 <div class="col-12 col-md-12 col-lg-4 p-0">
-                    <div class="row  "><img src="src/img/Xbox.jpeg" alt="" width="300px" height="200px"></div>
-                    <div class="row "> <button class="btn-red"><a href="Tienda-Producto.html">Xbox</a> </button></div>
+                    <div class="row  "><img  id="img"src="src/img/Xbox.jpeg" alt="" width="300px" height="200px"></div>
+                    <div class="row "> <button class="btn-red"><a href="tienda-xbox.html">Xbox</a> </button></div>
                 </div>
             </div>
         </div>
@@ -171,7 +189,7 @@
                 <li><a href="tienda.html" class="texto4">Más Productos</a></li>
                 <li><a href="contacto.html" class="texto4">Contacto</a></li>
                 <li><a href="iniciar-sesion.html" class="texto4">Login</a></li>
-                <li><a href="contacto.html" class="texto4">Preguntas Frecuentes</a></li>
+                <li><a href="preguntas.frecuentes.html" class="texto4">Preguntas Frecuentes</a></li>
             </div>
             <div class="col-md-3 col-lg-3 align-self-center text-center mt-3">
                 <span class="texto2 d-inline-block">Sobre Nosotros</span>
@@ -183,42 +201,28 @@
                     <img src="src/img/LogoGJconFondo.png" width="80" height="100" alt="">
                 </a>
             </div>
-            <div class="col-md-3 col-lg-3 text-center mt-3">
-                <span class="texto2 d-block">Síguenos en redes sociales</span>
-                <div class="row d-inline-flex align-items-center">
-                    <!--Se crea una nueva fila dentro de la columna, por coveniencia, los hijos de esta columna se alinearan al centro de manera horizontal y se separan con un margintop de 2-->
-                    <a href="https://es-la.facebook.com/"><img class="m-1" src="src/img/FacebookLogo.png"
-                            width="40"></a>
-                    <!--Icono con liga a facebook de tamaño 25 y margen derecho de 3-->
-                    <a href="https://www.instagram.com/?hl=es"><img class="m-1" src="src/img/InstagramLogo.png"
-                            width="40"></a>
-                    <!--Icono con liga a instagram-->
-                    <a href="https://twitter.com/?lang=es"><img class="m-1" src="src/img/Twiterlogo.png"
-                            width="50"></a>
-                    <!--Icono con liga a twitter-->
-                    <!-- <a href="https://www.flaticon.es/iconos-gratis/insignia-social-de-twitter" title="insignia social de twitter iconos">Insignia social de twitter iconos creados por Pixel perfect - Flaticon</a> -->
-                    <a href="https://www.tiktok.com/es/"><img class="mr-3" src="src/img/Tiktoklogo.png" width="40"></a>
-                    <!-- <a href="https://www.flaticon.com/free-icons/tiktok" title="tiktok icons">Tiktok icons created by Aldo Cervantes - Flaticon</a> -->
-                </div>
+            <div class="col-md-3 col-lg-3 text-center mt-3">    <!--Seccion de redes sociales 4/4-->
+                <span class="texto2 d-block">Si­guenos en redes sociales</span>
+                  <div class="row d-inline-flex align-items-center">  <!--Se crea una nueva fila dentro de la columna, por coveniencia, los hijos de esta columna se alinearan al centro de manera horizontal y se separan con un margintop de 2-->
+                    <a href="https://es-la.facebook.com/"><img class="m-1" src="src/img/FacebookLogo.png" width="40"></a> <!--Icono con liga a facebook de tamaÃ±o 25 y margen derecho de 3-->
+                    <a href="https://www.instagram.com/?hl=es"><img class="m-1" src="src/img/InstagramLogo.png" width="40"></a>  <!--Icono con liga a instagram-->
+                    <a href="https://twitter.com/?lang=es"><img class="m-1" src="src/img/Twiterlogo.png" width="50"></a> <!--Icono con liga a twitter-->
+                    <a href="https://www.tiktok.com/es/"><img class="mr-3" src="src/img/Tiktoklogo.png" width="40"></a>  <!--Icono de Tiktok -->
+                   </div>
             </div>
-        </div>
-        <div class="row footer-2 mt-5">
-            <div class="col-sm col-md-6 d-flex align-items-center justify-content-center">
-                <span class="texto2">Gorgonitas 2022</span>
+          </div>
+          <div class="row footer-2 mt-5">           <!--Seccion 2 de footer-->
+            <div class="col-sm col-md-6 d-flex align-items-center justify-content-center">  <!--Nombre de equipo 1/2-->
+              <span class="texto2">Gorgonitas 2022</span>
             </div>
-            <div class="col-sm col-md-6 d-flex justify-content-center pb-2">
-                <a href="https://www.paypal.com/mx/home"><img class="mr-3" src="src/img/LogodePaypal.png"
-                        width="40"></a>
-                <!-- <a href="https://www.flaticon.com/free-icons/paypal" title="paypal icons">Paypal icons created by Roundicons - Flaticon</a> -->
-                <a href="https://www.visa.com.mx/"><img class="mr-3" src="src/img/LogodeVisa.png" width="50"></a>
-                <!-- <a href="https://www.flaticon.com/free-icons/visa" title="visa icons">Visa icons created by Pixel Buddha - Flaticon</a> -->
-                <a href="https://www.americanexpress.com/es-mx/"><img class="mr-3" src="src/img/IconodeEfectivo.png"
-                        width="50"></a>
-                <!-- <a href="https://www.flaticon.com/free-icons/american-express" title="american express icons">American express icons created by Freepik - Flaticon</a> -->
-                <a href="https://bitcoin.org/es/"><img class="mr-3" src="src/img/LogodeBitcoin.png" width="40"></a>
-                <!-- <a href="https://www.flaticon.com/free-icons/bitcoin" title="bitcoin icons">Bitcoin icons created by Freepik - Flaticon</a> -->
+            <div class="col-sm col-md-6 d-flex justify-content-center pb-2">      <!-- Logos de medio de pago 2/2-->
+              <a href="https://www.paypal.com/mx/home"><img class="mr-3" src="src/img/LogodePaypal.png" width="40"></a>
+              <a href="https://www.visa.com.mx/"><img class="mr-3" src="src/img/LogodeVisa.png" width="50"></a>
+              <a href="https://www.americanexpress.com/es-mx/"><img class="mr-3" src="src/img/IconodeEfectivo.png" width="50"></a>
+              <a href="https://bitcoin.org/es/"><img class="mr-3" src="src/img/LogodeBitcoin.png" width="40"></a>
             </div>
-        </div>
+          </div>
+      
     </footer>
 
 

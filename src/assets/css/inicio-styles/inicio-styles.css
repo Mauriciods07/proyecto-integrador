@@ -9,6 +9,7 @@
     --pink: #FF00BC;
     --yellow: #E4F802;
     --white: #FFFFFF;
+    --lightgrey: rgb (211,211,211);
 
     /* Fuentes */
     --Titles: 'Press Start 2P', cursive;
@@ -121,7 +122,7 @@ li{             /* Se quitan las viñetas de las listas de la pagina*/
 }
 /*---------------------------------------------------------------------------------Productos mas vendidos---------------------------------------------*/
 .containerbverdePMV{
-    border: 5px solid var(--green);
+    border: 5px solid rgb(211, 211, 211);
     border-radius: 20px;
     margin: 0 auto;
     display: block;

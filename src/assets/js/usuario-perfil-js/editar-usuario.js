@@ -1,4 +1,4 @@
-$btnEditarUsuario.addEventListener('click', (e) =>{
+$btnEditarUsuario.addEventListener('click', (e) =>{ //Funcion del boton editar usuario, al dar click los inputs y boton guardar se habilitan, mientras que el boton editar usuario se inhabilita.
     $inputNombre.removeAttribute('disabled');
     $inputApellido.removeAttribute('disabled');
     $inputTelefono.removeAttribute('disabled');
@@ -17,5 +17,4 @@ $btnEditarUsuario.addEventListener('click', (e) =>{
     $btnEditarVendedor.style.opacity = "1.0";
     $btnAgregarVendedor.style.opacity ="0.2";
     $btnAgregarVendedor.setAttribute('disabled',true);
-    alert('Has habilitado la opcion de editar datos del usuario,excepto correo porque es el identificador unico en BD');
 });

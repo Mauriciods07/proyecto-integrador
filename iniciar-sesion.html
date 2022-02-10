@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS --> 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="src/assets/css/pred_fonts_styles.css" type="text/css"> <!--Link a hoja de estilos de Pagina base-->
     <link rel="stylesheet" href="src/assets/css/iniciar-sesion-styles/iniciar-sesion.css" type="text/css">
@@ -45,7 +45,7 @@
 
       <nav class="navbar navbar-expand-lg navbar-dark navbar-toggleable-lg">    <!--Se crea la barra de navegacion, expandible solo hasta el breakpoint lg-->
         <a class="navbar-brand" href="#">
-          <img src="src/img/LogoGJTrazoBlanco.png" width="80" height="100" alt="">  <!--Logo de GameJoy hacia el lado izquierdo-->
+          <img src="src/img/LogoGJconFondo.png" width="80" height="100" alt="">  <!--Logo de GameJoy hacia el lado izquierdo-->
         </a>
         <span class="texto3 d-block d-sm-block d-md-block d-lg-none">GAME<br>JOY</span> <!-- Texto GAME JOY, visible solo en barra de menu colapsada-->
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"> <!--Boton de navegador colapsable-->
@@ -53,12 +53,26 @@
         </button>                       <!--Todo lo que esta debajo de este boton va a desaparecer cuando el ancho de la ventana se reduzca-->
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">  <!--Todo lo que este dentro de esta seccion se colapsa hacia abajo-->
           <div class="navbar-nav mx-auto text-center">  <!-- Menu de navegacion con las paginas enlazadas-->
-            <a class="nav-link texto2" href="index.html">INICIO</a>   <!--Enlace de INICIO-->
+            <a class="nav-link texto2" href="index.html">INICIO</a>  
+            <!-- Inicia el sub menú despegable -->
+            <li class="nav-item dropdown">
+              <!-- Titulo tienda -->
+              <a class="nav-link  texto2 dropdown-toggle active " href="tienda.html" id="navbarDropdown" 
+              role="button" data-toggle="dropdown" aria-expanded="false">
+                TIENDA</a>
+                <!-- Sub titutlos del sub menú -->
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="tienda-lanzamientos.html">Lanzamiento</a>
+                <a class="dropdown-item" href="tienda-ofertas.html">Ofertas</a>
+                <a class="dropdown-item" href="tienda-accesorios.html">Accesorios</a>
+                <a class="dropdown-item" href="tienda-playstation.html">PlayStation</a>
+                <a class="dropdown-item" href="tienda-nintendo.html">Nintendo</a>
+                <a class="dropdown-item" href="tienda-xbox.html">Xbox</a>
+               
+            </li>
+         <!-- Termina el bloque de código del sub menú -->
             <a class="nav-link texto2" href="contacto.html">CONTACTO</a>    <!--Enlace de CONTACTO-->
             <a class="nav-link texto2" href="acerca-de-nosotros.html">SOBRE NOSOTROS</a>   <!--Enlace de SOBRE NOSOTROS-->
-            <a class="nav-link texto2" href="carrito.html">CARRITO</a>   <!--Enlace de CARRITO-->
-            <a class="nav-link texto2 active" href="iniciar-sesion.html">CUENTA</a>    <!--Enlace de CUENTA-->
-            <a class="nav-link texto2" href="tienda.html">TIENDA</a>             <!--Enlace de TIENDA-->
           </div>
           <div class="d-flex flex-row justify-content-around">  <!--Seccion donde esta los iconos de usuario y carrito de la tienda-->
             <a href="iniciar-sesion.html" class="m-2"><img src="src/img/IconodeUsuario.png" width="50" height="50" alt="Icono Cuenta"></a> <!--Icono de cuenta-->
@@ -70,9 +84,9 @@
 <!-- Aqui EMPIEZA LA PAGINA PERSONALIZADA  -->
 <main>
   <div class="container-fluid"> <!--Contenedor de los dos formularios -->
-  <div class="row mt-5"> <!--Inicio de la primera hilera -->
-      <div class="col-lg-6 col-md-12 col-sm-12 d-flex justify-content-center"> <!-- Columna  del formulario Iniciar sesión-->
-        <form onsubmit="return(false)" class="formulario-validacion formulario-iniciar mr-3" id="formulario"> <!--Formulario iniciar sesión-->
+  <div class="row "> <!--Inicio de la primera hilera -->
+      <div class="col-lg-12 col-md-12 col-sm-12 d-flex  mt-5 justify-content-center"> <!-- Columna  del formulario Iniciar sesión-->
+        <form onsubmit="return(false)" class="formulario-validacion formulario-iniciar" id="formulario"> <!--Formulario iniciar sesión-->
           <br/>
           <br/>
           <br/>
@@ -82,77 +96,30 @@
 
 
           <div class="formulario_grupo row d-flex justify-content-center mt-5 mb-5" id="grupo_correo"> <!-- Hilera para la sección correo-->
-        <label class="formulario_label col-lg-1 col-md-4 col-sm-12 mr-5 " for="exampleInputEmail1">Correo:</label> <!--Elemento para la etiqueta Correo, ya es resposivo hastael tamaño sm-->
-          <input type="email" class="formulario_input col-lg-6 col-md-10 col-sm-12 ml-5" name="correo" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="correo@ejemplo.com"><!--Espacio para colocar el correo del usuario ya es resposivo hastael tamaño sm-->
+        <label class="formulario_label col-form-label col-md-2 col-sm-11 col-11 mr-5 " for="exampleInputEmail1">Correo:</label> <!--Elemento para la etiqueta Correo, ya es resposivo hastael tamaño sm-->
+         <div col-md-7 col-sm-11 col-11> 
+           <input type="email" class="formulario_input col-form-label" name="correo" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="correo@ejemplo.com"><!--Espacio para colocar el correo del usuario ya es resposivo hastael tamaño sm-->
        <i class=" formulario_validacion-estado fas fa-times-circle"></i>
-       <p class="formulario_input-error">Introduce el correo electronico como se indica en el ejemplo.</p>
+       <p class="formulario_input-error">Formato como se muestra en el ejemplo.</p>
           </div>
+        </div>
           
           <div class="formulario_grupo row d-flex justify-content-center mt-5 mb-5" id="grupo_password"> <!-- Hilera para la sección Contraseña -->
-       <label class="formulario_label col-lg-2 col-md-4 col-sm-12 mr"  for="exampleInputPassword1">Contraseña:</label><!--Elemento para la etiqueta Contraseña ya es resposivo hastael tamaño sm-->
-       <input type="password" class="formulario_input col-lg-6 col-md-10 col-sm-12 ml-5" id="exampleInputPassword1" name="password"><!--Espacio para colocar la contraseña del usuario ya es resposivo hastael tamaño sm--> 
+       <label class="formulario_label col-form-label col-md-2 col-sm-11 col-11 mr-5"  for="exampleInputPassword1">Contraseña:</label><!--Elemento para la etiqueta Contraseña ya es resposivo hastael tamaño sm-->
+      <div col-md-7 col-sm-11 col-11> 
+        <input type="password" class="formulario_input" id="exampleInputPassword1" name="password"><!--Espacio para colocar la contraseña del usuario ya es resposivo hastael tamaño sm--> 
        <i class=" formulario_validacion-estado fas fa-times-circle"></i>
        <p class="formulario_input-error">La contraseña debe contener de 4 a 12 digitos</p>
           </div>
+        </div>
           
-          <div class="text-center"> <!--Contenedor del botón-->
+          <div class="text-center mt-5"> <!--Contenedor del botón-->
           <button type="submit" class="formulario_boton" id="formulario_mensaje-acceder">Iniciar sesión</button><!--Botón para iniciar sesión -->
           </div>
-          <div class="formulario_mensaje" id="formulario_mensaje"><p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente</p></div>
-        </form>
-      </div>
-    
-      
-  <div class="col-lg-6 col-md-12 col-sm-12 d-flex justify-content-center">
-        <form class="formulario-validacion formulario-registrate mr-3" id="formulario-dos"> <!--Formulario iniciar Registrate-->
-          <br/>
-        <div class=" row d-flex   justify-content-center"><!-- Hilera para el titulo-->
-          <h2 class=" titulo mt-5  mr-5">¡REGÍSTRATE!</h2><!--Titulo-->
-        </div>
-          <div class=" formulario_grupo  row d-flex justify-content-around mt-2 mb-3" id="grupo-nombre"><!-- Hilera para la sección nombre-->
-         <label class="formulario_label-resgistrate col-lg-1 col-md-4 col-sm-12" for="exampleInputEmail1"> Nombre: </label><!--Elemento para la etiqueta Nombre-->
-            <input type="text" class="formulario_input col-lg-6 col-md-10 col-sm-12"  id="exampleInputEmail1" name="nombre" aria-describedby="emailHelp">
-            <!--Espacio para colocar el nombre del usuario, ya es resposivo hasta el tamaño sm-->
-            <i class=" formulario_validacion-circulo fas fa-times-circle"></i>
-            <p class="formulario_input-error">El nombre sólo se pueden introducir letras.</p>
-          </div>
-          <div class=" row d-flex justify-content-around mt-2 mb-3" id="grupo-apellido"><!-- Hilera para la sección Apellido, ya es resposivo hastael tamaño sm-->
-            <label class=" formulario_label-resgistrate col-lg-1 col-md-4 col-sm-12"  for="exampleInputPassword1">Apellido: </label><!--Elemento para la etiqueta Apellido, ya es resposivo hasta el tamaño sm-->
-            <input type="text" class="formulario_input col-lg-6 col-md-10 col-sm-12" name="apellido" id="exampleInputPassword1"><!--Espacio para colocar el Apellido del usuario, ya es resposivo hasta el tamaño sm--> 
-            <i class=" formulario_validacion-circulo fas fa-times-circle"></i>
-            <p class="formulario_input-error">El apellido sólo se pueden introducir letras.</p>
-          </div>
-          <div class="row d-flex justify-content-around mt-2 mb-3" id="grupo-correo2"><!-- Hilera para la sección correo ya es resposivo hastael tamaño sm-->
-            <label class="formulario_label-resgistrate col-lg-1 col-md-4 col-sm-12" for="exampleInputPassword1">Correo: </label><!--Espacio para colocar el correo del usuario, ya es resposivo hasta el tamaño sm--> 
-            <input type="email" class="formulario_input col-lg-6 col-md-10 col-sm-12" name="correo2" id="exampleInputPassword1" placeholder="correo@ejemplo.com"><!--Espacio para colocar la contraseña del usuario, ya es resposivo hastael tamaño sm-->
-            <i class=" formulario_validacion-circulo fas fa-times-circle"></i>
-            <p class="formulario_input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p> 
-            </div>
-          
-          
-          <div class="row d-flex justify-content-around mt-2 mb-3" id="grupo-contraseña2"><!-- Hilera para la sección contraseña-->
-            <label class="formulario_label-resgistrate col-lg-1 col-md-4 col-sm-12 mr-4" for="exampleInputPassword1">Contraseña: </label><!--Elemento para la etiqueta Contraseña, ya es responsivo hasta el tamaño sm-->
-            <input type="password" class="formulario_input formulario_input col-lg-6 col-md-10 col-sm-12 ml-2" name="password2" id="exampleInputPassword1"><!--Espacio para colocar la contraseña del usuario, ya es resposivo hastael tamaño sm-->
-            <i class=" formulario_validacion-circulo fas fa-times-circle"></i>
-            <p class="formulario_input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p> 
-            </div>
-          
-          <div class="row d-flex justify-content-around mt-2 mb-3" id="grupo-telefono"><!-- Hilera para la sección teléfono-->
-            <label class="formulario_label-resgistrate col-lg-1 col-md-4 col-sm-12" for="exampleInputPassword1">Teléfono: </label><!--Elemento para la etiqueta Teléfono, ya es responsivo hasta el tamaño sm-->
-            <input type="text" class="formulario_input col-lg-6 col-md-10 col-sm-12" name="telefono" id="exampleInputPassword1"><!--Espacio para colocar el teléfono del usuario, ya es resposivo hastael tamaño sm--> 
-            <i class=" formulario_validacion-circulo fas fa-times-circle"></i>
-            <p class="formulario_input-error">El telefono solo puede contener numeros y el maximo son 14 dígitos.</p>
-            </div>
-          
-     
-          <div class="text-center"><!--Contenedor del botón-->
-          <button type="submit" class="formulario_boton mt-3 mr-5 " id="formulario_mensaje-enviado">Registrarse</button>
-          <p class="formulario_input-exito">El formulario se envío correctamente.</p> <!--Botón Registrarse-->
-        </div>
-       <div class="formulario_mensaje" id="formulario_mensaje"><p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor, rellena el formulario correctamente</p></div>
-        
-        </form>
-      </div>
+          <div class="formulario_mensaje col-md-12 col-sm-12 col-lg-12" id="formulario_mensaje"><p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente</p></div>
+          <div class="formulario_registrate "id="formulario_mensaje_registrate"><a class="texto-registro" href="registrate.html" >¡REGÍSTRATE!</a> </div>
+      </form>
+    </div>
       </div>  
   </div>
 </main>
@@ -167,7 +134,7 @@
         <li><a href="tienda.html" class="texto4">Mas Productos</a></li>
         <li><a href="contacto.html" class="texto4">Contacto</a></li>
         <li><a href="iniciar-sesion.html" class="texto4">Login</a></li>
-        <li><a href="contacto.html" class="texto4">Preguntas Frecuentes</a></li>
+        <li><a href="preguntas.frecuentes.html" class="texto4">Preguntas Frecuentes</a></li>
     </div>
     <div class="col-md-3 col-lg-3 align-self-center text-center mt-3">    <!--Texto sobre Nosotros  2/4-->
         <span class="texto2 d-inline-block">Sobre Nosotros</span>
@@ -206,6 +173,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
     <script src="src/assets/js/iniciar-sesion-js/formulario.js"></script>
+
 
     </body>
 </html>

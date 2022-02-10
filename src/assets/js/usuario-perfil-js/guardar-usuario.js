@@ -1,9 +1,10 @@
-function validarUsuario(){
-    if(!($inputTelefono.value.length>9 && $inputTelefono.value.length<12) || !($inputTarjeta.value.length===16 && $inputVencimiento.value.length===5 && $inputCVV.value.length===3)) {
+//Esta funcion se manda llamar cuando el boton de guardar es seleccionado con submit
+function guardarUsuario(){  //Funcion llamada por el tag form de usuario, regresa false siempre para que la pagina nunca recargue, verifica que las banderas de los inputs sean true, para asegurarse que los datos son correctos y cambiar informacion del usuario mediante API, SE REQUIERE API AQUI
+    if(!(banderaUsuario[0]&&banderaUsuario[1]&&banderaUsuario[2]&&banderaUsuario[3]&&banderaUsuario[5]&&banderaUsuario[6]&&banderaUsuario[7]&&direccion_OK)){
         alert('Revisa los campos en rojo');
         return false;
     }
-    else{
+    else{   //Si el formulario se lleno correctamente, los campos input se deshabilitan y solo se podra editar el usuario nuevamente o cerrar sesion
         $inputNombre.setAttribute('disabled',true);
         $inputApellido.setAttribute('disabled',true);
         $inputCorreo.setAttribute('disabled',true);
@@ -22,20 +23,4 @@ function validarUsuario(){
     }
     
 }
-
-// function restaurar(){    
-//         /////////////////////Formulario de Vendedor se desactiva hasta que se vuelva a editar de manera general///////////////////////////////
-//         $btnEditarVendedor.setAttribute('disabled',true);
-//         $btnEditarVendedor.style.opacity = "0.2";
-//         $btnGuardarVendedor.setAttribute('disabled',true);
-//         $btnGuardarVendedor.style.opacity = "0.2";
-//         $inputNombreComercio.setAttribute('disabled',true);
-//         $inputNombreVendedor.setAttribute('disabled',true);
-//         $inputCorreoEmpresa.setAttribute('disabled',true);
-//         $inputTelefonoEmpresa.setAttribute('disabled',true);
-//         $inputDireccionEmpresa.setAttribute('disabled',true);
-//         $btnAgregarVendedor.setAttribute('disabled',true);
-//         $imgFotoUsuario.setAttribute('disabled',true);
-//         $btnAgregarVendedor.style.opacity = "0.2";
-// }
 

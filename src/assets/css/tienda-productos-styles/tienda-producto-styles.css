@@ -90,15 +90,37 @@ li{             /* Se quitan las viñetas de las listas de la pagina*/
     margin-right: 5em;
 }
 .ajuste2{ /*Realiza un ajuste en el contenido para el margen en el footer*/
-    margin-left: -10em;
-    margin-right: -10em;
+    margin-left: -5em;
+    margin-right: -5em;
 }
-.div1{ 
+
+.centrar{
+    margin-top: 5em;
+ /*   margin-bottom: 5em;*/
+}
+.centrar1{
+    margin-right: 10em;
+    margin-left:0em;
+}
+.div1Azul{ 
+    font-family: Audiowide;
     height: 70px;
     width: 220px;
-    border: 5px solid #FF00BC;
+    border: 5px solid var(--blue);
     box-sizing: border-box; /*hace que el padding y el border pasen a formar parte del cálculo del ancho de la caja y no lo suman posteriormente.*/
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 45px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #FFFFFF; 
+}
+.div1Verde{ 
+    font-family: Audiowide;
+    height: 70px;
+    width: 220px;
+    border: 5px solid var(--green);
+    box-sizing: border-box; /*hace que el padding y el border pasen a formar parte del cálculo del ancho de la caja y no lo suman posteriormente.*/
+
     border-radius: 45px;
     margin-left: auto;
     margin-right: auto;
@@ -119,17 +141,36 @@ li{             /* Se quitan las viñetas de las listas de la pagina*/
     border-right: #FFFFFF 5px solid;
     border-left: #FFFFFF 5px solid;
 }
+
+.BordeBlanco1{
+    border-right: #FFFFFF 5px solid;
+    border-left: #FFFFFF 5px solid;
+    margin: 20px   30px   40px   10px;
+}
+.Etiquetas1{ /*Formato de los elementos que etiqueta*/
+    height: 70px;
+    width: 220px;
+    border: 5px solid var(--blue);
+    box-sizing: border-box; /*hace que el padding y el border pasen a formar parte del cálculo del ancho de la caja y no lo suman posteriormente.*/
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 45px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #FFFFFF; 
+}
+
+
+
 .Etiquetas{ /*Formato de los elementos que etiqueta*/
     font-family: Audiowide;
     font-style: normal;
     font-weight: normal;
     font-size: 30px;
-    line-height: 40px;
+    line-height: 30px;
     align-items: center;
     color: #FFFFFF;
     box-sizing: border-box;
-    border-radius: 45px;
-    border: 5px solid rgba(255, 13, 0, 0);
+    border-bottom: 5px solid white;
     text-align:center;
     margin: 10px;
 }
@@ -194,6 +235,15 @@ background-color: #1C1C1C;
    background-position: right; /*el relleno lo envia de lado derecho*/ 
                                /*genera el efecto de transicion de color*/   
 }
+.Cris{/*Relleno de boton carrito*/
+    cursor: pointer; /*indica que el cursos esta sobre el boton*/
+    background: linear-gradient(to right, transparent 50%, rgb(211,211,211,0.25) 25%);
+    background-size: 200%; /*Se desplaza el color para que no aparezca en pantalla*/
+    background-position: left; /*el relleno queda de lado izquiero */
+}
+.Cris:hover {/*Modifica la posicion de el relleno */
+   background-position: right; /*el relleno lo envia de lado derecho*/ /*genera el efecto de transicion de color*/   
+}
 .Rosa{/*Relleno de boton carrito*/
     cursor: pointer; /*indica que el cursos esta sobre el boton*/
     background: linear-gradient(to right, transparent 50%, rgba(255, 0, 188, 0.25) 25%);
@@ -236,10 +286,14 @@ background-color: #1C1C1C;
         width: 300px;
         height: 330px;    
     }
-    .div1{
+    .div1Azul{
         height: 50px;
         width: 150px;
-        border: 4px solid #FF00BC; 
+        border: 4px solid var(--blue); 
+    }
+    .Etiquetas1 { 
+        font-size: 20px;
+        line-height: 20px;
     }
     .redondo{
         width: 70px;
@@ -253,10 +307,25 @@ background-color: #1C1C1C;
         width: 280px;
         height: 200px;
     }
+    .centrar{
+        margin-top: 0em;
+        margin: right 5em;
+        margin: left 5em;   
+    }
+    .centrar1{
+        margin-top: 0em;
+        margin-right:auto;
+        margin-left:auto; 
+    }
+
+
     .Etiquetas{
         font-size: 25px;
-        border: 4px solid #FFFFFF;
-        margin-top: 5%;
+        line-height: 10px;
+        border-bottom: 4px solid #FFFFFF;
+       /* margin-top: 5%;*/
+       padding: 10% 0;
+
     }
     .TextoProducto{
         font-size: 25px;
@@ -307,6 +376,23 @@ p{
 .Box:hover .hoverVerde{
     width: 100%;/*da el efecto de cambio de color de forma completa**/
     transform: scale(1.07);/*Expande la imagen a 7%*/
+}
+
+.hoverCris{ 
+    width: 0%;
+    height: 100%;
+    background-color: rgb(211,211,211,0.75) ;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: transform 1.5s;
+}
+.Box:hover .hoverCris{
+    width: 100%;
+    transform: scale(1.07);
 }
 .hoverRosa{ 
     width: 0%;

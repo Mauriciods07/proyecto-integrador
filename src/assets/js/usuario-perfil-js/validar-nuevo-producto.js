@@ -1,0 +1,64 @@
+$inputNombreProductoNuevo.addEventListener('keyup', (e) =>{ //Evento donde al escribir sobre el input Nombre de producto nuevo, la funcion pregunta si es igual a la expresion regular definida (1-40 caracteres), si esta bien o no, los estilos de texto cambian para avisar al usuario
+    const expregNombre = /^[a-zA-ZÀ-ÿ\s]{1,40}$/;
+    const valido = expregNombre.test(e.target.value) ? true : false;
+    if (valido){
+        document.getElementById('lblNombreProducto').style.color = 'white';
+        e.target.style.color = "white";
+        e.target.style.border = "3px solid green";
+        nombreproducto_OK = true;
+    }
+    else{
+        document.getElementById('lblNombreProducto').style.color = 'red';
+        e.target.style.color = "red";
+        e.target.style.border = "3px solid red";
+        nombreproducto_OK = false;
+    }
+});
+
+$inputDescripcionProductoNuevo.addEventListener('keyup', (e) =>{ //Evento donde al escribir sobre el input descripcion de producto nuevo, la funcion pregunta si es igual a la expresion regular definida (1-100 caracteres), si esta bien o no, los estilos de texto cambian para avisar al usuario
+    const expregDescripcion = /^[a-zA-ZÀ-ÿ\s]{1,100}$/;
+    const valido = expregDescripcion.test(e.target.value) ? true : false;
+    if (valido){
+        document.getElementById('lblDescripcionProducto').style.color = 'white';
+        e.target.style.color = "white";
+        e.target.style.border = "3px solid green";
+        descripcionproducto_OK = true;
+    }
+    else{
+        document.getElementById('lblDescripcionProducto').style.color = 'red';
+        e.target.style.color = "red";
+        e.target.style.border = "3px solid red";
+        descripcionproducto_OK = false
+    }
+});
+
+$inputCostoProductoNuevo.addEventListener('keyup', (e) =>{ //Evento donde al escribir sobre el input costo de producto nuevo, la funcion pregunta si es igual a la condicion definida (costo mayor a 1), si esta bien o no, los estilos de texto cambian para avisar al usuario
+    if (parseInt(e.target.value)>=1){
+        document.getElementById('lblCostoProducto').style.color = 'white';
+        e.target.style.color = "white";
+        e.target.style.border = "3px solid green";
+        costoproducto_OK = true;
+    }
+    else{
+        document.getElementById('lblCostoProducto').style.color = 'red';
+        e.target.style.color = "red";
+        e.target.style.border = "3px solid red";
+        costoproducto_OK = false;
+    }
+});
+
+$inputCantidadProductoNuevo.addEventListener('keyup', (e) =>{   //Evento donde al escribir sobre el input Cantidad de producto nuevo, la funcion pregunta si es igual a la condicion definida (cantidad mayor a 1), si esta bien o no, los estilos de texto cambian para avisar al usuario
+    if (parseInt(e.target.value)>=1){
+        document.getElementById('lblCantidadProducto').style.color = 'white';
+        e.target.style.color = "white";
+        e.target.style.border = "3px solid green";
+        cantidadproducto_OK = true;
+    }
+    else{
+        document.getElementById('lblCantidadProducto').style.color = 'red';
+        e.target.style.color = "red";
+        e.target.style.border = "3px solid red";
+        cantidadproducto_OK = false;
+    }
+});
+//El elemento select no se valida porque tiene una categoria definida por defecto, asi que el usuario debe tener atencion al llenar el formulario

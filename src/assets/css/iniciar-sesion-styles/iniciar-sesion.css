@@ -13,17 +13,12 @@
   
 }
 
-.formulario_label-resgistrate{
-  color: var(--white);
-  font-family: var(--body);
-  font-size: 20px;
-}
 
 .formulario_boton {  /*Caracteristicas de los botones */
-  background-color: var(--pink);
+  background-color: #D6D6E3;
   border-radius: 45px;
-  border: 3px solid var(--blue);
-  color: var(--white);
+  border: 3px solid white;
+  color: var(black);
   font-family: var(--body);
   font-size: 25px;
   margin-bottom: 25px;
@@ -32,7 +27,7 @@
 }
 
 .formulario_boton:hover{
-  box-shadow: 3px 0px 30px rgba(163, 163,  163, 1);
+  box-shadow: 3px 0px 30px var(--blue);
 }
 
 .formulario_input-exito{
@@ -43,8 +38,8 @@
 
 
 .formulario_input {  /*Caracteristicas de los espacios para escribir*/
-  background: rgba(70, 255, 1, 0.25);
-  border: 3px solid var(--green);
+  background: #1212ff4f;
+  border: 3px solid rgb(18, 18, 255);
   border-radius: 45px;
   width: 342px;
   height: 35px;
@@ -58,7 +53,7 @@
 
 .formulario_input:focus {
 
-  border: 3px solid  #FF00BC;
+  border: 3px solid  #ffff;
   outline: none;
   box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
   
@@ -88,8 +83,9 @@ font-family: var(--body);
   font-family:var(--body) ;
   height: 45px;
   line-height: 45px;
+  width: 150px;
   text-align: center;
-  background-color:#FF00BC;
+  background-color: blue;
   color: white;
   display: none;
   
@@ -98,26 +94,36 @@ font-family: var(--body);
 }
 .formulario-iniciar{
   border-radius: 45px;
-  border: 5px solid var(--blue);
+  border: 5px solid #D6D6E3;
   width: 700px;
-  height: 550px;
+  height: 600px;
   margin-bottom: 200px;  
 }
 
-
-
-
-.formulario-registrate{ /*Caracteristicas de los formularios*/
-    border-radius: 45px;
-    border: 5px solid var(--blue);
-    width: 700px;
-    height: 550px;
-    margin-bottom: 200px;  
-    padding-left: 60px;
+.formulario_registrate{
+  color: var(--white);
+  font-family: var(--body);
+  font-size: 20px;
+  text-align: center;
+  
 }
-
+.texto-registro
 .formulario_input-exito-activo{
   display: block;
+
+}
+
+.formulario_mensaje{
+  font-family:var(--body) ;
+  height: 45px;
+  width: 800px;
+  line-height: 45px;
+  text-align: center;
+  background-color: var(--blue);
+  color: white;
+  display: none;
+  
+  
 
 }
 
@@ -125,28 +131,12 @@ font-family: var(--body);
 /*¨--------------------------------Formularios para validacion--------------------------------------*/
 .formulario_validacion-estado{
   position: relative;
-  right: 30px;
-  top: 10px;
+  right: 40px;
   z-index: 100;
   font-size: 16px;
   opacity: 0;
 }
 
-.formulario_validacion-circulo{
-  position: relative;
-  right: 110px;
-  top: 10px;
-  z-index: 100;
-  font-size: 16px;
-  opacity: 0;
-  
-}
-
-.formulario_grupo-correcto .formulario_validacion-circulo {
-  color: #46FF01;
-  opacity: 1;
-
-}
 
 .formulario_mensaje-activo{
   display: block;
@@ -159,6 +149,18 @@ font-family: var(--body);
   
 
 }
+.formulario_grupo-correcto .formulario_label{ /*validacoion para el capo iniciar sesion*/
+  
+  color: #46FF01;
+  opacity: 1;
+  
+
+}
+
+.formulario_grupo-correcto .formulario_input{
+  border: 3px solid  #46FF01;
+}
+
 
 .formulario_grupo-incorrecto .formulario_label{
 
@@ -175,13 +177,6 @@ font-family: var(--body);
   color: #FF0D00;
   opacity: 1;
 }
-.formulario_grupo-incorrecto .formulario_validacion-circulo{ 
-
-  color: #FF0D00;
-  opacity: 1;
-
-}
-
 
 
 
@@ -189,18 +184,11 @@ font-family: var(--body);
 
   .formulario-iniciar{
     
-    height: 600px;
+    height: 650px;
      
   }
 
   
-  
-  .formulario-registrate{
-
-    height: 700px; 
-    
-  }
-
 
 
 .formulario_label {
@@ -208,10 +196,7 @@ font-family: var(--body);
   text-align: center; /* las etique al cambiar la pantalla se centran*/
 }
 
-.formulario_label-resgistrate {
-  text-align: center; /* las etique al cambiar la pantalla se centran*/
-  padding-right: 60px;
-}
+
 
 .formulario_input {
 
@@ -220,10 +205,7 @@ font-family: var(--body);
 
 }
 
-.formulario_mensaje{
-font-size: 12px;
 
-}
 
 .formulario_validacion-circulo{
  
@@ -233,7 +215,7 @@ font-size: 12px;
 }
 
 .formulario_input-error{
-  font-size: 10px;
+  text-align: center;
 }
 
 }

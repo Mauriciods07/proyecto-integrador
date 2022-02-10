@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="src/assets/css/tienda-productos-styles/tienda-producto-styles.css" type="text/css"> <!--Link a hoja de estilos de Pagina base-->
 
-    <title>GameJoy / PS5</title>     <!--Titulo de la pagina-->
+    <title>GameJoy / PlayStation</title>     <!--Titulo de la pagina-->
   </head>
 
 
@@ -42,7 +42,7 @@
 
       <nav class="navbar navbar-expand-lg navbar-dark navbar-toggleable-lg">    <!--Se crea la barra de navegacion, expandible solo hasta el breakpoint lg-->
         <a class="navbar-brand" href="#">
-          <img src="src/img/LogoGJTrazoBlanco.png" width="80" height="100" alt="">  <!--Logo de GameJoy hacia el lado izquierdo-->
+          <img src="src/img/LogoGJconFondo.png" width="80" height="100" alt="">  <!--Logo de GameJoy hacia el lado izquierdo-->
         </a>
         <span class="texto3 d-block d-sm-block d-md-block d-lg-none">GAME<br>JOY</span> <!-- Texto GAME JOY, visible solo en barra de menu colapsada-->
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"> <!--Boton de navegador colapsable-->
@@ -51,11 +51,25 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">  <!--Todo lo que este dentro de esta seccion se colapsa hacia abajo-->
           <div class="navbar-nav mx-auto text-center">  <!-- Menu de navegacion con las paginas enlazadas-->
             <a class="nav-link texto2" href="index.html">INICIO</a>   <!--Enlace de INICIO-->
+            <!-- Inicia el sub menú despegable -->
+            <li class="nav-item dropdown">
+              <!-- Titulo tienda -->
+              <a class="nav-link  texto2 dropdown-toggle active " href="tienda.html" id="navbarDropdown" 
+              role="button" data-toggle="dropdown" aria-expanded="false">
+                TIENDA</a>
+                <!-- Sub titutlos del sub menú -->
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="tienda-lanzamientos.html">Lanzamiento</a>
+                <a class="dropdown-item" href="tienda-ofertas.html">Ofertas</a>
+                <a class="dropdown-item" href="tienda-accesorios.html">Accesorios</a>
+                <a class="dropdown-item" href="tienda-playstation.html">PlayStation</a>
+                <a class="dropdown-item" href="tienda-nintendo.html">Nintendo</a>
+                <a class="dropdown-item" href="tienda-xbox.html">Xbox</a>
+               
+            </li>
+         <!-- Termina el bloque de código del sub menú -->    
             <a class="nav-link texto2" href="contacto.html">CONTACTO</a>    <!--Enlace de CONTACTO-->
             <a class="nav-link texto2" href="acerca-de-nosotros.html">SOBRE NOSOTROS</a>   <!--Enlace de SOBRE NOSOTROS-->
-            <a class="nav-link texto2" href="carrito.html">CARRITO</a>   <!--Enlace de CARRITO-->
-            <a class="nav-link texto2" href="usuario-perfil.html" >CUENTA</a>    <!--Enlace de CUENTA-->
-            <a class="nav-link texto2 active" href="tienda.html"  >TIENDA</a>             <!--Enlace de TIENDA-->
 
 
           </div>
@@ -77,38 +91,37 @@
 <main>
 
   <br>
-  <h1 style="text-align:center" > <a href="tienda.html"> <div class="div1 Rosa" >Tienda</div> </a></h1>  <!--Titulo de la pagina/ Clase div1 da formato a ñla caja de texto tienda/ Clase rosa, le da formato  a la caja-->
+  <h1 style="text-align:center" > <a href="tienda.html"> <div class="div1Verde Verde" >Tienda</div> </a></h1>  <!--Titulo de la pagina/ Clase div1 da formato a ñla caja de texto tienda/ Clase rosa, le da formato  a la caja-->
   <br>
   <br>
   <div class="ajuste" > <!--Genera un margen en toda la pagia -->
                <!--****-->   <!--  -->
-  <div class="row BordeBlanco"> <!--Genera el borde blanco-->
+  <div class="row BordeBlanco "> <!--Genera el borde blanco-->
         
       <div class="col col-lg d-flex justify-content-around"  ><!-- Centra la caja que contiene el titulo -->
-        <img src="src/img/img_productos/PS5.jpeg"  alt="PS%" class="ImaSeccion" style="border-color:#1212FF" >            
+        <img src="src/img/img_productos/lanzamiento.jfif"  alt="Lanzamientos" class="ImaSeccion" style="border-color: white " >            
       </div>  <!--class="ImaSeccion" da formato a la imagen de la seccion-->
 
-      <div class="col col-lg d-flex  ">
-        <div class="container ">
+      <div class="col centrar1 col-lg d-flex justify-content-around ">
+        <div class="container centrar">
           <div class="row justify-content-around">
-            <div class="col Etiquetas Azul" style="border-color:  #1212FF"  >. . . P S 5 . . .</div>
+            <div class="col Etiquetas  Verde" style="border-color:  #46FF01"  >PlayStation</div>
                          <!--class Etiquetas, da formato al contenido de la etiqueta-->
-                         <!--class Azul/Verde/Rojo/Rosa/amatillo, da el formato del la animacion en su respectivo color-->
-          </div> 
-          <div class="row justify-content-around ">
-            <div class="col Etiquetas Verde" style="border-color:  #46FF01 "  > Acción</div>
-            <div class="col Etiquetas Rojo" style="border-color:  #FF0D00"  >Deportivo</div>
-            <div class="col Etiquetas Amarillo" style="border-color: #E4F802 "  >Estrategia</div> <br>
-            <div class="col Etiquetas Rosa" style="border-color:  #FF00BC"  >Aventura  </div>
-            <div class="col Etiquetas Rojo" style="border-color:  #FF0D00"  >Carreras</div>
-            <div class="col Etiquetas Verde" style="border-color:  #46FF01 "  >Horror de supervivencia </div>
-          </div> 
-        </div>
-      </div>
+                         <!--class Verde/Verde/Rojo/Rosa/amatillo, da el formato del la animacion en su respectivo color-->
+                        </div> 
+                        <div class="row justify-content-around ">
+                          <div class="col Etiquetas Cris" style="border-color:  white "  > Acción </div>
+                          <div class="col Etiquetas Cris" style="border-color: white"  >Deporte</div>
+                          <div class="col Etiquetas Cris" style="border-color:white"  >Estrategia</div> <br>
+                          <div class="col Etiquetas Cris" style="border-color: white" >Aventura </div>
+                          <div class="col Etiquetas Cris" style="border-color: white"  >Autos</div>
+                          <div class="col Etiquetas Cris" style="border-color:   white "  >Horror</div>
+                        </div> 
+                      </div>
+                    </div>
 
       <div class="row justify-content-center ">        
-         <div class="col-10 Etiquetas Azul" style="border-color: #1212FF ">
-          PlayStation (プレイステーション Pureisutēshon, oficialmente abreviada como PS1) es la primera videoconsola de Sony, y la primera de dicha compañía en ser diseñada por Ken Kutaragi, y es una videoconsola de sobremesa de 32 bits lanzada por Sony Computer Entertainment el 3 de diciembre de 1994 en Japón. Se considera la videoconsola más exitosa de la quinta generación tanto en ventas como en popularidad.</div>              
+              
       </div>
   </div>
   
@@ -118,245 +131,214 @@
   <div class="row BordeBlanco">
 
 
-
-    
-<!--*VERDE 1*-->            <!--SON LAS MISMAS INDICACIONES PARA TODOS LOS PRODUCTOS, SOLO CAMBIA EN COLOR -->        
-<dir class="col">                                                       <!--class="Imagen_prducto" da formato a la imagen de producto -->
-      <div class="row Box"> <br><img src="src/img/img_productos/1.jpg" class="Imagen_prducto" style="border-color:  #46FF01"  alt="Pruducto">
-      <div class="hoverVerde">  <!--class="hoverVerde/Azul/Rojo/Amarillo" define las caracteristicasa que tengra la imagen cuando se mueste la descripcion -->                                          
+<!--Verde-->
+    <dir class="col"> 
+      <div class="row Box"> <br><img src="src/img/img_productos/1.jpg" class="Imagen_prducto" style="border-color:  #46FF01 "  alt="Pruducto">
+      <div class="hoverVerde">
         <p>Call of Duty <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quae suscipit at neque. Nihil, vitae nesciunt alias perferendis modi voluptas .</p>
       </div>
         </div>  
         <div class="row">
         <dir class="col letra">
-          Call of Duty <br>$965 <br><button class="redondo Verde" style="border-color: #46FF01"> <img src="src/img/img_productos/carrito.png"  alt="carrito " class="Carrito"> </button>                      <!--class=redondo, hace redonde el boton carrito.  class="Carrito" da forma a la imagen carrito -->   
+          Call of Duty <br>$965 <br><button class="redondo Verde" style="border-color: #46FF01"> <img src="src/img/img_productos/carrito.png"  alt="carrito " class="Carrito"> </button>
       </dir>
-     </div>
+     </div>   
 </dir>
-
-<!--*Amarillo 2*-->
-<dir class="col"> 
-  <div class="row Box"> <br><img src="src/img/img_productos/2.jpg" class="Imagen_prducto" style="border-color:  #E4F802"  alt="Pruducto">
-  <div class="hoverAmarillo">
+ <!--Verde-->
+ <dir class="col"> 
+  <div class="row Box"> <br><img src="src/img/img_productos/2.jpg" class="Imagen_prducto" style="border-color:  #46FF01 "  alt="Pruducto">
+  <div class="hoverVerde">
     <p>Assassin's Creed Valhalla <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quae suscipit at neque. Nihil, vitae nesciunt alias perferendis modi voluptas .</p>
   </div>
     </div>  
     <div class="row">
     <dir class="col letra">
-      Assassin's Creed Valhalla<br>$965 <br><button class="redondo Amarillo" style="border-color: #E4F802"> <img src="src/img/img_productos/carrito.png"  alt="carrito " class="Carrito"> </button>
+      Assassin's Creed Valhalla<br>$965 <br><button class="redondo Verde" style="border-color: #46FF01"> <img src="src/img/img_productos/carrito.png"  alt="carrito " class="Carrito"> </button>
   </dir>
  </div>
-
 </dir>
-
- <!--*Rojo 3*-->     
- <dir class="col"> 
-  <div class="row Box"> <br><img src="src/img/img_productos/3.jpg" class="Imagen_prducto" style="border-color:  #FF0D00"  alt="Pruducto">
-  <div class="hoverRojo">
-    <p>Returnal <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quae suscipit at neque. Nihil, vitae nesciunt alias perferendis modi voluptas .</p>
+  <!--Verde-->
+  <dir class="col"> 
+    <div class="row Box"> <br><img src="src/img/img_productos/3.jpg" class="Imagen_prducto" style="border-color:  #46FF01 "  alt="Pruducto">
+    <div class="hoverVerde">
+      <p>Returnal <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quae suscipit at neque. Nihil, vitae nesciunt alias perferendis modi voluptas .</p>
   </div>
     </div>  
     <div class="row">
     <dir class="col letra">
-      Returnal<br>$982 <br><button class="redondo Rojo" style="border-color: #FF0D00"> <img src="src/img/img_productos/carrito.png"  alt="carrito " class="Carrito"> </button>
+      Returnal<br>$982 <br><button class="redondo Verde" style="border-color: #46FF01"> <img src="src/img/img_productos/carrito.png"  alt="carrito " class="Carrito"> </button>
+    </dir>
+   </div>
   </dir>
- </div>
-</dir>
-
-
-
-
- <!--*Azul 4*-->    
- <dir class="col"> 
-  <div class="row Box"> <br><img src="src/img/img_productos/4.jpg" class="Imagen_prducto" style="border-color:  #1212FF"  alt="Pruducto">
-  <div class="hoverAzul">
-    <p>Tales of Arise <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quae suscipit at neque. Nihil, vitae nesciunt alias perferendis modi voluptas .</p>
-  </div>
-    </div>  
-    <div class="row">
-    <dir class="col letra">
-      Tales of Arise<br>$1085 <br><button class="redondo Azul" style="border-color: #1212FF"> <img src="src/img/img_productos/carrito.png"  alt="carrito " class="Carrito"> </button>
+  <!--Verde-->
+  <dir class="col"> 
+    <div class="row Box"> <br><img src="src/img/img_productos/4.jpg" class="Imagen_prducto" style="border-color:  #46FF01 "  alt="Pruducto">
+    <div class="hoverVerde">
+      <p>Tales of Arise <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quae suscipit at neque. Nihil, vitae nesciunt alias perferendis modi voluptas .</p>
+    </div>
+      </div>  
+      <div class="row">
+      <dir class="col letra">
+        Tales of Arise<br>$1085 <br><button class="redondo Verde" style="border-color: #46FF01"> <img src="src/img/img_productos/carrito.png"  alt="carrito " class="Carrito"> </button>
+    </dir>
+   </div>
   </dir>
- </div>
-</dir>
-
-
- 
- <!--*Rosa 5*-->    
- <dir class="col"> 
-  <div class="row Box"> <br><img src="src/img/img_productos/5.jpg" class="Imagen_prducto" style="border-color:  #FF00BC"  alt="Pruducto">
-  <div class="hoverRosa">
-    <p>Tormented Souls <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quae suscipit at neque. Nihil, vitae nesciunt alias perferendis modi voluptas .</p>
-  </div>
-    </div>  
-    <div class="row">
-    <dir class="col letra">
-      Tormented Souls<br>$685 <br><button class="redondo Rosa" style="border-color: #FF00BC"> <img src="src/img/img_productos/carrito.png"  alt="carrito " class="Carrito"> </button>
+  <!--Verde-->
+  <dir class="col"> 
+    <div class="row Box"> <br><img src="src/img/img_productos/5.jpg" class="Imagen_prducto" style="border-color:  #46FF01 "  alt="Pruducto">
+    <div class="hoverVerde">
+      <p>Tormented Souls <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quae suscipit at neque. Nihil, vitae nesciunt alias perferendis modi voluptas .</p>
+    </div>
+      </div>  
+      <div class="row">
+      <dir class="col letra">
+        Tormented Souls<br>$685  <br><button class="redondo Verde" style="border-color: #46FF01"> <img src="src/img/img_productos/carrito.png"  alt="carrito " class="Carrito"> </button>
+    </dir>
+   </div>
   </dir>
- </div>
-</dir>
-
-    <!--*VERDE 6*-->
-<dir class="col"> 
-  <div class="row Box"> <br><img src="src/img/img_productos/6.jpg" class="Imagen_prducto" style="border-color:  #46FF01"  alt="Pruducto">
-  <div class="hoverVerde">
-    <p>Mortal Kombat <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quae suscipit at neque. Nihil, vitae nesciunt alias perferendis modi voluptas .</p>
+  <!--Verde-->
+  <dir class="col"> 
+    <div class="row Box"> <br><img src="src/img/img_productos/6.jpg" class="Imagen_prducto" style="border-color:  #46FF01 "  alt="Pruducto">
+    <div class="hoverVerde">
+      <p>Mortal Kombat <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quae suscipit at neque. Nihil, vitae nesciunt alias perferendis modi voluptas .</p>
   </div>
     </div>  
     <div class="row">
     <dir class="col letra">
       Mortal Kombat<br>$254 <br><button class="redondo Verde" style="border-color: #46FF01"> <img src="src/img/img_productos/carrito.png"  alt="carrito " class="Carrito"> </button>
+    </dir>
+   </div>
   </dir>
- </div>
-
-</dir>
-
-<!--*Amarillo 7 *-->
-<dir class="col"> 
-<div class="row Box"> <br><img src="src/img/img_productos/7.jpg" class="Imagen_prducto" style="border-color:  #E4F802"  alt="Pruducto">
-<div class="hoverAmarillo">
-<p>FINAL FANTASY VII REMAKE INTERGRADE <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quae suscipit at neque. Nihil, vitae nesciunt alias perferendis modi voluptas .</p>
+  <!--Verde-->
+  <dir class="col"> 
+    <div class="row Box"> <br><img src="src/img/img_productos/7.jpg" class="Imagen_prducto" style="border-color:  #46FF01 "  alt="Pruducto">
+    <div class="hoverVerde">
+      <p>FINAL FANTASY VII REMAKE INTERGRADE <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quae suscipit at neque. Nihil, vitae nesciunt alias perferendis modi voluptas .</p>
 </div>
 </div>  
 <div class="row">
 <dir class="col letra">
-  FINAL FANTASY VII REMAKE INTERGRADE<br>$1025 <br><button class="redondo Amarillo" style="border-color: #E4F802"> <img src="src/img/img_productos/carrito.png"  alt="carrito " class="Carrito"> </button>
-</dir>
-</div>
-
-</dir>
-
-<!--*Rojo 8*-->     
-<dir class="col"> 
-<div class="row Box"> <br><img src="src/img/img_productos/8.jpg" class="Imagen_prducto" style="border-color:  #FF0D00"  alt="Pruducto">
-<div class="hoverRojo">
-<p>The Medium <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quae suscipit at neque. Nihil, vitae nesciunt alias perferendis modi voluptas .</p>
+  FINAL FANTASY VII REMAKE INTERGRADE<br>$1025 <br><button class="redondo Verde" style="border-color: #46FF01"> <img src="src/img/img_productos/carrito.png"  alt="carrito " class="Carrito"> </button>
+    </dir>
+   </div>
+  </dir>
+  <!--Verde-->
+  <dir class="col"> 
+    <div class="row Box"> <br><img src="src/img/img_productos/8.jpg" class="Imagen_prducto" style="border-color:  #46FF01 "  alt="Pruducto">
+    <div class="hoverVerde">
+      <p>The Medium <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quae suscipit at neque. Nihil, vitae nesciunt alias perferendis modi voluptas .</p>
 </div>
 </div>  
 <div class="row">
 <dir class="col letra">
-  The Medium<br>$1249 <br><button class="redondo Rojo" style="border-color: #FF0D00"> <img src="src/img/img_productos/carrito.png"  alt="carrito " class="Carrito"> </button>
-</dir>
-</div>
-</dir>
-
-
-
-
-<!--*Azul 9*-->    
-<dir class="col"> 
-<div class="row Box"> <br><img src="src/img/img_productos/9.jpg" class="Imagen_prducto" style="border-color:  #1212FF"  alt="Pruducto">
-<div class="hoverAzul">
-<p>Chorus <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quae suscipit at neque. Nihil, vitae nesciunt alias perferendis modi voluptas .</p>
-</div>
-</div>  
-<div class="row">
-<dir class="col letra">
-  Chorus<br>$854 <br><button class="redondo Azul" style="border-color: #1212FF"> <img src="src/img/img_productos/carrito.png"  alt="carrito " class="Carrito"> </button>
-</dir>
-</div>
-</dir>
-
-
-
-<!--*Rosa 10 *-->    
-<dir class="col"> 
-<div class="row Box"> <br><img src="src/img/img_productos/10.jpg" class="Imagen_prducto" style="border-color:  #FF00BC"  alt="Pruducto">
-<div class="hoverRosa">
-<p>Scarlet Nexus <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quae suscipit at neque. Nihil, vitae nesciunt alias perferendis modi voluptas .</p>
-</div>
-</div>  
-<div class="row">
-<dir class="col letra">
-  Scarlet Nexus<br>$1025<br><button class="redondo Rosa" style="border-color: #FF00BC"> <img src="src/img/img_productos/carrito.png"  alt="carrito " class="Carrito"> </button>
-</dir>
-</div>
-</dir>
-
-  
-    <!--*VERDE 11*-->
-<dir class="col"> 
-  <div class="row Box"> <br><img src="src/img/img_productos/11.jpg" class="Imagen_prducto" style="border-color:  #46FF01"  alt="Pruducto">
-  <div class="hoverVerde">
-    <p>MechWarrior 5: Mercenaries <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quae suscipit at neque. Nihil, vitae nesciunt alias perferendis modi voluptas .</p>
-  </div>
+  The Medium<br>$1249 <br><button class="redondo Verde" style="border-color: #46FF01"> <img src="src/img/img_productos/carrito.png"  alt="carrito " class="Carrito"> </button>
+    </dir>
+   </div>
+  </dir>
+  <!--Verde-->
+  <dir class="col"> 
+    <div class="row Box"> <br><img src="src/img/img_productos/9.jpg" class="Imagen_prducto" style="border-color:  #46FF01 "  alt="Pruducto">
+    <div class="hoverVerde">
+      <p>Chorus <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quae suscipit at neque. Nihil, vitae nesciunt alias perferendis modi voluptas .</p>
+    </div>
     </div>  
     <div class="row">
     <dir class="col letra">
-      MechWarrior 5: Mercenaries <br>$655 <br><button class="redondo Verde" style="border-color: #46FF01"> <img src="src/img/img_productos/carrito.png"  alt="carrito " class="Carrito"> </button>
+      Chorus<br>$854 <br><button class="redondo Verde" style="border-color: #46FF01"> <img src="src/img/img_productos/carrito.png"  alt="carrito " class="Carrito"> </button>
+    </dir>
+   </div>
   </dir>
- </div>
+  <!--Verde-->
+  <dir class="col"> 
+    <div class="row Box"> <br><img src="src/img/img_productos/10.jpg" class="Imagen_prducto" style="border-color:  #46FF01 "  alt="Pruducto">
+    <div class="hoverVerde">
+      <p>Scarlet Nexus <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quae suscipit at neque. Nihil, vitae nesciunt alias perferendis modi voluptas .</p>
+    </div>
+    </div>  
+    <div class="row">
+    <dir class="col letra">
+      Scarlet Nexus<br>$1025 <br><button class="redondo Verde" style="border-color: #46FF01"> <img src="src/img/img_productos/carrito.png"  alt="carrito " class="Carrito"> </button>
+    </dir>
+   </div>
+  </dir>
+  <!--Verde-->
+  <dir class="col"> 
+    <div class="row Box"> <br><img src="src/img/img_productos/11.jpg" class="Imagen_prducto" style="border-color:  #46FF01 "  alt="Pruducto">
+    <div class="hoverVerde">
+      <p>MechWarrior 5: Mercenaries <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quae suscipit at neque. Nihil, vitae nesciunt alias perferendis modi voluptas .</p>
+    </div>
+      </div>  
+      <div class="row">
+      <dir class="col letra">
+        MechWarrior 5: Mercenaries <br>$655 <br><button class="redondo Verde" style="border-color: #46FF01"> <img src="src/img/img_productos/carrito.png"  alt="carrito " class="Carrito"> </button>
+    </dir>
+   </div>
+  </dir>
+  <!--Verde-->
+  <dir class="col"> 
+    <div class="row Box"> <br><img src="src/img/img_productos/12.jpg" class="Imagen_prducto" style="border-color:  #46FF01 "  alt="Pruducto">
+    <div class="hoverVerde">
+      <p>Kena. Bridge of Spirits <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quae suscipit at neque. Nihil, vitae nesciunt alias perferendis modi voluptas .</p>
+    </div>
+    </div>  
+    <div class="row">
+    <dir class="col letra">
+      Kena. Bridge of Spirits<br>$1299 <br><button class="redondo Verde" style="border-color: #46FF01"> <img src="src/img/img_productos/carrito.png"  alt="carrito " class="Carrito"> </button>
+    </dir>
+   </div>
+  </dir>
+  <!--Verde-->
+  <dir class="col"> 
+    <div class="row Box"> <br><img src="src/img/img_productos/13.jpg" class="Imagen_prducto" style="border-color:  #46FF01 "  alt="Pruducto">
+    <div class="hoverVerde">
+      <p>Sackboy. A Big Adventure <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quae suscipit at neque. Nihil, vitae nesciunt alias perferendis modi voluptas .</p>
+    </div>
+    </div>  
+    <div class="row">
+    <dir class="col letra">
+      Sackboy. A Big Adventure<br>$1379 <br><button class="redondo Verde" style="border-color: #46FF01"> <img src="src/img/img_productos/carrito.png"  alt="carrito " class="Carrito"> </button>
+    </dir>
+   </div>
+  </dir>
+  <!--Verde-->
+  <dir class="col"> 
+    <div class="row Box"> <br><img src="src/img/img_productos/14.jpg" class="Imagen_prducto" style="border-color:  #46FF01 "  alt="Pruducto">
+    <div class="hoverVerde">
+      p>Elden Ring <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quae suscipit at neque. Nihil, vitae nesciunt alias perferendis modi voluptas .</p>
+    </div>
+    </div>  
+    <div class="row">
+    <dir class="col letra">
+      Elden Ring<br>$1199 <br><button class="redondo Verde" style="border-color: #46FF01"> <img src="src/img/img_productos/carrito.png"  alt="carrito " class="Carrito"> </button>
+    </dir>
+   </div>
+  </dir>
+  <!--Verde-->
+  <dir class="col"> 
+    <div class="row Box"> <br><img src="src/img/img_productos/15.jpg" class="Imagen_prducto" style="border-color:  #46FF01 "  alt="Pruducto">
+    <div class="hoverVerde">
+      <p>Ratchet & Clank: Rift Apart <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quae suscipit at neque. Nihil, vitae nesciunt alias perferendis modi voluptas .</p>
+    </div>
+    </div>  
+    <div class="row">
+    <dir class="col letra">
+      Ratchet & Clank: Rift Apart<br>$1399 <br><button class="redondo Verde" style="border-color: #46FF01"> <img src="src/img/img_productos/carrito.png"  alt="carrito " class="Carrito"> </button>
+    </dir>
+   </div>
+  </dir>
 
-</dir>
+  
 
-<!--*Amarillo 12 *-->
-<dir class="col"> 
-<div class="row Box"> <br><img src="src/img/img_productos/12.jpg" class="Imagen_prducto" style="border-color:  #E4F802"  alt="Pruducto">
-<div class="hoverAmarillo">
-<p>Kena. Bridge of Spirits <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quae suscipit at neque. Nihil, vitae nesciunt alias perferendis modi voluptas .</p>
-</div>
-</div>  
-<div class="row">
-<dir class="col letra">
-  Kena. Bridge of Spirits<br>$1299 <br><button class="redondo Amarillo" style="border-color: #E4F802"> <img src="src/img/img_productos/carrito.png"  alt="carrito " class="Carrito"> </button>
-</dir>
-</div>
-
-</dir>
-
-<!--*Rojo 13*-->     
-<dir class="col"> 
-<div class="row Box"> <br><img src="src/img/img_productos/13.jpg" class="Imagen_prducto" style="border-color:  #FF0D00"  alt="Pruducto">
-<div class="hoverRojo">
-<p>Sackboy. A Big Adventure <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quae suscipit at neque. Nihil, vitae nesciunt alias perferendis modi voluptas .</p>
-</div>
-</div>  
-<div class="row">
-<dir class="col letra">
-  Sackboy. A Big Adventure<br>$1379 <br><button class="redondo Rojo" style="border-color: #FF0D00"> <img src="src/img/img_productos/carrito.png"  alt="carrito " class="Carrito"> </button>
-</dir>
-</div>
-</dir>
-
-
-
-
-<!--*Azul 14*-->    
-<dir class="col"> 
-<div class="row Box"> <br><img src="src/img/img_productos/14.jpg" class="Imagen_prducto" style="border-color:  #1212FF"  alt="Pruducto">
-<div class="hoverAzul">
-<p>Elden Ring <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quae suscipit at neque. Nihil, vitae nesciunt alias perferendis modi voluptas .</p>
-</div>
-</div>  
-<div class="row">
-<dir class="col letra">
-  Elden Ring<br>$1199<br><button class="redondo Azul" style="border-color: #1212FF"> <img src="src/img/img_productos/carrito.png"  alt="carrito " class="Carrito"> </button>
-</dir>
-</div>
-</dir>
-
-
-
-<!--*Rosa 15 *-->    
-<dir class="col"> 
-<div class="row Box"> <br><img src="src/img/img_productos/15.jpg" class="Imagen_prducto" style="border-color:  #FF00BC"  alt="Pruducto">
-<div class="hoverRosa">
-<p>Ratchet & Clank: Rift Apart <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quae suscipit at neque. Nihil, vitae nesciunt alias perferendis modi voluptas .</p>
-</div>
-</div>  
-<div class="row">
-<dir class="col letra">
-  Ratchet & Clank: Rift Apart<br>$1399 <br><button class="redondo Rosa" style="border-color: #FF00BC"> <img src="src/img/img_productos/carrito.png"  alt="carrito " class="Carrito"> </button>
-</dir>
-</div>
-</dir>                
-         
     
+
+
+
   
     
  
     </div>
-  <br>
+ 
+  </div>   <br>
 
 
 <!---------------------------------- FIN DIANA ---------------------------------->
