@@ -111,7 +111,7 @@
       border-radius: 45px;
       border: 5px solid #D6D6E3;
       width: 800px;
-      height: 650px;
+      height: 700px;
       margin-bottom: 200px;  
       
   }
@@ -127,8 +127,7 @@
   
   .formulario_validacion-circulo{
     position: relative;
-    right: 80px;
-   
+    right: 40px; 
     z-index: 100;
     font-size: 16px;
     opacity: 0;
@@ -148,6 +147,17 @@
     opacity: 1;
     
   
+  }
+  .formulario_grupo-correcto .formulario_label-resgistrate { /*validacoion para el capo iniciar sesion*/
+  
+    color: #46FF01;
+    opacity: 1;
+    
+  
+  }
+
+  .formulario_grupo-correcto .formulario_input{
+    border: 3px solid  #46FF01;
   }
   
   .formulario_grupo-incorrecto .formulario_label-resgistrate{
@@ -174,7 +184,7 @@
     
     .formulario-registrate{
   
-      height: 830px; 
+      height: 910px; 
       align-items: center;
       
     }
@@ -199,15 +209,8 @@
   
  
   
-  .formulario_validacion-circulo{
-   
-    right: 90px;
-   
-    
-  }
-  
   .formulario_input-error{
-    font-size: 13px;
+  
     text-align: center;
   }
   

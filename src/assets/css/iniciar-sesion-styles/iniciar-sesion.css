@@ -83,6 +83,7 @@ font-family: var(--body);
   font-family:var(--body) ;
   height: 45px;
   line-height: 45px;
+  width: 150px;
   text-align: center;
   background-color: blue;
   color: white;
@@ -95,7 +96,7 @@ font-family: var(--body);
   border-radius: 45px;
   border: 5px solid #D6D6E3;
   width: 700px;
-  height: 550px;
+  height: 600px;
   margin-bottom: 200px;  
 }
 
@@ -130,21 +131,10 @@ font-family: var(--body);
 /*¨--------------------------------Formularios para validacion--------------------------------------*/
 .formulario_validacion-estado{
   position: relative;
-  right: 30px;
-  top: 10px;
+  right: 40px;
   z-index: 100;
   font-size: 16px;
   opacity: 0;
-}
-
-.formulario_validacion-circulo{
-  position: relative;
-  right: 110px;
-  top: 10px;
-  z-index: 100;
-  font-size: 16px;
-  opacity: 0;
-  
 }
 
 
@@ -159,6 +149,18 @@ font-family: var(--body);
   
 
 }
+.formulario_grupo-correcto .formulario_label{ /*validacoion para el capo iniciar sesion*/
+  
+  color: #46FF01;
+  opacity: 1;
+  
+
+}
+
+.formulario_grupo-correcto .formulario_input{
+  border: 3px solid  #46FF01;
+}
+
 
 .formulario_grupo-incorrecto .formulario_label{
 
@@ -182,18 +184,11 @@ font-family: var(--body);
 
   .formulario-iniciar{
     
-    height: 600px;
+    height: 650px;
      
   }
 
   
-  
-  .formulario-registrate{
-
-    height: 700px; 
-    
-  }
-
 
 
 .formulario_label {
@@ -201,10 +196,7 @@ font-family: var(--body);
   text-align: center; /* las etique al cambiar la pantalla se centran*/
 }
 
-.formulario_label-resgistrate {
-  text-align: center; /* las etique al cambiar la pantalla se centran*/
-  padding-right: 60px;
-}
+
 
 .formulario_input {
 
@@ -213,10 +205,7 @@ font-family: var(--body);
 
 }
 
-.formulario_mensaje{
-font-size: 12px;
 
-}
 
 .formulario_validacion-circulo{
  
@@ -226,16 +215,7 @@ font-size: 12px;
 }
 
 .formulario_input-error{
-  font-size: 10px;
+  text-align: center;
 }
-
-}
-
-@media (max-width: 545px){
-
-  .formulario_label-resgistrate {
-    text-align: center; /* las etique al cambiar la pantalla se centran*/
-    padding-right: 30px;
-  }
 
 }
