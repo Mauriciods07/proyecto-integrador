@@ -1,4 +1,4 @@
-let Mario = {
+/* let Mario = {
     titulo: "Mario Kart",
     img: "src/img/productos/mario_kart8_deluxe.jpg",
     precio: 1400,
@@ -23,16 +23,18 @@ let Pokemon = {
     descripcion: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta cupiditate, repellat nihil quisquam minima enim expedita cum molestiae natus accusantium fugiat voluptates laboriosam, quas modi perspiciatis laudantium temporibus nemo accusamus.",
     color: "#1212FF",
     cantidad: 1
-}
+} 
 
-const juegos = [Mario, Luigi, Pokemon];
+const juegos = [Mario, Luigi, Pokemon];*/
 
 /* Recibir los productos de la API */
-/* fetch('http://localhost:3000/juegos')
+const juegos = [];
+fetch('http://localhost:3000/juegos')
     .then(response => response.json())
-    .then(data => data.forEach((el) => juegos.push(el))); */
+    .then(data => data.forEach((el) => juegos.push(el)));
 
-const colors = ["articlePink", "articleBlue", "articleRed", "articleYellow", "articleGreen"];
+const colors = ["articleBlue", "articleRed", "articleGrey"];
+const totalColors = 3;
 let colorsCounter = 0;
 let juegoIndex = 0;
 let articleNumber = 0;
@@ -149,7 +151,7 @@ function addArticle(){
     $articles.appendChild(articleDiv);
 
     /* Cambiar el objeto y color del div */
-    colorsCounter = (colorsCounter < 4) ? colorsCounter+1 : 0;
+    colorsCounter = (colorsCounter < totalColors-1) ? colorsCounter+1 : 0;
     juegoIndex = (juegoIndex < 2) ? juegoIndex+1 : 0;
     articleNumber += 1;
     total += juego.precio;
@@ -181,7 +183,7 @@ function showEmptyDoc() {
     /* Comprobar que no haya elementos */
     if($articles.children.length == 0){
         $articles.innerHTML = `
-        <div id="no-articles" class="article articlePink text-center ">
+        <div id="no-articles" class="article articleGrey text-center ">
             <p class="texto2">No hay elementos en el carrito</p>
         </div>
         `;
