@@ -230,3 +230,12 @@ font-size: 12px;
 }
 
 }
+
+@media (max-width: 545px){
+
+  .formulario_label-resgistrate {
+    text-align: center; /* las etique al cambiar la pantalla se centran*/
+    padding-right: 30px;
+  }
+
+}

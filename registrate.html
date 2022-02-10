@@ -81,38 +81,49 @@
           <h2 class=" titulo mb-5 mt-5  mr-5 ml-5">¡REGÍSTRATE!</h2><!--Titulo-->
         </div>
           <div class=" formulario_grupo  row d-flex justify-content-around mt-2 mb-3" id="grupo-nombre"><!-- Hilera para la sección nombre-->
-         <label class="formulario_label-resgistrate col-lg-1 col-md-4 col-sm-12" for="exampleInputEmail1"> Nombre: </label><!--Elemento para la etiqueta Nombre-->
-            <input type="text" class="Registro formulario_input col-lg-6 col-md-10 col-sm-12 mr-5 ml-5"  id="exampleInputEmail1" name="nombre" aria-describedby="emailHelp">
+         <label class="formulario_label-resgistrate col-form-label col-md-2 col-sm-11 col-11" for="exampleInputEmail1"> Nombre: </label><!--Elemento para la etiqueta Nombre-->
+                       
+           <div col-md-7 col-sm-11 col-11> 
+             <input type="text" class="Registro formulario_input col-lg-10 col-md-10 col-sm-12 mr-5 ml-5"  id="exampleInputEmail1" name="nombre" aria-describedby="emailHelp">
             <!--Espacio para colocar el nombre del usuario, ya es resposivo hasta el tamaño sm-->
             <i class=" formulario_validacion-circulo fas fa-times-circle"></i>
             <p class="formulario_input-error">En nombre sólo se pueden introducir letras.</p>
           </div>
+        </div>
           <div class=" row d-flex justify-content-around mt-2 mb-3" id="grupo-apellido"><!-- Hilera para la sección Apellido, ya es resposivo hastael tamaño sm-->
-            <label class=" formulario_label-resgistrate col-lg-1 col-md-4 col-sm-12"  for="exampleInputPassword1">Apellido: </label><!--Elemento para la etiqueta Apellido, ya es resposivo hasta el tamaño sm-->
-            <input type="text" class="Registro formulario_input col-lg-6 col-md-10 col-sm-12 mr-5 ml-5" name="apellido" id="exampleInputPassword1"><!--Espacio para colocar el Apellido del usuario, ya es resposivo hasta el tamaño sm--> 
+            <label class=" formulario_label-resgistrate col-form-label col-md-2 col-sm-11 col-11"  for="exampleInputPassword1">Apellido: </label><!--Elemento para la etiqueta Apellido, ya es resposivo hasta el tamaño sm-->
+           <div col-md-7 col-sm-11 col-11>
+             <input type="text" class="Registro formulario_input col-lg-10 col-md-10 col-sm-12 mr-5 ml-5" name="apellido" id="exampleInputPassword1"><!--Espacio para colocar el Apellido del usuario, ya es resposivo hasta el tamaño sm--> 
             <i class=" formulario_validacion-circulo fas fa-times-circle"></i>
             <p class="formulario_input-error">En el apellido sólo se pueden introducir letras.</p>
           </div>
+        </div>
 
           <div class="row d-flex justify-content-around mt-2 mb-3" id="grupo-correo"><!-- Hilera para la sección correo ya es resposivo hastael tamaño sm-->
-            <label class="formulario_label-resgistrate col-lg-1 col-md-4 col-sm-12" for="exampleInputPassword1">Correo: </label><!--Espacio para colocar el correo del usuario, ya es resposivo hasta el tamaño sm--> 
-            <input type="email" class="Registro formulario_input col-lg-6 col-md-10 col-sm-12 mr-5 ml-5" name="correo" id="exampleInputPassword1" placeholder="correo@ejemplo.com"><!--Espacio para colocar la contraseña del usuario, ya es resposivo hastael tamaño sm-->
+            <label class="formulario_label-resgistrate col-form-label col-md-2 col-sm-11 col-11" for="exampleInputPassword1">Correo: </label><!--Espacio para colocar el correo del usuario, ya es resposivo hasta el tamaño sm--> 
+           <div col-md-7 col-sm-11 col-11>
+             <input type="email" class="Registro formulario_input col-lg-10 col-md-10 col-sm-12 mr-5 ml-5" name="correo" id="exampleInputPassword1" placeholder="correo@ejemplo.com"><!--Espacio para colocar la contraseña del usuario, ya es resposivo hastael tamaño sm-->
            <i class=" formulario_validacion-circulo fas fa-times-circle"></i>
             <p class="formulario_input-error"> Formato como se muestra en el ejemplo.</p> 
             </div>
+          </div>
           <div class="row d-flex justify-content-around mt-2 mb-3" id="grupo-password"><!-- Hilera para la sección contraseña-->
-            <label class="formulario_label-resgistrate col-lg-1 col-md-4 col-sm-12 " for="exampleInputPassword1">Contraseña: </label><!--Elemento para la etiqueta Contraseña, ya es responsivo hasta el tamaño sm-->
-            <input type="password" class="Registro formulario_input formulario_input col-lg-6 col-md-10 col-sm-12 mr-5 ml-5" name="password" id="exampleInputPassword1"><!--Espacio para colocar la contraseña del usuario, ya es resposivo hastael tamaño sm-->
+            <label class="formulario_label-resgistrate col-form-label col-md-2 col-sm-11 col-11 " for="exampleInputPassword1">Contraseña: </label><!--Elemento para la etiqueta Contraseña, ya es responsivo hasta el tamaño sm-->
+           <div col-md-7 col-sm-11 col-11>
+             <input type="password" class="Registro formulario_input formulario_input col-lg-10 col-md-10 col-sm-12 mr-5 ml-5" name="password" id="exampleInputPassword1"><!--Espacio para colocar la contraseña del usuario, ya es resposivo hastael tamaño sm-->
             <i class=" formulario_validacion-circulo fas fa-times-circle"></i>
             <p class="formulario_input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p> 
             </div>
+          </div>
           
           <div class="row d-flex justify-content-around mt-2 mb-3" id="grupo-telefono"><!-- Hilera para la sección teléfono-->
-            <label class="formulario_label-resgistrate col-lg-1 col-md-4 col-sm-12" for="exampleInputPassword1">Teléfono: </label><!--Elemento para la etiqueta Teléfono, ya es responsivo hasta el tamaño sm-->
-            <input type="text" class="Registro formulario_input col-lg-6 col-md-10 col-sm-12 mr-5 ml-5" name="telefono" id="exampleInputPassword1"><!--Espacio para colocar el teléfono del usuario, ya es resposivo hastael tamaño sm--> 
+            <label class="formulario_label-resgistrate col-form-label col-md-2 col-sm-11 col-11" for="exampleInputPassword1">Teléfono: </label><!--Elemento para la etiqueta Teléfono, ya es responsivo hasta el tamaño sm-->
+           <div  col-md-7 col-sm-11 col-11>
+             <input type="text" class="Registro formulario_input col-lg-10 col-md-10 col-sm-12 mr-5 ml-5" name="telefono" id="exampleInputPassword1"><!--Espacio para colocar el teléfono del usuario, ya es resposivo hastael tamaño sm--> 
             <i class=" formulario_validacion-circulo fas fa-times-circle"></i>
             <p class="formulario_input-error"> Sólo  contiene numeros y  maximo son 14 dígitos.</p>
             </div>
+          </div>
           
      
           <div class="text-center"><!--Contenedor del botón-->
