@@ -114,6 +114,7 @@ li{             /* Se quitan las viñetas de las listas de la pagina*/
     color: var(--white);
     font-family: var(--body);
     font-size: 25px;
+    padding: 20px;
 }
 .contenedorContacto:hover{
     box-shadow: 1px 0px 30px rgba(163, 163,  163, 1);
@@ -128,8 +129,10 @@ li{             /* Se quitan las viñetas de las listas de la pagina*/
     font-size: 25px;
 }
 
+
+
 .btnEnviar{
-    border: 3px solid gray;
+    border: 3px solid var(--white);
     background-color: lightgray;
     color: var(--black);
     font-family: var(--body);
@@ -142,6 +145,8 @@ li{             /* Se quitan las viñetas de las listas de la pagina*/
 }
 .btnEnviar:hover{
     background-color:  rgba(18, 18, 255, 0.25);
+    color:var(--white)
+  /*   border: var(var(--blue)) */
 }
 
 /*¨--------------------------------Formularios para validacion--------------------------------------*/
@@ -158,20 +163,20 @@ li{             /* Se quitan las viñetas de las listas de la pagina*/
   
   }
   
-  .formulario_input-error-activo{
-    display: block;
-  
-  }
-  
+.formulario_input-error-activo{
+   display: block;
 
-    .formulario_validacion-estado{
-        position: relative;
-        left: 600px;
-        bottom: 50px;
-        z-index: 100;
-        font-size: 16px;
-        opacity: 0;
-      }
+}
+
+
+.formulario_validacion-estado{
+    position: relative;
+    left: 600px;
+    bottom: 50px;
+    z-index: 100;
+    font-size: 16px;
+    opacity: 0;
+  }
 
 
 .formulario_grupo-error{
@@ -181,95 +186,95 @@ li{             /* Se quitan las viñetas de las listas de la pagina*/
     margin-bottom: 0%;
     color: white;
     font-family: var(--body);
-    }
+  }
 
 
-    .formulario_mensaje-activo{
-        display: block;
-      }
+.formulario_mensaje-activo{
+    display: block;
+  }
       
-      .formulario_grupo-correcto .contenedorContacto { /*validacoion para el capo iniciar sesion*/
+.formulario_grupo-correcto .contenedorContacto { /*validacoion para el capo iniciar sesion*/
+
+  border: 3px solid  #46FF01;
+  
+
+}
+.formulario_grupo-correcto .nombreContacto { /*validacoion para el capo iniciar sesion*/
+
+  color: #46FF01;
+  
+
+}
+
+.formulario_grupo-incorrecto .nombreContacto{
+
+  color: #FF0D00;
+}
+
+.formulario_grupo-incorrecto .contenedorContacto{
+
+  border: 3px solid  #FF0D00;
+}
+
+.formulario_grupo-incorrecto .formulario_validacion-estado{/*validacoion para el capo iniciar sesion*/
+
+  color: #FF0D00;
+  opacity: 1;
+}
+
+
+
+@media (max-width: 990px) {  /*Cuando el ancho de la pagina sea maximo de 780 pixeles los formularios crecen en altura*/
+
+  .formulario-iniciar{
+    
+    height: 600px;
       
-        border: 3px solid  #46FF01;
-        
-      
-      }
-      .formulario_grupo-correcto .nombreContacto { /*validacoion para el capo iniciar sesion*/
-      
-        color: #46FF01;
-        
-      
-      }
-      
-      .formulario_grupo-incorrecto .nombreContacto{
-      
-        color: #FF0D00;
-      }
-      
-      .formulario_grupo-incorrecto .contenedorContacto{
-      
-        border: 3px solid  #FF0D00;
-      }
-      
-      .formulario_grupo-incorrecto .formulario_validacion-estado{/*validacoion para el capo iniciar sesion*/
-      
-        color: #FF0D00;
-        opacity: 1;
-      }
-      
-      
-      
-      @media (max-width: 990px) {  /*Cuando el ancho de la pagina sea maximo de 780 pixeles los formularios crecen en altura*/
-      
-        .formulario-iniciar{
-          
-          height: 600px;
-           
-        }
-      
-        
-        
-        .formulario-registrate{
-      
-          height: 700px; 
-          
-        }
-      
-      
-      
-      .formulario_label {
-      
-        text-align: center; /* las etique al cambiar la pantalla se centran*/
-      }
-      
-      .formulario_label-resgistrate {
-        text-align: center; /* las etique al cambiar la pantalla se centran*/
-        padding-right: 60px;
-      }
-      
-      .formulario_input {
-      
-        text-align: center; /* El texto se empieza a escribi desde el centro  al cambiar la pantalla */
-      
-      
-      }
-      
-      .formulario_mensaje{
-      font-size: 12px;
-      
-      }
-      
-      .formulario_validacion-circulo{
-       
-        right: 70px;
-       
-        
-      }
-      
-      .formulario_input-error{
-        font-size: 10px;
-      }
-      
-      }
+  }
+
+  
+  
+  .formulario-registrate{
+
+    height: 700px; 
+    
+  }
+
+
+
+  .formulario_label {
+
+    text-align: center; /* las etique al cambiar la pantalla se centran*/
+  }
+
+  .formulario_label-resgistrate {
+    text-align: center; /* las etique al cambiar la pantalla se centran*/
+    padding-right: 60px;
+  }
+
+  .formulario_input {
+
+    text-align: center; /* El texto se empieza a escribi desde el centro  al cambiar la pantalla */
+
+
+  }
+
+  .formulario_mensaje{
+  font-size: 12px;
+
+  }
+
+  .formulario_validacion-circulo{
+    
+    right: 70px;
+    
+    
+  }
+
+  .formulario_input-error{
+    font-size: 10px;
+  }
+
+}
 
 

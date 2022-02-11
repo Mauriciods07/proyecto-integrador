@@ -30,6 +30,7 @@ const expresiones = {
     nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios y acentos.
     correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
     telefono: /^\d{10,12}$/, // 10 a 12 numeros.
+    mensaje: /^[a-zA-ZÀ-ÿ\s]{1,40}$/
 }
 
 const validarFormulario = (e) =>{
@@ -43,6 +44,9 @@ const validarFormulario = (e) =>{
        case 'telefono':
          validarCampo(expresiones.telefono, e.target,'telefono');
             break;
+       case 'mensaje':
+         validarCampo(expresiones.mensaje, e.target, 'mensaje');
+         break;
    }
 }
 
