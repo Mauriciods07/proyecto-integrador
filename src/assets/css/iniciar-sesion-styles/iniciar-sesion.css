@@ -9,7 +9,8 @@
 .formulario_label {  /*Caracteristicas de las etiquetas*/
   color: var(--white);
   font-family: var(--body);
-  font-size: 20px;
+  font-size: 23px;
+  margin-right: 75px;
   
 }
 
@@ -48,6 +49,7 @@
   font-size: 15px;
   cursor:pointer;
   transition: .3s ease all;
+  
 }
 
 
@@ -205,12 +207,20 @@ font-family: var(--body);
 
 }
 
+.formulario_mensaje{
+
+  width: 500px;
+  font-size: 12px;
+  
+  
+
+}
 
 
 
 .formulario_input-error{
   text-align: center;
-  font-size: 12px;
+  font-size: 12pc;
 }
 
 }
