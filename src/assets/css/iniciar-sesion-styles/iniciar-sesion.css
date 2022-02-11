@@ -63,15 +63,16 @@
 }
 
 .formulario_input-error{
-font-size: 15px;
-display: none;
-margin-top: 0%;
-margin-bottom: 0%;
-color: white;
-font-family: var(--body);
-
-
-}
+  font-size: 15px;
+  display: none;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  color: white;
+  font-family: var(--body);
+  
+  
+  }
+  
 
 .formulario_input-error-activo{
   display: block;
@@ -220,7 +221,7 @@ font-family: var(--body);
 
 .formulario_input-error{
   text-align: center;
-  font-size: 12pc;
+  font-size: 12px;
 }
 
 }
