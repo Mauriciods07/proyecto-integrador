@@ -197,6 +197,9 @@
 .formulario_label {
 
   text-align: center; /* las etique al cambiar la pantalla se centran*/
+  font-size: 25px;
+  margin-left: 20px;
+
 }
 
 
