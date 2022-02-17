@@ -9,6 +9,7 @@
     --pink: #FF00BC;
     --yellow: #E4F802;
     --white: #FFFFFF;
+    --grey:#a9a9a9;
 
     /* Fuentes */
     --Titles: 'Press Start 2P', cursive;
@@ -50,6 +51,7 @@ max-height: 98.1px;
     font-size: 10px;
     color: var(--white);
 }
+
 .main{  /*Seccion personalizada de pagina*/
     width: max-content;
     height: 1500px;

@@ -8,7 +8,7 @@
     <!-- css contacto -->
     <link rel="stylesheet" href="src/assets/css/contacto-styles/contacto-styles.css" type="text/css"> <!--Link a hoja de estilos de Pagina base-->
 
-    <title>Preguntas frecuentes</title>     <!--Titulo de la pagina-->
+    <title>Contacto</title>     <!--Titulo de la pagina-->
   </head>
 
 
@@ -53,20 +53,19 @@
           <div class="navbar-nav mx-auto text-center">  <!-- Menu de navegacion con las paginas enlazadas-->
             <a class="nav-link texto2" href="index.html">INICIO</a>   <!--Enlace de INICIO-->
             <!-- Inicia el sub menú despegable -->
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown menu_item">
               <!-- Titulo tienda -->
-              <a class="nav-link  texto2 dropdown-toggle  " href="tienda.html" id="navbarDropdown" 
-              role="button" data-toggle="dropdown" aria-expanded="false">
-                TIENDA</a>
-                <!-- Sub titutlos del sub menú -->
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="tienda-lanzamientos.html">Lanzamiento</a>
-                <a class="dropdown-item" href="tienda-ofertas.html">Ofertas</a>
-                <a class="dropdown-item" href="tienda-accesorios.html">Accesorios</a>
-                <a class="dropdown-item" href="tienda-playstation.html">PlayStation</a>
-                <a class="dropdown-item" href="tienda-nintendo.html">Nintendo</a>
-                <a class="dropdown-item" href="tienda-xbox.html">Xbox</a>
-               
+                <a class="nav-link  texto2 dropdown-toggle  " href="tienda.html" id="navbarDropdown" >TIENDA</a>
+                <!-- Contenedor de los links -->
+                  <div class=" menu texto2" aria-labelledby="navbarDropdown">
+                    <!-- links del sub menú -->
+                    <a class=" dropdown-item texto2" href="tienda-lanzamientos.html">Lanzamiento</a>
+                    <a class="dropdown-item texto2" href="tienda-ofertas.html">Ofertas</a>
+                    <a class="dropdown-item texto2" href="tienda-accesorios.html">Accesorios</a>
+                    <a class="dropdown-item texto2" href="tienda-playstation.html">PlayStation</a>
+                    <a class="dropdown-item texto2" href="tienda-nintendo.html">Nintendo</a>
+                    <a class="dropdown-item texto2" href="tienda-xbox.html">Xbox</a>
+                  </div>
             </li>
          <!-- Termina el bloque de código del sub menú -->  
             <a class="nav-link texto2 active" href="contacto.html">CONTACTO</a>    <!--Enlace de CONTACTO-->
@@ -134,8 +133,9 @@
                     <div class="row form-group" id="grupo_mensaje">
                         <label for="mensaje" class="nombreContacto col-form-label col-md-2 col-sm-11 col-11">Mensaje</label>
                         <div class="col-md-7 col-sm-11 col-11">
-                            <textarea name="mensaje" id="mensaje" rows="10"  class="contenedorContacto form-control" name="mensaje" id="mensaje" placeholder="Mensaje" value="" required ></textarea>
+                            <textarea name="mensaje" id="mensaje" rows="10"  class="contenedorContacto form-control" name="mensaje" id="mensaje" placeholder="Mensaje" value=""  ></textarea>
                             <!-- Validación -->
+                            <p class="formulario_input-error"> Introduce  el mensaje.</p>
                            <!-- opción 2 de validación -->
                             <!-- <div class="valid-feedback">Valido</div>
                             <div class="invalid-feedback">Completa el campo</div> -->
