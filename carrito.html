@@ -49,7 +49,22 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">  <!--Todo lo que este dentro de esta seccion se colapsa hacia abajo-->
           <div class="navbar-nav mx-auto text-center">  <!-- Menu de navegacion con las paginas enlazadas-->
             <a class="nav-link texto2" href="index.html">INICIO</a>   <!--Enlace de INICIO-->
-            <a class="nav-link texto2" href="tienda.html">TIENDA</a>             <!--Enlace de TIENDA-->
+            <!-- Inicia el sub menú despegable -->
+            <li class="nav-item dropdown menu_item">
+              <!-- Titulo tienda -->
+                <a class="nav-link  texto2 dropdown-toggle  " href="tienda.html" id="navbarDropdown" >TIENDA</a>
+                <!-- Contenedor de los links -->
+                  <div class=" menu texto2" aria-labelledby="navbarDropdown">
+                    <!-- links del sub menú -->
+                    <a class=" dropdown-item texto2" href="tienda-lanzamientos.html">Lanzamiento</a>
+                    <a class="dropdown-item texto2" href="tienda-ofertas.html">Ofertas</a>
+                    <a class="dropdown-item texto2" href="tienda-accesorios.html">Accesorios</a>
+                    <a class="dropdown-item texto2" href="tienda-playstation.html">PlayStation</a>
+                    <a class="dropdown-item texto2" href="tienda-nintendo.html">Nintendo</a>
+                    <a class="dropdown-item texto2" href="tienda-xbox.html">Xbox</a>
+                  </div>
+            </li>
+            <!-- Termina el bloque de código del sub menú -->
             <a class="nav-link texto2" href="contacto.html">CONTACTO</a>    <!--Enlace de CONTACTO-->
             <a class="nav-link texto2" href="acerca-de-nosotros.html">SOBRE NOSOTROS</a>   <!--Enlace de SOBRE NOSOTROS-->
           </div>
