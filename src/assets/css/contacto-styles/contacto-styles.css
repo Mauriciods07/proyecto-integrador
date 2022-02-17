@@ -9,6 +9,7 @@
     --pink: #FF00BC;
     --yellow: #E4F802;
     --white: #FFFFFF;
+    --grey:#a9a9a9;
 
     /* Fuentes */
     --Titles: 'Press Start 2P', cursive;
@@ -50,6 +51,50 @@ max-height: 98.1px;
     font-size: 10px;
     color: var(--white);
 }
+/* ------------------CSS del menu despegable--------------- */
+.menu_item{
+    list-style: none;
+    position: relative;
+   z-index: 100;
+    margin: 0 5px;
+    /* --clip: polygon(0 0, 100% 0, 100% 100%, 0 100%); */
+    --clip:   polygon(0 0, 100% 0, 100% 0, 0 0);
+
+    
+}
+.menu_item:hover{
+    --clip: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+ 
+
+}
+/* sub meno contenedor */
+.menu{
+    clip-path: var(--clip);
+    list-style: none;
+    transition: clip-path .3s;
+  position: absolute;
+   margin: auto;
+    width: max-content;
+    
+    background-color: var(--black);
+    border: 2px solid wheat;
+    
+}
+
+/* enlaces del menu contenedor */
+.dropdown-item{
+    color: var(--grey);
+}
+
+.dropdown-item:hover{
+    color: var(--white);
+    background-color: var(--black);
+}
+
+
+
+
+/* ---------------Termina el CSS del menú despegable */
 .main{  /*Seccion personalizada de pagina*/
     width: max-content;
     height: 1500px;
