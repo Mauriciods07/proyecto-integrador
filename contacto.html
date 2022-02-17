@@ -91,15 +91,16 @@
                 <!-- <hr class="bg-danger"> -->
 
                 <form action="https://formsubmit.co/gamejoy.gorgonita@gmail.com" id="formulario"  onsubmit="return(false)" class="formulario-validacion formulario-contacto mr-3" id="formulario">
+                  <!-- opción 2 de validación -->
                   <!-- method="post" class="needs-validation" novalidate -->
                   <!-- 408bcf8cc4872cf10e6f6f427d614278 -->
                     <div class="row form-group " id="grupo_nombre">
                         <label for="nombre" class="nombreContacto col-form-label col-md-2 col-sm-11 col-11">Nombre</label>
                         <div class="col-md-7 col-sm-11 col-11">
-                            <input type="text" name="nombre" id="nombre" value="" required class="contenedorContacto form-control" placeholder="Nombre" >
+                            <input type="text" name="nombre" id="nombre" value="" class="contenedorContacto form-control" placeholder="Nombre" >
                             <!-- Validación -->
-                            <i class=" formulario_validacion-circulo fas fa-times-circle"></i>
                             <p class="formulario_input-error">Sólo se pueden introducir letras.</p>
+                            <!-- opción 2 de validación -->
                            <!--  <div class="valid-feedback">Valido</div>
                             <div class="invalid-feedback">Completa el campo</div> -->
                         </div>
@@ -108,10 +109,10 @@
                     <div class="row form-group" id="grupo_correo">
                         <label for="correo" class="nombreContacto col-form-label col-md-2 col-sm-11 col-11">Correo</label>
                         <div class="col-md-7 col-sm-11 col-11">
-                            <input type="email" name="correo" id="correo" value="" required class="contenedorContacto form-control" placeholder="ejemplo@gmail.com">
+                            <input type="email" name="correo" id="correo" value=""  class="contenedorContacto form-control" placeholder="ejemplo@gmail.com">
                             <!-- Validación -->
-                            <i class=" formulario_validacion-circulo fas fa-times-circle"></i>
                             <p class="formulario_input-error"> Formato como se muestra en el ejemplo.</p> 
+                            <!-- opción 2 de validación -->
                             <!-- <div class="valid-feedback">Valido</div>
                             <div class="invalid-feedback">Completa el campo</div> -->
                         </div>
@@ -120,10 +121,10 @@
                     <div class="row form-group" id="grupo_telefono">
                         <label for="telefono" class="nombreContacto col-form-label col-md-2 col-sm-11 col-11">Teléfono</label>
                         <div class="col-md-7 col-sm-11 col-11">
-                            <input type="tel" name="telefono" id="telefono" value="" required class="contenedorContacto form-control" placeholder="Teléfono">
+                            <input type="tel" name="telefono" id="telefono" value="" class="contenedorContacto form-control" placeholder="Teléfono">
                             <!-- Validación -->
-                            <i class=" formulario_validacion-circulo fas fa-times-circle"></i>
                             <p class="formulario_input-error"> Sólo se puede agregar números.</p>
+                            <!-- opción 2 de validación -->
                            <!--  <div class="valid-feedback">Valido</div>
                             <div class="invalid-feedback">Completa el campo</div> -->
                         </div>
@@ -132,10 +133,10 @@
                     <div class="row form-group" id="grupo_mensaje">
                         <label for="mensaje" class="nombreContacto col-form-label col-md-2 col-sm-11 col-11">Mensaje</label>
                         <div class="col-md-7 col-sm-11 col-11">
-                            <textarea name="mensaje" id="mensaje" rows="10"  class="contenedorContacto form-control" name="mensaje" id="mensaje" placeholder="Mensaje" value="" required ></textarea>
+                            <textarea name="mensaje" id="mensaje" rows="10"  class="contenedorContacto form-control" name="mensaje" id="mensaje" placeholder="Mensaje" value=""  ></textarea>
                             <!-- Validación -->
-                            <i class=" formulario_validacion-circulo fas fa-times-circle"></i>
-                            <p class="formulario_input-error"> Ingresa el mensaje.</p>
+                            <p class="formulario_input-error"> Introduce  el mensaje.</p>
+                           <!-- opción 2 de validación -->
                             <!-- <div class="valid-feedback">Valido</div>
                             <div class="invalid-feedback">Completa el campo</div> -->
                         </div>
@@ -143,7 +144,7 @@
 
                     <button type="submit" class="btnEnviar mb-5" id="btn_enviar" >Enviar</button>
                     <!-- onclick="return validar();" -->
-                    <div class="formulario_mensaje align-self-center" id="formulario_mensaje"><p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor, rellena el formulario correctamente</p></div>
+  
 
 
                 </form>
@@ -207,9 +208,7 @@
 
 <!-- ************Script***************** -->
 <script src="src/assets/js/contacto-js/contacto.js"></script>
-
-
-
+<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->

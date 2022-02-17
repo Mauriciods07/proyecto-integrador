@@ -6,8 +6,7 @@
     --red: #FF0D00;
     --blue: #1212FF;
     --green: #46FF01;
-    --pink: #FF00BC;
-    --yellow: #E4F802;
+    --lightgrey: #D6D6E3;
     --white: #FFFFFF;
 
     /* Fuentes */
@@ -126,10 +125,11 @@ max-height: 98.1px;
 .title-box > h4 {
     position: absolute;
     left: 25%;
+    font-size: 50px;
 }
 
 .title-box {
-    border: 3px solid var(--pink);
+    border: 3px solid var(--lightgrey);
     border-radius: var(--radius);
     text-align: center;
     width: 10rem;
@@ -143,25 +143,21 @@ max-height: 98.1px;
     padding: 50px;
 }
 
-.articlePink {
-    border: 1px solid rgb(255, 0, 188);
-}
-
 .articleBlue {
-    border: 1px solid rgb(18, 18, 255);
+    border: 1px solid var(--blue);
 }
 
 .articleRed {
-    border: 1px solid rgb(255, 13, 0);
+    border: 1px solid var(--red);
 
 }
 
-.articleYellow {
-    border: 1px solid rgb(228, 248, 2);
+.articleGrey {
+    border: 1px solid var(--lightgrey);
 }
 
 .articleGreen {
-    border: 1px solid rgb(70, 255, 1);
+    border: 1px solid var(--green);
 }
 
 .article img {
@@ -257,13 +253,13 @@ max-height: 98.1px;
     width: 100%;
 }
 
-/* ----- Efectos ----- */
-.title-box:hover {
-    background-color: rgba(255, 0, 188, 0.1);
+.title-box span{
+    font-size: 25px;
 }
 
-.articlePink:hover {
-    background-color: rgba(255, 0, 188, 0.1);
+/* ----- Efectos ----- */
+.title-box:hover {
+    background-color: rgba(211, 211, 211, 0.1);
 }
 
 .articleBlue:hover {
@@ -274,12 +270,8 @@ max-height: 98.1px;
     background-color: rgba(255, 13, 0, 0.1);
 }
 
-.articleYellow:hover {
-    background-color: rgba(228, 248, 2, 0.1);
-}
-
-.articleGreen:hover {
-    background-color: rgba(70, 255, 1, 0.1);
+.articleGrey:hover {
+    background-color: rgba(214, 214, 227, 0.1);
 }
 
 .quitarBtn:hover {
@@ -295,7 +287,7 @@ max-height: 98.1px;
 }
 
 .carritoBtn:hover {
-    background-color: rgba(255, 0, 188, 0.5);
+    background-color: rgba(211, 211, 211, 0.1);
 }
 
 .pago:hover {
@@ -339,5 +331,8 @@ li{             /* Se quitan las viñetas de las listas de la pagina*/
     .articulos-contador {
         top: 85%;
         right: 15%;
+    }
+    .title-box span {
+        font-size: 18px;
     }
 }

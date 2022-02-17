@@ -1,4 +1,5 @@
 //Función para que no se envie el formulario si hay campos invalidos
+//2da opción para la validación
 /*(function() {
   'use strict';
   window.addEventListener('load', function() {
@@ -26,39 +27,45 @@ const inputs = document.querySelectorAll ('#formulario input')
  
 const expresiones = {
    
-    nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
+    nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios y acentos.
     correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-    telefono: /^\d{10,11}$/, // 10 a 11 numeros.
-}
-const campos ={
-    nombre: false,
-    correo: false,
-    telefono: false,
-    mensaje:false
-   
- 
+    telefono: /^\d{10,12}$/, // 10 a 12 numeros.
+    mensaje: /^[a-zA-ZÀ-ÿ\s]{1,40}$/
 }
 
 const validarFormulario = (e) =>{
    switch( e.target.name ){
-       case "nombre":
-           if(expresiones.nombre.test(e.target.value)){
-
-           }else{
-               document.getElementById('grupo_nombre').classList.add('formulario_grupo-incorrecto');
-           }
+       case 'nombre':
+          validarCampo(expresiones.nombre, e.target, 'nombre');
            break;
        case 'correo':
-   
+         validarCampo(expresiones.correo, e.target, 'correo');
             break;
-       case 'telofono':
-    
+       case 'telefono':
+         validarCampo(expresiones.telefono, e.target,'telefono');
             break;
-        case 'mensaje':
-        
-            break;
+       case 'mensaje':
+         validarCampo(expresiones.mensaje, e.target, 'mensaje');
+         break;
    }
 }
+
+const validarCampo = (expresion, input, campo)=>{
+  if(expresion.test(input.value)){
+    document.getElementById(`grupo_${campo}`).classList.remove('formulario_grupo-incorrecto');
+    document.getElementById(`grupo_${campo}`).classList.add('formulario_grupo-correcto');
+    document.querySelector(`#grupo_${campo} .formulario_input-error`).classList.remove('formulario_input-error-activo');
+
+   }else{
+       document.getElementById(`grupo_${campo}`).classList.add('formulario_grupo-incorrecto');
+       document.getElementById(`grupo_${campo}`).classList.remove('formulario_grupo-correcto');
+       document.querySelector(`#grupo_${campo} .formulario_input-error`).classList.add('formulario_input-error-activo');
+
+   }
+}
+
+
+
 
 inputs.forEach((input) =>{
     input.addEventListener('keyup', validarFormulario);

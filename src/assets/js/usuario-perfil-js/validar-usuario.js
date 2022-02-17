@@ -3,13 +3,15 @@ formularioUsuarioInputs.forEach((input,index) =>{   //Funcion que evalua todos l
             input.addEventListener('keyup',(e) =>{  //A cada input se agrega un evento de escritura, mientras se escribe dentro de ellos, se evalua que cumplan las expresiones regulares, dependiendo de la validacion el estilo de texto cambia
                 const valido = expregUsuario[index].test(input.value) ? true : false;
                 if(valido){
-                    document.querySelectorAll('.formulario_usuario label')[index].style.color = 'white';
+                    document.querySelectorAll('.formulario_usuario label')[index].style.color = '#46FF01';
                     document.querySelectorAll('.formulario_usuario p')[index].style.display = "none";
+                    input.style.border = "3px solid #46FF01";
                     banderaUsuario[index] = true;
                 }
                 else{
                     document.querySelectorAll('.formulario_usuario label')[index].style.color = 'red';
                     document.querySelectorAll('.formulario_usuario p')[index].style.display = "block";
+                    input.style.border = "3px solid red";
                     banderaUsuario[index] = false;
                 }
             })
@@ -18,12 +20,14 @@ formularioUsuarioInputs.forEach((input,index) =>{   //Funcion que evalua todos l
             input.addEventListener('keyup', (e) =>{ //Se agregan eventos de escritura y mientras se escribe se valida con expresiones regulares, el estilo del texto interior cambia, al igual que el label datos de pago.
                 const valido = expregUsuario[index].test(input.value) ? true : false;
                 if (valido){
-                    document.getElementById('datos_Pago').style.color = "white";
+                    document.getElementById('datos_Pago').style.color = "#46FF01";
                     input.style.color = 'white';
+                    input.style.border = "3px solid #46FF01";
                     banderaUsuario[index] = true;
                 }
                 else{
                     input.style.color = 'red';
+                    input.style.border = "3px solid red";
                     document.getElementById('datos_Pago').style.color = "red";
                     banderaUsuario[index] = true;
                 }
@@ -35,16 +39,17 @@ formularioUsuarioInputs.forEach((input,index) =>{   //Funcion que evalua todos l
 });
 
 $inputDireccion.addEventListener('keyup', (e) =>{   //Evento especial para campo direccion ya que es textarea y no input
-    const expregDireccion = /^[a-zA-ZÀ-ÿ\s]{1,100}$/;
-    const valido = expregDireccion.test(e.target.value) ? true : false;
+    const valido = e.target.value.length<100 ? true : false;
     if (valido){
-        document.querySelectorAll('.formulario_usuario label')[4].style.color = 'white';
+        document.querySelectorAll('.formulario_usuario label')[4].style.color = '#46FF01';
         document.querySelectorAll('.formulario_usuario p')[4].style.display = "none";
+        e.target.style.border = "3px solid #46FF01";
         direccion_OK = true;
     }
     else{
         document.querySelectorAll('.formulario_usuario label')[4].style.color = 'red';
         document.querySelectorAll('.formulario_usuario p')[4].style.display = "block";
+        e.target.style.border = "3px solid red";
         direccion_OK = false;
     }
 });

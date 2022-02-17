@@ -53,7 +53,7 @@ position: absolute;
   .formulario_label-resgistrate{
     color: var(--white);
     font-family: var(--body);
-    font-size: 20px;
+    font-size: 25px;
     padding-left: 60px;
     padding-right: 60px;
   }
@@ -91,6 +91,7 @@ position: absolute;
     font-size: 15px;
     cursor:pointer;
     transition: .3s ease all;
+    
    
   }
   
@@ -155,7 +156,7 @@ position: absolute;
       border-radius: 45px;
       border: 5px solid #D6D6E3;
       width: 800px;
-      height: 600px;
+      height: 750px;
       margin-bottom: 200px;  
       
   }
@@ -171,8 +172,7 @@ position: absolute;
   
   .formulario_validacion-circulo{
     position: relative;
-    right: 140px;
-    top: 10px;
+    right: 40px; 
     z-index: 100;
     font-size: 16px;
     opacity: 0;
@@ -192,6 +192,17 @@ position: absolute;
     opacity: 1;
     
   
+  }
+  .formulario_grupo-correcto .formulario_label-resgistrate { /*validacoion para el capo iniciar sesion*/
+  
+    color: #46FF01;
+    opacity: 1;
+    
+  
+  }
+
+  .formulario_grupo-correcto .formulario_input{
+    border: 3px solid  #46FF01;
   }
   
   .formulario_grupo-incorrecto .formulario_label-resgistrate{
@@ -218,83 +229,48 @@ position: absolute;
     
     .formulario-registrate{
   
-      height: 830px; 
+      height: 930px; 
       align-items: center;
+      
       
     }
   
   
   
-  .formulario_label {
-  
-    text-align: center; /* las etique al cambiar la pantalla se centran*/
-  }
+
   
   .formulario_label-resgistrate {
     text-align: center; /* las etique al cambiar la pantalla se centran*/
-    padding-right: 20px;
+  
     
   }
   
   .formulario_input {
    
     text-align: center; /* El texto se empieza a escribi desde el centro  al cambiar la pantalla */
-     width: 500px;
+   margin-left: 20px;
    
   
   }
   
  
   
-  .formulario_validacion-circulo{
-   
-    right: 90px;
-   
-    
-  }
-  
   .formulario_input-error{
-    font-size: 13px;
+  
+    text-align: center;
+    font-size: 12px;   
+
   }
-  
-  }
-
-  @media (max-width: 545px){
-
-    
-    .formulario-registrate{
-  
-     width: 400px;
-      align-items: center;
-      
-    }
-  
-
-    .formulario_validacion-circulo{
-    margin: 0%;
-    padding: 0%;
-    left: 50p;
-     
-      
-    }
-    
-    
-  .formulario_input {
-   
-     width: 300px;
-
-  
-  }
-  
 
   .formulario_mensaje{
-width : 400px;
-font-size: 12px;
 
-  }
-
-
-
-
+    width: 500px;
+    font-size: 12px;
+    
+    
   
-}
+  }
+  
+  
+  
+  }
