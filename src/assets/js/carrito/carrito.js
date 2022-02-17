@@ -1,4 +1,4 @@
-/* let Mario = {
+let Mario = {
     titulo: "Mario Kart",
     img: "src/img/productos/mario_kart8_deluxe.jpg",
     precio: 1400,
@@ -25,13 +25,13 @@ let Pokemon = {
     cantidad: 1
 } 
 
-const juegos = [Mario, Luigi, Pokemon];*/
+const juegos = [Mario, Luigi, Pokemon];
 
 /* Recibir los productos de la API */
-const juegos = [];
+/* const juegos = [];
 fetch('http://localhost:3000/juegos')
     .then(response => response.json())
-    .then(data => data.forEach((el) => juegos.push(el)));
+    .then(data => data.forEach((el) => juegos.push(el))); */
 
 const colors = ["articleBlue", "articleRed", "articleGrey"];
 const totalColors = 3;
