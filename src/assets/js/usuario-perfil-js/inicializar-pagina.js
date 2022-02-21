@@ -51,7 +51,7 @@ let expregUsuario = [/^[a-zA-ZÀ-ÿ\s]{1,40}$/,
                     /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
                     /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]{3}$/,
                     /^\d{10,11}$/,/^[a-zA-ZÀ-ÿ\s]{1,100}$/,
-                    /^\d{16}$/,/^(0?[1-9]|1[0-2])\/(\d{4})$/,
+                    /^\d{16}$/,/^(0?[1-9]|1[0-2])\/(\d{2})$/,
                     /^\d{3}$/];   //Arreglo de expresiones regulares utilizadas en el formulario de USUARIO
 
 let expregVendedor =[/^[a-zA-ZÀ-ÿ\s]{1,40}$/,

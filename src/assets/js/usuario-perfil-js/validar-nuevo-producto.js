@@ -1,6 +1,5 @@
 $inputNombreProductoNuevo.addEventListener('keyup', (e) =>{ //Evento donde al escribir sobre el input Nombre de producto nuevo, la funcion pregunta si es igual a la expresion regular definida (1-40 caracteres), si esta bien o no, los estilos de texto cambian para avisar al usuario
-    const expregNombre = /^[a-zA-ZÀ-ÿ\s]{1,40}$/;
-    const valido = expregNombre.test(e.target.value) ? true : false;
+    const valido =e.target.value.length<60 ? true : false;
     if (valido){
         document.getElementById('lblNombreProducto').style.color = '#46FF01';
         e.target.style.color = "white";
@@ -16,7 +15,7 @@ $inputNombreProductoNuevo.addEventListener('keyup', (e) =>{ //Evento donde al es
 });
 
 $inputDescripcionProductoNuevo.addEventListener('keyup', (e) =>{ //Evento donde al escribir sobre el input descripcion de producto nuevo, la funcion pregunta si es igual a la expresion regular definida (1-100 caracteres), si esta bien o no, los estilos de texto cambian para avisar al usuario
-    const valido = e.target.value.length<100 ? true : false;
+    const valido = e.target.value.length<150 ? true : false;
     if (valido){
         document.getElementById('lblDescripcionProducto').style.color = '#46FF01';
         e.target.style.color = "white";
