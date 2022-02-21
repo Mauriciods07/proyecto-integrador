@@ -88,7 +88,8 @@
         <div class="row mb-4 text justify-content-center">
             <!-- Caja del título -->
             <div class="title-box">
-                <a onclick="addArticle();">
+                <!--<a onclick="addArticle();">-->
+                <a class="addArticleBtn">
                     <h4 class="texto2 title mt-1">Carrito</h4>
                 </a>
             </div>
@@ -97,9 +98,7 @@
         
 
         <!-- Artículos -->
-        <div class="articles">
-          
-        </div>
+        <ul id="articles" class="list-group"></ul>
 
         <!-- Carrito y casilla de pago -->
         <div class="row mt-5 postarticulos">
@@ -111,7 +110,7 @@
                         Comprar
                     </span>
                 </button>
-            </div>
+            </div> 
 
             <!-- Casilla de pago -->
             <div class="col-12 col-lg-6 col-7">
