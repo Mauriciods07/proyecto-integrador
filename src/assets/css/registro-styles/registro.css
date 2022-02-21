@@ -229,9 +229,11 @@ position: absolute;
     
     .formulario-registrate{
   
-      height: 930px; 
+      height: 900px; 
       align-items: center;
-      
+      padding: auto;
+      align-items: center;
+      margin-left: 20px;
       
     }
   
@@ -248,7 +250,8 @@ position: absolute;
   .formulario_input {
    
     text-align: center; /* El texto se empieza a escribi desde el centro  al cambiar la pantalla */
-   margin-left: 20px;
+   margin-left: 5px;
+   width: 300px;
    
   
   }
@@ -292,7 +295,8 @@ position: absolute;
 @media (max-width: 413px) {
 
   .formulario_input {
-    width : 300px 
+    width : 270px;
+    padding-left: 5px;
     
   }
 
