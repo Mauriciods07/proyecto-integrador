@@ -41,7 +41,9 @@ const $pymGarantia = document.querySelector('#pymGarantia');
 const $subtotal = document.querySelector('#pymSubtotal');
 const $total = document.querySelector('#pymTotal');
 const $addArticleBtn = document.querySelectorAll('.addArticleBtn');
-const myLocalStorage = window.localStorage;
+const myLocalStorage = window.localStorage;// verificar en qué página se encuentra el usuario
+const path = window.location.pathname;
+const page = path.substring(path.lastIndexOf('/') + 1);
 
 const colors = ["articleBlue", "articleRed", "articleGrey"];
 const totalColors = 3;
@@ -60,11 +62,6 @@ function addArticleToKart(e) {
     
     // función de prueba -- ELIMINAR
     let newArticle = parseInt(Math.random() * juegos.length) + 1;
-    // verificar en qué página se encuentra el usuario
-    let path = window.location.pathname;
-    let page = path.substring(path.lastIndexOf('/') + 1);
-
-    console.log(page);
 
     if(!kart.includes(newArticle)) {
         kart.push(newArticle);
@@ -412,5 +409,9 @@ function loadLocalKart() {
 }
 
 loadLocalKart();
-renderKart();
-showEmptyDoc();
+
+if (page == 'carrito.html') {
+    renderKart();
+    showEmptyDoc();
+}
+adjustKartCounter();

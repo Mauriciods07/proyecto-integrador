@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Press+Start+2P&display=swap');
+
+:root {
+    /* Paleta de colores */
+    --black: #1C1C1C;
+    --red: #FF0D00;
+    --blue: #1212FF;
+    --green: #46FF01;
+    --lightgrey: #D6D6E3;
+    --white: #FFFFFF;
+    --grey:#a9a9a9;
+    /* Fuentes */
+    --Titles: 'Press Start 2P', cursive;
+    --body: 'Audiowide';
+
+    --radius: 50px;
+}
+
+.articulos-contador {
+    border: 1px solid var(--red);
+    border-radius: var(--radius);
+    background-color: var(--red);
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    top: 20%;
+    right: 0.5%;
+    text-align: center;
+    display: none;
+}
+
+.contador {
+    color: white;
+}
+
+@media (max-width: 990px){
+    .articulos-contador {
+        top: 82%;
+        right: 20%;
+    }
+}
+
+@media (max-width: 768px){
+    .articulos-contador {
+        right: 19%;
+    }
+}
+
+@media (max-width: 576px){
+    .articulos-contador {
+        right: 18%;
+    }
+}

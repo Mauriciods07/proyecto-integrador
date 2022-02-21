@@ -101,23 +101,6 @@ max-height: 98.1px;
     margin: 5vw auto;
 }
 
-.articulos-contador {
-    border: 1px solid var(--red);
-    border-radius: var(--radius);
-    background-color: var(--red);
-    width: 1.5rem;
-    height: 1.5rem;
-    position: absolute;
-    top: 20%;
-    right: 0.5%;
-    text-align: center;
-    display: none;
-}
-
-.contador {
-    color: white;
-}
-
 /* ----- título de página ----- */
 .title-box > h4 {
     position: absolute;
@@ -336,10 +319,6 @@ li{             /* Se quitan las viñetas de las listas de la pagina*/
     .carrito img {
         max-width: 50%;
     }
-    .articulos-contador {
-        top: 82%;
-        right: 20%;
-    }
     .title-box span {
         font-size: 18px;
     }
@@ -361,16 +340,4 @@ li{             /* Se quitan las viñetas de las listas de la pagina*/
    background-color: var(--blue) !important;
    
 }
-}
-
-@media (max-width: 768px){
-    .articulos-contador {
-        right: 19%;
-    }
-}
-
-@media (max-width: 576px){
-    .articulos-contador {
-        right: 18%;
-    }
 }
