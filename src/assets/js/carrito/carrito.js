@@ -6,7 +6,7 @@ let Mario = {
     color: "#FF00BC",
     cantidad: 1
 }
-
+ 
 let Luigi = {
     titulo: "Luigi",
     img: "src/img/productos/luigis_mansion3.jpg",
