@@ -288,6 +288,16 @@ position: absolute;
    background-color: var(--blue) !important;
    
 }
+
+@media (max-width: 413px) {
+
+  .formulario_input {
+    width : 300px 
+    
+  }
+
+  
+}
   
   
   }
