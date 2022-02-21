@@ -30,7 +30,12 @@ const expresiones = {
     nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios y acentos.
     correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
     telefono: /^\d{10,12}$/, // 10 a 12 numeros.
-    mensaje: /^[a-zA-ZÀ-ÿ\s]{1,40}$/
+   // mensaje: /^[a-zA-ZÀ-ÿ\s]{1,40}$/
+}
+const campos = {
+  nombre: false,
+  correo: false,
+  telefono: false
 }
 
 const validarFormulario = (e) =>{
@@ -44,22 +49,24 @@ const validarFormulario = (e) =>{
        case 'telefono':
          validarCampo(expresiones.telefono, e.target,'telefono');
             break;
-       case 'mensaje':
+      /*  case 'mensaje':
          validarCampo(expresiones.mensaje, e.target, 'mensaje');
-         break;
+         break; */
    }
 }
 
-const validarCampo = (expresion, input, campo)=>{
+const validarCampo = (expresion,   input, campo)=>{
   if(expresion.test(input.value)){
     document.getElementById(`grupo_${campo}`).classList.remove('formulario_grupo-incorrecto');
     document.getElementById(`grupo_${campo}`).classList.add('formulario_grupo-correcto');
     document.querySelector(`#grupo_${campo} .formulario_input-error`).classList.remove('formulario_input-error-activo');
+    campos[campo] = true; /* quitar despues */
 
    }else{
        document.getElementById(`grupo_${campo}`).classList.add('formulario_grupo-incorrecto');
        document.getElementById(`grupo_${campo}`).classList.remove('formulario_grupo-correcto');
        document.querySelector(`#grupo_${campo} .formulario_input-error`).classList.add('formulario_input-error-activo');
+       campos[campo] = false; /* quitar despues */
 
    }
 }
@@ -73,8 +80,26 @@ inputs.forEach((input) =>{
 })
 
 
-    formulario.addEventListener('submit', (e) => {
-        e.preventDefault();
-    })
+formulario.addEventListener('submit', (e) => {
+  //e.preventDefault();
 
- 
+  const mensaje = document.getElementById ('mensaje');
+  if(campos.nombre && campos.correo && campos.telefono && mensaje.value){
+    window.location.href="contacto.html";
+    //formulario.reset();
+
+    document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
+    setTimeout(() =>{
+      document.getElementById('formulario__mensaje-exito').classList.remove('formulario__mensaje-exito-activo');
+    }, 4000);
+
+  } else {
+    document.getElementById ('formulario__mensaje').classList.add('formulario__mensaje-activo');
+    setTimeout(() =>{
+      document.getElementById('formulario__mensaje').classList.remove('formulario__mensaje-activo');
+    }, 4000);
+  }
+
+})
+
+

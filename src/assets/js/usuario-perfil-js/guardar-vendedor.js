@@ -6,7 +6,7 @@
         }
         else{               //Si los inputs son correctos, se desahbilitan las entradas de texto y solo se puede editar el vendedor de nuevo
             $inputNombreComercio.setAttribute('disabled',true);
-            $inputNombreVendedor.setAttribute('disabled',true);
+           // $inputNombreVendedor.setAttribute('disabled',true);
             $inputCorreoEmpresa.setAttribute('disabled',true);
             $inputTelefonoEmpresa.setAttribute('disabled',true);
             $inputDireccionEmpresa.setAttribute('disabled',true);

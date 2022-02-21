@@ -221,15 +221,6 @@
                             <p style="display: none;">Introduce el comercio correctamente.</p>
                         </div>
                     </div>
-                    <div class="row d-flex justify-content-center mt-3">   <!--Fila donde esta el nombre de usuario tenia ml-3-->
-                        <div class="col-lg-3 col-md-12 text-center">
-                            <label for="TextoNombreVendedor" class="label_formulario">Nombre Legal:</label>
-                        </div>
-                        <div class="col-lg-9 col-md-12 text-center">
-                            <input name="TextoNombreVendedor" type="text"class="input_formulario_vendedor" id="txtNombreVendedor" placeholder="Ingresa nombre de persona física" required disabled>
-                            <p style="display: none;">Introduce el nombre legal correcto</p>
-                        </div>
-                    </div>
                     <div class="row d-flex justify-content-center mt-3"> <!--Fila donde esta el correo empresarial tenia ml-3-->
                         <div class="col-lg-3 col-md-12 text-center">
                             <label for="TextoCorreoEmpresa" class="label_formulario">Correo empresarial:</label>
@@ -327,23 +318,25 @@
                       <option value = "1" selected>Xbox</option>
                       <option value = "2">PlayStation</option>
                       <option value = "3">Nintendo</option>
-                      <option value = "4">Coleccionables</option>
+                      <option value = "4">Lanzamientos</option>
+                      <option value = "4">Ofertas</option>
+                      <option value = "4">Accesorios</option>
                    </select>
                     <!-- <input name="TextoCategoriaNuevo" type="text"class="input_nuevoproducto_sm" id="txtCategoriaNuevo" placeholder="Categoria" required> -->
                 </div>
             </div>
         
             <div class="row mt-3 style="background-color: transparent;">  <!--Seccion de botones-->
-              <div class="col-6">
+              <div class="col-4">
                     <img src="src/img/error.png" id="imgProductoNuevo" width="30" height="30">
                     <label for="archivoFotoProductoNuevo" id="btnSubirImagenProductoNuevo" class="btn_modal_subirimagen">Subir Imagen</label>
                     <input name="archivoFotoProductoNuevo" type="file" style="display: none;" id="archivoFotoProductoNuevo" name="Subir Imagen" required>
                     <!-- <button class="btn_modal_subirimagen">Subir Imagen</button> -->
               </div>
-              <div class="col-3 text-center">
+              <div class="col-4 text-center">
                     <button class="btn_modal_cancelar_nuevo mt-3" id="btnModalCancelarProductoNuevo" data-dismiss="modal">Cancelar</button>
               </div>
-              <div class="col-3 text-center">
+              <div class="col-4 text-center">
                   <button type="button" class="btn_modal_aceptar_nuevo mt-3" id="btnModalAceptarProductoNuevo">Aceptar</button>
               </div>
             </div>
@@ -424,3 +417,13 @@
     <script src="src/assets/js/usuario-perfil-js/carousel-historial.js"></script>
   </body>
 </html>
+
+<div class="row d-flex justify-content-center mt-3" >   <!--Fila donde esta el nombre de usuario tenia ml-3-->
+  <div class="col-lg-3 col-md-12 text-center">
+      <label for="TextoNombreVendedor" class="label_formulario" style="display: none;">Nombre Legal:</label>
+  </div>
+  <div class="col-lg-9 col-md-12 text-center">
+      <input name="TextoNombreVendedor" type="text"class="input_formulario_vendedor" id="txtNombreVendedor" placeholder="Ingresa nombre de persona física" required disabled style="display: none;">
+      <p style="display: none;">Introduce el nombre legal correcto</p>
+  </div>
+</div>

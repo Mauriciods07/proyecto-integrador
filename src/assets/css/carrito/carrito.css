@@ -343,6 +343,24 @@ li{             /* Se quitan las viñetas de las listas de la pagina*/
     .title-box span {
         font-size: 18px;
     }
+     /* Contenedor del sub menú */
+   .menu{
+    background-color: var(--blue) !important; 
+    position: absolute; 
+    display: block; 
+    
+   width: 100%; 
+    transform: translate(0);
+} 
+/* Links del submneú */
+.dropdown-item{
+   border-top: 1px solid var(--white);
+   border-bottom: 1px solid var(--white);
+}
+.dropdown-item:hover{
+   background-color: var(--blue) !important;
+   
+}
 }
 
 @media (max-width: 768px){
