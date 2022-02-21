@@ -91,9 +91,6 @@ max-height: 98.1px;
     background-color: var(--black);
 }
 
-
-
-
 /* ---------------Termina el CSS del menú despegable */
 .main{  /*Seccion personalizada de pagina*/
     width: max-content;
@@ -102,23 +99,6 @@ max-height: 98.1px;
 
 .container {
     margin: 5vw auto;
-}
-
-.articulos-contador {
-    border: 1px solid var(--red);
-    border-radius: var(--radius);
-    background-color: var(--red);
-    width: 1.5rem;
-    height: 1.5rem;
-    position: absolute;
-    top: 20%;
-    right: 0.5%;
-    text-align: center;
-    display: none;
-}
-
-.contador {
-    color: white;
 }
 
 /* ----- título de página ----- */
@@ -164,6 +144,17 @@ max-height: 98.1px;
     max-width: 10rem;
     border: 5px solid black;
     border-radius: 30px;
+}
+
+.addArticleBtn:hover, #no-articles {
+    text-decoration: none;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
 
 .cantidad {
@@ -327,10 +318,6 @@ li{             /* Se quitan las viñetas de las listas de la pagina*/
     }
     .carrito img {
         max-width: 50%;
-    }
-    .articulos-contador {
-        top: 85%;
-        right: 15%;
     }
     .title-box span {
         font-size: 18px;
