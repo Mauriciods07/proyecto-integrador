@@ -16,7 +16,7 @@ let $formularioVendedor = document.querySelector('.formulario_vendedor');   //Va
 let $archivo = document.getElementById('imgFotoUsuario');               //Variable con referencia al archivo seleccionado de la foto del usuario
 let $foto = document.getElementById('imgFotoActual');                   //Variable con referencia a la imagen de usuario
 let $inputNombreComercio = document.getElementById("txtNombreComercio"); //Variable con referencia a input comercio de vendedor
-let $inputNombreVendedor = document.getElementById("txtNombreVendedor");    //Variable con referencia a input Nombre legal de vendedor
+//let $inputNombreVendedor = document.getElementById("txtNombreVendedor");    //Variable con referencia a input Nombre legal de vendedor
 let $inputCorreoEmpresa = document.getElementById("txtCorreoEmpresa");  //Variable con referencia a input correo de vendedor
 let $inputTelefonoEmpresa = document.getElementById("nmbrTelefonoEmpresa"); //Variable con referencia a input telefono de vendedor
 let $inputDireccionEmpresa = document.getElementById("txtDireccionEmpresa"); //Variable con referencia a textarea direccion de empresa
@@ -55,7 +55,6 @@ let expregUsuario = [/^[a-zA-ZÀ-ÿ\s]{1,40}$/,
                     /^\d{3}$/];   //Arreglo de expresiones regulares utilizadas en el formulario de USUARIO
 
 let expregVendedor =[/^[a-zA-ZÀ-ÿ\s]{1,40}$/,
-                     /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
                      /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]{3}$/,
                      /^\d{10,11}$/];    //Arreglo de expresiones regulares utilizadas en el formulario de VENDEDOR
 

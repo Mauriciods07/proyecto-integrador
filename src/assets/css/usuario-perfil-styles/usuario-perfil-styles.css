@@ -383,7 +383,7 @@ Extra extra large	xxl	≥1400px
         width: 250px;
     }
     .modal_producto{
-        width: 370px;
+        width: 330px;
         height: max-content;
      }
      .label_formulario_nuevo{
@@ -400,16 +400,16 @@ Extra extra large	xxl	≥1400px
         width: 200px;
     }
     .btn_modal_cancelar_nuevo{
-        font-size: 12px;
-        width: 80px;
+        font-size: 10px;    /*12*/
+        width: 70px;    /*80*/
     }
     .btn_modal_aceptar_nuevo{
-        font-size: 12px;
-        width: 80px;
+        font-size: 10px;    /*12*/
+        width: 70px;    /*80*/
     }
     .btn_modal_subirimagen{
-        font-size: 12px;
-        width: 80px;
+        font-size: 10px;    /*12*/
+        width: 70px;    /*80*/
     }
     .container.modal.fade.modal_producto {
         top: 0px;

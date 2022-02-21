@@ -6,6 +6,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="src/assets/css/carrito/carrito.css" type="text/css"> <!--Link a hoja de estilos de Pagina base-->
+    <link rel="stylesheet" href="src/assets/css/carrito/carrito-contador.css">
 
     <title>Carrito</title>     <!--Titulo de la pagina-->
   </head>
@@ -68,9 +69,10 @@
             <!-- Termina el bloque de código del sub menú -->
             <a class="nav-link texto2" href="contacto.html">CONTACTO</a>    <!--Enlace de CONTACTO-->
             <a class="nav-link texto2" href="acerca-de-nosotros.html">SOBRE NOSOTROS</a>   <!--Enlace de SOBRE NOSOTROS-->
+          
           </div>
           <div class="d-flex flex-row justify-content-around">  <!--Seccion donde esta los iconos de usuario y carrito de la tienda-->
-            <a href="usuario-perfil.html" class="m-2"><img src="src/img/IconodeUsuario.png" width="50" height="50" alt="Icono Cuenta"></a> <!--Icono de cuenta-->
+            <a href="iniciar-sesion.html" class="m-2"><img src="src/img/IconodeUsuario.png" width="50" height="50" alt="Icono Cuenta"></a> <!--Icono de cuenta-->
             <div class="mt-2">
               <a href="#" class="m-2"><img src="src/img/IconodeCarrito.png" width="50" height="50" alt="Icono Carrito"></a>  <!--Icono de carrito-->
               <div class="articulos-contador">
@@ -88,7 +90,8 @@
         <div class="row mb-4 text justify-content-center">
             <!-- Caja del título -->
             <div class="title-box">
-                <a onclick="addArticle();">
+                <!--<a onclick="addArticle();">-->
+                <a class="addArticleBtn">
                     <h4 class="texto2 title mt-1">Carrito</h4>
                 </a>
             </div>
@@ -97,9 +100,7 @@
         
 
         <!-- Artículos -->
-        <div class="articles">
-          
-        </div>
+        <ul id="articles" class="list-group"></ul>
 
         <!-- Carrito y casilla de pago -->
         <div class="row mt-5 postarticulos">
@@ -111,7 +112,7 @@
                         Comprar
                     </span>
                 </button>
-            </div>
+            </div> 
 
             <!-- Casilla de pago -->
             <div class="col-12 col-lg-6 col-7">

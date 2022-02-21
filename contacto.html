@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <!-- css contacto -->
     <link rel="stylesheet" href="src/assets/css/contacto-styles/contacto-styles.css" type="text/css"> <!--Link a hoja de estilos de Pagina base-->
+    <link rel="stylesheet" href="src/assets/css/carrito/carrito-contador.css" type="text/css"> <!--Link a hoja de estilos de Pagina base-->
 
     <title>Contacto</title>     <!--Titulo de la pagina-->
   </head>
@@ -74,7 +75,12 @@
           </div>
           <div class="d-flex flex-row justify-content-around">  <!--Seccion donde esta los iconos de usuario y carrito de la tienda-->
             <a href="iniciar-sesion.html" class="m-2"><img src="src/img/IconodeUsuario.png" width="50" height="50" alt="Icono Cuenta"></a> <!--Icono de cuenta-->
-            <a href="carrito.html" class="m-2"><img src="src/img/IconodeCarrito.png" width="50" height="50" alt="Icono Carrito"></a>  <!--Icono de carrito-->
+            <div class="mt-2">
+              <a href="carrito.html" class="m-2"><img src="src/img/IconodeCarrito.png" width="50" height="50" alt="Icono Carrito"></a>  <!--Icono de carrito-->
+              <div class="articulos-contador">
+                <p><span class="contador">0</span></p>
+              </div>
+            </div>
           </div>
         </div>
       </nav>
@@ -90,12 +96,13 @@
                 <h3 class="tituloContacto mt-5">Contacto</h3>
                 <!-- <hr class="bg-danger"> -->
 
-                <form action="https://formsubmit.co/gamejoy.gorgonita@gmail.com" id="formulario"  onsubmit="return(false)" class="formulario-validacion formulario-contacto mr-3" id="formulario">
+                <form  onsubmit="return(false)" action="https://formsubmit.co/408bcf8cc4872cf10e6f6f427d614278" id="formulario" class="formulario-validacion formulario-contacto mr-3" id="formulario" method="post"> 
+                  <!--  onsubmit="return(false)" -->
                   <!-- opción 2 de validación -->
                   <!-- method="post" class="needs-validation" novalidate -->
-                  <!-- 408bcf8cc4872cf10e6f6f427d614278 -->
+                  <!-- 408bcf8cc4872cf10e6f6f427d614278 correo gamejoy.gorgonita@gmail.com -->
                     <div class="row form-group " id="grupo_nombre">
-                        <label for="nombre" class="nombreContacto col-form-label col-md-2 col-sm-11 col-11">Nombre</label>
+                        <label for="nombre" class="nombreContacto col-form-label col-md-2 col-sm-11 col-11 mr-3">Nombre</label>
                         <div class="col-md-7 col-sm-11 col-11">
                             <input type="text" name="nombre" id="nombre" value="" class="contenedorContacto form-control" placeholder="Nombre" >
                             <!-- Validación -->
@@ -107,9 +114,9 @@
                     </div>
 
                     <div class="row form-group" id="grupo_correo">
-                        <label for="correo" class="nombreContacto col-form-label col-md-2 col-sm-11 col-11">Correo</label>
+                        <label for="correo" class="nombreContacto col-form-label col-md-2 col-sm-11 col-11 mr-3">Correo</label>
                         <div class="col-md-7 col-sm-11 col-11">
-                            <input type="email" name="correo" id="correo" value=""  class="contenedorContacto form-control" placeholder="ejemplo@gmail.com">
+                            <input type="email" name="correo" id="correo" value=""  class="contenedorContacto form-control" placeholder="ejemplo@correo.com">
                             <!-- Validación -->
                             <p class="formulario_input-error"> Formato como se muestra en el ejemplo.</p> 
                             <!-- opción 2 de validación -->
@@ -119,7 +126,7 @@
                     </div>
 
                     <div class="row form-group" id="grupo_telefono">
-                        <label for="telefono" class="nombreContacto col-form-label col-md-2 col-sm-11 col-11">Teléfono</label>
+                        <label for="telefono" class="nombreContacto col-form-label col-md-2 col-sm-11 col-11 mr-3">Teléfono</label>
                         <div class="col-md-7 col-sm-11 col-11">
                             <input type="tel" name="telefono" id="telefono" value="" class="contenedorContacto form-control" placeholder="Teléfono">
                             <!-- Validación -->
@@ -131,9 +138,9 @@
                     </div>
 
                     <div class="row form-group" id="grupo_mensaje">
-                        <label for="mensaje" class="nombreContacto col-form-label col-md-2 col-sm-11 col-11">Mensaje</label>
+                        <label for="mensaje" class="nombreContacto col-form-label col-md-2 col-sm-11 col-11 mr-3">Mensaje</label>
                         <div class="col-md-7 col-sm-11 col-11">
-                            <textarea name="mensaje" id="mensaje" rows="10"  class="contenedorContacto form-control" name="mensaje" id="mensaje" placeholder="Mensaje" value=""  ></textarea>
+                            <textarea name="mensaje" id="mensaje" rows="6"  class="contenedorContacto form-control" name="mensaje" id="mensaje" placeholder="Mensaje" value="" ></textarea>
                             <!-- Validación -->
                             <p class="formulario_input-error"> Introduce  el mensaje.</p>
                            <!-- opción 2 de validación -->
@@ -142,8 +149,22 @@
                         </div>
                     </div>
 
-                    <button type="submit" class="btnEnviar mb-5" id="btn_enviar" >Enviar</button>
+
+
+                    <button type="submit"  class="btnEnviar mb-5" id="btn_enviar" >Enviar</button>
+                      <!-- <p class="formulario_input-error"><b>Error:</b> Por favor rellena el formulario correctamente. </p>
+                    </div> -->
+                   <!-- <p class="formulario_input-error"><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente.</p> -->
                     <!-- onclick="return validar();" -->
+                    <!-- value="Enviar" -->
+
+                    <div class="formulario__mensaje" id="formulario__mensaje">
+                      <p><i class="fas fa-exclamation-triangle"></i> Rellene los campos </p>
+                    </div>
+              
+                    <div class="formulario_grupo ">
+                      <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+                    </div>
   
 
 
@@ -214,6 +235,8 @@
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+    <script src="src/assets/js/carrito/carrito.js"></script>
 
     <!--SECCION DE REFERENCIAS DE LOGOS ANTIGUOS-->
 

@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="src/assets/css/pred_fonts_styles.css" type="text/css"> <!--Link a hoja de estilos de Pagina base-->
     <link rel="stylesheet" href="src/assets/css/usuario-perfil-styles/usuario-perfil-styles.css" type="text/css">    <!--Hoja de estilos de pagina de usuario-->
-
+    <link rel="stylesheet" href="src/assets/css/carrito/carrito-contador.css" type="text/css"> <!--Link a hoja de estilos de Pagina base-->
+    
     <title>GameJoy Perfil de Usuario</title>     <!--Titulo de la pagina-->
   </head>
   <body>
@@ -73,11 +74,14 @@
             <a class="nav-link texto2" href="contacto.html">CONTACTO</a>
             <a class="nav-link texto2" href="acerca-de-nosotros.html">SOBRE NOSOTROS</a>
           </div>
-          <div class="d-flex flex-row justify-content-around">
-            <a href="usuario-perfil.html" class="m-2"><img src="src/img/IconodeUsuario.png" width="50" height="50" alt="Icono Cuenta"></a>
-            <!-- <a href="https://www.flaticon.com/free-icons/user" title="user icons">User icons created by Smashicons - Flaticon</a> -->
-            <a href="carrito.html" class="m-2"><img src="src/img/IconodeCarrito.png" width="50" height="50" alt="Icono Carrito"></a>
-            <!-- <a href="https://www.flaticon.com/free-icons/shopping-cart" title="shopping cart icons">Shopping cart icons created by Smashicons - Flaticon</a> -->
+          <div class="d-flex flex-row justify-content-around">  <!--Seccion donde esta los iconos de usuario y carrito de la tienda-->
+            <a href="iniciar-sesion.html" class="m-2"><img src="src/img/IconodeUsuario.png" width="50" height="50" alt="Icono Cuenta"></a> <!--Icono de cuenta-->
+            <div class="mt-2">
+              <a href="carrito.html" class="m-2"><img src="src/img/IconodeCarrito.png" width="50" height="50" alt="Icono Carrito"></a>  <!--Icono de carrito-->
+              <div class="articulos-contador">
+                <p><span class="contador">0</span></p>
+              </div>
+            </div>
           </div>
         </div>
       </nav>
@@ -221,15 +225,6 @@
                             <p style="display: none;">Introduce el comercio correctamente.</p>
                         </div>
                     </div>
-                    <div class="row d-flex justify-content-center mt-3">   <!--Fila donde esta el nombre de usuario tenia ml-3-->
-                        <div class="col-lg-3 col-md-12 text-center">
-                            <label for="TextoNombreVendedor" class="label_formulario">Nombre Legal:</label>
-                        </div>
-                        <div class="col-lg-9 col-md-12 text-center">
-                            <input name="TextoNombreVendedor" type="text"class="input_formulario_vendedor" id="txtNombreVendedor" placeholder="Ingresa nombre de persona física" required disabled>
-                            <p style="display: none;">Introduce el nombre legal correcto</p>
-                        </div>
-                    </div>
                     <div class="row d-flex justify-content-center mt-3"> <!--Fila donde esta el correo empresarial tenia ml-3-->
                         <div class="col-lg-3 col-md-12 text-center">
                             <label for="TextoCorreoEmpresa" class="label_formulario">Correo empresarial:</label>
@@ -327,23 +322,25 @@
                       <option value = "1" selected>Xbox</option>
                       <option value = "2">PlayStation</option>
                       <option value = "3">Nintendo</option>
-                      <option value = "4">Coleccionables</option>
+                      <option value = "4">Lanzamientos</option>
+                      <option value = "4">Ofertas</option>
+                      <option value = "4">Accesorios</option>
                    </select>
                     <!-- <input name="TextoCategoriaNuevo" type="text"class="input_nuevoproducto_sm" id="txtCategoriaNuevo" placeholder="Categoria" required> -->
                 </div>
             </div>
         
             <div class="row mt-3 style="background-color: transparent;">  <!--Seccion de botones-->
-              <div class="col-6">
+              <div class="col-4">
                     <img src="src/img/error.png" id="imgProductoNuevo" width="30" height="30">
                     <label for="archivoFotoProductoNuevo" id="btnSubirImagenProductoNuevo" class="btn_modal_subirimagen">Subir Imagen</label>
                     <input name="archivoFotoProductoNuevo" type="file" style="display: none;" id="archivoFotoProductoNuevo" name="Subir Imagen" required>
                     <!-- <button class="btn_modal_subirimagen">Subir Imagen</button> -->
               </div>
-              <div class="col-3 text-center">
+              <div class="col-4 text-center">
                     <button class="btn_modal_cancelar_nuevo mt-3" id="btnModalCancelarProductoNuevo" data-dismiss="modal">Cancelar</button>
               </div>
-              <div class="col-3 text-center">
+              <div class="col-4 text-center">
                   <button type="button" class="btn_modal_aceptar_nuevo mt-3" id="btnModalAceptarProductoNuevo">Aceptar</button>
               </div>
             </div>
@@ -422,5 +419,16 @@
     <script src="src/assets/js/usuario-perfil-js/validar-vendedor.js"></script>
     <script src="src/assets/js/usuario-perfil-js/validar-nuevo-producto.js"></script>
     <script src="src/assets/js/usuario-perfil-js/carousel-historial.js"></script>
+    <script src="src/assets/js/carrito/carrito.js"></script>
   </body>
 </html>
+
+<div class="row d-flex justify-content-center mt-3" >   <!--Fila donde esta el nombre de usuario tenia ml-3-->
+  <div class="col-lg-3 col-md-12 text-center">
+      <label for="TextoNombreVendedor" class="label_formulario" style="display: none;">Nombre Legal:</label>
+  </div>
+  <div class="col-lg-9 col-md-12 text-center">
+      <input name="TextoNombreVendedor" type="text"class="input_formulario_vendedor" id="txtNombreVendedor" placeholder="Ingresa nombre de persona física" required disabled style="display: none;">
+      <p style="display: none;">Introduce el nombre legal correcto</p>
+  </div>
+</div>
