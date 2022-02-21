@@ -1,3 +1,4 @@
+
 const juegos = [
     {
         id_producto: 1,
@@ -27,6 +28,7 @@ const juegos = [
         cantidad: 1
     }
 ];
+
 
 /* Recibir los productos de la API */
 /* const juegos = [];
