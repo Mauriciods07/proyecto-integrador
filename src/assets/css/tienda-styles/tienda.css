@@ -223,7 +223,7 @@ li{
     }
     /* Contenedor del sub menú */
    .menu{
-         background-color: var(--blue) !important; 
+         background-color: var(--black) !important; 
          position: absolute; 
          display: block; 
          

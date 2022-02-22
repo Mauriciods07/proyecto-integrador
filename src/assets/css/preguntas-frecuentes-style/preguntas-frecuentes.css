@@ -157,4 +157,30 @@ font-size: 25px;
 
 }
 
-
+@media (max-width: 990px) {
+    .navbar-dark{
+        background-color: var(--blue) !important;
+    }
+    .nav-link{
+        border-top: 1px solid var(--white);
+        border-bottom: 1px solid var(--white);
+    }
+    /* Contenedor del sub menú */
+   .menu{
+         background-color: var(--black) !important; 
+         position: absolute; 
+         display: block; 
+         
+        width: 100%; 
+         transform: translate(0);
+    } 
+    /* Links del submneú */
+    .dropdown-item{
+        border-top: 1px solid var(--white);
+        border-bottom: 1px solid var(--white);
+    }
+    .dropdown-item:hover{
+        background-color: var(--blue) !important;
+        
+    }
+}
