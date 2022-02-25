@@ -99,3 +99,5 @@ let numjuegos = juegos.length;
 let numJuegosPorAgregar = juegos.length;
 let $carousel = document.querySelector('.carousel-inner.carousel_dinamico');
 //llamada a API para cargar datos del usuario basados en su correo;
+
+
