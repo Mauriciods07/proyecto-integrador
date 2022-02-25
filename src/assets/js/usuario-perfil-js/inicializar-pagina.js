@@ -93,7 +93,7 @@ let Pokemon = {
     color: "#1212FF",
     cantidad: 1
 }
-const juegos = [Luigi, Luigi,Pokemon, Mario, Luigi,Pokemon];
+const juegos = [Luigi, Luigi,Pokemon, Mario, Luigi,Pokemon];    //Este es el JSON convertido a object recibido del backend
 let paginas = 0;
 let numjuegos = juegos.length;
 let numJuegosPorAgregar = juegos.length;

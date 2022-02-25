@@ -6,6 +6,9 @@ $btnModalAceptarProductoNuevo.addEventListener('click', (e) =>{ //Boton donde el
     }
     else{
         alert('Revisa los apartados en rojo y recuerda que debes subir una imagen de tu producto');
+        document.querySelector('#formularioProducto').addEventListener('submit',(e)=>{
+            e.preventDefault();
+        });
         // alert('Se llama a API para agregar el producto a tienda, basado en el id del usuario (correo), id vendedor (correo), si ambos existen, se agrega el producto a la tienda dentro de la categoria especificada, y en sus propiedad de vendedor = correo de vendedor externo');
     }
 });
