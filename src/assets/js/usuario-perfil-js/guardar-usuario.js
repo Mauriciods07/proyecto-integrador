@@ -1,8 +1,8 @@
 //Esta funcion se manda llamar cuando el boton de guardar es seleccionado con submit
-function guardarUsuario(){  //Funcion llamada por el tag form de usuario, regresa false siempre para que la pagina nunca recargue, verifica que las banderas de los inputs sean true, para asegurarse que los datos son correctos y cambiar informacion del usuario mediante API, SE REQUIERE API AQUI
+document.querySelector('#formularioUsuario').addEventListener('submit',(e) =>{
+    e.preventDefault();
     if(!(banderaUsuario[0]&&banderaUsuario[1]&&banderaUsuario[2]&&banderaUsuario[3]&&banderaUsuario[5]&&banderaUsuario[6]&&banderaUsuario[7]&&direccion_OK)){
         alert('Revisa los campos en rojo');
-        return false;
     }
     else{   //Si el formulario se lleno correctamente, los campos input se deshabilitan y solo se podra editar el usuario nuevamente o cerrar sesion
         $inputNombre.setAttribute('disabled',true);
@@ -19,8 +19,10 @@ function guardarUsuario(){  //Funcion llamada por el tag form de usuario, regres
         $btnEditarUsuario.removeAttribute('disabled');
         $btnGuardarUsuario.style.opacity = "0.2";
         $btnGuardarUsuario.setAttribute('disabled',true);
-        return false;
     }
+})
+/*function guardarUsuario(){  //Funcion llamada por el tag form de usuario, regresa false siempre para que la pagina nunca recargue, verifica que las banderas de los inputs sean true, para asegurarse que los datos son correctos y cambiar informacion del usuario mediante API, SE REQUIERE API AQUI
     
-}
+    
+}*/
 

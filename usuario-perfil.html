@@ -86,11 +86,11 @@
         </div>
       </nav>
 <!-----------------------------------------------------------------------------Fin de barra de navegacion------------------------------------------>
-<!----------------------------------------------------------------------------INICIO DE PERFIL DE USUARIO------------------------------------------>
+<!----------------------------------------------------------------------------INICIO DE PERFIL DE USUARIO-------onsubmit="return(guardarUsuario())" ----------------------------------->
 <main class="mb-5">
     <div class="container formulario_usuario mt-5 p-3">
         <h2 class="titulo_form text-center mt-5 mb-5">Mi Perfil</h2>
-        <form id="formularioUsuario" autocomplete="off" onsubmit="return(guardarUsuario())" class="formulario">
+        <form id="formularioUsuario" autocomplete="off" class="formulario">
                 <div class="row">       <!--Fila donde esta el formulario personal y foto-->
                     <div class="col-lg-8 order-1">  <!--Todo tenia ml-3-->
                             <div class="row d-flex justify-content-center">
@@ -211,10 +211,10 @@
     </div>
 
 
-    <!------------------------------------------------------------FORMULARIO DE VENDEDOR-------------------------------------------->
+    <!------------------------------------------------------------FORMULARIO DE VENDEDOR--------------- onsubmit="return(validarVendedor())"----------------------------->
   <div class="container formulario_vendedor mt-5 mx-auto p-3" style = "display: none;" id="divFormularioVendedor">
     <h2 class="titulo_form text-center mt-3 mb-5">Vendedor</h2>
-    <form id="formularioVendedor"  autocomplete="off" onsubmit="return(validarVendedor())" class="formulario_vendedor_action">
+    <form id="formularioVendedor"  autocomplete="off" class="formulario_vendedor_action">
         <div class="align-items-center">       <!--Seccion donde estan los campos principales del formulario-->
                     <div class="row d-flex justify-content-center">  <!--Fila donde esta comercio tenia ml-3-->
                         <div class="col-lg-3 col-md-12 text-center">
@@ -289,7 +289,7 @@
   <div class="container modal fade modal_producto" id="modalAgregarProductoNuevo" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content content_producto text-center">
-        <!-- <form onsubmit="return(validarAgregarProducto())" autocomplete="off"> -->
+        <form id ="formularioProducto" autocomplete="off">
             <span class = "titulo_form" style="font-size: 30px;">Ingresa los datos de tu producto</span>
             <div class="row d-flex justify-content-center mt-2">    <!--Seccion de nombre de producto-->
                 <div class="col-12 col-md-12 text-center">
@@ -341,10 +341,10 @@
                     <button class="btn_modal_cancelar_nuevo mt-3" id="btnModalCancelarProductoNuevo" data-dismiss="modal">Cancelar</button>
               </div>
               <div class="col-4 text-center">
-                  <button type="button" class="btn_modal_aceptar_nuevo mt-3" id="btnModalAceptarProductoNuevo">Aceptar</button>
+                  <button type="submit" class="btn_modal_aceptar_nuevo mt-3" id="btnModalAceptarProductoNuevo">Aceptar</button>
               </div>
             </div>
-         <!-- </form> -->
+         </form>
       </div>
     </div>
   </div>
