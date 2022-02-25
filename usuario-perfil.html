@@ -90,7 +90,7 @@
 <main class="mb-5">
     <div class="container formulario_usuario mt-5 p-3">
         <h2 class="titulo_form text-center mt-5 mb-5">Mi Perfil</h2>
-        <form id="formularioUsuario" autocomplete="off" class="formulario">
+        <form id="formularioUsuario" action="localhost:8080/Usuarios/obtenerUsuarios" autocomplete="off" class="formulario">
                 <div class="row">       <!--Fila donde esta el formulario personal y foto-->
                     <div class="col-lg-8 order-1">  <!--Todo tenia ml-3-->
                             <div class="row d-flex justify-content-center">
@@ -269,13 +269,13 @@
 </main>
 
 <!---------------------------------------------------------------MODAL DE CERRAR SESION---------------------------------------------------->
-<div class="modal fade bd-example-modal-sm modal_cerrar_sesion" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"     aria-hidden="true">
+<div class="modal fade bd-example-modal-sm modal_cerrar_sesion" id="modalCerrarSesion" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-sm ">
       <div class="modal-content cerrar_sesion">
         <span class = "mb-2">¿Seguro que quieres cerrar sesión?</span>
         <div class="row" style="background-color: transparent;">
             <div class="col-6">
-                <button class="btn_modal_aceptar"><a href="iniciar-sesion.html">Aceptar</a></button>  <!--Agregar pagina de Marja y Raquel-->
+                <button class="btn_modal_aceptar"><a id="btnModalAceptar" href="iniciar-sesion.html">Aceptar</a></button> 
             </div>
             <div class="col-6">
                 <button class="btn_modal_cancelar" data-dismiss="modal">Cancelar</button>
@@ -420,7 +420,9 @@
     <script src="src/assets/js/usuario-perfil-js/validar-nuevo-producto.js"></script>
     <script src="src/assets/js/usuario-perfil-js/carousel-historial.js"></script>
     <script src="src/assets/js/carrito/carrito.js"></script>
+    <script src="src/assets/js/usuario-perfil-js/cerrar-sesion.js"></script>
   </body>
+  
 </html>
 
 <div class="row d-flex justify-content-center mt-3" >   <!--Fila donde esta el nombre de usuario tenia ml-3-->
