@@ -35,16 +35,17 @@ let $modalProducto = document.getElementsByClassName('modal_producto'); //Variab
 let $archivoProductoNuevo = document.getElementById('archivoFotoProductoNuevo');    //Variable con referencia al archivo de foto productonuevo
 let $imgProductoNuevo = document.getElementById('imgProductoNuevo'); //Variable con referencia a la imagen visible del producto nuevo
 let $btnSubirImagenProductoNuevo = document.getElementById("btnSubirImagenProductoNuevo");  //Variable con referencia al boton de subir image de productonuevo
-
+let $carousel = document.querySelector('.carousel-inner.carousel_dinamico');
+$inputCBX.checked = false;
 /*Enumerar inputs de formularios*/
 let formularioUsuarioInputs = document.querySelectorAll('.formulario_usuario input');    //referencias a los inputs del formulario de usuario, se guardan en esta coleccion para usarlos en validacion 
 let banderaUsuario = new Array(formularioUsuarioInputs.length); //Banderas de usuario para validar formulario en botones guardar
-banderaUsuario.fill(false);     //Las banderas de usuario se llenan de false para que se modifiquen los campos, si ya hay campos llenos al cargar datos de Api, asegurarse que estos se llenen individualmente
+banderaUsuario.fill(true);     //Las banderas de usuario se llenan de false para que se modifiquen los campos, si ya hay campos llenos al cargar datos de Api, asegurarse que estos se llenen individualmente
 
 
 let formularioVendedorInputs = document.querySelectorAll('.formulario_vendedor input'); //Referencias a los inputs del formulario de vendedor, se guardan en esta coleccion para usarlos en validacion 
 let banderaVendedor = new Array(formularioVendedorInputs.length);       //Banderas de vendedor para validar formulario en botones guardar
-banderaVendedor.fill(false);     //Las banderas de vendedor  se llenan de false para que se modifiquen los campos, si ya hay campos llenos al cargar datos de Api, asegurarse que estos se llenen individualmente
+banderaVendedor.fill(true);     //Las banderas de vendedor  se llenan de false para que se modifiquen los campos, si ya hay campos llenos al cargar datos de Api, asegurarse que estos se llenen individualmente
 
 
 let expregUsuario = [/^[a-zA-ZÀ-ÿ\s]{1,40}$/,
@@ -97,7 +98,47 @@ const juegos = [Luigi, Luigi,Pokemon, Mario, Luigi,Pokemon];    //Este es el JSO
 let paginas = 0;
 let numjuegos = juegos.length;
 let numJuegosPorAgregar = juegos.length;
-let $carousel = document.querySelector('.carousel-inner.carousel_dinamico');
+
 //llamada a API para cargar datos del usuario basados en su correo;
+
+sessionStorage.setItem('IdUsuario', 13);
+let usuarioActual ={"idUsuario":sessionStorage.getItem('IdUsuario')}; 
+jsonaenviar = JSON.stringify(usuarioActual);
+
+window.onload = function(s) {
+        fetch('http://localhost:8080/Usuarios/obtenerUsuarioPorId', {
+            method : 'POST',
+            body: jsonaenviar,
+            headers: {
+                "Content-Type": "application/json; charset = UTF-8"
+            }
+        })
+            .then(res =>res.json())
+                 .then(datos => {
+                     console.log(datos);
+                     $inputNombre.value = datos.nombre;
+                     $inputApellido.value = datos.apellido;
+                     $inputCorreo.value = datos.correo;
+                     $inputTelefono.value = datos.telefono;
+                     $inputDireccion.value = datos.direccion;
+                     $inputTarjeta.value = datos.numeroTarjeta;
+                     $inputVencimiento.value = datos.fechaExpiracion;
+                     $inputCVV.value = datos.cvv
+                     $inputCBX.checked = datos.esVendedor;
+                     $formVendedor.style.display = $inputCBX.checked ? "block" : "none";
+                     if(datos.esVendedor){
+                        $btnEditarVendedor.removeAttribute('disabled');
+                        $btnEditarVendedor.style.opacity = "1.0";
+                        $btnAgregarVendedor.style.opacity ="0.2";
+                        $btnAgregarVendedor.setAttribute('disabled',true);
+                     }
+                     $inputNombreComercio.value = datos.comercio;
+                     $inputCorreoEmpresa.value = datos.correoEmpresa;
+                     $inputTelefonoEmpresa.value = datos.telefonoEmpresa;
+                     $inputDireccionEmpresa.value = datos.direccionEmpresa;
+                 });
+    }
+
+
 
 
