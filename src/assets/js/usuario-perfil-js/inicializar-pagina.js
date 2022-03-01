@@ -101,8 +101,8 @@ let numJuegosPorAgregar = juegos.length;
 
 //llamada a API para cargar datos del usuario basados en su correo;
 
-sessionStorage.setItem('IdUsuario', 13);
-let usuarioActual ={"idUsuario":sessionStorage.getItem('IdUsuario')}; 
+sessionStorage.setItem('id', 1);
+let usuarioActual ={"id":sessionStorage.getItem('id')}; 
 jsonaenviar = JSON.stringify(usuarioActual);
 
 window.onload = function(s) {
