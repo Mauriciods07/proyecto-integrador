@@ -34,7 +34,7 @@ formularioUsuarioInputs.forEach((input,index) =>{   //Funcion que evalua todos l
             });
         }
         else{   //Si el indice no esta en los rangos seleccionados, se omiten los inputs de foto y checkbox, ya que no son necesarios para validacion
-            console.log('ignore los otros campos de foto y checkbox');
+           // console.log('ignore los otros campos de foto y checkbox');
         }
 });
 

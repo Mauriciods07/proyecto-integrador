@@ -9,10 +9,10 @@ $formLogin.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const nombre = $nombre.value; 
-    const apellido = $apellido.value;
-    const correo = $correo.value;
-    const password = $password.value;
-    const telefono = $telefono.value;
+    const apellido = $apellido.value;                        
+    const correo = $correo.value;                       
+    const password = $password.value;                 
+    const telefono = $telefono.value;                       
 
 
     if(nombre != '' && apellido != '' && correo != '' && password != '' && telefono != '' ) {
@@ -23,8 +23,8 @@ $formLogin.addEventListener('submit', (e) => {
                 apellido,
                 correo,
                 password,
-                telefono
-            }),
+                telefono,
+            }),                                                                       
             headers: {
                 'Content-type': 'application/json'
             }

@@ -5,6 +5,39 @@ document.querySelector('#formularioUsuario').addEventListener('submit',(e) =>{
         alert('Revisa los campos en rojo');
     }
     else{   //Si el formulario se lleno correctamente, los campos input se deshabilitan y solo se podra editar el usuario nuevamente o cerrar sesion
+        fetch('http://localhost:8080/Usuarios/crearGuardarUsuario', {
+            method : 'POST',
+            body: JSON.stringify({
+                id:localStorage.getItem('id').toString(),
+                nombre:$inputNombre.value,
+                apellido: $inputApellido.value,
+                correo:$inputCorreo.value,
+                contrasenia:localStorage.getItem("C"),
+                telefono:$inputTelefono.value,
+                direccion:$inputDireccion.value,
+                fechaIngreso:fechaActual,
+                numeroTarjeta:$inputTarjeta.value,
+                fechaExpiracion:$inputVencimiento.value,
+                cvv:$inputCVV.value,
+                foto:"imagenUsuario",
+                esVendedor:$inputCBX.checked,
+                comercio:$inputNombreComercio.value,
+                correoEmpresa:$inputCorreoEmpresa.value,
+                telefonoEmpresa:$inputTelefonoEmpresa.value,
+                direccionEmpresa:$inputDireccionEmpresa.value
+            }),
+            headers: {
+                "Content-Type": "application/json; charset = UTF-8"
+            }
+        })
+            .then(res =>{
+                if(res.ok){
+                    alert("Se guardo el usuario correctamente")
+                }
+                else{
+                    alert("Hubo un error al guardar el usuario")
+                }
+            })
         $inputNombre.setAttribute('disabled',true);
         $inputApellido.setAttribute('disabled',true);
         $inputCorreo.setAttribute('disabled',true);

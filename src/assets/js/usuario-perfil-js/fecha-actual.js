@@ -4,4 +4,4 @@ let mes = new Date();
 mes = mes.getMonth()<10 ? "0"+ (mes.getMonth()+1): mes.getMonth()+1;
 let anio = new Date().getFullYear();
 let fechaActual = anio + '-' + mes + '-' + dia;
-    console.log(fechaActual);
+    //console.log(fechaActual);
