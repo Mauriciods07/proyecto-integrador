@@ -91,7 +91,7 @@
   <div class="container-fluid"> <!--Contenedor de los dos formularios -->
   <div class="row "> <!--Inicio de la primera hilera -->
       <div class="col-lg-12 col-md-12 col-sm-12 d-flex  mt-5 justify-content-center"> <!-- Columna  del formulario Iniciar sesión-->
-        <form onsubmit="return(false)" class="formulario-validacion formulario-iniciar" id="formulario"> <!--Formulario iniciar sesión-->
+        <form onsubmit="return(false)" class="formulario-validacion formulario-iniciar" id="formulario" method="post" > <!--Formulario iniciar sesión-->
           <br/>
           <br/>
           <br/>
@@ -103,7 +103,7 @@
           <div class="formulario_grupo row d-flex justify-content-center mt-5 mb-5" id="grupo_correo"> <!-- Hilera para la sección correo-->
         <label class="formulario_label col-form-label col-md-2 col-sm-11 col-11 mr-5 " for="exampleInputEmail1">Correo:</label> <!--Elemento para la etiqueta Correo, ya es resposivo hastael tamaño sm-->
          <div col-md-7 col-sm-11 col-11> 
-           <input type="email" class="formulario_input col-form-label" name="correo" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="correo@ejemplo.com"><!--Espacio para colocar el correo del usuario ya es resposivo hastael tamaño sm-->
+           <input type="email" class="formulario_input col-form-label" name="correo" id="correo" aria-describedby="emailHelp" placeholder="correo@ejemplo.com"><!--Espacio para colocar el correo del usuario ya es resposivo hastael tamaño sm-->
        <i class=" formulario_validacion-estado fas fa-times-circle"></i>
        <p class="formulario_input-error">Formato como se muestra en el ejemplo.</p>
           </div>
@@ -125,7 +125,6 @@
           
           <div class="formulario_registrate "id="formulario_mensaje_registrate"><a class="texto-registro" href="registrate.html" >¡REGÍSTRATE!</a> </div>
 
-          <div id="errDiv"> </div>
       </form>
     </div>
       </div>  
@@ -182,6 +181,9 @@
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
     <script src="src/assets/js/iniciar-sesion-js/formulario.js"></script>
     <script src="src/assets/js/carrito/carrito.js"></script>
+    <!-- <script src="src/assets/js/iniciar-sesion-js/login.js"></script> -->
+    <script src="src/assets/js/iniciar-sesion-js/app-login.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     </body>
 </html>
