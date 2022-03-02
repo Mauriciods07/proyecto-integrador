@@ -105,10 +105,11 @@ let contrasen;
 
 //llamada a API para cargar datos del usuario basados en su correo;
 
-localStorage.setItem('id', 5);
+localStorage.setItem('id', 2);
 
 window.onload = function(s) {
-        fetch('http://localhost:8080/Usuarios/obtenerUsuarioPorId', {
+     const urlcarga = 'http://localhost:8080/Usuarios/obtenerUsuarioPorId'
+        fetch(urlcarga, {
             method : 'POST',
             body: JSON.stringify({id:localStorage.getItem('id')}),
             headers: {
