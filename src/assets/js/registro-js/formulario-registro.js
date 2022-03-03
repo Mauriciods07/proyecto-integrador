@@ -112,17 +112,19 @@ formulario.addEventListener ('submit', (e) =>{
                    }else{
                     localStorage.setItem("id",dato.id)
                     alert("Usuario registrado")
+                    formulario.reset();
+                    document.querySelectorAll('.formulario_grupo-correcto').forEach ((icono) =>{
+                    icono.classList.remove ('formulario_grupo-correcto')
+                    document.getElementById ('formulario_mensaje').classList.remove('formulario_mensaje-activo');
+        })
+        setTimeout(() => { window.location.href="usuario-perfil.html";}, 1000);
+         
+
                    }
                 } )
 
 
-    // formulario.reset();
-        document.querySelectorAll('.formulario_grupo-correcto').forEach ((icono) =>{
-            icono.classList.remove ('formulario_grupo-correcto')
-            document.getElementById ('formulario_mensaje').classList.remove('formulario_mensaje-activo');
-        })
-        setTimeout(() => { window.location.href="usuario-perfil.html";}, 1000);
-         
+    
         
     } else{
         document.getElementById ('formulario_mensaje').classList.add ('formulario_mensaje-activo');
