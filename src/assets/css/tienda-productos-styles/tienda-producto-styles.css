@@ -262,8 +262,8 @@ li{             /* Se quitan las viñetas de las listas de la pagina*/
     color: #FFFFFF; 
 }
 .Imagen_prducto{
-width: 340px;
-height: 242px;
+    width: 320px;
+    height: 250px;
 border: 5px solid #FFFFFF;
 box-sizing: border-box;
 border-radius: 45px;
