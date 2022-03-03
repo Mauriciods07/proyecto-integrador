@@ -214,7 +214,7 @@ function renderTitle(title, description){
     nodeText.appendChild(nodeDescription);
     
     return nodeText;
-}
+} 
 
 /* Función para colocar el precio del artículo */
 function renderPrice(id, price, section) {
