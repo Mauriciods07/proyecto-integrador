@@ -1,4 +1,4 @@
-/* const juegos = [
+const juegos = [
     {
         id_producto: 1,
         nombre_producto: "Mario Kart",
@@ -27,6 +27,7 @@
         cantidad: 1
     }
 ]; */
+
 
 /* Recibir los productos de la API */
 let juegos = [];
@@ -243,7 +244,7 @@ function renderTitle(title, description){
     nodeText.appendChild(nodeDescription);
     
     return nodeText;
-}
+} 
 
 /* Función para colocar el precio del artículo */
 function renderPrice(id, price, section) {

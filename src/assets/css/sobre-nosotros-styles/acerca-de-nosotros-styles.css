@@ -128,7 +128,7 @@ li{             /* Se quitan las viñetas de las listas de la pagina*/
     }
      /* Contenedor del sub menú */
    .menu{
-    background-color: var(--blue) !important; 
+    background-color: var(--black) !important; 
     position: absolute; 
     display: block; 
     
@@ -288,7 +288,7 @@ h3 {
     opacity: 0;
 }
 
-
+  
 
 .iconosadn:hover{
 

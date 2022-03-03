@@ -273,7 +273,7 @@ position: absolute;
 }
  /* Contenedor del sub menú */
  .menu{
-  background-color: var(--blue) !important; 
+  background-color: var(--black) !important; 
   position: absolute; 
   display: block; 
   
@@ -288,6 +288,14 @@ position: absolute;
 .dropdown-item:hover{
  background-color: var(--blue) !important;
  
+}
+@media (max-width: 413px) {
+
+  .formulario_input {
+    width : 300px 
+    
+  }
+  
 }
 
 }

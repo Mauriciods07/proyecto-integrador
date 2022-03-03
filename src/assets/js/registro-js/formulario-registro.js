@@ -1,3 +1,9 @@
+let $inputNombre = document.getElementById('nombre');         //Variable con referencia a input Nombre de usuario
+let $inputApellido = document.getElementById('apellido');     //Variable con referencia a input apellido de usuario
+let $inputCorreo = document.getElementById('correo');         //Variable con referencia a input correo de usuario
+let $inputTelefono = document.getElementById('telefono');     //Variable con referencia a input telefono de usuario
+let $inputContrasenia = document.getElementById('password'); 
+
 const formulario=  document.getElementById ('formulario')
 const inputs= document.querySelectorAll ('#formulario input')
 
@@ -75,12 +81,50 @@ inputs.forEach((input) =>{
 formulario.addEventListener ('submit', (e) =>{
 
     if (campos.nombre && campos.apellido && campos.correo && campos.password && campos.telefono){
-        window.location.href="usuario-perfil.html";
-     formulario.reset();
-        document.querySelectorAll('.formulario_grupo-correcto').forEach ((icono) =>{
-            icono.classList.remove ('formulario_grupo-correcto')
-            document.getElementById ('formulario_mensaje').classList.remove('formulario_mensaje-activo');
+        fetch('http://localhost:8080/Usuarios/crearGuardarUsuario', {
+            method : 'POST',
+            body: JSON.stringify({
+            nombre:$inputNombre.value,
+            apellido: $inputApellido.value,
+            correo:$inputCorreo.value,
+            contrasenia:$inputContrasenia.value,
+            telefono:$inputTelefono.value,
+            direccion:" ",
+            fechaIngreso:"2022-02-15",
+            numeroTarjeta:null,
+            fechaExpiracion:null,
+            cvv:null,
+            foto:null,
+            esVendedor:false,
+            comercio:null,
+            correoEmpresa:null,
+            telefonoEmpresa:null,
+            direccionEmpresa:null
+            }),
+            headers: {
+                "Content-Type": "application/json; charset = UTF-8"
+            }})
+          
+            .then(res => res.json()).then(dato =>{
+                    //console.log(dato.id)
+                   if(dato.id == undefined ) {
+                       alert("Este usuario ya ha suido registrado")
+                   }else{
+                    localStorage.setItem("id",dato.id)
+                    alert("Usuario registrado")
+                    formulario.reset();
+                    document.querySelectorAll('.formulario_grupo-correcto').forEach ((icono) =>{
+                    icono.classList.remove ('formulario_grupo-correcto')
+                    document.getElementById ('formulario_mensaje').classList.remove('formulario_mensaje-activo');
         })
+        setTimeout(() => { window.location.href="usuario-perfil.html";}, 1000);
+         
+
+                   }
+                } )
+
+
+    
         
     } else{
         document.getElementById ('formulario_mensaje').classList.add ('formulario_mensaje-activo');

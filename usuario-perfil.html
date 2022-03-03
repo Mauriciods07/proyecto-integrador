@@ -86,11 +86,11 @@
         </div>
       </nav>
 <!-----------------------------------------------------------------------------Fin de barra de navegacion------------------------------------------>
-<!----------------------------------------------------------------------------INICIO DE PERFIL DE USUARIO------------------------------------------>
+<!----------------------------------------------------------------------------INICIO DE PERFIL DE USUARIO-------onsubmit="return(guardarUsuario())" ----------------------------------->
 <main class="mb-5">
     <div class="container formulario_usuario mt-5 p-3">
         <h2 class="titulo_form text-center mt-5 mb-5">Mi Perfil</h2>
-        <form id="formularioUsuario" autocomplete="off" onsubmit="return(guardarUsuario())" class="formulario">
+        <form id="formularioUsuario" action="localhost:8080/Usuarios/obtenerUsuarios" autocomplete="off" class="formulario">
                 <div class="row">       <!--Fila donde esta el formulario personal y foto-->
                     <div class="col-lg-8 order-1">  <!--Todo tenia ml-3-->
                             <div class="row d-flex justify-content-center">
@@ -162,7 +162,7 @@
                             <input name="txtTarjeta" type="number" class="input_pago_tarjeta" id="txtTarjeta" placeholder="Número de tarjeta" required disabled>
                         </div>
                         <div class="col-lg-2 col-md-6 text-center mt-2">
-                            <input name="txtVencimiento" type="text" class="input_pago_numeros" id="txtVencimiento" minlength="5" placeholder="AA/MM" required disabled>
+                            <input name="txtVencimiento" type="text" class="input_pago_numeros" id="txtVencimiento" minlength="5" placeholder="MM/AA" required disabled>
                         </div>
                         <div class="col-lg-2 col-md-6 text-center mt-2">
                             <input name="txtCVV" type="text" class="input_pago_numeros" id="txtCVV" placeholder="CVV" minlength="3" required disabled>
@@ -211,10 +211,10 @@
     </div>
 
 
-    <!------------------------------------------------------------FORMULARIO DE VENDEDOR-------------------------------------------->
+    <!------------------------------------------------------------FORMULARIO DE VENDEDOR--------------- onsubmit="return(validarVendedor())"----------------------------->
   <div class="container formulario_vendedor mt-5 mx-auto p-3" style = "display: none;" id="divFormularioVendedor">
     <h2 class="titulo_form text-center mt-3 mb-5">Vendedor</h2>
-    <form id="formularioVendedor"  autocomplete="off" onsubmit="return(validarVendedor())" class="formulario_vendedor_action">
+    <form id="formularioVendedor"  autocomplete="off" class="formulario_vendedor_action">
         <div class="align-items-center">       <!--Seccion donde estan los campos principales del formulario-->
                     <div class="row d-flex justify-content-center">  <!--Fila donde esta comercio tenia ml-3-->
                         <div class="col-lg-3 col-md-12 text-center">
@@ -269,13 +269,13 @@
 </main>
 
 <!---------------------------------------------------------------MODAL DE CERRAR SESION---------------------------------------------------->
-<div class="modal fade bd-example-modal-sm modal_cerrar_sesion" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"     aria-hidden="true">
+<div class="modal fade bd-example-modal-sm modal_cerrar_sesion" id="modalCerrarSesion" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-sm ">
       <div class="modal-content cerrar_sesion">
         <span class = "mb-2">¿Seguro que quieres cerrar sesión?</span>
         <div class="row" style="background-color: transparent;">
             <div class="col-6">
-                <button class="btn_modal_aceptar"><a href="iniciar-sesion.html">Aceptar</a></button>  <!--Agregar pagina de Marja y Raquel-->
+                <button class="btn_modal_aceptar"><a id="btnModalAceptar" href="iniciar-sesion.html">Aceptar</a></button> 
             </div>
             <div class="col-6">
                 <button class="btn_modal_cancelar" data-dismiss="modal">Cancelar</button>
@@ -289,7 +289,7 @@
   <div class="container modal fade modal_producto" id="modalAgregarProductoNuevo" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content content_producto text-center">
-        <!-- <form onsubmit="return(validarAgregarProducto())" autocomplete="off"> -->
+        <form id ="formularioProducto" autocomplete="off">
             <span class = "titulo_form" style="font-size: 30px;">Ingresa los datos de tu producto</span>
             <div class="row d-flex justify-content-center mt-2">    <!--Seccion de nombre de producto-->
                 <div class="col-12 col-md-12 text-center">
@@ -322,7 +322,7 @@
                       <option value = "1" selected>Xbox</option>
                       <option value = "2">PlayStation</option>
                       <option value = "3">Nintendo</option>
-                      <option value = "4">Lanzamientos</option>
+                      <option value = "4">Lanzamiento</option>
                       <option value = "4">Ofertas</option>
                       <option value = "4">Accesorios</option>
                    </select>
@@ -341,10 +341,10 @@
                     <button class="btn_modal_cancelar_nuevo mt-3" id="btnModalCancelarProductoNuevo" data-dismiss="modal">Cancelar</button>
               </div>
               <div class="col-4 text-center">
-                  <button type="button" class="btn_modal_aceptar_nuevo mt-3" id="btnModalAceptarProductoNuevo">Aceptar</button>
+                  <button type="submit" class="btn_modal_aceptar_nuevo mt-3" id="btnModalAceptarProductoNuevo">Aceptar</button>
               </div>
             </div>
-         <!-- </form> -->
+         </form>
       </div>
     </div>
   </div>
@@ -404,7 +404,6 @@
     <!--Recursos de Bootstrap, y scripts para funcionar la pagina -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
     <script src="src/assets/js/usuario-perfil-js/inicializar-pagina.js"></script>
     <script src="src/assets/js/usuario-perfil-js/cargar-foto-usuario.js"></script>
     <script src="src/assets/js/usuario-perfil-js/editar-usuario.js"></script>
@@ -420,7 +419,10 @@
     <script src="src/assets/js/usuario-perfil-js/validar-nuevo-producto.js"></script>
     <script src="src/assets/js/usuario-perfil-js/carousel-historial.js"></script>
     <script src="src/assets/js/carrito/carrito.js"></script>
+    <script src="src/assets/js/usuario-perfil-js/cerrar-sesion.js"></script>
+    <script src="src/assets/js/usuario-perfil-js/fecha-actual.js"></script>
   </body>
+  
 </html>
 
 <div class="row d-flex justify-content-center mt-3" >   <!--Fila donde esta el nombre de usuario tenia ml-3-->

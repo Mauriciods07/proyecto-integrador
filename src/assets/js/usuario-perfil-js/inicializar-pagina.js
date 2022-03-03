@@ -35,23 +35,24 @@ let $modalProducto = document.getElementsByClassName('modal_producto'); //Variab
 let $archivoProductoNuevo = document.getElementById('archivoFotoProductoNuevo');    //Variable con referencia al archivo de foto productonuevo
 let $imgProductoNuevo = document.getElementById('imgProductoNuevo'); //Variable con referencia a la imagen visible del producto nuevo
 let $btnSubirImagenProductoNuevo = document.getElementById("btnSubirImagenProductoNuevo");  //Variable con referencia al boton de subir image de productonuevo
-
+let $carousel = document.querySelector('.carousel-inner.carousel_dinamico');
+$inputCBX.checked = false;
 /*Enumerar inputs de formularios*/
 let formularioUsuarioInputs = document.querySelectorAll('.formulario_usuario input');    //referencias a los inputs del formulario de usuario, se guardan en esta coleccion para usarlos en validacion 
 let banderaUsuario = new Array(formularioUsuarioInputs.length); //Banderas de usuario para validar formulario en botones guardar
-banderaUsuario.fill(false);     //Las banderas de usuario se llenan de false para que se modifiquen los campos, si ya hay campos llenos al cargar datos de Api, asegurarse que estos se llenen individualmente
+banderaUsuario.fill(true);     //Las banderas de usuario se llenan de false para que se modifiquen los campos, si ya hay campos llenos al cargar datos de Api, asegurarse que estos se llenen individualmente
 
 
 let formularioVendedorInputs = document.querySelectorAll('.formulario_vendedor input'); //Referencias a los inputs del formulario de vendedor, se guardan en esta coleccion para usarlos en validacion 
 let banderaVendedor = new Array(formularioVendedorInputs.length);       //Banderas de vendedor para validar formulario en botones guardar
-banderaVendedor.fill(false);     //Las banderas de vendedor  se llenan de false para que se modifiquen los campos, si ya hay campos llenos al cargar datos de Api, asegurarse que estos se llenen individualmente
+banderaVendedor.fill(true);     //Las banderas de vendedor  se llenan de false para que se modifiquen los campos, si ya hay campos llenos al cargar datos de Api, asegurarse que estos se llenen individualmente
 
 
 let expregUsuario = [/^[a-zA-ZÀ-ÿ\s]{1,40}$/,
                     /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
                     /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]{3}$/,
                     /^\d{10,11}$/,/^[a-zA-ZÀ-ÿ\s]{1,100}$/,
-                    /^\d{16}$/,/^(0?[1-9]|1[0-2])\/(\d{4})$/,
+                    /^\d{16}$/,/^(0?[1-9]|1[0-2])\/(\d{2})$/,
                     /^\d{3}$/];   //Arreglo de expresiones regulares utilizadas en el formulario de USUARIO
 
 let expregVendedor =[/^[a-zA-ZÀ-ÿ\s]{1,40}$/,
@@ -66,36 +67,56 @@ let descripcionproducto_OK = true;
 let costoproducto_OK = true;
 let cantidadproducto_OK = true;
 
-//Variables para carousel dinamico
-let Mario = {
-    titulo: "Mario Kart 8",
-    img: "src/img/lanzamientos/nintendoazulyrojo.jpg",
-    precio: 1400,
-    descripcion: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat nisi saepe optio vero animi assumenda non quas corporis corrupti eius eum facere quod sunt repellendus, recusandae quo veritatis dolorem? Molestias.",
-    color: "#FF00BC",
-    cantidad: 1
-}
 
-let Luigi = {
-    titulo: "Luigi´s Mansion",
-    img: "src/img/productos/luigis_mansion3.jpg",
-    precio: 1500,
-    descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat voluptatum ullam quis recusandae rem id excepturi tempore magni! Doloremque laudantium vero assumenda illum, reprehenderit atque sunt necessitatibus expedita ipsum?",
-    color: "#46FF01",
-    cantidad: 1
-}
+ let numjuegos=0;// juegos.length;
 
-let Pokemon = {
-    titulo: "Pokémon Sword & Shield",
-    img: "src/img/productos/pokemon_brilliant_diamond.jpg",
-    precio: 1300,
-    descripcion: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta cupiditate, repellat nihil quisquam minima enim expedita cum molestiae natus accusantium fugiat voluptates laboriosam, quas modi perspiciatis laudantium temporibus nemo accusamus.",
-    color: "#1212FF",
-    cantidad: 1
-}
-const juegos = [Luigi, Luigi,Pokemon, Mario, Luigi,Pokemon];
-let paginas = 0;
-let numjuegos = juegos.length;
-let numJuegosPorAgregar = juegos.length;
-let $carousel = document.querySelector('.carousel-inner.carousel_dinamico');
 //llamada a API para cargar datos del usuario basados en su correo;
+
+window.onload = function() {
+     const urlcarga = 'http://localhost:8080/Usuarios/obtenerUsuarioPorId'
+        fetch(urlcarga, {
+            method : 'POST',
+            body: JSON.stringify({id:localStorage.getItem('id')}),
+            headers: {
+                "Content-Type": "application/json; charset = UTF-8"
+            }
+        })
+            .then(res =>res.json())
+                 .then(datos => {
+                     console.log(datos);
+                     $inputNombre.value = datos.nombre;
+                     $inputApellido.value = datos.apellido;
+                     $inputCorreo.value = datos.correo;
+                     $inputTelefono.value = datos.telefono;
+                     $inputDireccion.value = datos.direccion;
+                     $foto.src = datos.foto;
+                     $inputTarjeta.value = datos.numeroTarjeta;
+                     $inputVencimiento.value = datos.fechaExpiracion;
+                     $inputCVV.value = datos.cvv
+                     $inputCBX.checked = datos.esVendedor;
+                     $formVendedor.style.display = $inputCBX.checked ? "block" : "none";
+                     if(datos.esVendedor){
+                        $btnEditarVendedor.removeAttribute('disabled');
+                        $btnEditarVendedor.style.opacity = "1.0";
+                        $btnAgregarVendedor.style.opacity ="0.2";
+                        $btnAgregarVendedor.setAttribute('disabled',true);
+                     }
+                     $inputNombreComercio.value = datos.comercio;
+                     $inputCorreoEmpresa.value = datos.correoEmpresa;
+                     $inputTelefonoEmpresa.value = datos.telefonoEmpresa;
+                     $inputDireccionEmpresa.value = datos.direccionEmpresa;
+                 })
+                 const urlcompra = 'http://localhost:8080/Compras/buscarCompraPorUsuario/'+ localStorage.getItem('id').toString();
+                 fetch(urlcompra).then(res =>res.json()).then(datos =>{    
+                     if (datos.length>0){
+                     generarCarrusel(0,datos.length,datos.length,0,datos)
+                     recortarTextos()
+                    }
+                     else{
+                         alert("No tienes compras, ¡Agrega productos al carrito!")
+                     }
+                     
+                 })
+    }
+
+

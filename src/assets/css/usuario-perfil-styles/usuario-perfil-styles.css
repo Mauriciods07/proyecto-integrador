@@ -359,11 +359,11 @@ Extra extra large	xxl	≥1400px
 @media  (max-device-width: 575px){    /*Tamaño extrachico hacia abajo*/
 
     .input_formulario {
-        width: 270px;
+        width: 220px;   /*270 ORIGINALMENTE*/
         font-size: 18px;
     }
     .input_formulario_vendedor {
-        width: 270px;
+        width: 220px;
         font-size: 18px;
     }
     .btn_Form_Usuario{

@@ -1,3 +1,6 @@
+let $inputCorreo = document.getElementById('correo');
+let $inputContrasenia = document.getElementById('password');
+localStorage.setItem('id',"0");
 const formulario = document.getElementById('formulario');
 const inputs = document.querySelectorAll('#formulario input')
 
@@ -54,16 +57,31 @@ input.addEventListener ('blur', validarFormulario );
 })
 
 formulario.addEventListener ('submit', (e)=> {
-
- 
-
+    e.preventDefault();
     if (campos. correo && campos. password){
-        window.location.href="usuario-perfil.html";
-        formulario.reset();
-        document.querySelectorAll('.formulario_grupo-correcto').forEach ((icono) =>{
-            icono.classList.remove ('formulario_grupo-correcto')
-            document.getElementById ('formulario_mensaje').classList.remove('formulario_mensaje-activo');
-        })
+        fetch('http://localhost:8080/Usuarios/IniciarSesion', {
+            method : 'POST',
+            body: JSON.stringify({
+               correo:$inputCorreo.value,
+               contrasenia:$inputContrasenia.value
+            }),
+            headers: {
+                "Content-Type": "application/json; charset = UTF-8"
+            }})
+          
+            .then(res => res.json()).then(dato => localStorage.setItem("id",dato.toString()))
+            setTimeout(() => {}, 100);
+            if(parseInt(localStorage.getItem("id"))!==0 ){
+                //formulario.reset();
+                document.querySelectorAll('.formulario_grupo-correcto').forEach ((icono) =>{
+                icono.classList.remove ('formulario_grupo-correcto')
+                document.getElementById ('formulario_mensaje').classList.remove('formulario_mensaje-activo');
+                })
+                setTimeout(() => { window.location.href="usuario-perfil.html";}, 1000);
+            }
+            else{
+                console.log("invalido");
+            }
         
     } else{
         document.getElementById ('formulario_mensaje').classList.add ('formulario_mensaje-activo');
