@@ -1,4 +1,4 @@
-const juegos = [
+/*const juegos = [
     {
         id_producto: 1,
         nombre_producto: "Mario Kart",
