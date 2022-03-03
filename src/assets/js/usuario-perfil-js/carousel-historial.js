@@ -36,7 +36,7 @@ for(let i=0;i<paginas;i++){
                     </div>
                     <div class="row d-flex flex-column text-center">
                       <span class="orden_texto">Cantidad</span>
-                      <span class="orden_texto_id mx-auto">${juegos[2*i].producto.cantidad}</span>
+                      <span class="orden_texto_id mx-auto">${juegos[2*i].cantidad}</span>
                     </div>
                   </div>
                 </div>
@@ -71,7 +71,7 @@ for(let i=0;i<paginas;i++){
                     </div>
                     <div class="row d-flex flex-column text-center">
                       <span class="orden_texto">Cantidad</span>
-                      <span class="orden_texto_id mx-auto">${juegos[2*i].producto.cantidad}</span>
+                      <span class="orden_texto_id mx-auto">${juegos[2*i].cantidad}</span>
                     </div>
                   </div>
                 </div>
@@ -94,7 +94,7 @@ for(let i=0;i<paginas;i++){
                   </div>
                   <div class="row d-flex flex-column text-center">
                     <span class="orden_texto">Cantidad</span>
-                    <span class="orden_texto_id mx-auto">${juegos[2*i+1].producto.cantidad}</span>
+                    <span class="orden_texto_id mx-auto">${juegos[2*i+1].cantidad}</span>
                   </div>
                 </div>
               </div>

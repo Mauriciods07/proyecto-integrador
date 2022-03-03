@@ -7,21 +7,17 @@
             console.log(banderaVendedor);
         }
         else{               //Si los inputs son correctos, se desahbilitan las entradas de texto y solo se puede editar el vendedor de nuevo
-            fetch('http://localhost:8080/Usuarios/crearGuardarUsuario', {
+            fetch('http://localhost:8080/Usuarios/GuardarUsuario', {
             method : 'POST',
             body: JSON.stringify({
                 id:localStorage.getItem('id').toString(),
                 nombre:$inputNombre.value,
                 apellido: $inputApellido.value,
-                correo:$inputCorreo.value,
-                contrasenia:localStorage.getItem("C"),
                 telefono:$inputTelefono.value,
                 direccion:$inputDireccion.value,
-                fechaIngreso:fechaActual,
                 numeroTarjeta:$inputTarjeta.value,
                 fechaExpiracion:$inputVencimiento.value,
                 cvv:$inputCVV.value,
-                foto:"imagenUsuario",
                 esVendedor:$inputCBX.checked,
                 comercio:$inputNombreComercio.value,
                 correoEmpresa:$inputCorreoEmpresa.value,
@@ -40,6 +36,7 @@
                     alert("Hubo un error al guardar el usuario")
                 }
             })
+            
             $inputNombreComercio.setAttribute('disabled',true);
            // $inputNombreVendedor.setAttribute('disabled',true);
             $inputCorreoEmpresa.setAttribute('disabled',true);
