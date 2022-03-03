@@ -1,7 +1,7 @@
 $btnEditarUsuario.addEventListener('click', (e) =>{ //Funcion del boton editar usuario, al dar click los inputs y boton guardar se habilitan, mientras que el boton editar usuario se inhabilita.
     $inputNombre.removeAttribute('disabled');
     $inputApellido.removeAttribute('disabled');
-    $inputCorreo.removeAttribute('disabled');
+ //   $inputCorreo.removeAttribute('disabled');
     $inputTelefono.removeAttribute('disabled');
     $inputDireccion.removeAttribute('disabled');
     $inputFoto.removeAttribute('disabled');
