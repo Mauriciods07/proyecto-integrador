@@ -1,11 +1,12 @@
-sessionStorage.setItem('id', 13);
-let usuarioActual ={"id":sessionStorage.getItem('id')}; 
-jsonaenviar = JSON.stringify(usuarioActual);
+//localStorage.setItem('id', 8);
+/* let usuarioActual ={"id":sessionStorage.getItem('id')}; 
+jsonaenviar = JSON.stringify(usuarioActual); */
 
 window.onload = function(s) {
-        fetch('http://localhost:8080/Usuarios/IniciarSesion', {
+    const urlguarda = 'http://localhost:8080/Usuarios/IniciarSesion'
+    fetch(urlguarda, {
             method : 'POST',
-            body: jsonaenviar,
+            body: /* jsonaenviar, */ JSON.stringify({id:localStorage.getItem('id')}),
             headers: {
                 "Content-Type": "application/json; charset = UTF-8"
             }
