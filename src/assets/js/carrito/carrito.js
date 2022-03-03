@@ -1,5 +1,4 @@
-
-const juegos = [
+/*const juegos = [
     {
         id_producto: 1,
         nombre_producto: "Mario Kart",
@@ -27,14 +26,44 @@ const juegos = [
         color: "#1212FF",
         cantidad: 1
     }
-];
+]; */
 
 
 /* Recibir los productos de la API */
-/* const juegos = [];
-fetch('http://localhost:3000/juegos')
-.then(response => response.json())  
-.then(data => data.forEach((el) => juegos.push(el))); */
+let juegos = [];
+/* Función para obtener los artículos de la BD */
+const fetchProducts = function() {
+    const article = [];
+    const requests = [];
+    const prom = fetch('http://127.0.0.1:8090/Productos/obtenerProductos')
+        .then(response => response.json());
+
+    requests.push(prom);
+
+    return new Promise((resolve) => {
+        Promise.all(requests)
+            .then((proms) =>
+                proms.forEach((p) => article.push(p))
+            )
+            .then(() => resolve(article));
+    });
+};
+
+/* Función para esperar a que se recuperen todos los artículos con fetch */
+async function main() {
+    await fetchProducts().then((el) => {
+        juegos = el.map(p => p);
+    });
+    juegos = juegos[0];
+    
+    loadLocalKart();
+    
+    if (page == 'carrito.html') {
+        renderKart();
+        showEmptyDoc();
+    }
+    adjustKartCounter();
+}
 
 let kart = [];
 const $articles = document.querySelector("#articles");
@@ -86,15 +115,16 @@ function renderKart() {
     // quitar los elementos duplicados
     const newKart = [...new Set(kart)];
 
+    
     // colocar los elementos de cada artículo
     // cada elemento es el id de los productos
     newKart.forEach((el) => {
         // obtener los productos de la base de datos
         const product = juegos.filter((item) => {
-            return item.id_producto === parseInt(el);
+            return item.id === parseInt(el);
         });
-        
-        const id_producto = product[0].id_producto;
+
+        const id_producto = product[0].id;
         
         // crear el nodo para los productos del carrito
         const node = document.createElement('div');
@@ -214,7 +244,7 @@ function renderTitle(title, description){
     nodeText.appendChild(nodeDescription);
     
     return nodeText;
-}
+} 
 
 /* Función para colocar el precio del artículo */
 function renderPrice(id, price, section) {
@@ -359,7 +389,7 @@ function getSubtotal() {
     return kart.reduce((total, item) => {
         // obtener el precio de cada producto
         const product = juegos.filter((element) => {
-            return element.id_producto === parseInt(item);
+            return element.id === parseInt(item);
         });
 
         return total + product[0].costo;
@@ -371,7 +401,7 @@ function getTotal() {
     return kart.reduce((total, item) => {
         // obtener el precio de cada producto
         const product = juegos.filter((element) => {
-            return element.id_producto === parseInt(item);
+            return element.id === parseInt(item);
         });
 
         return total + product[0].costo;
@@ -384,7 +414,7 @@ function getTotalProduct(id) {
     return filteredKart.reduce((total, item) => {
         // obtener el precio de cada producto
         const product = juegos.filter((element) => {
-            return element.id_producto === parseInt(id);
+            return element.id === parseInt(id);
         });
 
         return total + product[0].costo;
@@ -410,10 +440,4 @@ function loadLocalKart() {
     }
 }
 
-loadLocalKart();
-
-if (page == 'carrito.html') {
-    renderKart();
-    showEmptyDoc();
-}
-adjustKartCounter();
+main();
