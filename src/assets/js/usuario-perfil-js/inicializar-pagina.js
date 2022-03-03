@@ -72,8 +72,6 @@ let cantidadproducto_OK = true;
 
 //llamada a API para cargar datos del usuario basados en su correo;
 
-localStorage.setItem('id', 3);
-
 window.onload = function() {
      const urlcarga = 'http://localhost:8080/Usuarios/obtenerUsuarioPorId'
         fetch(urlcarga, {
