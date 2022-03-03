@@ -22,7 +22,7 @@ fetch('http://localhost:8080//Productos/obtenerProductoPorCategoria/Accesorios')
             </div>  
             <div class="row">
             <div class="col letra">
-            ${el.nombreProducto}<br>${el.costo} <br><button class="redondo Verde" style="border-color: #46FF01"> <img src="src/img/img_productos/carrito.png"  alt="carrito " class="Carrito"> </button>
+            ${el.nombreProducto}<br>${el.costo} <br><button class="redondo Verde button" style="border-color: #46FF01"> <img src="src/img/img_productos/carrito.png"  alt="carrito " class="Carrito"> </button>
           </div>
        </div>
       </dir> 
