@@ -70,7 +70,7 @@ formulario.addEventListener ('submit', (e)=> {
             }})
           
             .then(res => res.json()).then(dato => localStorage.setItem("id",dato.toString()))
-            if(parseInt(localStorage.getItem("id"))<1 ){
+            if(parseInt(localStorage.getItem("id"))!==0 ){
                 formulario.reset();
                 document.querySelectorAll('.formulario_grupo-correcto').forEach ((icono) =>{
                 icono.classList.remove ('formulario_grupo-correcto')
