@@ -108,12 +108,12 @@ window.onload = function() {
                  })
                  const urlcompra = 'http://localhost:8080/Compras/buscarCompraPorUsuario/'+ localStorage.getItem('id').toString();
                  fetch(urlcompra).then(res =>res.json()).then(datos =>{    
-                     if (datos.producto.length>0){
+                     if (datos.length>0){
                      generarCarrusel(0,datos.length,datos.length,0,datos)
                      recortarTextos()
-                     }
+                    }
                      else{
-                         alert("No tiene compras")
+                         alert("No tienes compras, ¡Agrega productos al carrito!")
                      }
                      
                  })
