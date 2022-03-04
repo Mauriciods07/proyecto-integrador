@@ -5,8 +5,11 @@ let $container = document.querySelector('.card-group');
 
 
 fetch('http://localhost:8080//Productos/obtenerProductoPorCategoria/PlayStation',{
-  'Access-Control-Allow-Origin': '*'
-})
+  method: 'GET',
+  headers: new Headers({
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*',
+  })
   .then((response) => response.json())
   .then((json) => {
     json.forEach((el) => {
