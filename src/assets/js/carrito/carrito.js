@@ -1,41 +1,31 @@
-/*const juegos = [
-    {
-        id_producto: 1,
-        nombre_producto: "Mario Kart",
-        descripcion: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat nisi saepe optio vero animi assumenda non quas corporis corrupti eius eum facere quod sunt repellendus, recusandae quo veritatis dolorem? Molestias.",
-        imagen: "src/img/productos/mario_kart8_deluxe.jpg",
-        costo: 1400.00,
-        color: "#FF00BC",
-        cantidad: 1
-    },
-    {
-        id_producto: 2,
-        nombre_producto: "Luigi",
-        descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat voluptatum ullam quis recusandae rem id excepturi tempore magni! Doloremque laudantium vero assumenda illum, reprehenderit atque sunt necessitatibus expedita ipsum?",
-        imagen: "src/img/productos/luigis_mansion3.jpg",
-        costo: 1500.00,
-        color: "#46FF01",
-        cantidad: 1
-    },
-    {
-        id_producto: 3,
-        nombre_producto: "Pokémon",
-        descripcion: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta cupiditate, repellat nihil quisquam minima enim expedita cum molestiae natus accusantium fugiat voluptates laboriosam, quas modi perspiciatis laudantium temporibus nemo accusamus.",
-        imagen: "src/img/productos/pokemon_brilliant_diamond.jpg",
-        costo: 1300.00,
-        color: "#1212FF",
-        cantidad: 1
-    }
-]; */
+let kart = [];
+const $articles = document.querySelector('#articles');
+const $pymEnvio = document.querySelector('#pymEnvio');
+const $pymGarantia = document.querySelector('#pymGarantia');
+const $subtotal = document.querySelector('#pymSubtotal');
+const $total = document.querySelector('#pymTotal');
+const myLocalStorage = window.localStorage;// verificar en qué página se encuentra el usuario
+const path = window.location.pathname;
+const page = path.substring(path.lastIndexOf('/') + 1);
+let $addArticleBtn = document.querySelectorAll('.addArticleBtn');
 
+const colors = ["articleBlue", "articleRed", "articleGrey"];
+const totalColors = 3;
+const moneda = '$';
 
 /* Recibir los productos de la API */
 let juegos = [];
+
+/* Páginas que funcionan con carrito */
+const pages = ['tienda-lanzamientos.html', 'tienda-ofertas.html', 
+                'tienda-accesorios.html', 'tienda-playstation.html', 
+                'tienda-nintendo.html', 'tienda-xbox.html'];
+
 /* Función para obtener los artículos de la BD */
 const fetchProducts = function() {
     const article = [];
     const requests = [];
-    const prom = fetch('http://127.0.0.1:8090/Productos/obtenerProductos')
+    const prom = fetch('http://127.0.0.1:8080/Productos/obtenerProductos')
         .then(response => response.json());
 
     requests.push(prom);
@@ -49,50 +39,98 @@ const fetchProducts = function() {
     });
 };
 
+const fetchArticles = function() {
+    const article = [];
+    const requests = [];
+    const beginWord = path.search('-\\w+.');
+    const endWord = path.search('.html');
+    const categoria = path.slice(beginWord+1, endWord);
+    const prom = fetch(`http://127.0.0.1:8080/Productos/obtenerProductoPorCategoria/${categoria}`)
+        .then((response) => response.json());
+
+    requests.push(prom);
+
+    return new Promise((resolve) => {
+        Promise.all(requests)
+            .then((proms) =>
+                proms.forEach((p) => article.push(p))
+            )
+            .then(() => resolve(article));
+    });
+}
+
 /* Función para esperar a que se recuperen todos los artículos con fetch */
 async function main() {
-    await fetchProducts().then((el) => {
-        juegos = el.map(p => p);
-    });
-    juegos = juegos[0];
-    
     loadLocalKart();
     
     if (page == 'carrito.html') {
+        await fetchProducts().then((el) => {
+            juegos = el.map(p => p);
+        });
+        juegos = juegos[0];
         renderKart();
         showEmptyDoc();
     }
+    if (pages.includes(page)) {
+        let articlesLanzamientos = [];
+        let $container = document.querySelector('.card-group');
+
+        await fetchArticles().then((json) => {
+            articlesLanzamientos = json.map(p => p);
+        });
+        articlesLanzamientos = articlesLanzamientos[0];
+        console.log("hola", articlesLanzamientos)
+
+        articlesLanzamientos.forEach((el) => {
+                
+            console.log(el);
+
+            let creado = document.createElement('div');
+            //---
+            creado.innerHTML = `
+            <dir class="col text-center" id="${el.id}> 
+            <div class="row Box"> <br><img src="${el.imagen}" class="Imagen_prducto" style="border-color:  #46FF01 "  alt="Pruducto">
+            <div class="hoverVerde">
+            <p> ${el.nombreProducto}
+                <br> ${el.costo}
+                </div>  
+                <div class="row">
+                <div class="col letra">
+                ${el.nombreProducto}<br>${el.costo} <br><button class="redondo Verde addArticleBtn button" marcador="${el.id}" style="border-color: #46FF01"> <img src="src/img/img_productos/carrito.png" marcador="${el.id}" alt="carrito " class="Carrito"> </button>
+            </div>
+            </div>
+            </dir> 
+            `;
+    
+            console.log(el.id);
+            $container.appendChild(creado);
+        }); 
+    }
+    
+    
     adjustKartCounter();
+    updateBtn();
 }
 
-let kart = [];
-const $articles = document.querySelector("#articles");
-const $pymEnvio = document.querySelector('#pymEnvio');
-const $pymGarantia = document.querySelector('#pymGarantia');
-const $subtotal = document.querySelector('#pymSubtotal');
-const $total = document.querySelector('#pymTotal');
-const $addArticleBtn = document.querySelectorAll('.addArticleBtn');
-const myLocalStorage = window.localStorage;// verificar en qué página se encuentra el usuario
-const path = window.location.pathname;
-const page = path.substring(path.lastIndexOf('/') + 1);
-
-const colors = ["articleBlue", "articleRed", "articleGrey"];
-const totalColors = 3;
-const moneda = '$';
-
-// Darle funcionalidad a los botones para agregar elementos al carrito
-$addArticleBtn.forEach((button) => {
-    button.addEventListener("click", addArticleToKart);
-});
+/* Función para agregarle funcionalidad a los botones de agregar productos */
+function updateBtn() {
+    $addArticleBtn = document.querySelectorAll('.addArticleBtn');
+    console.log($addArticleBtn);
+    // Darle funcionalidad a los botones para agregar elementos al carrito
+    $addArticleBtn.forEach((button) => {
+        button.addEventListener("click", addArticleToKart);
+    });
+}
 
 /* Añadir los productos al carrito */
 function addArticleToKart(e) {
     // añadir el producto al carrito
-    //let newArticle = e.target.getAttribute('marcador');
+    let newArticle = parseInt(e.target.getAttribute('marcador'));
+    console.log("Hola", newArticle);
     //kart.push(e.target.getAttribute('marcador'));
     
     // función de prueba -- ELIMINAR
-    let newArticle = parseInt(Math.random() * juegos.length) + 1;
+    //let newArticle = parseInt(Math.random() * juegos.length) + 1;
 
     if(!kart.includes(newArticle)) {
         kart.push(newArticle);
@@ -105,6 +143,13 @@ function addArticleToKart(e) {
 
     // guardar el elemento localmente
     saveLocalKart();
+}
+
+/* Función para eliminar todos los productos del carrito */
+function emptyKart() {
+    kart = [];
+    renderKart();
+    showEmptyDoc();
 }
 
 /* Función para colocar los productos al carrito */

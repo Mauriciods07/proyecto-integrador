@@ -1,10 +1,10 @@
-/* Obtener los elementos */
+/* /* Obtener los elementos 
 let $container = document.querySelector('.card-group');
 
 
 
 
-fetch('http://localhost:8080//Productos/obtenerProductoPorCategoria/Lanzamiento')
+fetch('http://localhost:8090/Productos/obtenerProductoPorCategoria/Lanzamiento')
   .then((response) => response.json())
   .then((json) => {
     json.forEach((el) => {
@@ -22,11 +22,14 @@ fetch('http://localhost:8080//Productos/obtenerProductoPorCategoria/Lanzamiento'
             </div>  
             <div class="row">
             <div class="col letra">
-            ${el.nombreProducto}<br>${el.costo} <br><button class="redondo Verde button" style="border-color: #46FF01"> <img src="src/img/img_productos/carrito.png"  alt="carrito " class="Carrito"> </button>
+            ${el.nombreProducto}<br>${el.costo} <br><button class="redondo Verde addArticleBtn button" style="border-color: #46FF01"> <img src="src/img/img_productos/carrito.png"  alt="carrito " class="Carrito"> </button>
           </div>
        </div>
       </dir> 
       `;
+
+    creado.setAttribute('marcador', el.id);
+    console.log(el.id);
     $container.appendChild(creado);
     })
-  });
+  }); */
