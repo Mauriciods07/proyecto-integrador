@@ -25,7 +25,7 @@ const pages = ['tienda-lanzamientos.html', 'tienda-ofertas.html',
 const fetchProducts = function() {
     const article = [];
     const requests = [];
-    const prom = fetch('http://127.0.0.1:8080/Productos/obtenerProductos',{'mode': 'no-cors'})
+    const prom = fetch('http://127.0.0.1:8080/Productos/obtenerProductos')
         .then(response => response.json());
 
     requests.push(prom);
@@ -45,7 +45,7 @@ const fetchArticles = function() {
     const beginWord = path.search('-\\w+.');
     const endWord = path.search('.html');
     const categoria = path.slice(beginWord+1, endWord);
-    const prom = fetch(`http://127.0.0.1:8080/Productos/obtenerProductoPorCategoria/${categoria}`,{'mode': 'no-cors'})
+    const prom = fetch(`http://127.0.0.1:8080/Productos/obtenerProductoPorCategoria/${categoria}`)
         .then((response) => response.json());
 
     requests.push(prom);
