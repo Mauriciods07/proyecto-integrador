@@ -4,7 +4,9 @@ let $container = document.querySelector('.card-group');
 
 
 
-fetch('http://localhost:8080//Productos/obtenerProductoPorCategoria/PlayStation')
+fetch('http://localhost:8080//Productos/obtenerProductoPorCategoria/PlayStation',{
+  'Access-Control-Allow-Origin': '*'
+})
   .then((response) => response.json())
   .then((json) => {
     json.forEach((el) => {
